@@ -6,8 +6,6 @@
   </p>
 </div>
 
-Future updates for this repository will be available at [https://github.com/ShaoYuchen0112/Hydrangea](https://github.com/ShaoYuchen0112/Hydrangea).
-
 
 ## What is LLM-enabled software?
 
