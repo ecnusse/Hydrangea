@@ -1,0 +1,102 @@
+APP,url,classification,commit id,LLM,LLM_Deployment Environments,vectordb,VectorDB_Deployment Environments,langchain,language
+,,,,instance,online/local,instance,online/local,,
+Shaunwei/RealChar,https://github.com/Shaunwei/RealChar,chatbot,ee36a803e220c8a3f021a61922ea81c59e7242ee,OpenAI,online,chroma,online,1,javascript
+eosphoros-ai/DB-GPT,https://github.com/eosphoros-ai/DB-GPT,multifunction,1519df7f0179be0957008e75fd27eafb9d6890f1,OpenAI,Online,chroma,local,1,python
+uukuguy/DB-GPT-Lite,https://github.com/uukuguy/DB-GPT-Lite,multifunction,d857cb71f2c19e8535d0f5e9692e15c4e4dd100d,OpenAI,Online,chroma,local,1,python
+yanll/YP-GPT,https://github.com/yanll/YP-GPT,multifunction,6df9f79f694ba4aaf0dc84867cd44e66c062c99f,OpenAI,Online,chroma,local,1,python
+fangyinc/DB-GPT,https://github.com/fangyinc/DB-GPT,multifunction,f317740d5557b56899d1a3e786ca7cc583fdd700,OpenAI,Online,chroma,local,1,python
+X-D-Lab/LangChain-ChatGLM-Webui,https://github.com/X-D-Lab/LangChain-ChatGLM-Webui,context-based QA,ef829a28234228761a97541e4ebae9da4f4e6800,ChatGLM-6B,local,faiss-cpu,local,1,python
+langchain-ai/chat-langchain,https://github.com/langchain-ai/chat-langchain,chatbot,a875a649109ad7c3d68d7e9b75508f687e627ca4,OpenAI,Online,WEAVIATE,online,1,python
+hamelsmu/chat-langchain,https://github.com/hamelsmu/chat-langchain,chatbot,8252cc469335da08230afb049cdc7dfb178c328b,OpenAI,Online,faiss-cpu,local,1,python
+joaocarlosleme/chat-langchain,https://github.com/joaocarlosleme/chat-langchain,chatbot,362e71c016d70022a6b1d067e0cddbe1a6ef496e,OpenAI,Online,faiss-cpu,local,1,python
+blu3mo/scrapchat,https://github.com/blu3mo/scrapchat,chatbot,ce78a875399b069d3d5c44c738cb10fb3704c0fd,OpenAI,Online,OpenAI,Online,1,python
+yoheinakajima/babyagi,https://github.com/yoheinakajima/babyagi,task management,3532f987744e9254afacc254e3325d1910c0651d,gpt-3.5-turbo,Online,chroma,online,0,python
+dory111111/babyagi-streamlit,https://github.com/dory111111/babyagi-streamlit,task management,088aa7376c39d541543a3518df8bd5db46633f51,OpenAI,Online,faiss-cpu,local,1,python
+kroll-software/babyagi4all,https://github.com/kroll-software/babyagi4all,task management,3dc42659eb5cb51dbea71b565ce09f61a130cc20,llama,local,chroma,local,0,python
+sw5park/LUISE,https://github.com/sw5park/LUISE,task management,e88343c1e2d1c634a33838500e6cc72aa97fdeaa,OpenAI,Online,pinecone,online,0,python
+robiwan303/babyagi,https://github.com/robiwan303/babyagi,task management,9c22f053675710094576bfc4e6527f59a50e6ac2,OpenAI,Online,chroma,online,1,python
+saten-private/BabyCommandAGI,https://github.com/saten-private/BabyCommandAGI,task management,993f7075479d4d89948410bfec0c4c18d4a06b0c,OpenAI,Online,chroma,local,0,python
+ai8hyf/babyagi,https://github.com/ai8hyf/babyagi,task management,6fcd528a92c80846dbb351f2b7babdd50c38709d,llama,local,faiss-cpu,local,1,python
+matigumma/bb.agi,https://github.com/matigumma/bb.agi,task management,9af4396c1c97b0de3fc47ceb35ff8e4489be6254,OpenAI,Online,pinecone,online,1,Jupyter Notebook
+VTSTech/localagi,https://github.com/VTSTech/localagi,task management,85ecc246bd50783e9edaa4227493c0ac127912d8,OpenAI,Online,pinecone,online,0,python
+realminchoi/babyagi-langchain,https://github.com/realminchoi/babyagi-langchain,task management,8173232f8abd09f9b9f8942f0b1cd44327cf66b7,OpenAI,Online,faiss-cpu,local,1,python
+miurla/babyagi-ui,https://github.com/miurla/babyagi-ui,task management,3f71b1bd4edea6eb2a063d2ccf540fa309114925,OpenAI,Online,pinecone,online,0,TypeScript
+alexdphan/babyagi-chroma-agent,https://github.com/alexdphan/babyagi-chroma-agent,task management,a5379280e526fd559c49d3b85513a339afc302e5,OpenAI,Online,chroma,local,1,python
+fendouai/babyagi_zh,https://github.com/fendouai/babyagi_zh,task management,bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864,OpenAI,Online,pinecone,online,0,python
+Significant-Gravitas/AutoGPT,https://github.com/Significant-Gravitas/AutoGPT,task management,9ef4fab084633e4289226a6dd059a598085ec876,gpt-3.5-turbo,Online,chroma,local,0,python
+FOLLGAD/Godmode-GPT,https://github.com/FOLLGAD/Godmode-GPT,task management,4e1dc7055580ab9bb3ce85114f9e17950ac96d7b,gpt-3.5-turbo,Online,Pinecone,online,0,python
+BillSchumacher/Auto-GPT,https://github.com/BillSchumacher/Auto-GPT,task management,bdd07b18bea674cf756ebfb3a0a8915042d9126f,gpt-3.5-turbo,Online,Pinecone,online,0,python
+amauryfischer/Auto-GPT-WebUI,https://github.com/amauryfischer/Auto-GPT-WebUI,task management,cea68df18f309b094912bdaa6ce2cd484dca5a13,gpt-3.5-turbo,Online,Pinecone,online,0,python
+ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack,task management,1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,gpt-3.5-turbo,Online,Pinecone,online,1,javascript
+catid/Supercharger-Auto-GPT,https://github.com/catid/Supercharger-Auto-GPT,task management,2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29,openai,Online,pinecone,online,0,python
+edik7333/Auto-GPT-llama-cpp,https://github.com/edik7333/Auto-GPT-llama-cpp,task management,2b4bf189825c0abe28bf6f020b87921d82636d67,openai,Online,Pinecone,online,0,python
+Josh-XT/AGiXT,https://github.com/Josh-XT/AGiXT,multifunction,de7d913b2853708b9f9d4e7127ea48bca80865b9,OpenAI,Online,chroma,local,0,python
+hlohaus/Agent-LLM,https://github.com/hlohaus/Agent-LLM,multifunction,d8a46dacea35c6224effd3e733d5c085bea1949a,openai,online,chroma,local,0,python
+CloudDevStudios/Agent-LLM,https://github.com/CloudDevStudios/Agent-LLM,multifunction,f89aaebd761a4d016b8a61ee511330f5ed403fe9,openai,online,chroma,local,0,python
+ChuloAI/BrainChulo,https://github.com/ChuloAI/BrainChulo,chatbot,f2d6753177ef9940dcb6994da03fbf5fd323a3b3,llama,local,chroma,local,1,python
+daveshap/ChromaDB_Chatbot_Public,https://github.com/daveshap/ChromaDB_Chatbot_Public,chatbot,ad7df3a7391c07ab59298e48ac05c24c8698698b,OpenAI,Online,chroma,local,0,python
+AgentValley/chromadb-chatbot,https://github.com/AgentValley/chromadb-chatbot,chatbot,48c10aa15ae4c0896fc282c4f1c4efdfccbd53bf,OpenAI,Online,chroma,local,1,python
+edrickdch/chat-pdf,https://github.com/edrickdch/chat-pdf,context-based QA,bf5343fef116a360424245b1c154edc2bac07bfd,OpenAI,Online,chroma,local,1,python
+realrasengan/AIQA,https://github.com/realrasengan/AIQA,context-based QA,fb86f8c48978bd218df62f6bf034463f0034b426,OpenAI,Online,chroma,local,1,javascript
+Gamma-Software/AppifyAi,https://github.com/Gamma-Software/AppifyAi,other,1e2a008b29a0a14d590f41056226636dae266931,OpenAI,Online,chroma,local,1,python
+szpnygo/VecTextSearch,https://github.com/szpnygo/VecTextSearch,other,ec6a1a2861b1399b3463026980c02507702d3508,OpenAI,Online,WEAVIATE,local,0,Go
+yujiosaka/ChatIQ,https://github.com/yujiosaka/ChatIQ,context-based QA,def21481b0c132173b51d1d7a314b103db324ca2,OpenAI,Online,WEAVIATE,local,1,python
+labring/FastGPT,https://github.com/labring/FastGPT,multifunction,05bf1b22653f8699b85098db3e86a7f29bdc2895,OpenAI,Online,mongo,local,0,TypeScript
+c121914yu/FastGPT,https://github.com/c121914yu/FastGPT,multifunction,2ae8d43216d4e6fb739143c3cc12285fed048596,OpenAI,Online,mongo,local,0,TypeScript
+SaudM/GPT-LMU-APP,https://github.com/SaudM/GPT-LMU-APP,multifunction,882ad9818e49ca004959e17a0f7d2580ebfedb10,OpenAI,Online,mongo,local,0,TypeScript
+Abonia1/Context-Based-LLMChatbot,https://github.com/Abonia1/Context-Based-LLMChatbot,context-based QA,f21f7e157157d235e0b9ddd2fc997a7d33096da1,OpenAI,Online,chroma,local,1,Jupyter Notebook
+h2oai/h2ogpt,https://github.com/h2oai/h2ogpt,multifunction,15f3a2d564541020f78cfc83bc90722dcda8a960,LLaMa2,local,chroma,local,1,Jupyter Notebook
+Jerk400/h2ogpt-dev-local,https://github.com/Jerk400/h2ogpt-dev-local,multifunction,ba56d6471080ec447c7c5347a2d4765ae4dba5b4,LLaMa2,local,chroma,local,1,python
+ushakrishnan/SearchWithOpenAI,https://github.com/ushakrishnan/SearchWithOpenAI,context-based QA,470a5d10f786efbac2feab18330c69365a937599,OpenAI,Online,chroma,local,1,python
+EmbraceAGI/LocalAGI,https://github.com/EmbraceAGI/LocalAGI,task management,f2fd7824ee270b8d45b336366ec885a14b809b8b,chatglm2-6b,local,chroma,local,1,python
+StanGirard/quivr,https://github.com/StanGirard/quivr,context-based QA,b6f38f7aff5f026eb46a071362c9362e057119df,OpenAI,Online,FAISS,local,1,python
+mckaywrigley/chatbot-ui,https://github.com/mckaywrigley/chatbot-ui,chatbot,f4ec4df77f650fa650535c6b934d4a1775cf491a,OpenAI,Online,Supabase,online,1,TypeScript
+dotneet/smart-chatbot-ui,https://github.com/dotneet/smart-chatbot-ui,chatbot,6a07b944b73ca53996a1a06cdf65ab19ed2a19ab,OpenAI,Online,mongo,local,1,TypeScript
+arc53/DocsGPT,https://github.com/arc53/DocsGPT,context-based QA,744d4ebbaf4349444d8d361593c4c04652c6c54b,OpenAI,Online,mongo,local,1,python
+yangchuansheng/DocsGPT,https://github.com/yangchuansheng/DocsGPT,context-based QA,595581b624b54046d756ad28bc845521ee4807d0,openai,online,FAISS,local,1,python
+DanielSmith0831/DocsGPT,https://github.com/DanielSmith0831/DocsGPT,context-based QA,6b6737613ad934a28ae4251ffa9716465e6e35dd,openai,online,FAISS,local,1,python
+chatchat-space/Langchain-Chatchat,https://github.com/chatchat-space/Langchain-Chatchat,context-based QA,bc7f01925fe49c622cf7d6e2540c03fd5a0679e1,ChatGLM,Online,FAISS,local,1,TypeScript
+hzg0601/langchain-ChatGLM-annotation,https://github.com/hzg0601/langchain-ChatGLM-annotation,context-based QA,da8085ba5fcb89a2e665cd3fde28cdafa38b9c29,ChatGLM,online,FAISS,local,1,python
+ExpressGit/langchain-ChatGLM,https://github.com/ExpressGit/langchain-ChatGLM,context-based QA,21035d7706b24956f845c65e1492690abbb07d8b,ChatGLM,online,FAISS,local,1,TypeScript
+zhjunqin/Langchain-Chatchat-InternLM,https://github.com/zhjunqin/Langchain-Chatchat-InternLM,context-based QA,761f0bc3a94ccdda9970761b6c769c7e0537e2e8,ChatGLM,online,FAISS,local,1,python
+imartinez/privateGPT,https://github.com/imartinez/privateGPT,context-based QA,2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1,OpenAI,Online,chroma,local,1,python
+menloparklab/privateGPT-app,https://github.com/menloparklab/privateGPT-app,context-based QA,028c81038dec2f923477812f7c7f7d48706fa7a9,llama,local,chroma,local,1,python
+AgentJ-WR/Private-GPT-Flask,https://github.com/AgentJ-WR/Private-GPT-Flask,context-based QA,328bbc320a6dacc1a120cfcaf9c88e0fd001b381,llama,local,chroma,local,1,python
+REFRIED-BoolEANS/privatgpt-gui,https://github.com/REFRIED-BoolEANS/privatgpt-gui,context-based QA,840675927b1ace596dcc2c8ed0f6f483805e33fe,llama,local,chroma,local,1,python
+camel-ai/camel,https://github.com/camel-ai/camel,task management,71d466d9d67d1d7230ebfa1be6db95f5c53e38d9,OpenAI,Online,mongo,local,0,python
+mattzcarey/code-review-gpt,https://github.com/mattzcarey/code-review-gpt,other,87bce4d443c869eb3da09e5a2c11b1a79c5e5d6a,OpenAI,Online,dynamodb,online,1,TypeScript
+chenhunghan/code-review-private-ai,https://github.com/chenhunghan/code-review-private-ai,other,17f00ec43ba35f3914fea322ad84f4b1a888500f,llama,local,dynamodb,online,1,TypeScript
+cpacker/MemGPT,https://github.com/cpacker/MemGPT,context-based QA,6e2c92e3abda617b9efc96c88b582195579717c8,OpenAI,Online,chroma,local,0,python
+starsnatched/MemGPT-multimodal,https://github.com/starsnatched/MemGPT-multimodal,context-based QA,82b9b74efa9ad2a04dc531b0ef77a9e229e86e00,openai,online,chroma,local,0,python
+goetzrobin/MemGPT,https://github.com/goetzrobin/MemGPT,context-based QA,0e8918e79935d24210991d78da09bf0e4c796d2e,openai,Online,chroma,local,0,python
+GreyDGL/PentestGPT,https://github.com/GreyDGL/PentestGPT,multifunction,a4e5361d76c880a9cf6f79f12e6cff90c8c01da3,OpenAI,Online,pinecone,Online,1,python
+0xk1h0/PentestGPT,https://github.com/0xk1h0/PentestGPT,multifunction,a6edb3053ef1b3e0c36286306bc95cd8e6ceb026,openai,online,pinecone,online,1,python
+vmayoral/PentestGPT,https://github.com/vmayoral/PentestGPT,multifunction,58e80fa92dea24da3d4899aa625b7683100720da,openai,online,pinecone,online,1,python
+Devansh968/Chat-with-Pdf-using-Qdrant-vector-database,https://github.com/Devansh968/Chat-with-Pdf-using-Qdrant-vector-database,context-based QA,771195f36a735a6f4ac1b63edc04661c11a67f3f,OpenAI,online,qdrant,online,1,python
+marella/chatdocs,https://github.com/marella/chatdocs,context-based QA,ff0f962972ba65f0bccbf2e81875a95bae7473b5,GPTQ models,local,chroma,local,1,python
+ranfysvalle02/chatdocs-mdb,https://github.com/ranfysvalle02/chatdocs-mdb,context-based QA,6322d0ea03d2a3a14fbfaa7ca9f12104e733a72f,llama,local,mongo,local,1,python
+Vidminas/chatdocs-streamlit,https://github.com/Vidminas/chatdocs-streamlit,context-based QA,cf4053a1b20116fb0d05e64778e3c4c28b902f2a,openai,online,chroma,local,1,python
+Haste171/langchain-chatbot,https://github.com/Haste171/langchain-chatbot,context-based QA,f3999530d57eb8069d8b911024785d82ac5d003d,OpenAI,Online,pinecone,Online,1,python
+iMagist486/ElasticSearch-Langchain-Chatglm2,https://github.com/iMagist486/ElasticSearch-Langchain-Chatglm2,context-based QA,304d3d204a00782a0078fd76be232fa5802f4307,chatglm2-6b,local,Elasticsearch,local,1,python
+mayooear/gpt4-pdf-chatbot-langchain,https://github.com/mayooear/gpt4-pdf-chatbot-langchain,context-based QA,66d183f6b207fa1d92153a430c620c58b01e9b1c,OpenAI,Online,pinecone,Online,1,TypeScript
+davideuler/gpt4-pdf-chatbot-langchain-chromadb,https://github.com/davideuler/gpt4-pdf-chatbot-langchain-chromadb,context-based QA,5c0f8daba056483afebf9e8a46a988e07c58ee99,OpenAI,Online, Chroma,local,1,TypeScript
+groovybits/gaib,https://github.com/groovybits/gaib,context-based QA,887e8edf7f6ce112af4790ac5f45c629b05e3225,OpenAI,Online, Chroma,local,1,TypeScript
+sagarsaija/gpt4-pdf-chatbot-langchain-chroma,https://github.com/sagarsaija/gpt4-pdf-chatbot-langchain-chroma,context-based QA,259d5cb6510b0c06b93389810671d73482f9a37c,OpenAI,Online, Chroma,local,1,TypeScript
+oshoura/IslamAI,https://github.com/oshoura/IslamAI,context-based QA,d39fad996040c1fe7917b330996620380b9028af,OpenAI,Online, Chroma,local,1,TypeScript
+arndvs/gpt4-langchain-ingest-api-data-private-chroma-aws,https://github.com/arndvs/gpt4-langchain-ingest-api-data-private-chroma-aws,context-based QA,5259ae39cd23892c3d0030b98ae99148fb5b7284,OpenAI,Online, Chroma,online,1,TypeScript
+Mintplex-Labs/anything-llm,https://github.com/Mintplex-Labs/anything-llm,multifunction,ebd3a62866e9e17b07a4a973b74329c0297fb78a,OpenAI,Online,LanceDB,local,1,javascript
+frasergr/anything-llm,https://github.com/frasergr/anything-llm,multifunction,5fa61458724fd019a15e243b8db8e71bead950b5,openai,online,pinecone,online,1,javascript
+alejandro-ao/ask-multiple-pdfs,https://github.com/alejandro-ao/ask-multiple-pdfs,context-based QA,362e85213a01d73772d5319fb9819e026ecbe8a7,OpenAI,Online,FAISS,local,1,python
+aigeek0x0/chat-with-multiple-pdfs-streamlit-langchain-faiss-openai,https://github.com/aigeek0x0/chat-with-multiple-pdfs-streamlit-langchain-faiss-openai,context-based QA,3cc2b0ac1522d6a78a998759ea212052ddefb3b7,openai,online,FAISS,local,1,python
+mayooear/private-chatbot-mpt30b-langchain,https://github.com/mayooear/private-chatbot-mpt30b-langchain,context-based QA,dbb888a2d5f1eaf6256ffab53e4ec0b766a86a3f,MPT-30B,local,chroma,local,1,python
+c0sogi/LLMChat,https://github.com/c0sogi/LLMChat,multifunction,b0fe554ca2327d2dc43dc819934b7973e662ffdb,OpenAI,Online,Redis,local,1,python
+dotvignesh/PDFChat,https://github.com/dotvignesh/PDFChat,context-based QA,bb46824b7835386d39f76cd0c70b427dc42997c9,OpenAI,Online,FAISS,local,1,python
+yvann-hub/Robby-chatbot,https://github.com/yvann-hub/Robby-chatbot,context-based QA,5beb6894c8ba0d0b67188ba2be568a2a22a00491,OpenAI,Online,FAISS,local,1,python
+gabacode/ChatBot-PDF,https://github.com/gabacode/ChatBot-PDF,context-based QA,320476ac687db4ea0e9051b4b25ef6904d3a014d,OpenAI,Online,FAISS,local,1,python
+chinesewebman/doc-chatbot,https://github.com/chinesewebman/doc-chatbot,context-based QA,d17caf9f0414bc7bc802774de1f13c5d746966fb,OpenAI,Online,FAISS,local,1,python
+Doriandarko/BabyAGIChatGPT,https://github.com/Doriandarko/BabyAGIChatGPT,task management,174491cbbc09d3f6ef0ec511e9e3b94e2615ffa0,OpenAI,Online,pinecone,Online,0,python
+benjaminearlevans/Chatgpt-babyagi-plugin,https://github.com/benjaminearlevans/Chatgpt-babyagi-plugin,task management,771a5ba6e6b69c30020da7a139ccec868b4a3dc7,OpenAI,Online,pinecone,Online,0,python
+codeacme17/examor,https://github.com/codeacme17/examor,other,891ed727b711c6b59e3c6899f7fa08f0df773c30,OpenAI,Online,chroma,local,1,TypeScript
+junruxiong/IncarnaMind,https://github.com/junruxiong/IncarnaMind,context-based QA,75564a3bf08d0006387889cdc9a76fc509ededd8,OpenAI,Online,chroma,local,1,python
+Codium-ai/pr-agent,https://github.com/Codium-ai/pr-agent,other,41166dc271039f9952c8086005f6c4b242021221,OpenAI,Online,pinecone,Online,1,python
+SolaceDev/pr-agent,https://github.com/SolaceDev/pr-agent,other,5c768572233adb5fb9eadef21a184410b30b5603,OpenAI,Online,pinecone,Online,1,python
