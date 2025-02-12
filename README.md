@@ -50,6 +50,14 @@ A collection of defects in these projects (involves 100 projects),containing
    3. the consequences of defect
    4. the defect-triggering tests
 
-
+The meaning of different olumns in `defect.csv`:
+   1. **APP**: the applications from GitHub.
+   2. **commit url**: the relevant version of the application on GitHub.
+   3. **types**: different defect types.
+   4. **cases**: different examples for each defect type. Cells containing a "/" indicate that there is only one case for that defect type.
+   5. **explanation**: details of the defect.
+   6. **consequences**: the impacts of the defect. Here we use the abbreviations: ST refer to fail-stops, IC refer to incorrectness, SL refer to slower execution, UI refer to unfriendly user interface, TK refer to more tokens, and IS refer to insecure.
+   7. **source-code locations**: The location of the code file where the defect occurs.
+   8. **defect-triggering tests**: The software input that triggers the defect.
 
 
