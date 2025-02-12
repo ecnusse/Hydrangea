@@ -50,7 +50,7 @@ A collection of defects in these projects (involves 100 projects),containing
    3. the consequences of defect
    4. the defect-triggering tests
 
-The meaning of different olumns in `defect.csv`:
+The meaning of different columns in `defect.csv`:
    1. **APP**: the applications from GitHub.
    2. **commit url**: the relevant version of the application on GitHub.
    3. **types**: different defect types.
