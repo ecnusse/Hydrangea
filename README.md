@@ -10,9 +10,11 @@ This repository is made available under the Public Domain Dedication and License
 
 The corresponding paper [**Are LLMs Correctly Integrated into Software Systems?**](https://arxiv.org/abs/2407.05138) has been accepted by ICSE2025.
 
+If you have any questions, please feel free to contact me via email(ycshao@stu.ecnu.edu.cn).
+
 ## What is LLM-enabled software?
 
-It is software that integrates LLMs (large language models) with RAG (retrieval-augmented generation ) support to realize intelligence features.
+It is software that integrates LLMs (large language models) with RAG (retrieval-augmented generation) support to realize intelligence features.
 
 It contains four components:
 
