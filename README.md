@@ -8,6 +8,7 @@
 
 This repository is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://opendatacommons.org/licenses/pddl/1.0/ - see the [LICENSE](./LICENSE) file for details.
 
+The corresponding paper [**Are LLMs Correctly Integrated into Software Systems?**](https://arxiv.org/abs/2407.05138) has been accepted by ICSE2025.
 
 ## What is LLM-enabled software?
 
