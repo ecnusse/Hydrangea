@@ -1,4 +1,4 @@
-﻿APP,commit url,types,cases,explanation,consequences,source-code locations,defect-triggering tests
+APP,commit url,types,cases,explanation,consequences,source-code locations,defect-triggering tests
 Shaunwei/RealChar,https://github.com/Shaunwei/RealChar/tree/ee36a803e220c8a3f021a61922ea81c59e7242ee,Unclear context in prompt,/,The LLM's answers sometimes contradict the truth or the content of the uploaded file,IC,RealChar/realtime_ai_character/llm/openai_llm.py,"1.In the RealChar UI, select a character to converse with.
 2.Ask the character vague or ambiguous questions/overly complex or contradictory Information
 like ""Explain what it is."" or ""If the sun were blue, what color would the moon be?"""
@@ -1928,7 +1928,7 @@ autogpt/memory/context/memory_item.py
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 Significant-Gravitas/AutoGPT,https://github.com/Significant-Gravitas/AutoGPT/tree/9ef4fab084633e4289226a6dd059a598085ec876,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","autogpt/agent/agent.py
 autogpt/chat.py",The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-Significant-Gravitas/AutoGPT,https://github.com/Significant-Gravitas/AutoGPT/tree/9ef4fab084633e4289226a6dd059a598085ec876,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+Significant-Gravitas/AutoGPT,https://github.com/Significant-Gravitas/AutoGPT/tree/9ef4fab084633e4289226a6dd059a598085ec876,absence of final output,/,aught in error loop "No Text to summary","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -2221,7 +2221,7 @@ autogpt/memory_management/store_memory.py
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 FOLLGAD/Godmode-GPT,https://github.com/FOLLGAD/Godmode-GPT/tree/4e1dc7055580ab9bb3ce85114f9e17950ac96d7b,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","autogpt/agent/agent.py
 autogpt/chat.py",The user did not provide specific examples. We can observe app's memory performance in its behavior.
-FOLLGAD/Godmode-GPT,https://github.com/FOLLGAD/Godmode-GPT/tree/4e1dc7055580ab9bb3ce85114f9e17950ac96d7b,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for app according to the instructions on v0.2.2 READMe.md
+FOLLGAD/Godmode-GPT,https://github.com/FOLLGAD/Godmode-GPT/tree/4e1dc7055580ab9bb3ce85114f9e17950ac96d7b,absence of final output,/,aught in error loop "No Text to summary","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for app according to the instructions on v0.2.2 READMe.md
 2. Run app in continuous mode.
 3.Let app execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if app enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -2521,7 +2521,7 @@ autogpt/memory/context/memory_item.py
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 BillSchumacher/Auto-GPT,https://github.com/BillSchumacher/Auto-GPT/tree/bdd07b18bea674cf756ebfb3a0a8915042d9126f,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","autogpt/agent/agent.py
 autogpt/chat.py",The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-BillSchumacher/Auto-GPT,https://github.com/BillSchumacher/Auto-GPT/tree/bdd07b18bea674cf756ebfb3a0a8915042d9126f,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+BillSchumacher/Auto-GPT,https://github.com/BillSchumacher/Auto-GPT/tree/bdd07b18bea674cf756ebfb3a0a8915042d9126f,absence of final output,/,aught in error loop "No Text to summary","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -2821,7 +2821,7 @@ autogpt/memory/context/memory_item.py
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 amauryfischer/Auto-GPT-WebUI,https://github.com/amauryfischer/Auto-GPT-WebUI/tree/cea68df18f309b094912bdaa6ce2cd484dca5a13,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","autogpt/agent/agent.py
 autogpt/chat.py",The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-amauryfischer/Auto-GPT-WebUI,https://github.com/amauryfischer/Auto-GPT-WebUI/tree/cea68df18f309b094912bdaa6ce2cd484dca5a13,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+amauryfischer/Auto-GPT-WebUI,https://github.com/amauryfischer/Auto-GPT-WebUI/tree/cea68df18f309b094912bdaa6ce2cd484dca5a13,absence of final output,/,aught in error loop "No Text to summary","IC,ST",autogpt/agent/agent.py/start_interaction_loop(self),"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -3038,7 +3038,7 @@ CRITICISM:  I need to make sure that I am thorough in my analysis 
 NEXT ACTION:  COMMAND = read_file ARGUMENTS = {'file': 'WoWinArabic_Chat.lua'}
 Enter 'y' to authorise command, 'y -N' to run N continuous commands, 'n' to exit program, or enter feedback for ...
 Input:y"
-ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,,case10," It shows "" This model's maximum context length is 8191 tokens  """,ST,"autogpts/autogpt/autogpt/config/config.py/__init__(self)
+ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,,case10, It shows " This model's maximum context length is 8191 tokens  ",ST,"autogpts/autogpt/autogpt/config/config.py/__init__(self)
 autogpts/autogpt/autogpt/processing/text.py/split_text(), summarize_text()","1.Complete the environment setup for AutoGPT(v<=0.2.1)
 2.Set  ""Auto-GPT\autogpt\llm_utils.py"" as : see https://github.com/Significant-Gravitas/AutoGPT/issues/2366
 3.Content of the txt file mentioned in llm_utils.py: see https://github.com/Significant-Gravitas/AutoGPT/issues/2366
@@ -3132,7 +3132,7 @@ ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e
 5.Perform an action that uses the append_to_file command, specifying the same file and additional text to append.
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL",autogpts/forge/forge/agent.py,The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",autogpts/forge/forge/agent.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+ATheorell/AutoGPTArenaHack,https://github.com/ATheorell/AutoGPTArenaHack/tree/1e4f2dc004b92b9f236543674f94fb9f0af9bb2e,absence of final output,/,aught in error loop "No Text to summary","IC,ST",autogpts/forge/forge/agent.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -3413,7 +3413,7 @@ scripts/commands.py","1.Configure and launch Auto-GPT according to the in
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 catid/Supercharger-Auto-GPT,https://github.com/catid/Supercharger-Auto-GPT/tree/2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","scripts/agent_manager.py
 scripts/chat.py",The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-catid/Supercharger-Auto-GPT,https://github.com/catid/Supercharger-Auto-GPT/tree/2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",scripts/agent_manager.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+catid/Supercharger-Auto-GPT,https://github.com/catid/Supercharger-Auto-GPT/tree/2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29,absence of final output,/,aught in error loop "No Text to summary","IC,ST",scripts/agent_manager.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -3696,7 +3696,7 @@ scripts/commands.py","1.Configure and launch Auto-GPT according to the in
 6. Check the contents of the file after each action to see if the text is being overwritten or appended correctly."
 edik7333/Auto-GPT-llama-cpp,https://github.com/edik7333/Auto-GPT-llama-cpp/tree/2b4bf189825c0abe28bf6f020b87921d82636d67,Imprecise knowledge retrieval,/,Add Recency and Importance for Memory Retrieval,"IC,SL","scripts/agent_manager.py
 scripts/chat.py",The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.
-edik7333/Auto-GPT-llama-cpp,https://github.com/edik7333/Auto-GPT-llama-cpp/tree/2b4bf189825c0abe28bf6f020b87921d82636d67,absence of final output,/,"aught in error loop ""No Text to summary""","IC,ST",scripts/agent_manager.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+edik7333/Auto-GPT-llama-cpp,https://github.com/edik7333/Auto-GPT-llama-cpp/tree/2b4bf189825c0abe28bf6f020b87921d82636d67,absence of final output,/,aught in error loop "No Text to summary","IC,ST",scripts/agent_manager.py,"1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
 2. Run AutoGPT in continuous mode.
 3.Let Auto GPT execute ""browse_website"" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
 4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again."
@@ -3982,7 +3982,7 @@ python/ocr/surya/app.py","
 Regarding completion_chunk"
 labring/FastGPT,https://github.com/labring/FastGPT/tree/05bf1b22653f8699b85098db3e86a7f29bdc2895,Missing LLM input format validation,case1,The analysis of PPT documents needs optimization,IC,packages/service/common/file/read/utils.ts/read,"
 
-1. Use FsatGPT online: https://fastgpt.in/
+1. Use FastGPT online: https://fastgpt.in/
 2. Create a new knowledge base.
 3. In the ""Dataset"" interface, select the ""Create/Import"" tab and choose ""Text Dataset.""
 4. Upload the pptx file.
@@ -4049,7 +4049,7 @@ python/bdg-rerank/bdg-reranker-/app.py","1.Upload an xlsx file with around�
 labring/FastGPT,https://github.com/labring/FastGPT/tree/05bf1b22653f8699b85098db3e86a7f29bdc2895,,case2,Knowledge base search cannot accurately identify the number,IC,src/global/core/call/dataset,"1.Import the knowledge base with serial number/model data
 2.We have tried Q&A training and document uploading to the knowledge base to ensure that the numbered keywords have been covered by the knowledge base multiple times.
 3.Neither semantic retrieval nor full-text retrieval can accurately point to the relevant knowledge."
-labring/FastGPT,https://github.com/labring/FastGPT/tree/05bf1b22653f8699b85098db3e86a7f29bdc2895,,case3,"The bot's replies always contain garbled characters and consistently display ""retrieving file"".",IC,It's an issue with the user's gpt-4o model channel,"1.In the ""Workbench"", create a new ""Workflow"".
+labring/FastGPT,https://github.com/labring/FastGPT/tree/05bf1b22653f8699b85098db3e86a7f29bdc2895,,case3,The bot's replies always contain garbled characters and consistently display "retrieving file".,IC,It's an issue with the user's gpt-4o model channel,"1.In the ""Workbench"", create a new ""Workflow"".
 2.In the ""Question Classification"" module, select the AI model as gpt-4o.
 3.After successfully creating the application, start the conversation.
 4.The bot's responses in the conversation always contain garbled characters."
@@ -4068,7 +4068,7 @@ python/bge-rerank/bge-reranker-base/app.py","
 Regarding completion_chunk"
 c121914yu/FastGPT,https://github.com/c121914yu/FastGPT/tree/2ae8d43216d4e6fb739143c3cc12285fed048596,Missing LLM input format validation,case1,The analysis of PPT documents needs optimization,IC,packages/service/common/file/read,"
 
-1. Use FsatGPT online: https://fastgpt.in/
+1. Use FastGPT online: https://fastgpt.in/
 2. Create a new knowledge base.
 3. In the ""Dataset"" interface, select the ""Create/Import"" tab and choose ""Text Dataset.""
 4. Upload the pptx file.
@@ -4135,7 +4135,7 @@ python/bdg-rerank/bdg-reranker-/app.py","1.Upload an xlsx file with around�
 c121914yu/FastGPT,https://github.com/c121914yu/FastGPT/tree/2ae8d43216d4e6fb739143c3cc12285fed048596,,case2,Knowledge base search cannot accurately identify the number,IC,src/global/core/call/dataset,"1.Import the knowledge base with serial number/model data
 2.We have tried Q&A training and document uploading to the knowledge base to ensure that the numbered keywords have been covered by the knowledge base multiple times.
 3.Neither semantic retrieval nor full-text retrieval can accurately point to the relevant knowledge."
-c121914yu/FastGPT,https://github.com/c121914yu/FastGPT/tree/2ae8d43216d4e6fb739143c3cc12285fed048596,,case3,"The bot's replies always contain garbled characters and consistently display ""retrieving file"".",IC,It's an issue with the user's gpt-4o model channel,"1.In the ""Workbench"", create a new ""Workflow"".
+c121914yu/FastGPT,https://github.com/c121914yu/FastGPT/tree/2ae8d43216d4e6fb739143c3cc12285fed048596,,case3,The bot's replies always contain garbled characters and consistently display "retrieving file".,IC,It's an issue with the user's gpt-4o model channel,"1.In the ""Workbench"", create a new ""Workflow"".
 2.In the ""Question Classification"" module, select the AI model as gpt-4o.
 3.After successfully creating the application, start the conversation.
 4.The bot's responses in the conversation always contain garbled characters."
@@ -4242,7 +4242,7 @@ client/src/api/model.ts
 client/src/pages/model/components/ModelList.tsx","1.Import the knowledge base with serial number/model data
 2.We have tried Q&A training and document uploading to the knowledge base to ensure that the numbered keywords have been covered by the knowledge base multiple times.
 3.Neither semantic retrieval nor full-text retrieval can accurately point to the relevant knowledge."
-SaudM/GPT-LMU-APP,https://github.com/SaudM/GPT-LMU-APP/tree/882ad9818e49ca004959e17a0f7d2580ebfedb10,,case3,"The bot's replies always contain garbled characters and consistently display ""retrieving file"".",IC,"client/src/pages/model/index.tsx
+SaudM/GPT-LMU-APP,https://github.com/SaudM/GPT-LMU-APP/tree/882ad9818e49ca004959e17a0f7d2580ebfedb10,,case3,The bot's replies always contain garbled characters and consistently display "retrieving file".,IC,"client/src/pages/model/index.tsx
 client/src/api/model.ts
 client/src/pages/model/components/ModelList.tsx","1.In the ""Workbench"", create a new ""Workflow"".
 2.In the ""Question Classification"" module, select the AI model as gpt-4o.
@@ -4333,7 +4333,7 @@ Abonia1/Context-Based-LLMChatbot,https://github.com/Abonia1/Context-Based-LLMCha
 app.py","1.Import the knowledge base with serial number/model data
 2.We have tried Q&A training and document uploading to the knowledge base to ensure that the numbered keywords have been covered by the knowledge base multiple times.
 3.Neither semantic retrieval nor full-text retrieval can accurately point to the relevant knowledge."
-Abonia1/Context-Based-LLMChatbot,https://github.com/Abonia1/Context-Based-LLMChatbot/tree/f21f7e157157d235e0b9ddd2fc997a7d33096da1,,case3,"The bot's replies always contain garbled characters and consistently display ""retrieving file"".",IC,"chat.py
+Abonia1/Context-Based-LLMChatbot,https://github.com/Abonia1/Context-Based-LLMChatbot/tree/f21f7e157157d235e0b9ddd2fc997a7d33096da1,,case3,The bot's replies always contain garbled characters and consistently display "retrieving file".,IC,"chat.py
 app.py","1.In the ""Workbench"", create a new ""Workflow"".
 2.In the ""Question Classification"" module, select the AI model as gpt-4o.
 3.After successfully creating the application, start the conversation.
@@ -6247,7 +6247,7 @@ frontend/src/components/EmbeddingSelection/CohereOptions/index.jsx","1. Set up A
 5. Enter a user query for embedding.
 6. Observe the embedding process to check if the query embeddings are being chunked per character instead of by word or sentence.(for example,KeyError: 'API_KEY') 
 7.Check Logs and Output: Review the application logs and console output for any additional error messages or stack traces that provide more details about the failure. Pay special attention to errors related to missing environment variables or incorrect configurations."
-Mintplex-Labs/anything-llm,https://github.com/Mintplex-Labs/anything-llm/tree/ebd3a62866e9e17b07a4a973b74329c0297fb78a,exceeding  LLM content limit,case1,"Azure OpenAI Embed API says: ""Too many inputs. The max number of inputs is 16.""",ST,"server/utils/helpers/tiktoken.js
+Mintplex-Labs/anything-llm,https://github.com/Mintplex-Labs/anything-llm/tree/ebd3a62866e9e17b07a4a973b74329c0297fb78a,exceeding  LLM content limit,case1,Azure OpenAI Embed API says: "Too many inputs. The max number of inputs is 16.",ST,"server/utils/helpers/tiktoken.js
 collector/utils/tokenizer/index.js","1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
 2. Configure Azure OpenAI Embed API: Integrate the Azure OpenAI Embed API with the project.
 3. Run Anything-LLM: Execute `python app.py` or the relevant command to start the server.
@@ -6283,7 +6283,7 @@ frasergr/anything-llm,https://github.com/frasergr/anything-llm/tree/5fa61458724f
 5. Enter a user query for embedding.
 6. Observe the embedding process to check if the query embeddings are being chunked per character instead of by word or sentence.(for example,KeyError: 'API_KEY') 
 7.Check Logs and Output: Review the application logs and console output for any additional error messages or stack traces that provide more details about the failure. Pay special attention to errors related to missing environment variables or incorrect configurations."
-frasergr/anything-llm,https://github.com/frasergr/anything-llm/tree/5fa61458724fd019a15e243b8db8e71bead950b5,exceeding  LLM content limit,case1,"Azure OpenAI Embed API says: ""Too many inputs. The max number of inputs is 16.""",ST,"frontend/src/models/system.js
+frasergr/anything-llm,https://github.com/frasergr/anything-llm/tree/5fa61458724fd019a15e243b8db8e71bead950b5,exceeding  LLM content limit,case1,Azure OpenAI Embed API says: "Too many inputs. The max number of inputs is 16.",ST,"frontend/src/models/system.js
 collector/scripts/utils.py
 collector/scripts/link.py","1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
 2. Configure Azure OpenAI Embed API: Integrate the Azure OpenAI Embed API with the project.
