@@ -3,7 +3,7 @@
   <img src="./Hydrangea.png" alt="Alt text" width="300" style="float: right; margin-left: 10px;">
 </div>
 
-This is the artifact for our ICSE2025 paper "[Are LLMs Correctly Integrated into Software Systems?](https://arxiv.org/abs/2407.05138)". It is publicly archived at [Figshare](https://figshare.com/articles/dataset/Hydrangea/28262426). This repository is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://opendatacommons.org/licenses/pddl/1.0/ - see the [LICENSE](./LICENSE) file for details. If you have any questions, please feel free to contact me via email(ycshao@stu.ecnu.edu.cn).
+This is the artifact for our ICSE2025 paper "[Are LLMs Correctly Integrated into Software Systems?](https://arxiv.org/abs/2407.05138)". It is publicly archived at [Figshare](https://figshare.com/articles/dataset/Hydrangea/28262426). This repository is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://opendatacommons.org/licenses/pddl/1.0/ - see the [LICENSE](./LICENSE) file for details. We are grateful for the contribution made by our anonymous collaborator. If you have any questions, please feel free to contact me via email(ycshao@stu.ecnu.edu.cn).
 
 Hydrangea is a defect library for LLM-enabled software. Hydrangea has 4 main petals, each corresponding to one of the major components where defects often arise: LLM agent, vector database, software component, and system.
 
