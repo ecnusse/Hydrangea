@@ -28,9 +28,9 @@ For enhanced availability and reusability, we offer an organized defect library 
 Below are details of what is included in each part:
 
 ### Application benchmark
-A suite of 100 non-trivial projects which tightly integrates LLMs and vector databases in their workflow.
+A suite of 100 non-trivial projects that tightly integrates LLMs and vector databases in their workflow.
 
-We have uploaded `application.csv`, it contains:
+We have uploaded `application.csv`, which contains:
 
    1. software project name
    2. GitHub link and commit ID
@@ -44,7 +44,7 @@ In the uploaded `defect.csv`, we have documented different cases for the same de
 
 It contains:
 
-A collection of defects in these projects (involves 100 projects),containing
+A collection of defects in these projects (involves 100 projects), containing
    1. the defect type and its detailed explanation
    2. the exact file and source-code line location of the defect
    3. the consequences of defect
@@ -60,4 +60,14 @@ The meaning of different columns in `defect.csv`:
    7. **source-code locations**: The location of the code file where the defect occurs.
    8. **defect-triggering tests**: The software input that triggers the defect.
 
+## Quick Start-How to use Hydranger?
+<div style="overflow: auto;">
+  <img src="./pic4tutorial.png" alt="Alt text" width="800" style="float: right; margin-left: 10px;">
+</div>
 
+Take **LocalAGI** as an example. It makes plans to guide users to achieve their goals. However, due to its infinite loop design with time intervals, it repeatedly refines a subset of the generated steps, without providing a final version that contains all the refinements. Making things worse, this loop could only be broken by terminating the entire application, significantly degrading user experience.
+
+### Tutorial
+   1. Open `application.csv` to find the corresponding GitHub link and commit ID for this application.
+   2. Review `defect.csv` to get an overview of the defect and the associated defect-triggering tests.
+   3. You can attempt to reproduce the issue.
