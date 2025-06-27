@@ -3,8 +3,7 @@
   <img src="./Hydrangea.png" alt="Alt text" width="300" style="float: right; margin-left: 10px;">
 </div>
 
-**Yuchen Shao<sup>1,2</sup>**, **Yuheng Huang<sup>3</sup>**, **Jiawei Shen<sup>2</sup>**,  
-**Lei Ma<sup>3,4</sup>**, **Ting Su<sup>2</sup>**, **Chengcheng Wan<sup>1,2</sup><sup>*</sup>**  
+**Yuchen Shao<sup>1,2</sup>**, **Yuheng Huang<sup>3</sup>**, **Jiawei Shen<sup>2</sup>**, **Lei Ma<sup>3,4</sup>**, **Ting Su<sup>2</sup>**, **Chengcheng Wan<sup>1,2</sup><sup>*</sup>**  
 <sup>1</sup> Shanghai Innovation Institute  
 <sup>2</sup> Software Engineering Institute, East China Normal University, Shanghai, China  
 <sup>3</sup> Department of Computer Science, The University of Tokyo, Tokyo, Japan  
