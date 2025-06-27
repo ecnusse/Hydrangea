@@ -3,6 +3,13 @@
   <img src="./Hydrangea.png" alt="Alt text" width="300" style="float: right; margin-left: 10px;">
 </div>
 
+**Yuchen Shao<sup>1,2</sup>**, **Yuheng Huang<sup>3</sup>**, **Jiawei Shen<sup>2</sup>**,  
+**Lei Ma<sup>3,4</sup>**, **Ting Su<sup>2</sup>**, **Chengcheng Wan<sup>1,2</sup><sup>*</sup>**  
+<sup>1</sup> Shanghai Innovation Institute  
+<sup>2</sup> Software Engineering Institute, East China Normal University, Shanghai, China  
+<sup>3</sup> Department of Computer Science, The University of Tokyo, Tokyo, Japan  
+<sup>4</sup> University of Alberta, Edmonton, AB, Canada  
+
 This is the artifact for our ICSE2025 paper "[Are LLMs Correctly Integrated into Software Systems?](https://arxiv.org/abs/2407.05138)". It is publicly archived at [Figshare](https://figshare.com/articles/dataset/Hydrangea/28262426). This repository is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://opendatacommons.org/licenses/pddl/1.0/ - see the [LICENSE](./LICENSE) file for details. If you have any questions, please feel free to contact me via email(ycshao@stu.ecnu.edu.cn).
 
 We are grateful for the contribution made by our anonymous collaborator. The `defect.csv` file has been updated accordingly. You can review the latest updates!
