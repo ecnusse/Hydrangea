@@ -1,0 +1,20 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-incompatible_llm_output_format-case4
+type: Incompatible LLM output format
+case: '4'
+consequence:
+- IC
+locations:
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Perform the Environment Setup: Follow the setup instructions in the project''s
+  README.
+
+  3.Ask the Question: Input the question "What is the most fundamental right in America?".
+
+  4.Observe the Response: Notice that while the response references the correct document,
+  it doesn''t align with the source content accurately.'

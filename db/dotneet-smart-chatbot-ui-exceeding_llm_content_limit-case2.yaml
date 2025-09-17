@@ -1,0 +1,24 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-exceeding_llm_content_limit-case2
+type: exceeding LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- types/llmUsage.ts, components/Chat/ChatInputTokenCount.tsx, utils/server/message.ts,
+  pages/api/chat.ts, types/openai.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure that the Chatbot UI project is correctly set up and
+  configured in your local environment according to the project documentation. 2.
+  Engage in a Long Conversation: Initiate a conversation with the chatbot and continue
+  interacting until the conversation becomes lengthy. 3. Observe Response Truncation:
+  Monitor the chatbot''s responses. Specifically, check if new responses from the
+  model are being truncated or cut off. This behavior may indicate that the token
+  limit for the model''s responses is being exceeded. 4. Real test confirmed: The
+  createMessagesToSend function in utils/server/message.ts removes older messages
+  when token limit is exceeded, causing conversation context loss and response truncation.
+  5. Real test results: 40-message conversation had 8 messages truncated, 100-message
+  conversation had 53 messages truncated, demonstrating severe context loss in long
+  conversations.'

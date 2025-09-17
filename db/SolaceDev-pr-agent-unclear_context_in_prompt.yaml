@@ -1,0 +1,17 @@
+app: pr-agent
+repo: https://github.com/SolaceDev/pr-agent
+commit: 5c768572233adb5fb9eadef21a184410b30b5603
+defect_id: SolaceDev-pr-agent-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- docs/docs/tools/custom_prompt.md
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

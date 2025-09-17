@@ -1,0 +1,14 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/app/scene/chat_dashboard
+trigger_tests:
+- '1.Enter the "Dashboard" scene.
+
+  2.Attempt to view previous chats, but their chat reports cannot be viewed.'

@@ -1,0 +1,14 @@
+app: babyagi-ui
+repo: https://github.com/Christopher-Hayes/babyagi-node-js
+commit: 3f71b1bd4edea6eb2a063d2ccf540fa309114925
+defect_id: miurla-babyagi-ui-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- src/index.ts
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.'

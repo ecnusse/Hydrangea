@@ -1,0 +1,49 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case5
+type: exceeding LLM content limit
+case: '5'
+consequence:
+- ST
+- IC
+locations:
+- scripts/config.py scripts/llm_utils.py
+trigger_tests:
+- '1.Install all the dependencies and run as "python -m autogpt -c" 2.Give the prompt:
+  Goal 1: Please analyze the home page of http://mathrubhumi.com Goal 2: Provide feedback
+  on the website''s design and functionality Continuous Mode: ENABLED Name: Entrepreneur-GPT
+  Role: an AI designed to autonomously develop and run businesses with the goal of
+  analyzing the website http://mathrubhumi.com and provide feedback Continue (y/n):
+  y Using memory of type: RedisMemory Using Browser: chrome 3. According to the user''s
+  logs, the next steps are as follows: THOUGHTS: I will start by analyzing the home
+  page of http://mathrubhumi.com to provide feedback. REASONING: Analyzing the home
+  page will give me an idea of the website''s design, layout, and content, which will
+  help me determine if there are any areas that need improvement. PLAN: - Analyze
+  the home page of http://mathrubhumi.com - Provide feedback on the website''s design,
+  layout, and content CRITICISM: I need to ensure that my feedback is constructive
+  and actionable. NEXT ACTION: COMMAND = browse_website ARGUMENTS = {''url'': ''http://mathrubhumi.com
+  '', ''question'': "Provide feedback on the website''s design, layout, and content."}
+  Text length: 8180 characters Adding chunk 1 / 3 to memory Summarizing chunk 1 /
+  3 of length 3078 characters, or 2975 tokens SYSTEM: Command browse_website returned:
+  ("Answer gathered from website: The text does not provide information about the
+  design and user experience of the Mathrubhumi website. It contains news articles
+  and features on various topics such as politics, environment, sports, and entertainment.
+  Some articles are available for free, while others require a premium subscription.
+  The website also includes special pages for events like Vishu, Ramzan, and IPL 2023.
+  \n \n Links: [''\\n\\n (javascript:void(0))'', ''\\n\\n\\n (https://www.mathrubhumi.com/
+  )'', ''\\nMALAYALAM (http://mathrubhumi.com/ )'', ''\\nENGLISH (https://english.mathrubhumi.com/
+  )'', ''\\nNewspaper (https://newspaper.mathrubhumi.com/ )'']", <selenium.webdriver.chrome.webdriver.WebDriver
+  (session="f00359f317ac17df84fd2258bd7da2ef")>) - Thinking... an read more here:
+  https://github.com/Significant-Gravitas/Auto-GPT#openai-api-keys-configuration THOUGHTS:
+  Based on the information gathered, I suggest we use the ''get_hyperlinks'' command
+  to get a list of hyperlinks on the Mathrubhumi website. REASONING: Getting a list
+  of hyperlinks will allow us to explore the website in more detail and gain a better
+  understanding of its design and user experience. PLAN: - Use the ''get_hyperlinks''
+  command to get a list of hyperlinks on the Mathrubhumi website. CRITICISM: I need
+  to ensure that I am thorough in my exploration of the website and not overlook any
+  important information. NEXT ACTION: COMMAND = get_hyperlinks ARGUMENTS = {''url'':
+  ''http://mathrubhumi.com ''} 4.After the get_hyperlinks command, the following error
+  should appear: openai.error.InvalidRequestError: This model''s maximum context length
+  is 8191 tokens, however you requested 11945 tokens (11945 in your prompt; 0 for
+  the completion). Please reduce your prompt; or completion length.'

@@ -1,0 +1,36 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- src/agents/task_creation_agent.py
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.E
+
+  2.Set the project.objective as "Have a fun day" and project.first_task as "Develop
+  a task list".
+
+  3.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example1:
+
+  Task 2: Attend a virtual Indian classical dance performance to witness the grace
+  and beauty of traditional dance forms like Bharatanatyam, Kathak, or Odissi for
+  a mesmerizing and cultural experience
+
+  Task 8: Join a virtual Indian classical dance workshop to learn traditional dance
+  forms like Bharatanatyam, Kathak, or Odissi for a graceful and expressive dance
+  experience
+
+  Example2:
+
+  Task 4: Attend a virtual Indian traditional music concert to enjoy live performances
+  of classical Indian music genres like Hindustani or Carnatic for a soulful and
+
+  Task 9: Participate in a virtual Indian classical music instrumental concert to
+  enjoy live performances of traditional Indian instruments like the sarangi, santoor,
+  or shehnai for a melodic and cultural musical showcase'

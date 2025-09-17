@@ -1,0 +1,20 @@
+app: IncarnaMind
+repo: https://github.com/junruxiong/IncarnaMind
+commit: 75564a3bf08d0006387889cdc9a76fc509ededd8
+defect_id: junruxiong-IncarnaMind-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- toolkit/together_api_llm.py
+- docs2db.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

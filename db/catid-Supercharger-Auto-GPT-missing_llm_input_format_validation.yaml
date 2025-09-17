@@ -1,0 +1,15 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- 'scripts/file_operations.py: read_file'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Create non-UTF8 file at auto_gpt_workspace/project-plan-form.htm
+  (with 0xA0 bytes); 3) Launch: python scripts/main.py --continuous --gpt3only; 4)
+  Use prompts to read the file; 5) Observe UnicodeDecodeError and repeated retry attempts
+  with different encodings.'

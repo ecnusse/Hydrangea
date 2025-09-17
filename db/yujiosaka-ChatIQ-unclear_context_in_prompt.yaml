@@ -1,0 +1,17 @@
+app: ChatIQ
+repo: https://github.com/yujiosaka/ChatIQ
+commit: def21481b0c132173b51d1d7a314b103db324ca2
+defect_id: yujiosaka-ChatIQ-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- chatiq/prompt.py chatiq/chat_chain.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

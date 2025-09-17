@@ -1,0 +1,13 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- SL
+locations:
+- backend/models/brains.py, backend/routes/user_routes.py
+trigger_tests:
+- Deploy locally, feed about 20 files to default brain, observe ~5 seconds loading
+  time on page refresh due to brain size calculation and file retrieval without caching

@@ -1,0 +1,13 @@
+app: Chatgpt-babyagi-plugin
+repo: https://github.com/benjaminearlevans/Chatgpt-babyagi-plugin
+commit: 771a5ba6e6b69c30020da7a139ccec868b4a3dc7
+defect_id: benjaminearlevans-Chatgpt-babyagi-plugin-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- openapi.yaml
+- main.py
+trigger_tests:
+- Upload the pptx file.

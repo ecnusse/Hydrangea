@@ -1,0 +1,18 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- paper_experiments/doc_qa_task/doc_qa.py
+- letta/schemas/openai/chat_completion_response.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

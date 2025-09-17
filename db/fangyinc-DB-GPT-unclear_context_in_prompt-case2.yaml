@@ -1,0 +1,23 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- 1.packages/dbgpt-app/src/dbgpt_app/scene/chat_knowledge/v1/chat.py
+- 2.packages/dbgpt-app/src/dbgpt_app/scene/chat_knowledge/v1/prompt.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a PDF knowledge file (e.g., "The Little Prince") to the knowledge base.
+
+  3.Ask the question: "What are the characteristics of fairy tales?"
+
+  4.LLM response: "Fairy tales typically include magical elements, moral education,
+  and imaginative descriptions that differ from reality." that not reference knowledge
+  base.
+
+  llm: gpt-3.5-turbo.'

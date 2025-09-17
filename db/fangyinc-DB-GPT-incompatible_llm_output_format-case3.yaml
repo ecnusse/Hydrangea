@@ -1,0 +1,22 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-incompatible_llm_output_format-case3
+type: Incompatible LLM output format
+case: '3'
+consequence:
+- UI
+locations:
+- packages/dbgpt-core/src/dbgpt/_private/config.py
+trigger_tests:
+- '1.Add a database to the system.
+
+  2.Enter the "Chat Data" scenario.
+
+  3.Ask a question in Chinese: "今天天气怎么样？"
+
+  4.LLM responds in English: "I''m sorry, I do not have access to real-time weather
+  information. You may want to check a weather website or app for the current weather."
+
+  Issue:LLM fails to follow user''s language preference and responds in English instead
+  of Chinese, creating inconsistent user experience.'

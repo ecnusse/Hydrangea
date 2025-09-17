@@ -1,0 +1,23 @@
+app: Robby-chatbot
+repo: https://github.com/yvann-hub/Robby-chatbot
+commit: 5beb6894c8ba0d0b67188ba2be568a2a22a00491
+defect_id: yvann-hub-Robby-chatbot-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- src/modules/robby_sheet/table_tool.py
+- src/modules/chatbot.py
+trigger_tests:
+- '1. Set up Robby-chatbot: Ensure the project is correctly set up in your local environment.
+
+  2. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  3. Open the upload interface in the web UI.
+
+  4. Attempt to upload multiple CSV files.
+
+  5. Observe if the application fails to handle the upload of multiple CSV files for
+  the chatbot.'

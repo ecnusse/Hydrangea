@@ -1,0 +1,24 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- private_gpt/settings/settings.py
+- private_gpt/components/llm/custom/sagemaker.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the PrivateGPT project is correctly set up in your
+  local environment.
+
+  2.Configure Environment Variables: Ensure the MODEL_N_CTX value is set in the .env
+  file.
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Long Query: Input a query that exceeds the context window size.
+
+  5.Observe the Error: Notice the error message indicating that the prompt size exceeds
+  the context window size and cannot be processed.'

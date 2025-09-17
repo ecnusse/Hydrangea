@@ -1,0 +1,20 @@
+app: langchain-ChatGLM
+repo: https://github.com/ExpressGit/langchain-ChatGLM
+commit: 21035d7706b24956f845c65e1492690abbb07d8b
+defect_id: ExpressGit-langchain-ChatGLM-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- models/llama_llm.py
+- models/base.py
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

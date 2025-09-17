@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case7
+type: Missing LLM input format validation
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- projects/app/src/service/core/dataset/data/pg.ts;projects/app/src/service/moduleDispatch/agent/extract.ts;projects/app/src/service/moduleDispatch/agent/classifyQuestion.ts
+trigger_tests:
+- '1. Use Tool call to access multiple knowledge bases; 2. Each knowledge base reference
+  limit is below 3000 tokens; 3. Start a chat, and the questions call 2 knowledge
+  bases, but it shows that the tokens exceed the model''s limit of 16k; 4. Root cause:
+  filterResultsByMaxTokens function only considers individual knowledge base tokens
+  without global coordination'

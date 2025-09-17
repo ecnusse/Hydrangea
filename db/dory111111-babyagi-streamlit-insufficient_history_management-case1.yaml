@@ -1,0 +1,26 @@
+app: babyagi-streamlit
+repo: https://github.com/dory111111/babyagi-streamlit
+commit: 088aa7376c39d541543a3518df8bd5db46633f51
+defect_id: dory111111-babyagi-streamlit-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Set the environment variables: OBJECTIVE=Solve world hunger INITIAL_TASK=Develop
+  a task list
+
+  3. Observe the tasks and outcoms, until you notice the repeated tasks.
+
+  Example:
+
+  Task 14: Investigate the use of drone technology for food delivery in remote areas
+  with high levels of hunger
+
+  Task 16: Investigate the use of drones for delivering food aid to remote areas with
+  high levels of hunger'

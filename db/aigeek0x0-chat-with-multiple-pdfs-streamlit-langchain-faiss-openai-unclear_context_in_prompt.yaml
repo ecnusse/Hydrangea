@@ -1,0 +1,17 @@
+app: chat-with-multiple-pdfs-streamlit-langchain-faiss-openai
+repo: https://github.com/aigeek0x0/chat-with-multiple-pdfs-streamlit-langchain-faiss-openai
+commit: 3cc2b0ac1522d6a78a998759ea212052ddefb3b7
+defect_id: aigeek0x0-chat-with-multiple-pdfs-streamlit-langchain-faiss-openai-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- app.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

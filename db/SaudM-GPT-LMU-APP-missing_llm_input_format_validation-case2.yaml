@@ -1,0 +1,14 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- IC
+locations:
+- client/src/pages/api/openapi/kb/pushData.ts; client/src/api/plugins/kb.ts; client/src/service/pg.ts
+trigger_tests:
+- '1) POST wrong body -> 500. 2) POST correct body: kbId=KB_ID, mode=index, data=[{q:
+  There’s a pretty good restaurant near Xidian University in Xi’an., a: empty}] ->
+  200.'

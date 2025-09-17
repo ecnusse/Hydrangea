@@ -1,0 +1,19 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-absence_of_final_output-/
+type: absence of final output
+case: /
+consequence:
+- IC
+- ST
+locations:
+- 'scripts/browse.py: scrape_text and summarize_text functions; scripts/commands.py:
+  browse_website function'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch AutoGPT in continuous mode; 3) Execute
+  browse_website command on problematic URL; 4) Observe scrape_text returns "Error:
+  HTTP 404 error"; 5) Observe summarize_text returns "Error: No text to summarize"
+  for empty/error text; 6) Observe browse_website combines error messages; 7) AutoGPT
+  may retry same URL or search for alternatives; 8) This creates infinite loop: search
+  -> problematic URL -> browse error -> retry -> same URL -> repeat.'

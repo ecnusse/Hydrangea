@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-imprecise_knowledge_retrieval-case2
+type: Imprecise knowledge retrieval
+case: '2'
+consequence:
+- IC
+locations:
+- projects/app/src/service/core/dataset/utils.ts;projects/app/src/service/core/dataset/data/pg.ts;projects/app/src/service/core/dataset/data/controller.ts;packages/global/common/string/jieba.ts
+trigger_tests:
+- '1. Import knowledge base with serial number/model data; 2. Try Q&A training and
+  document uploading to ensure numbered keywords are covered multiple times by the
+  knowledge base; 3. Test both semantic retrieval and full-text retrieval, but neither
+  can accurately point to relevant knowledge; 4. Root cause: jieba segmentation may
+  affect number integrity, MongoDB full-text index has limited support for numbers'

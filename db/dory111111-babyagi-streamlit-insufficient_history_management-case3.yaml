@@ -1,0 +1,26 @@
+app: babyagi-streamlit
+repo: https://github.com/dory111111/babyagi-streamlit
+commit: 088aa7376c39d541543a3518df8bd5db46633f51
+defect_id: dory111111-babyagi-streamlit-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- "1.Clone the repository via git clone https://github.com/dory111111/babyagi-streamlit.git and cd into the cloned repository.\n\
+  2.Install the required packages: pip install -r requirements.txt\n3.Copy the .env.example file to .env: cp .env.example .env. This is where you will set the following variables.\n\
+  4.Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables. In order to use with Pinecone\
+  \ you will also need to setup additional variables detailed here.\n5.Set the name of the table where the task results will be stored in the TABLE_NAME variable.\n\
+  6.(Optional) Set the name of the BabyAGI instance in the BABY_NAME variable.\n7.Set the OBJECTIVE variable as \"\
+  Have a fun day.\"\n8.Set the INITIAL_TASK variable as \"1.Make a list of tasks\"\
+  .\n9.Run the script: python babyagi.py\n10.After several rounds of task generation, check whether the newly generated task lists ignore the preceding task results.\n\
+  Example:\nTask 6: Visit a local art gallery or museum to appreciate and immerse\
+  \ yourself in the beauty of various artworks and exhibits. Take your time to explore\
+  \ different art styles and interpretations.\nTask 10: Explore a local art gallery\
+  \ or museum to appreciate the creativity and talent of various artists. Take your\
+  \ time to admire the exhibits and learn more about different art forms. \nTask 16:\
+  \ Explore a new art exhibit or gallery in your city. Immerse yourself in creativity\
+  \ and appreciate the work of talented artists. Take your time to admire each piece\
+  \ and gain inspiration from different."

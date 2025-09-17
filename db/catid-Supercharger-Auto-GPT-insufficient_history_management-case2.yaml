@@ -1,0 +1,16 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- 'scripts/memory.py: permanent_memory; scripts/commands.py: commit_memory; scripts/chat.py:
+  inject permanent_memory into current_context; scripts/chat.py: append to full_message_history'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch: python scripts/main.py --continuous
+  --gpt3only; 3) Task: download https://example.com/non-existent-file.pdf until success;
+  write progress to reports/analysis.txt; 4) Observe repeated browse/google/write_to_file
+  cycles indicating retries due to metadata-less memories.'

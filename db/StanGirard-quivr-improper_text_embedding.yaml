@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- SL
+locations:
+- backend/utils/vectors.py, backend/celery_worker.py
+trigger_tests:
+- Upload CSV file with 30+ columns and 2000+ rows, system processes ~100 records then
+  times out with "Error creating vector for document timed out" and "'NoneType' object
+  is not iterable" errors

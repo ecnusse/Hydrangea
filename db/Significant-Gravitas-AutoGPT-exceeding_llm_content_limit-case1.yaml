@@ -1,0 +1,18 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- AutoGPT/forge/forge/llm/providers/openai.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  2.(cli mode)Use the command: "./autogpt.sh --continuous" to start AutoGPT in continuous mode.
+
+  3.Simulate API Quota Depletion:Ensure that your OpenAI API quota is depleted. This can be done by using up your available credits or not having sufficient pre-paid balance on your OpenAI account.
+
+  4.Allow AutoGPT to make several API requests to OpenAI, which will result in "429 Too Many Requests" errors due to the depleted API quota.'

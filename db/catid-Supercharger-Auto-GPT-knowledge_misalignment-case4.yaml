@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-knowledge_misalignment-case4
+type: knowledge misalignment
+case: '4'
+consequence:
+- IC
+locations:
+- 'scripts/browse.py: split_text function'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Create text with very small last paragraph;
+  3) Test split_text() with max_length=1000; 4) Observe chunks: first empty (0 chars),
+  middle large (5200 chars), last tiny (21 chars); 5) Test overlap processing with
+  overlap_size=500; 6) Observe "overlap size (500) > last chunk size (21)" error;
+  7) This indicates split_text() cannot handle overlap when last chunk is too small;
+  8) May cause token overflow errors when processing large files.'

@@ -1,0 +1,17 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- scripts/chat.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  2.In manual mode, do not interact with Auto-GPT for "a long time" (3 hours for example).
+
+  3.Try to interact with Auto-GPT again and observe if you encounter any API errors or connection timeouts.'

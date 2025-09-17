@@ -1,0 +1,18 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- RealChar/realtime_ai_character/llm/openai_llm.py
+trigger_tests:
+- '1.In the RealChar UI, select a character to converse with.
+
+  2.Ask the character a question that requires reasoning or arithmetic calculation,
+  like:
+
+  “Xiao Ming has 3 apples. He gives 1 to Xiao Hong. How many apples does Xiao Ming
+  have now?”'

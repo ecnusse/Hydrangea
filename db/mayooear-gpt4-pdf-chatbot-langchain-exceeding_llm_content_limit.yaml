@@ -1,0 +1,29 @@
+app: gpt4-pdf-chatbot-langchain
+repo: https://github.com/mayooear/gpt4-pdf-chatbot-langchain
+commit: 66d183f6b207fa1d92153a430c620c58b01e9b1c
+defect_id: mayooear-gpt4-pdf-chatbot-langchain-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- IC
+locations:
+- ingest-data.ts
+trigger_tests:
+- '1. Set up GPT4 PDF Chatbot LangChain: Ensure the project is correctly set up in
+  your local environment.
+
+  2. Configure Pinecone: Ensure Pinecone is properly set up and integrated.
+
+  3. Upload a large PDF document or dataset that could exceed typical message size
+  limits.
+
+  4. Run the Chatbot: Execute `python app.py` or the relevant command to start the
+  server.
+
+  5. Open the chat interface in the web UI.
+
+  6. Enter a query that processes the large PDF document or dataset.
+
+  7. Observe if a PineconeError occurs, specifically an error message indicating that
+  the message length is too large, such as "found 5453452 bytes, the limit is: 4194304
+  bytes."'

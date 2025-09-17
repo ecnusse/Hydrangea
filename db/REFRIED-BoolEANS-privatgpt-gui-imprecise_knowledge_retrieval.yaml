@@ -1,0 +1,23 @@
+app: privatgpt-gui
+repo: https://github.com/REFRIED-BoolEANS/privatgpt-gui
+commit: 840675927b1ace596dcc2c8ed0f6f483805e33fe
+defect_id: REFRIED-BoolEANS-privatgpt-gui-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly configured in your local
+  environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Open the GUI: Access the web UI.
+
+  4. Attempt to Upload a File: Try uploading a file with a size greater than 50MB.
+
+  5. Observe the Behavior: Notice if an error occurs or if the upload fails.'

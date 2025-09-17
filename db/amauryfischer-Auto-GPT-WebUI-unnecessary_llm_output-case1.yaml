@@ -1,0 +1,22 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-unnecessary_llm_output-case1
+type: unnecessary LLM output
+case: '1'
+consequence:
+- IC
+- UI
+locations:
+- autogpt/chat.py
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.(Use releases before v0.5.0)
+
+  2.Create an AI agent.
+
+  3.Start AutoGPT. Authorize these commands and observe their outputs: 
+
+  (1) list_files ARGUMENTS = {''directory'': ''....\auto_gpt_workspace''} --> SYSTEM: Failure: command list_files returned too much output. Do not execute this command again with the same arguments.
+
+  (2)read_file ARGUMENTS = {''filename'': ''...smoketests_basic_qemu.yml''} --> SYSTEM: Failure: command read_file returned too much output. Do not execute this command again with the same arguments.'

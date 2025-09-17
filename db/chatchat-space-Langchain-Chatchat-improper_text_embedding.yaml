@@ -1,0 +1,24 @@
+app: Langchain-Chatchat
+repo: https://github.com/chatchat-space/Langchain-Chatchat
+commit: bc7f01925fe49c622cf7d6e2540c03fd5a0679e1
+defect_id: chatchat-space-Langchain-Chatchat-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- IC
+- ST
+locations:
+- libs/chatchat-server/chatchat/server/localai_embeddings.py/embed_with_retry
+- libs/python-sdk/open_chatcaht/api/knowledge_base/knowledge_base_client.py/recreate_vector_store
+- libs/chatchat-server/chatchat/webui_pages/utils.py/recreate_vector_store
+- libs/chatchat-server/chatchat/server/knowledge_base/kb_cache/faiss_cache.py/faiss_cache.py
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment with the necessary dependencies.
+
+  2.Use Elasticsearch for Vector Database: Configure Elasticsearch as the vector database.
+
+  3.Add Markdown Documents: Add multiple markdown documents to the knowledge base.
+
+  4.Observe Failures: Notice that some markdown documents fail to vectorize properly,
+  with errors like "index creation failed" and "index already exists."'

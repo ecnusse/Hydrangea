@@ -1,0 +1,27 @@
+app: Chat-with-Pdf-using-Qdrant-vector-database
+repo: https://github.com/Devansh968/Chat-with-Pdf-using-Qdrant-vector-database
+commit: 771195f36a735a6f4ac1b63edc04661c11a67f3f
+defect_id: Devansh968-Chat-with-Pdf-using-Qdrant-vector-database-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- /Lib/site-packages/markdown_it/token.py
+- -/Lib/site-packages/packaging/_tokenizer.py
+- -/Lib/site-packages/sqlalchemy/orm/path_registry.py
+trigger_tests:
+- '1. Set up: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Context: Set or verify the memory context limit in the configuration
+  file.
+
+  3. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  4. Open the chat or interaction interface.
+
+  5. Input a series of queries or interactions that are designed to exceed the memory
+  context limit.
+
+  6. Observe if a "Memory context limit exceeded" error occurs or if the system fails
+  to handle the excess memory context properly.'

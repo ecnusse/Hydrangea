@@ -1,0 +1,14 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- generative_app/core/chains/prompt.py, generative_app/core/chains/conversational_retrieval_over_code.py
+trigger_tests:
+- 1. In the application, ask questions with ambiguous references like "What is this?"
+  or "How do I do that?" without providing clear context. 2. The LLM may generate
+  responses that don't match the actual context or uploaded file content.

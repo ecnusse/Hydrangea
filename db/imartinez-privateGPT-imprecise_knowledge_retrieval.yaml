@@ -1,0 +1,22 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly configured in your local
+  environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Open the GUI: Access the web UI.
+
+  4. Attempt to Upload a File: Try uploading a file with a size greater than 50MB.
+
+  5. Observe the Behavior: Notice if an error occurs or if the upload fails.'

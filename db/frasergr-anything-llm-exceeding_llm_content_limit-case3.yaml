@@ -1,0 +1,26 @@
+app: anything-llm
+repo: https://github.com/frasergr/anything-llm
+commit: 5fa61458724fd019a15e243b8db8e71bead950b5
+defect_id: frasergr-anything-llm-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- frontend/src/models/system.js
+- collector/scripts/utils.py
+- collector/scripts/link.py
+trigger_tests:
+- '1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
+
+  2. Run Anything-LLM: Execute `python app.py` or the relevant command to start the
+  server.
+
+  3. Open the document embedding interface in the web UI.
+
+  4. Select and upload multiple documents for embedding.
+
+  5. Observe if the server force-restarts during the process.
+
+  6. Check if only one document is embedded after the restart, despite multiple documents
+  being selected initially.(for example, "TypeError: ''NoneType'' object is not iterable")'

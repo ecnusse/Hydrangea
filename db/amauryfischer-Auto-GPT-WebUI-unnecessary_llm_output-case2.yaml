@@ -1,0 +1,19 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-unnecessary_llm_output-case2
+type: unnecessary LLM output
+case: '2'
+consequence:
+- IC
+locations:
+- autogpt/agent/agent.py/start_interaction_loop(self)
+- (Releases before v0.3.0)
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.
+
+  2.Create an AI agent.
+
+  3.Set up a task, let AutoGPT enter its interactive loop. Use any command that generates the following info:
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''s'' to run self-feedback commands''n'' to exit program, or enter feedback for ...'

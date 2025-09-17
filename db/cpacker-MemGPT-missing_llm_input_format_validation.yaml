@@ -1,0 +1,12 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- letta/main.py
+trigger_tests:
+- Upload the pptx file.

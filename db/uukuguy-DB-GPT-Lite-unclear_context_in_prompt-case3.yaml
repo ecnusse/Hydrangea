@@ -1,0 +1,23 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- 1.dbgpt/app/scene/chat_knowledge/v1/chat.py
+- 2.dbgpt/storage/vector_store/chroma_store.py
+- 3.dbgpt/rag/retriever/embedding.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a .txt knowledge file (e.g., "The Little Prince") to the knowledge base.
+
+  3.Ask the same question multiple times: "On which planet did the Little Prince meet
+  the king?"
+
+  4.The LLM provides inconsistent answers to identical questions (first response:
+  "third planet", second response: "second planet") without referencing the knowledge
+  base.'

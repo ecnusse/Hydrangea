@@ -1,0 +1,12 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chatdocs/chatdocs/add.py
+trigger_tests:
+- Upload the pptx file.

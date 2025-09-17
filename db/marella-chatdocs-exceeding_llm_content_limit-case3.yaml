@@ -1,0 +1,30 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- IC
+locations:
+- chatdocs/chatdocs/chains.py
+- chatdocs/chatdocs/llms.py
+- chatdocs/chatdocs/data/chatdocs.yml
+- chatdocs/chatdocs/chat.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query that requires a detailed response.
+
+  6. Observe if the response is incomplete and whether there is currently no way to
+  continue the lost response through a new prompt.
+
+  7. Attempt to split the query into smaller chunks and note if this results in a
+  loss of context in the responses.'

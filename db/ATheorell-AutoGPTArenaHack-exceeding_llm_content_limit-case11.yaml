@@ -1,0 +1,17 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-exceeding_llm_content_limit-case11
+type: exceeding LLM content limit
+case: '11'
+consequence:
+- ST
+locations:
+- autogpts/autogpt/autogpt/processing/text.py (split_text/summarize_text used elsewhere);
+  autogpts/autogpt/autogpt/config/config.py (model limits)
+trigger_tests:
+- '1. Run Auto-GPT v0.3.0 2. Goals: (1) search_files and describe all files; (2) be
+  aware of 8k limit 3. Prepare directory with lots of files 4. Authorize search_files.
+  5. Observe: InvalidRequestError maximum context length 8191 (requested ~17113).
+  Quick simulation: run ''python test_prompt_overflow_handling.py'' to show lack of
+  graceful handling (no pre-budgeting/truncation/fallback)'

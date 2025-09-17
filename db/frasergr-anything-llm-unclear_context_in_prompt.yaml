@@ -1,0 +1,18 @@
+app: anything-llm
+repo: https://github.com/frasergr/anything-llm
+commit: 5fa61458724fd019a15e243b8db8e71bead950b5
+defect_id: frasergr-anything-llm-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- server/utils/chats/index.js
+- frontend/src/components/WorkspaceChat/ChatContainer/ChatHistory/PromptReply/index.jsx
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

@@ -1,0 +1,17 @@
+app: DocsGPT
+repo: https://github.com/yangchuansheng/DocsGPT
+commit: 595581b624b54046d756ad28bc845521ee4807d0
+defect_id: yangchuansheng-DocsGPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- scripts/parser/file/bulk.py:15-22, scripts/ingest.py:38-40
+trigger_tests:
+- '1. Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment. 2. Upload PPTX File: Upload a PPTX file to the system using the ingest
+  command or file upload functionality. 3. Observe Processing: Notice that the PPTX
+  file is processed as plain text, resulting in binary content being extracted instead
+  of meaningful text from slides. 4. Check LLM Input: Verify that the extracted content
+  contains binary data and is not suitable for LLM processing.'

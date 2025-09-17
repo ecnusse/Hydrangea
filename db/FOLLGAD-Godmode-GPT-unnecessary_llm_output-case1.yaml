@@ -1,0 +1,26 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-unnecessary_llm_output-case1
+type: unnecessary LLM output
+case: '1'
+consequence:
+- IC
+- UI
+locations:
+- autogpt/llm/chat.py
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Configure and launch app according to the instructions.
+
+  2.Create an AI agent.
+
+  3.Start AutoGPT. Authorize these commands and observe their outputs:
+
+  (1) list_files ARGUMENTS = {''directory'': ''auto_gpt_workspace/test_files/many_files''}
+  --> SYSTEM: Failure: command list_files returned too much output. Do not execute
+  this command again with the same arguments.
+
+  (2) read_file ARGUMENTS = {''filename'': ''auto_gpt_workspace/test_files/large_text_file.txt''}
+  --> SYSTEM: Failure: command read_file returned too much output. Do not execute
+  this command again with the same arguments.'

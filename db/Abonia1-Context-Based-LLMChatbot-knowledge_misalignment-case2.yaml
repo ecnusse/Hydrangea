@@ -1,0 +1,17 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-knowledge_misalignment-case2
+type: knowledge misalignment
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- chat.py
+trigger_tests:
+- 1. Upload spreadsheet files to your knowledge base. 2. Select "Direct Segmentation".
+  3. Review the segmentation results and observe that segmentation is done directly
+  by word count. For example, when chunking an EXCEL spreadsheet file, the text is
+  truncated directly by word count, resulting in information from the same row being
+  located in different chunks.

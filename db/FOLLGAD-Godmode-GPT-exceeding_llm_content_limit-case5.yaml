@@ -1,0 +1,24 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-exceeding_llm_content_limit-case5
+type: exceeding  LLM content limit
+case: '5'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/agent/agent.py
+trigger_tests:
+- "1.Run Auto-GPT by: \"python -m autogpt\"\n2.Set up an AI with the following parameters:\n\
+  AI Name: Yoyo\nRole: Lua coder\nGoal 1: Improve the code file WoWinArabic_Chat.lua and document it then save it.\n\
+  3.Authorize the read_file command with the code file WoWinArabic_Chat.lua\n4.After\
+  \ the read_file command, Auto-GPT prints: \"Since the read_file command returned\
+  \ too much output, I should try to read the file in parts to better understand its\
+  \ content.\"\n5.Provide feedback to Auto-GPT by entering a command to output a summary\
+  \ of the file's content. Auto-GPT then generates:\n   Key Functions and Sections\
+  \ Summary:\n   1. Function 1: Description of function 1.\n   2. Function 2: Description\
+  \ of function 2.\n   3. Section 1: Overview of section 1.\n   4. Section 2: Overview\
+  \ of section 2.\n   ...\n6.Based on the placeholder summary, it is clear that Auto-GPT\
+  \ did not actually read the file, but simply created a template summary without\
+  \ the real content from WoWinArabic_Chat.lua."

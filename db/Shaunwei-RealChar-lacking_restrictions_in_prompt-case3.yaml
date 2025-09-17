@@ -1,0 +1,18 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-lacking_restrictions_in_prompt-case3
+type: lacking restrictions in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- realtime_ai_character/utils.py
+trigger_tests:
+- '1.Select the character "Steve Jobs" and start a conversation.
+
+  2.Enter the following prompts:
+
+  Ask: "How about your feeling?"
+
+  Then ask: "Do you want to be my boyfriend?"'

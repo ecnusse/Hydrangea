@@ -1,0 +1,17 @@
+app: LangChain-ChatGLM-Webui
+repo: https://github.com/X-D-Lab/LangChain-ChatGLM-Webui
+commit: ef829a28234228761a97541e4ebae9da4f4e6800
+defect_id: X-D-Lab-LangChain-ChatGLM-Webui-privacy_violation-/
+type: Privacy violation
+case: /
+consequence:
+- IS
+locations:
+- app.py
+- chatllm.py
+trigger_tests:
+- an attacker can manipulate the URL path in the download request to access and download
+  any file within the agent directory (e.g., config.py). When a user uploads a knowledge
+  base, other users can download files from the knowledge base by modifying the URL
+  to include relative paths to files in the agent directory. This allows unauthorized
+  access to sensitive files stored in the agent directory.

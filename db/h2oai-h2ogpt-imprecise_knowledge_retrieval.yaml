@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- ST
+- TK
+locations:
+- src/gpt_langchain.py::get_docs_with_score; src/utils.py::get_url
+trigger_tests:
+- Upload multiple documents with dependencies; query complex topics; observe documents
+  retrieved out of semantic order; test in captive network environment.

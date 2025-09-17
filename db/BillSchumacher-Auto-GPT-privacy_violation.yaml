@@ -1,0 +1,22 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- .env (settings)
+- autogpt/commands/web_selenium.py/browse_website()
+- autogpt/config/config.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  (Use default Settings)
+
+  2.(cli mode)Use the command: "./autogpt.sh run --help " to start AutoGPT.
+
+  3.Set up a task, which involves web browsing and searching.
+
+  4.Allow AutoGPT to process the task and check if AutoGPT accesses the browser without user consent.'

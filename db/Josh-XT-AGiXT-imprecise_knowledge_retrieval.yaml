@@ -1,0 +1,17 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- CL
+- SL
+locations:
+- 'AgentLLM.py: __init__(), context_agent(), run_chain(), run_chain_step(); Config.py:
+  get_steps(), get_chain()'
+trigger_tests:
+- '(Env: Local) 1) Set .env with AI_PROVIDER=openai, NO_MEMORY=true. 2) Initialize
+  AgentLLM agent. 3) Call agent.context_agent("test query", top_results_num=3) - observe
+  "collection" attribute missing error. 4) Run chain execution - observe empty context
+  retrieval and "Unable to retrieve data" errors.'

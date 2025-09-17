@@ -1,0 +1,15 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- autogpts/autogpt/autogpt/llm/providers/openai.py (session/retry handling)
+trigger_tests:
+- '1. Configure and launch Auto-GPT 2. In manual mode, idle for several hours 3. Interact
+  again; observe API errors/timeouts. Quick simulation: run ''python test_low_frequency_interactivity.py''
+  to see idle-expire error and a refresh-based recovery path'

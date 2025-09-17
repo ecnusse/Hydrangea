@@ -1,0 +1,18 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+- IC
+locations:
+- 'scripts/token_counter.py: count_message_tokens; scripts/chat.py: context construction
+  and token limit checking'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch: python scripts/main.py --continuous
+  --gpt3only; 3) Set up simple task (e.g., "list 2 best phone for high mega pixel
+  camera"); 4) Allow AutoGPT to process and accumulate context; 5) Observe if "Please
+  reduce the length of the messages or completion" error occurs despite small task
+  size.'

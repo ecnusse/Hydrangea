@@ -1,0 +1,37 @@
+app: LangChain-ChatGLM-Webui
+repo: https://github.com/X-D-Lab/LangChain-ChatGLM-Webui
+commit: ef829a28234228761a97541e4ebae9da4f4e6800
+defect_id: X-D-Lab-LangChain-ChatGLM-Webui-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- UI
+locations:
+- 1.LangChain-ChatGLM-Webui/app.py/class KnowledgeBasedChatLLM/init_model_config()
+- 2.LangChain-ChatGLM-Webui/requirements.txt/ Update the versions of some packages (langchain==0.1.0,
+- transformers==4.30.2, wandb==0.16.2, protobuf==4.25.2, langchain-community==0.0.11 )
+- '3.LangChain-ChatGLM-Webui/app.py/some modifications to library imports:'
+- '"from langchain_community.document_loaders import UnstructuredFileLoader"'
+- '"from langchain_community.vectorstores import FAISS"'
+trigger_tests:
+- '1.Verify that the system has multiple GPUs available.
+
+  2.Execute a command to determine the GPU with the least memory consumption before launching the program. This command typically looks like:
+
+  "os.system(''nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp'')
+
+  memory_gpu = [int(x.split()[2]) for x in open(''tmp'', ''r'').readlines()]
+
+  DEVICE_ID = np.argmax(memory_gpu)
+
+  torch.cuda.set_device(int(DEVICE_ID))"
+
+  3.Launch the program. Upon startup, the default model ChatGLM-6B-int4 is loaded successfully, and the program shows device=3.
+
+  4.Select the ChatGLM-6B-int8 model for reloading. However, an error occurs during the reloading process.The specific error message indicates: "CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 31.75 GiB total capacity; 4.25 GiB already allocated; 44.75 MiB free; 4.25 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation. See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF"
+
+  5.To sum up,the issues are :
+
+  *Resources occupied by the old model are not released after reloading.
+
+  *The new model is not loaded onto the GPU with device ID 3 but instead uses the default device, which is GPU 0.'

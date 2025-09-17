@@ -1,0 +1,19 @@
+app: BrainChulo
+repo: https://github.com/ChuloAI/BrainChulo
+commit: f2d6753177ef9940dcb6994da03fbf5fd323a3b3
+defect_id: ChuloAI-BrainChulo-exceeding_llm_content_limit-/
+type: Exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- app/llms/oobabooga_llm.py, app/conversations/document_based.py, app/prompt_templates/document_based_conversation.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

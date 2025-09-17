@@ -1,0 +1,36 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- src/agents/task_creation_agent.py
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Set the project.objective as "Solve world hunger" and project.first_task as "Develop
+  a task list".
+
+  3. Observe the tasks and outcoms, until you notice the repeated tasks.
+
+  Example1:
+
+  Task 2: Organize a global summit on hunger and food insecurity to bring together
+  experts, policymakers, and stakeholders to discuss solutions and best practices
+
+  Task 16: Organize a global summit on hunger and food insecurity to bring together
+  experts, policymakers, and stakeholders to discuss solutions and best practices
+
+  Example2:
+
+  Task 5: Partner with nutritionists and dietitians to create tailored meal plans
+  for individuals experiencing food insecurity, taking into account their specific
+  health needs and dietary restrictions
+
+  Task 20: Partner with nutritionists and dietitians to create tailored meal plans
+  for individuals experiencing food insecurity, taking into account their specific
+  health needs and dietary restrictions'

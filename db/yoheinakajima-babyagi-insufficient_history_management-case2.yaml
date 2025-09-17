@@ -1,0 +1,25 @@
+app: babyagi
+repo: https://github.com/yoheinakajima/babyagi
+commit: 3532f987744e9254afacc254e3325d1910c0651d
+defect_id: yoheinakajima-babyagi-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi/babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Expected Result:
+
+  The task list should remain diverse, with new and progressively developed tasks.
+
+  Actual Result:
+
+  The task list becomes increasingly similar, with frequent repetitions of the same
+  task types (e.g., virtual game night, movie night, virtual movie night).
+
+  Indicates lack of progress and insufficient task de-duplication.'

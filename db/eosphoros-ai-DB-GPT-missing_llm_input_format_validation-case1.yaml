@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- dbgpt/app/scene/chat_data/chat_excel/excel_reader.py
+trigger_tests:
+- '1.Enter the ChatExcel scenario.
+
+  2.Upload an xlsx file containing multiple sheets.
+
+  3.DB-GPT does not handle xlsx files with multiple sheets clearly.'

@@ -1,0 +1,25 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-improper_text_embedding-case1
+type: improper text embedding
+case: '1'
+consequence:
+- SL
+- TK
+locations:
+- letta/settings.py
+- letta/embeddings.py
+- letta/server/rest_api/interface.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Start MemGPT Server: Execute `python memgpt.py` or the relevant command to run
+  the server.
+
+  3. Open the embedding endpoint in the API interface or client.
+
+  4. Send an embedding request to the endpoint.
+
+  5. Observe if a timeout error occurs or if the request fails to complete within
+  the expected time frame.'

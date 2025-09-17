@@ -1,0 +1,16 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-absence_of_final_output-/
+type: absence of final output
+case: /
+consequence:
+- IC
+- ST
+locations:
+- autogpts/forge/forge/agent.py
+trigger_tests:
+- '1. Setup (MacOS, Docker, v0.2.2) 2. Run Continuous Mode 3. Use browse_website to
+  a page with no text/parse errors 4. Observe loop: No text to summarize -> google
+  search -> same page repeatedly. Quick simulation: run ''python test_no_text_summary_loop.py''
+  to reproduce the loop'

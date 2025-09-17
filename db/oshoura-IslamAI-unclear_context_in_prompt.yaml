@@ -1,0 +1,17 @@
+app: IslamAI
+repo: https://github.com/oshoura/IslamAI
+commit: d39fad996040c1fe7917b330996620380b9028af
+defect_id: oshoura-IslamAI-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- utils/makechain.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

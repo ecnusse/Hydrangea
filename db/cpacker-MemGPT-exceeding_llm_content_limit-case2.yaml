@@ -1,0 +1,25 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- letta/constants.py
+- letta/system.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Local LLMs: Set up and configure local LLMs in the project.
+
+  3. Enable Token Tracking: Adjust configuration settings or code to enable token
+  usage tracking for local LLMs.
+
+  4. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  5. Open the chat or interaction interface.
+
+  6. Input a series of queries or commands and observe if token usage is correctly
+  tracked and reported.'

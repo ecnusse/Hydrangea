@@ -1,0 +1,24 @@
+app: camel
+repo: https://github.com/camel-ai/camel
+commit: 71d466d9d67d1d7230ebfa1be6db95f5c53e38d9
+defect_id: camel-ai-camel-lacking_restrictions_in_prompt-/
+type: Lacking restrictions in prompt
+case: /
+consequence:
+- ST
+locations:
+- camel/societies/role_playing.py
+trigger_tests:
+- '1.Set up Camel: Ensure the project is correctly set up in your local environment.
+
+  2.Prepare Test Cases: Create test scenarios with invalid input parameters including
+  empty strings and None values for role names.
+
+  3.Execute Validation Test: Run the test script that attempts to create RolePlaying
+  sessions with invalid parameters.
+
+  4.Observe System Behavior: Monitor whether the system accepts these invalid inputs
+  without throwing appropriate validation errors.
+
+  5.Verify Error Handling: Check if error messages are informative and help identify
+  the specific validation failure.'

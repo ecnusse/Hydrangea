@@ -1,0 +1,20 @@
+app: babyagi
+repo: https://github.com/ai8hyf/babyagi
+commit: 6fcd528a92c80846dbb351f2b7babdd50c38709d
+defect_id: ai8hyf-babyagi-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example: Identify Eligibility Criteria for Funding Programs
+
+  Task 15: Identify the eligibility criteria for each of the tax incentives and grants.
+
+  Task 21: Identify the eligibility criteria for each tax incentive or grant program.'

@@ -1,0 +1,18 @@
+app: private-chatbot-mpt30b-langchain
+repo: https://github.com/mayooear/private-chatbot-mpt30b-langchain
+commit: dbb888a2d5f1eaf6256ffab53e4ec0b766a86a3f
+defect_id: mayooear-private-chatbot-mpt30b-langchain-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- utils.py
+- chat.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

@@ -1,0 +1,16 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- CL
+locations:
+- AgentLLM.py, Config/Agent.py
+trigger_tests:
+- '1.Create new agent with oobabooga provider configuration 2.Configure agent with
+  specific settings (provider: oobabooga, AI_MODEL: gpt-3.5-turbo, AI_TEMPERATURE:
+  0.4, MAX_TOKENS: 4000) 3.Try to interact with the agent 4.Observe that agent is
+  stuck creating memories 5.Additional test cases: Test ChromaDB initialization, monitor
+  memory persistence directory, test YAML memory file operations'

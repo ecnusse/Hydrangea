@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- IC
+locations:
+- backend/tests/test_upload.py
+trigger_tests:
+- Upload CSV bank statement with 20+ records, query for payment records of specific
+  amount, observe only 4 records returned instead of 20+ due to hard-coded k=6 limit
+  in similarity search

@@ -1,0 +1,20 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- ST IC
+locations:
+- private_gpt/server/embeddings/embeddings_router.py
+- private_gpt/server/chat/chat_service.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Use Linux Environment: Make sure you are operating within a Linux environment.
+
+  3.Upload a .doc File: Try uploading a .doc file to the knowledge base.
+
+  4.Observe the Error: Notice the error message indicating that the .doc file format
+  is not supported and the file cannot be parsed.'

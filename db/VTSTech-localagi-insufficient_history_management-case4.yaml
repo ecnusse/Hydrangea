@@ -1,0 +1,26 @@
+app: localagi
+repo: https://github.com/VTSTech/localagi
+commit: 85ecc246bd50783e9edaa4227493c0ac127912d8
+defect_id: VTSTech-localagi-insufficient_history_management-case4
+type: insufficient history management
+case: '4'
+consequence:
+- IC
+locations:
+- babyagi.py/main()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.You can observe the log continuously shows:
+
+  DEBUG: most_similar_task: None
+
+  Creating task...
+
+  Adding task...
+
+  Task completed: Develop a task list
+
+  Response: Develop a task list.
+
+  This indicates that BabyAGI falls into a loop and cannot generate new valid tasks.'

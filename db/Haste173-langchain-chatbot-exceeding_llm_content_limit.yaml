@@ -1,0 +1,25 @@
+app: langchain-chatbot
+repo: https://github.com/Haste171/langchain-chatbot
+commit: f3999530d57eb8069d8b911024785d82ac5d003d
+defect_id: Haste173-langchain-chatbot-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- streamlit.py
+trigger_tests:
+- '1. Set up LangChain Chatbot: Ensure the project is correctly set up in your local
+  environment.
+
+  2. Configure Token Limit: Set a specific token limit in the configuration file.
+
+  3. Run LangChain Chatbot: Execute `python langchain_chatbot.py` or the relevant
+  command to start the server.
+
+  4. Open the chat interface in the Streamlit web UI.
+
+  5. Enter a long query or multiple queries that exceed the configured token limit.
+
+  6. Observe if the system correctly handles the token limit and if any errors or
+  truncation issues occur.'

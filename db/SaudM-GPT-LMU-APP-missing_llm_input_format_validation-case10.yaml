@@ -1,0 +1,14 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case10
+type: Missing LLM input format validation
+case: '10'
+consequence:
+- ST
+locations:
+- client/src/pages/api/openapi/kb/pushData.ts
+trigger_tests:
+- '1) Knowledge Base → Text Dataset → upload CSV >100MB → Direct Segmentation → error
+  413. 2) Workarounds: split large files, use chunked upload, or increase bodyParser
+  limit in server config.'

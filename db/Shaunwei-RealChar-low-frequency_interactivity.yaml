@@ -1,0 +1,20 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- 1.realtime_ai_character/database/connection.py
+- 2.realtime_ai_character/websocket_routes.py
+- 3.realtime_ai_character/static/script.js
+- 4.cli.py
+trigger_tests:
+- '1.Configure and launch RealChar according to the instructions on the website
+
+  2.In manual mode, do not interact with RealChar for "a long time" (3 hours for example).
+
+  3.Try to interact with RealChar again and observe if you encounter any API errors or connection timeouts.'

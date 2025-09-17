@@ -1,0 +1,23 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- 1.dbgpt/app/scene/chat_knowledge/v1/chat.py
+- 2.dbgpt/app/scene/chat_knowledge/v1/prompt.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a PDF knowledge file (e.g., "The Little Prince") to the knowledge base.
+
+  3.Ask the question: "How many petals does the Little Prince''s rose have?"
+
+  4.The LLM answers: "The Little Prince''s rose has three petals."
+
+  Note: In the book The Little Prince, there is no mention of how many petals the
+  Little Prince''s rose has. Any answer specifying a number of petals is not based
+  on the text and is therefore fabricated by the model.'

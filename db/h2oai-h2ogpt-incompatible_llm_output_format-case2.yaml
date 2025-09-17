@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::clean_doc; src/gpt_langchain.py::chunk_sources; src/gradio_runner.py::fix_new_lines
+trigger_tests:
+- Upload documents with newlines; query content requiring formatting; observe LLM
+  responses losing newlines and structure; test with code blocks and lists.

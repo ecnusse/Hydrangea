@@ -1,0 +1,25 @@
+app: ChatBot-PDF
+repo: https://github.com/gabacode/ChatBot-PDF
+commit: 320476ac687db4ea0e9051b4b25ef6904d3a014d
+defect_id: gabacode-ChatBot-PDF-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- modules/chatbot.py
+trigger_tests:
+- '1. Set up : Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document or dataset for querying.
+
+  3. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a series of queries or a single lengthy query that is likely to exceed
+  the maximum context length.
+
+  6. Observe if an error message appears indicating that the maximum context length
+  has been exceeded.'

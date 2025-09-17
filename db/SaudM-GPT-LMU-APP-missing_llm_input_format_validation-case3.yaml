@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- IC
+locations:
+- client/src/pages/api/system/uploadImage.ts; client/src/pages/api/system/img/[id].ts;
+  client/src/api/system.ts
+trigger_tests:
+- 1) In UI, start a chat (any model). 2) Send an image; client posts to /api/system/uploadImage
+  and receives a relative image URL. 3) Ensure the request uses the app’s host (no
+  proxy rewrite to 127.0.0.1:3000 or ::1). No ECONNREFUSED with correct origin.

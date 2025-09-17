@@ -1,0 +1,23 @@
+app: bb.agi
+repo: https://github.com/matigumma/bb.agi
+commit: 9af4396c1c97b0de3fc47ceb35ff8e4489be6254
+defect_id: matigumma-bb.agi-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2. Observe the tasks and outcoms, until you notice the repeated tasks.
+
+  Example:
+
+  Task 1: Plan a picnic in a scenic park or garden with a selection of delicious snacks
+  and drinks. Research the best locations with beautiful views and peaceful surroundings.
+
+  Task 3: Plan a picnic in a scenic park or garden with a selection of delicious snacks
+  and drinks. Research the best locations with beautiful views and peaceful surroundings.'

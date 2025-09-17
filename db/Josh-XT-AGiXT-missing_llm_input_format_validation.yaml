@@ -1,0 +1,17 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- 'commands/file_operations.py: read_file(), ingest_file(); AgentLLM.py: store_result(),
+  log_interaction(); (Note: this commit has no upload endpoint in app.py and no "Learning"
+  UI; ingestion assumes UTF-8 text.)'
+trigger_tests:
+- 'UI: Not available in this commit; API/code: place a binary PDF at WORKSPACE/sample.pdf,
+  then instruct the agent to ingest it (instruction mode with commands enabled) or
+  invoke file_operations.ingest_file(''sample.pdf'', memory) directly to trigger the
+  serialization/decoding error.'

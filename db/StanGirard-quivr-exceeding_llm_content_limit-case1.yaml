@@ -1,0 +1,16 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence: []
+locations:
+- frontend/app/globals.css
+- frontend/styles/blog.module.css
+trigger_tests:
+- '1. Use Quivr online or deploy locally following instructions on https://github.com/QuivrHQ/quivr/README.md
+
+  2. Upload url or ducuments to your knowledge, which will cause some errors.
+
+  3. Observe if error message is too lengthy, and overflow its container.'

@@ -1,0 +1,13 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- backend/parsers/powerpoint.py, backend/models/files.py, backend/utils/processors.py
+trigger_tests:
+- Upload any file with .pptx extension that contains invalid content or corrupted
+  structure

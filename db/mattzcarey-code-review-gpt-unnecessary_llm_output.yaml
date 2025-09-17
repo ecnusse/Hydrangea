@@ -1,0 +1,26 @@
+app: code-review-gpt
+repo: https://github.com/mattzcarey/code-review-gpt
+commit: 87bce4d443c869eb3da09e5a2c11b1a79c5e5d6a
+defect_id: mattzcarey-code-review-gpt-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- packages/code-review-gpt/src/review/llm/askAI.ts
+- packages/code-review-gpt/src/review/llm/PriorityQueue.ts
+trigger_tests:
+- '1. Set up Code Review GPT: Ensure the project is correctly set up in your local
+  environment.
+
+  2. Run Code Review GPT: Execute `python code_review_gpt.py` or the relevant command
+  to start the server.
+
+  3. Open the chat interface or input field.
+
+  4. Enter a query that typically requires a concise response, such as: "Explain the
+  purpose of a `for` loop in Python."
+
+  5. Observe the output: Notice if the response is excessively polite or verbose,
+  deviating from a succinct and clear answer.'

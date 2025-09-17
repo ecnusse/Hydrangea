@@ -1,0 +1,15 @@
+app: DocsGPT
+repo: https://github.com/arc53/DocsGPT
+commit: 744d4ebbaf4349444d8d361593c4c04652c6c54b
+defect_id: arc53-DocsGPT-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- frontend/src/conversation/ConversationBubble.tsx
+trigger_tests:
+- 1. Set up DocsGPT frontend application. 2. Ask a question that generates a response
+  with bullet points or numbered lists. 3. Observe that bullet points are not properly
+  aligned when text wraps to multiple lines. 4. For ordered lists, notice that they
+  incorrectly display disc bullets instead of numbers.

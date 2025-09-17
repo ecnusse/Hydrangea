@@ -1,0 +1,12 @@
+app: chat-pdf
+repo: https://github.com/edrickdch/chat-pdf
+commit: bf5343fef116a360424245b1c154edc2bac07bfd
+defect_id: edrickdch-chat-pdf-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- src/ingest.py
+trigger_tests:
+- Upload the pptx file.

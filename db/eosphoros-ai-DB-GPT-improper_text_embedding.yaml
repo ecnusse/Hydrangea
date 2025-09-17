@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- IC
+locations:
+- dbgpt/app/scene/chat_data/chat_excel/excel_analyze/out_parser.py
+trigger_tests:
+- '1.Enter the Chat Data scene and upload a Chinese data file.
+
+  2.During the conversation, the bot returns garbled Chinese data from the file.
+
+  3.Viewing the Chinese file in the database shows it displays normally.'

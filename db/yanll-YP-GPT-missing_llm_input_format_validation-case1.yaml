@@ -1,0 +1,16 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/app/scene/chat_data/chat_excel/excel_reader.py
+trigger_tests:
+- '1.Enter the ChatExcel scenario.
+
+  2.Upload an xlsx file containing multiple sheets.
+
+  3.DB-GPT does not handle xlsx files with multiple sheets clearly.'

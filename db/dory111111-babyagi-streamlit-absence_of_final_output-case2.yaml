@@ -1,0 +1,48 @@
+app: babyagi-streamlit
+repo: https://github.com/dory111111/babyagi-streamlit
+commit: 088aa7376c39d541543a3518df8bd5db46633f51
+defect_id: dory111111-babyagi-streamlit-absence_of_final_output-case2
+type: absence of final output
+case: '2'
+consequence:
+- UI
+locations:
+- babyagi.py/task_creation_agent(), main() loop
+trigger_tests:
+- '1.Clone the Repository:
+
+     git clone https://github.com/dory111111/babyagi-streamlit.git
+
+     cd babyagi
+
+  2.Install the Required Packages:
+
+     pip install -r requirements.txt
+
+  3.Set Up Environment Variables:
+
+    (1)Copy the .env.example file to .env:
+
+     cp .env.example .env
+
+    (2)Open the .env file and set the following variables:
+
+     OPENAI_API_KEY=your_openai_api_key
+
+     OPENAI_API_MODEL=gpt-3.5-turbo
+
+     TABLE_NAME=your_results_store_name
+
+  (3)Optionally, set other variables:
+
+     BABY_NAME=your_babyagi_instance_name
+
+     OBJECTIVE="Write a novel"
+
+     INITIAL_TASK="Start writing the introduction of the novel"
+
+  4.Run the Script:
+
+     python babyagi.py
+
+  5.Observe tasks and outcomes'

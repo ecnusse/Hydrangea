@@ -1,0 +1,16 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- dbgpt/app/scene/chat_data/chat_excel/excel_reader.py
+trigger_tests:
+- '1.Enter the ChatExcel scenario.
+
+  2.Upload an xlsx file containing multiple sheets.
+
+  3.DB-GPT does not handle xlsx files with multiple sheets clearly.'

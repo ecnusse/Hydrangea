@@ -1,0 +1,22 @@
+app: DocsGPT
+repo: https://github.com/NinjaDevOps0831/DocsGPT
+commit: 6b6737613ad934a28ae4251ffa9716465e6e35dd
+defect_id: DanielSmith0831-DocsGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- frontend/src/components/Navigation.jsx
+- frontend/src/styles/Navigation.css
+trigger_tests:
+- '1.Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment.
+
+  2.Initiate a Chat: Start a chat session within DocsGPT.
+
+  3.Create a Long Title: Generate a chat session title that is long enough to cause
+  overflow.
+
+  4.Observe Text Overflow: Notice that the chat''s title text overflows and is not
+  contained within the title box.'

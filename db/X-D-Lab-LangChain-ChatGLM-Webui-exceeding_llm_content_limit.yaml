@@ -1,0 +1,13 @@
+app: LangChain-ChatGLM-Webui
+repo: https://github.com/X-D-Lab/LangChain-ChatGLM-Webui
+commit: ef829a28234228761a97541e4ebae9da4f4e6800
+defect_id: X-D-Lab-LangChain-ChatGLM-Webui-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- IC
+locations:
+- paddlepaddle/chatllm.py
+- chatllm.py
+trigger_tests:
+- simultaneously upload multiple documents of the same format or multiple documents of different formats.

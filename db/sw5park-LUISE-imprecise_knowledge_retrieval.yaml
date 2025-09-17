@@ -1,0 +1,28 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- src/agents/execution_agent.py
+trigger_tests:
+- '1.Clone the repository via git clone https://github.com/sw5park/LUISE.git and cd
+  into the cloned repository.
+
+  2.Install the required packages: pip install -r requirements.txt
+
+  3.Edit the configs/config.yaml file to set your configuration.
+
+  4.Set your OpenAI API key in the openai.api_key field.
+
+  5.Set the Pinecone configuration including api_key, environment, and pinecone_index.table_name.
+
+  6.Set the project.objective as "Have a fun day."
+
+  7.Set the project.first_task as "Develop a task list".
+
+  8.Run the script: python scripts/main.py'

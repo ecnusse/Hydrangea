@@ -1,0 +1,29 @@
+app: gpt4-pdf-chatbot-langchain-chroma
+repo: https://github.com/sagarsaija/gpt4-pdf-chatbot-langchain-chroma
+commit: 259d5cb6510b0c06b93389810671d73482f9a37c
+defect_id: sagarsaija-gpt4-pdf-chatbot-langchain-chroma-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- IC
+locations:
+- pages/index.tsx
+- pages/api/chat.ts
+trigger_tests:
+- '1. Set up GPT4 PDF Chatbot LangChain: Ensure the project is correctly set up in
+  your local environment.
+
+  2. Upload a PDF document for querying.
+
+  3. Run the Chatbot: Execute `python app.py` or the relevant command to start the
+  server.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query and observe the response.
+
+  6. Enter a follow-up query that relies on the context of the previous interaction.
+
+  7. Observe if the response demonstrates awareness of the previous interactions or
+  if it treats each query as an isolated interaction.(similar to "AttributeError:
+  ''NoneType'' object has no attribute ''extract_text''")'

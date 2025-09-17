@@ -1,0 +1,21 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Add a PDF: Upload a PDF document to the model.
+
+  3.Ask a Detailed Question: Input a question that requires a detailed response, resulting
+  in more than 512 tokens.
+
+  4.Observe the Error: Notice the error message "ValueError: Requested tokens (733)
+  exceed context window of 512."'

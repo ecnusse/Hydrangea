@@ -1,0 +1,16 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-inefficient_memory_management-case3
+type: inefficient memory management
+case: '3'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/serve/agent/team/plan/team_auto_plan.py/a_process_rely_message
+- YP-GPT/dbgpt/agent/memory/gpts_memory.py
+- YP-GPT/dbgpt/serve/agent/team/layout/agent_operator.py
+trigger_tests:
+- "1.Use the test data provided in the official documentation, with the agent only\
+  \ using DataScientist. \n2.Count the number of men and women in each country and\
+  \ display it using an appropriate chart."

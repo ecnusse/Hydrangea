@@ -1,0 +1,14 @@
+app: localagi
+repo: https://github.com/VTSTech/localagi
+commit: 85ecc246bd50783e9edaa4227493c0ac127912d8
+defect_id: VTSTech-localagi-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/create_task(), update_task()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.'

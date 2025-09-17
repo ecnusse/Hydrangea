@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Set up the application according to the README.md of this project. 2. Manually
+  place a PPTX file in the doc directory. 3. Run the application. 4. The PPTX file
+  will be ignored, and only PDF files will be processed, leading to incomplete or
+  incorrect analysis results.

@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case6
+type: Missing LLM input format validation
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- client/src/utils/file.ts;client/src/pages/api/openapi/kb/pushData.ts;client/src/pages/api/openapi/v1/chat/completions.ts
+trigger_tests:
+- '1. Upload a CSV file larger than 20MB to your knowledge base; 2. In "Data Processing,"
+  select "Direct Segmentation"; 3. Click upload and receive an error: "The value of
+  ''offset'' is out of range"; 4. VERIFIED: System lacks file size validation in readCsvContent
+  function and has inconsistent API size limits'

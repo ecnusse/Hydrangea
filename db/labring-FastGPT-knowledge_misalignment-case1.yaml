@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-knowledge_misalignment-case1
+type: knowledge misalignment
+case: '1'
+consequence:
+- IC
+locations:
+- packages/global/common/string/textSplitter.ts;packages/service/core/dataset/collection/utils.ts;projects/app/src/web/common/file/utils.ts;packages/service/worker/file/extension/docx.ts
+trigger_tests:
+- '1. Upload a .docx file (containing level 3 headings) to your knowledge base; 2.
+  In Data Processing, select Direct Segmentation and Automatic; 3. In the segmentation
+  results, if a level 3 heading (###) has fewer than 29 characters, the heading is
+  lost, and its content is directly merged into the next segment; 4. Root cause: miniChunkLen
+  = 30 is too small, causing short headings to be merged'

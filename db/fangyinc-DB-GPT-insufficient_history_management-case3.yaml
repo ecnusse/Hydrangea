@@ -1,0 +1,30 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- packages/dbgpt-app/src/dbgpt_app/scene/base_chat.py
+trigger_tests:
+- '1.Enter the Chat Data scenario.
+
+  2.Add a database to the system.
+
+  3.Ask a database query question (e.g., "Show all users").
+
+  4.Wait for system response.
+
+  5.Ask: "What did I just query?"
+
+
+  Expected Result:
+
+  System should recall the previous database query and respond appropriately.
+
+  Actual Result:
+
+  System responds: "The context provided is not sufficient to determine what you have
+  recently queried."'

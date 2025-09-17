@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-imprecise_knowledge_retrieval-case2
+type: Imprecise knowledge retrieval
+case: '2'
+consequence:
+- IC
+locations:
+- client/src/service/plugins/useSearch.ts; client/src/pages/kb/components/Detail.tsx
+trigger_tests:
+- '1) Knowledge Base → import data with serial/model numbers → Q&A training + document
+  upload → test semantic/full-text search. 2) Numbered keywords fail to retrieve accurately
+  despite multiple coverage. 3) Root cause: vector embeddings don''t capture numeric
+  patterns well; need specialized indexing for alphanumeric identifiers.'

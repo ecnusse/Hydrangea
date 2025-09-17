@@ -1,0 +1,21 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-exceeding_llm_content_limit-case3
+type: exceeding LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- lib/build-prompt.ts:buildFinalMessages function (line 74), lib/build-prompt.ts:buildBasePrompt
+  function, components/ui/chat-settings-form.tsx:context length slider (line 147),
+  app/api/chat/openai/route.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up and configured
+  in your local environment 2. Initiate a Long Conversation: Engage in a lengthy conversation
+  using the GPT-4 API 3. Input a Short Message: Enter a short message, such as "my
+  host supports PostgreSQL databases." 4. Observe the Error: Notice the error indicating
+  the context length exceeds the model''s maximum limit, with a message similar to:
+  [OpenAIError: This model''s maximum context length is 8192 tokens. However, you
+  requested 8554 tokens (7554 in the messages, 1000 in the completion). Please reduce
+  the length of the messages or completion.]'

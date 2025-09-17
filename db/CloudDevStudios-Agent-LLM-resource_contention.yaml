@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-resource_contention-/
+type: resource contention
+case: /
+consequence:
+- ST
+locations:
+- commands/web_playwright.py, app.py
+trigger_tests:
+- '1.Start an instruction using any of the playwright commands 2.Execute scrape_text
+  command with a URL 3.Additional test cases: Test multiple playwright commands, monitor
+  resource conflicts, check async/sync API mismatches'

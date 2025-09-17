@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- IC
+- SL
+locations:
+- YP-GPT/dbgpt/pilot/server/knowledge/api.py//knowledge/{space_name}/document/upload
+trigger_tests:
+- '1.In .env file, set "language" to zh.
+
+  2.Start app, Enter "Chat Knowledge" scenario.
+
+  3.Try to upload large text files (greater than 2M) to knowledge bases, failed, and their status remains as TODO.'

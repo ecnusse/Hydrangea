@@ -1,0 +1,15 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- IC
+locations:
+- 1.realtime_ai_character/models/interaction.py
+- 2.realtime_ai_character/websocket_routes.py
+trigger_tests:
+- '1.In the RealChar UI, select a character to converse with.
+
+  2.Ask the character to summarize the conversation, but the character is unable to do so.'

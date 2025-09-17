@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case7
+type: Missing LLM input format validation
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- client/src/service/utils/chat/openai.ts; client/src/service/utils/chat/index.ts;
+  client/src/constants/model.ts; client/src/pages/api/openapi/kb/appKbSearch.ts; client/src/utils/plugin/openai.ts
+trigger_tests:
+- 1) Set model to gpt-3.5-turbo-16k. 2) Attach two KBs and ask a long question. 3)
+  Observe server filters context and adjusts max_tokens; request succeeds. If it fails,
+  reduce chat.maxToken or KB searchLimit, or use the 16k model explicitly.

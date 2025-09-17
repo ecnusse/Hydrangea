@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case5
+type: Missing LLM input format validation
+case: '5'
+consequence:
+- IC
+locations:
+- client/src/utils/plugin/openai.ts
+trigger_tests:
+- '1. In "Application Configuration," call a multimodal application''s API (such as
+  Claude-3); 2. When calling the API, the message body transmits images and text information
+  in an ordered array format via content; 3. VERIFIED: FastGPT''s adaptChatItem_openAI
+  function only processes string content, losing the order and connection between
+  images and text'

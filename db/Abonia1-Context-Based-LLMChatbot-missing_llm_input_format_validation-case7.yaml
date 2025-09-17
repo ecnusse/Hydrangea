@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case7
+type: Missing LLM input format validation
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Use "Tool call" to access multiple knowledge bases. 2. Each knowledge base reference
+  limit is below 3000 tokens. 3. Start a chat, and the questions call 2 knowledge
+  bases, but it shows that the tokens exceed the model's limit of 16k.

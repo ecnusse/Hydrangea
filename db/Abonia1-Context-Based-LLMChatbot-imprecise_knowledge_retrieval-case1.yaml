@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-imprecise_knowledge_retrieval-case1
+type: Imprecise knowledge retrieval
+case: '1'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Upload an xlsx file with around 10,000 rows to your knowledge base. 2. In "Search
+  Test," ask questions related to the content of this file. 3. In "Knowledge Base
+  Search Configuration," select different search modes to test the Q&A, but the test
+  results are unsatisfactory, with inaccurate answers.

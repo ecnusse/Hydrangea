@@ -1,0 +1,23 @@
+app: privatgpt-gui
+repo: https://github.com/REFRIED-BoolEANS/privatgpt-gui
+commit: 840675927b1ace596dcc2c8ed0f6f483805e33fe
+defect_id: REFRIED-BoolEANS-privatgpt-gui-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Use the GUI: Open the web UI and upload a document.
+
+  4. Ask a Question: Enter a question that requires a multiline or bullet-pointed
+  response, such as "Tell me 3 jokes".
+
+  5. Observe the Response: Notice that the AI''s response cuts off at newlines or
+  fails to format lists properly.'

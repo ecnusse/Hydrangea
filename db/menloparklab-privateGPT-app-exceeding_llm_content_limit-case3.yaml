@@ -1,0 +1,21 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Add a PDF: Upload a PDF document to the model.
+
+  3.Ask a Detailed Question: Input a question that requires a detailed response, resulting
+  in more than 512 tokens.
+
+  4.Observe the Error: Notice the error message "ValueError: Requested tokens (733)
+  exceed context window of 512."'

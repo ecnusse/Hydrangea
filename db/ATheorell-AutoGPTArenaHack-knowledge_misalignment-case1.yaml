@@ -1,0 +1,18 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-knowledge_misalignment-case1
+type: knowledge misalignment
+case: '1'
+consequence:
+- ST
+- IC
+locations:
+- autogpts/autogpt/autogpt/agents/features/context.py (ContextMixin); autogpts/autogpt/autogpt/core/memory/simple.py;
+  autogpts/autogpt/autogpt/memory/vector/*
+trigger_tests:
+- '1. Set up Auto-GPT with Redis and pre-seed issues_data.json: python data_ingestion.py
+  --f issues_data.json --init --overlap 300 --max_length 3000 2. Run: python -m autogpt
+  with goals to build FAQ using memory 3. Observe: agent ignores memory and clones
+  repo to workspace to gather data. Quick simulation: run ''python test_preseeded_memory_unused.py''
+  to compare behavior with/without memory integration'

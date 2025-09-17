@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::template; src/prompter.py::generate_prompt
+trigger_tests:
+- Upload large document (50+ pages); enter query with incorrect context; observe hallucinations
+  or inaccurate information; test with false technical claims in context.

@@ -1,0 +1,28 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- autogpt/commands/file_operations.py/read_file()
+trigger_tests:
+- '1.Complete the environment setup for app according to the instructions on v0.2.2 README.md
+
+  2. Run app.
+
+  (Prompts:
+
+  ai_goals:
+
+  - Read project-plan-form.html file 
+
+  - Fill project-plan-form.html for and idea with flying monkeys
+
+  ai_name: DocWritter
+
+  ai_role: Fill in a doc using a file template)
+
+  3.Authorize and wait for the result of the "read_file ARGUMENTS = {''file'': ''project-plan-form.htmll''}" command, which will cause an error: "Command read_file returned: Error: ''utf-8'' codec can''t decode byte 0xa0 in position 1341: invalid start byte ".'

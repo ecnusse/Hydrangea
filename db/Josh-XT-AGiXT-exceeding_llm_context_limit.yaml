@@ -1,0 +1,16 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-exceeding_llm_context_limit-/
+type: Exceeding LLM context limit
+case: /
+consequence:
+- ST
+locations:
+- 'provider/oobabooga.py: instruct(); Config.py: MAX_TOKENS; AgentLLM.py: get_prompt_with_context(),
+  trim_context(), run()'
+trigger_tests:
+- '(Env: Local or Docker) 1) In .env set AI_PROVIDER=oobabooga, AI_PROVIDER_URI=http://127.0.0.1:7860,
+  MAX_TOKENS=2000. 2) Start Oobabooga with a 2048-token model and the Agent-LLM backend.
+  3) POST /api/agent/{agent}/instruct with a normal prompt. 4) Observe Oobabooga logs:
+  reported context ≈ 2096 and server crash/error.'

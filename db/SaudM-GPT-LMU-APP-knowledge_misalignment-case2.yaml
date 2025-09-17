@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-knowledge_misalignment-case2
+type: knowledge misalignment
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- client/src/utils/adapt.ts; client/src/pages/kb/components/SelectCsvModal.tsx
+trigger_tests:
+- '1) Knowledge Base → Text Dataset → upload Excel/CSV → Direct Segmentation → observe
+  row splitting. 2) Same row data appears in different chunks, losing table context.
+  3) Workarounds: use QA mode for structured data, implement table-aware parsing,
+  or manually adjust chunk boundaries.'

@@ -1,0 +1,26 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- letta/constants.py
+- letta/system.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Context: Set or verify the memory context limit in the configuration
+  file.
+
+  3. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  4. Open the chat or interaction interface.
+
+  5. Input a series of queries or interactions that are designed to exceed the memory
+  context limit.
+
+  6. Observe if a "Memory context limit exceeded" error occurs or if the system fails
+  to handle the excess memory context properly.'

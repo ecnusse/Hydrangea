@@ -1,0 +1,13 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- scripts/memory.py
+trigger_tests:
+- The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.

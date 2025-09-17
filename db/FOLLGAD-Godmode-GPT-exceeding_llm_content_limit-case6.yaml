@@ -1,0 +1,33 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-exceeding_llm_content_limit-case6
+type: exceeding  LLM content limit
+case: '6'
+consequence:
+- ST
+locations:
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Run Auto-GPT v0.3.0.
+
+  2.Set up an AI with the following parameters:
+
+  Goal 1: list_files and make a descriptions of all files.   
+
+  Goal 2: be aware that you cannot send long requests to the api. i think max is 8k tokens.
+
+  Using memory of type: LocalCache
+
+  Using Browser: chrome
+
+  3.Authorize the list_files command with the code file WoWinArabic_Chat.lua
+
+  4.After the list_files command, Auto-GPT prints: "Since listing all files at once
+  exceeded the token limit, I should list files in smaller batches to manage the output
+  size."
+
+  5.The LLM repeatedly plans and adjusts its strategy to handle large output, but
+  never actually lists all the files.
+
+  PS.The folder should contain  lots of files.'

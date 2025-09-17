@@ -1,0 +1,15 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-unnecessary_llm_output-/
+type: Unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- src/gpt_langchain.py::chunk_sources
+trigger_tests:
+- Upload multiple documents with overlapping content; query topics covered in multiple
+  documents; observe repetitive information in responses; test with similar content
+  across documents.

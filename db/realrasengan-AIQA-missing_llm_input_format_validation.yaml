@@ -1,0 +1,12 @@
+app: AIQA
+repo: https://github.com/realrasengan/AIQA
+commit: fb86f8c48978bd218df62f6bf034463f0034b426
+defect_id: realrasengan-AIQA-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- aiqa.js
+trigger_tests:
+- Upload the pptx file.

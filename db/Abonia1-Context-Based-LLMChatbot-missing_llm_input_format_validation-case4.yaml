@@ -1,0 +1,16 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Upload CSV or XLSX files to your knowledge base, selecting "Direct Segmentation"
+  and "Automatic" in "Data Processing". 2. If you click "Preview Source Text" before
+  uploading, the dataset appears empty after uploading and is not stored in the database.
+  3. If you do not click "Preview Source Text" before uploading, the upload is successful
+  and the data is stored in the database.

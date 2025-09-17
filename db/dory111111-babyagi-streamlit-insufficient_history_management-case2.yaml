@@ -1,0 +1,32 @@
+app: babyagi-streamlit
+repo: https://github.com/dory111111/babyagi-streamlit
+commit: 088aa7376c39d541543a3518df8bd5db46633f51
+defect_id: dory111111-babyagi-streamlit-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.E
+
+  2.Set the environment variables: OBJECTIVE=Have a fun day and INITIAL_TASK=Develop
+  a task list
+
+  3.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example1:
+
+  Task 2: Go for a bike ride to a nearby park and have a picnic
+
+  Task 16: Have a picnic in a scenic park or garden, enjoying delicious food and drinks
+  in the great outdoors. Relax and unwind while taking in the beauty of nature.
+
+  Example2:
+
+  Task 12: Have a beach day and try surfing or bodyboarding for a fun day by the ocean.
+  Soak up the sun and enjoy the waves.
+
+  Task 20: Have a beach day, complete with swimming, sunbathing, and beach games.
+  Enjoy the sound of the waves and the warmth of the sun.'

@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- IC
+locations:
+- client/src/utils/file.ts;client/src/pages/api/system/uploadImage.ts
+trigger_tests:
+- '1. Set up FastGPT application according to README.md; 2. Select "Application" and
+  choose GPT-4o model to start chatting; 3. Send an image to the chatbox; 4. VERIFIED:
+  System lacks proper validation for image upload service availability, causing connection
+  errors when service is unavailable'

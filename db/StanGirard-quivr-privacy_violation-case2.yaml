@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-privacy_violation-case2
+type: privacy violation
+case: '2'
+consequence:
+- IS
+locations:
+- backend/routes/chat_routes.py, backend/models/databases/supabase/chats.py
+trigger_tests:
+- User A creates account and chat, User B (different org) creates account, User B
+  sends messages to User A's chat using chat ID, messages are injected into User A's
+  chat without ownership validation

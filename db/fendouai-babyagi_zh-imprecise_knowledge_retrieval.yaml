@@ -1,0 +1,35 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864
+defect_id: fendouai-babyagi_zh-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/execution_agent()
+trigger_tests:
+- '1. Clone the repository via git clone https://github.com/fendouai/babyagi_zh.git
+  and cd into the cloned repository.
+
+  2. Install the required packages: pip install -r requirements.txt
+
+  3. Create the .env file manually since there''s no .env.example file in this project.
+  This is where you will set the following variables.
+
+  4. Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables.
+  You will also need to setup Pinecone variables detailed here.
+
+  5. Set the Pinecone API key in the PINECONE_API_KEY variable.
+
+  6. Set the Pinecone environment in the PINECONE_ENVIRONMENT variable.
+
+  7. Set the name of the table where the task results will be stored in the TABLE_NAME
+  variable.
+
+  8. (Optional) Set the objective of the task management system in the OBJECTIVE variable.
+
+  9. (Optional) Set the first task of the system in the INITIAL_TASK variable.
+
+  10. Run the script: python babyagi.py'

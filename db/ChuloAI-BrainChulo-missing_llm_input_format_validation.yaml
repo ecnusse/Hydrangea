@@ -1,0 +1,12 @@
+app: BrainChulo
+repo: https://github.com/ChuloAI/BrainChulo
+commit: f2d6753177ef9940dcb6994da03fbf5fd323a3b3
+defect_id: ChuloAI-BrainChulo-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- app/conversations/document_based.py, app/main.py
+trigger_tests:
+- Upload the pptx file.

@@ -1,0 +1,42 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- CL
+locations:
+- agixt/Tasks.py
+- agixt/pages/4-Tasks.py
+- agixt/AGiXT.py
+trigger_tests:
+- '1.Commands:
+
+  git clone https://github.com/Josh-XT/AGiXT
+
+  cd AGiXT/agixt
+
+  pip install -r requirements.txt
+
+  playwright install
+
+  streamlit run Main.py
+
+
+  2.Run textgen with: python server.py --listen-port 7861 --wbits 4 --groupsize 128 --model llama-13b-4bit-128g --model_type llama --xformers --api
+
+  See that it is running:
+
+  Starting streaming server at ws://127.0.0.1:5005/api/v1/stream Starting API at http://127.0.0.1:5000/api Running on local URL:  http://127.0.0.1:7861
+
+
+  3.Create new agent with config:
+
+
+  {"commands": {"Read Audio from File": false, "Read Audio": false, "Evaluate Code": true, "Analyze Pull Request": false, "Perform Automated Testing": false, "Run CI-CD Pipeline": false, "Improve Code": false, "Write Tests": false, "Create a new command": false, "Execute Python File": false, "Execute Shell": false, "Read File": true, "Write to File": true, "Append to File": true, "Delete File": true, "Search Files": true, "Clone Github Repository": false, "Google Search": true, "Searx Search": false, "Get Datetime": false, "Speak with TTS": false, "Scrape Text with Playwright": false, "Scrape Links with Playwright": false, "Is Valid URL": false, "Sanitize URL": false, "Check Local File Access": false, "Get Response": true, "Scrape Text": true, "Scrape Links": true, "Scrape Text with Selenium": false, "Ask AI Agent gpt4free": false, "Instruct AI Agent gpt4free": false, "Ask AI Agent Ooga": false, "Instruct AI Agent Ooga": false}, "settings": {"provider": "oobabooga", "AI_MODEL": "gpt-3.5-turbo", "AI_TEMPERATURE": "0.4", "MAX_TOKENS": "4000", "embedder": "default", "AI_PROVIDER_URI": "http://127.0.0.1:5000", "HUGGINGFACE_AUDIO_TO_TEXT_MODEL": "facebook/wav2vec2-large-960h-lv60-self", "DISCORD_COMMAND_PREFIX": "/AGiXT", "WORKING_DIRECTORY": "./WORKSPACE", "WORKING_DIRECTORY_RESTRICTED": "True", "SEARXNG_INSTANCE_URL": "https://searx.work", "USE_BRIAN_TTS": "True", "ELEVENLABS_VOICE": "Josh", "SELENIUM_WEB_BROWSER": "chrome", "": ""}}
+
+
+  4.Ask it to do anything or chat with it.
+
+  5.Behavior: Agent is unable to do anything, program is stuck trying to create memories.'

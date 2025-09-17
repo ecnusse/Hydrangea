@@ -1,0 +1,14 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- IC
+locations:
+- packages/service/core/chat/utils.ts;projects/app/src/components/ChatBox/MessageInput.tsx;projects/app/src/web/common/file/controller.ts
+trigger_tests:
+- 1. In the FastGPT UI, select Application and choose the GPT-4o model to start chatting;
+  2. Send an image to the chatbox; 3. Encounter the error ECONNREFUSED ::1:3000 when
+  the system tries to load the image to base64 format

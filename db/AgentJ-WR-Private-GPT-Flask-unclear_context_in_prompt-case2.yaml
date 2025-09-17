@@ -1,0 +1,23 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Ingest Documents: Upload 1047 different PDF files (4GB) into the system.
+
+  3. Run the Server: Execute `python privateGPT.py`.
+
+  4. Ask Multiple Queries: Make several unrelated queries with subjects exclusive
+  to different source files.
+
+  5. Observe the Sources: Notice that the responses always exhibit the same sources
+  for every query, even when those sources have zero relation to the query context.'

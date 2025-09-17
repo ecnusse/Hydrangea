@@ -1,0 +1,17 @@
+app: gpt4-langchain-ingest-api-data-private-chroma-aws
+repo: https://github.com/arndvs/gpt4-langchain-ingest-api-data-private-chroma-aws
+commit: 5259ae39cd23892c3d0030b98ae99148fb5b7284
+defect_id: arndvs-gpt4-langchain-ingest-api-data-private-chroma-aws-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- utils/makechain.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

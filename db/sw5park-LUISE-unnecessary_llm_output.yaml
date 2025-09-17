@@ -1,0 +1,27 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- src/agents/task_creation_agent.py
+trigger_tests:
+- "1.Clone the repository via git clone https://github.com/sw5park/LUISE.git and cd\
+  \ into the cloned repository.\n2.Install the required packages: pip install -r requirements.txt\n\
+  3.Edit the configs/config.yaml file to set your configuration.\n4.Set your OpenAI\
+  \ API key in the openai.api_key field.\n5.Set the Pinecone configuration including\
+  \ api_key, environment, and pinecone_index.table_name.\n6.Set the project.objective\
+  \ as \"Translate this sentence from english into chinese: hello, world\"\n7.Set\
+  \ the project.first_task as \"Develop a task list\".\n8.Run the script: python scripts/main.py\n\
+  9.Observe Tasks and Outcomes.\nExample:\nTask 1. Translate \"hello, world\" from\
+  \ English to Chinese.  \nTask 2. Translate \"good morning\" from English to Chinese.\
+  \  \nTask 3. Translate \"I love you\" from English to Chinese.  \nTask 4. Translate\
+  \ \"how are you?\" from English to Chinese.  \nTask 5. Translate \"goodbye, world\"\
+  \ from English to Chinese.  \nTask 6. Translate \"thank you\" from English to Chinese.\
+  \  \nTask 7. Translate \"sorry\" from English to Chinese.  \nTask 8. Translate \"\
+  please\" from English to Chinese.  \nTask 9. Translate \"excuse me\" from English\
+  \ to Chinese.  \nTask 1: Translate \"hello, world\" from English to Chinese."

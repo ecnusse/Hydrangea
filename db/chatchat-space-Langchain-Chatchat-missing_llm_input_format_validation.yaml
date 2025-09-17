@@ -1,0 +1,20 @@
+app: Langchain-Chatchat
+repo: https://github.com/chatchat-space/Langchain-Chatchat
+commit: bc7f01925fe49c622cf7d6e2540c03fd5a0679e1
+defect_id: chatchat-space-Langchain-Chatchat-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- ST IC
+locations:
+- libs/chatchat-server/chatchat/server/file_rag/document_loaders/mydocloader.py
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Use Linux Environment: Make sure you are operating within a Linux environment.
+
+  3.Upload a .doc File: Try uploading a .doc file to the knowledge base.
+
+  4.Observe the Error: Notice the error message indicating that the .doc file format
+  is not supported and the file cannot be parsed.'

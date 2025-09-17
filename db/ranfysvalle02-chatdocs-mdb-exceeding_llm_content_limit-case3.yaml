@@ -1,0 +1,28 @@
+app: chatdocs-mdb
+repo: https://github.com/ranfysvalle02/chatdocs-mdb
+commit: 6322d0ea03d2a3a14fbfaa7ca9f12104e733a72f
+defect_id: ranfysvalle02-chatdocs-mdb-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- IC
+locations:
+- chatdocs/llms.py
+- chatdocs/ui.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query that requires a detailed response.
+
+  6. Observe if the response is incomplete and whether there is currently no way to
+  continue the lost response through a new prompt.
+
+  7. Attempt to split the query into smaller chunks and note if this results in a
+  loss of context in the responses.'

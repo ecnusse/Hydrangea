@@ -1,0 +1,23 @@
+app: doc-chatbot
+repo: https://github.com/chinesewebman/doc-chatbot
+commit: d17caf9f0414bc7bc802774de1f13c5d746966fb
+defect_id: chinesewebman-doc-chatbot-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- src/modules/layout.py
+- src/modules/utils.py
+trigger_tests:
+- '1. Set up: Ensure the project is correctly set up in your local environment.
+
+  2. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  3. Open the upload interface in the web UI.
+
+  4. Attempt to upload an csv file.
+
+  5. Observe if there is any problem or error message during the loading process of
+  the csv file.(for example, TypeError: ''NoneType'' object is not callable)'

@@ -1,0 +1,18 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- 'scripts/config.py: gpt3only mode configuration; scripts/agent_manager.py: agent
+  memory management; scripts/memory.py: permanent_memory list; scripts/chat.py: memory
+  injection into context'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Set smart model to gpt-3.5-turbo; 3) Launch
+  with --gpt3only --debug; 4) Configure AI as Unity developer; 5) Give goal to load
+  design document into long term memory; 6) Allow AutoGPT to process task; 7) Issues:
+  simple list memory without persistence, no file storage, no validation; 8) Memory
+  may not work properly in gpt3only mode; 9) Potential JSON format errors.'

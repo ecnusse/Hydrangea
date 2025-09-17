@@ -1,0 +1,119 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case7
+type: exceeding  LLM content limit
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/config/config.py
+- autogpt/llm/__init__.py
+- autogpt/llm/llm_utils.py
+- autogpt/llm/modelsinfo.py
+trigger_tests:
+- '1.Run Auto-GPT in GPT3.5 only mode: "python -m autogpt --gpt3only"
+
+  2.Set up an AI with the following parameters:
+
+  AI Name: Yoyo
+
+  Role: Lua coder
+
+  Goal 1: Improve the code file WoWinArabic_Chat.lua and document it then save it.
+
+  3.Authorize the analyze_code command with the code file WoWinArabic_Chat.lua
+
+  4.After the analyze_code command, the following error should appear: openai.error.InvalidRequestError: This model''s maximum context length is 8191 tokens, however you requested 19023 tokens (19023 in your prompt; 0 for the completion). Please reduce your prompt; or completion length.
+
+
+  (Complete user''s logs:)
+
+  F:\Projects\autogpt\Auto-GPT>python -m autogpt --gpt3only
+
+  Warning: The file ''auto-gpt.json'' does not exist. Local memory would not be saved to a file.
+
+  GPT3.5 Only Mode:  ENABLED
+
+  NEWS:  ::UPDATED:: Welcome to Auto-GPT! We''ll keep you informed of the latest news and features by printing messages here. If you don''t wish to see this message, you can run Auto-GPT with the --skip-news flag
+
+  Welcome to Auto-GPT!  run with ''--help'' for more information.
+
+  Create an AI-Assistant:  Enter the name of your AI and its role below. Entering nothing will load defaults.
+
+  Name your AI:  For example, ''Entrepreneur-GPT''
+
+  AI Name: Yoyo
+
+  Yoyo here!  I am at your service.
+
+  Describe your AI''s role:  For example, ''an AI designed to autonomously develop and run businesses with the sole goal of increasing your net worth.''
+
+  Yoyo is: you are lua coder
+
+  Enter up to 5 goals for your AI:  For example: Increase net worth, Grow Twitter Account, Develop and manage multiple businesses autonomously''
+
+  Enter nothing to load defaults, enter nothing when finished.
+
+  Goal 1: improve the code file WoWinArabic_Chat.lua and documented it then save it.
+
+  Goal 2:
+
+  Using memory of type:  LocalCache
+
+  Using Browser:  chrome
+
+   THOUGHTS:  I think I should start by analyzing the code file WoWinArabic_Chat.lua to see what improvements can be made.
+
+  REASONING:  Analyzing the code file will give me a better understanding of the current state of the code and help me identify areas that can be improved.
+
+  PLAN:
+
+  -  Analyze the code file
+
+  -  Identify areas for improvement
+
+  -  Make necessary changes
+
+  -  Document changes
+
+  -  Save the file
+
+  CRITICISM:  I need to make sure that I am thorough in my analysis and that I document all changes that I make.
+
+  NEXT ACTION:  COMMAND = analyze_code ARGUMENTS = {''code'': ''WoWinArabic_Chat.lua''}
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''n'' to exit program, or enter feedback for ...
+
+  Input:y
+
+  -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-=
+
+  SYSTEM:  Command analyze_code returned: I''m sorry, but you forgot to provide the code for me to analyze. Please provide the code so I can give you suggestions for improvements.
+
+   THOUGHTS:  I need to read the code file WoWinArabic_Chat.lua to get the code and analyze it.
+
+  REASONING:  I need to read the code file to get the code and analyze it.
+
+  PLAN:
+
+  -  Read the code file
+
+  -  Analyze the code
+
+  -  Identify areas for improvement
+
+  -  Make necessary changes
+
+  -  Document changes
+
+  -  Save the file
+
+  CRITICISM:  I need to make sure that I am thorough in my analysis and that I document all changes that I make.
+
+  NEXT ACTION:  COMMAND = read_file ARGUMENTS = {''file'': ''WoWinArabic_Chat.lua''}
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''n'' to exit program, or enter feedback for ...
+
+  Input:y'

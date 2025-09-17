@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-exceeding_llm_context_limit-/
+type: Exceeding LLM context limit
+case: /
+consequence:
+- ST
+locations:
+- src/gpt4all_llm.py::_call; src/h2oai_pipeline.py::limit_prompt
+trigger_tests:
+- Upload a large text document (>70000 chars); process multiple rounds of chat with
+  long context; upload a document with important information at the beginning that
+  gets truncated.

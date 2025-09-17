@@ -1,0 +1,25 @@
+app: babyagi
+repo: https://github.com/yoheinakajima/babyagi
+commit: 3532f987744e9254afacc254e3325d1910c0651d
+defect_id: yoheinakajima-babyagi-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi/babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+
+  3.Task numbering should be sequential and consistent, but the system shows various
+  numbering problems including resets, jumps, and reverse ordering.
+
+  Example:
+
+  Task numbers reset from high numbers (10-12) back to 1
+
+  Task numbers jump erratically (9→1→2)
+
+  Task numbering occasionally goes in reverse order'

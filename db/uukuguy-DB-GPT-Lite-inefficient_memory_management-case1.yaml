@@ -1,0 +1,19 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-inefficient_memory_management-case1
+type: inefficient memory management
+case: '1'
+consequence:
+- ST
+- IC
+locations:
+- 1.dbgpt/model/llm/inference.py
+- 2.dbgpt/util/model_utils.py
+- 3.dbgpt/model/cluster/worker/default_worker.py
+trigger_tests:
+- '1.Follow the tutorial to deploy DB-GPT on the ubuntu machine (https://github.com/eosphoros-ai/DB-GPT/README.md) (24g single-card GPU)
+
+  2.Continue to ask questions
+
+  3.Observe that CUDA memory kept increasing until memory exploded'

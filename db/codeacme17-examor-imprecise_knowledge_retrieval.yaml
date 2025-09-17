@@ -1,0 +1,27 @@
+app: examor
+repo: https://github.com/codeacme17/examor
+commit: 891ed727b711c6b59e3c6899f7fa08f0df773c30
+defect_id: codeacme17-examor-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- ST
+locations:
+- server/llm_services/pure_llm.py
+trigger_tests:
+- '1. Set up Examor: Ensure the project is correctly set up in your local environment.
+
+  2. Install the application by following the provided installation instructions.
+
+  3. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  4. Open the import interface in the web UI.
+
+  5. Attempt to import a Markdown file containing questions.
+
+  6. Observe if there are no errors during the import process.
+
+  7. Try to extract questions from the imported Markdown file.
+
+  8. Observe if the questions are not extracted despite the successful import.'

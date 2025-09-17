@@ -1,0 +1,19 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-exceeding_llm_content_limit-case5
+type: exceeding LLM content limit
+case: '5'
+consequence:
+- SL
+- IC
+locations:
+- lib/build-prompt.ts:buildFinalMessages function (lines 78-88), components/utility/global-state.tsx:default
+  contextLength (line 67), components/ui/chat-settings-form.tsx:context length slider
+  (line 147), components/messages/message.tsx:handleRegenerate function
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment 2. Engage in a Long Conversation: Continue a conversation until
+  it becomes lengthy 3. Observe Response Issue: Notice that after a long conversation,
+  the AI stops generating replies. Neither the regenerate nor the re-edit functions
+  work 4. Start a New Conversation: Starting a new conversation works normally'

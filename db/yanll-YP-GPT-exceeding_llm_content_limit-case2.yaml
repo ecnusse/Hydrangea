@@ -1,0 +1,22 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- YP-GPT/dbgpt/core/interface/llm.py
+- YP-GPT/dbgpt/app/secne/chat_knowledge/v1/chat,py
+trigger_tests:
+- '1.Run server 
+
+  2.Chat with knowledge
+
+  3.Chat with llm
+
+  4.For more than 2 or 3 questions it will crush down when llm is generating answers
+
+
+  LLM:chatglm3-6b embedding model: text2vec-large-chinese'

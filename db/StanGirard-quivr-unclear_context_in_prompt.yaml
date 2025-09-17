@@ -1,0 +1,13 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- backend/llm/qa_base.py, backend/vectorstore/supabase.py
+trigger_tests:
+- Deploy locally, set OLLAMA_API_BASE_URL in .env, add PDF documents to brain, ask
+  questions about PDF content, system responds without using provided documents

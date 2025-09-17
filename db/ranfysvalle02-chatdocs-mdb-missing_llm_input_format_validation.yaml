@@ -1,0 +1,12 @@
+app: chatdocs-mdb
+repo: https://github.com/ranfysvalle02/chatdocs-mdb
+commit: 6322d0ea03d2a3a14fbfaa7ca9f12104e733a72f
+defect_id: ranfysvalle02-chatdocs-mdb-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chatdocs/add.py
+trigger_tests:
+- Upload the pptx file.

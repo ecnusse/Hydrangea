@@ -1,0 +1,19 @@
+app: DocsGPT
+repo: https://github.com/NinjaDevOps0831/DocsGPT
+commit: 6b6737613ad934a28ae4251ffa9716465e6e35dd
+defect_id: DanielSmith0831-DocsGPT-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- src/enums.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

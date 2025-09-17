@@ -1,0 +1,19 @@
+app: SearchWithOpenAI
+repo: https://github.com/ushakrishnan/SearchWithOpenAI
+commit: 470a5d10f786efbac2feab18330c69365a937599
+defect_id: ushakrishnan-SearchWithOpenAI-exceeding_llm_content_limit-caseexceeding
+  LLM content limit
+type: exceeding LLM content limit
+case: exceeding LLM content limit
+consequence:
+- ST
+locations:
+- common/funs.py/addtostorepdf() pages/3_Index_PDFnTXT_Into_ChromaDB_Store.py/start_capture()
+trigger_tests:
+- '1.Set up SearchWithOpenAI according to the README.md of this project: https://github.com/ushakrishnan/SearchWithOpenAI/README.md
+  2. Run: "streamlit run Home.py" 3. Create large PDF files (total size >30MB) in
+  the sou/ directory 4. Attempt to index the large PDF files using the addtostorepdf
+  function 5. The application crashes with segmentation fault when processing large
+  files 6. Additional test case: Query with ''how wood cribs are fastened?'' after
+  indexing large files 7. The defect is confirmed by the segmentation fault error
+  during large file processing'

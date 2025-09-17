@@ -1,0 +1,19 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- 'scripts/chat.py: context construction with permanent_memory; scripts/memory.py:
+  simple list storage; scripts/agent_manager.py: agent message history'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Add diverse memories with different importance
+  levels; 3) Test memory retrieval for specific queries; 4) Observe all memories sent
+  regardless of relevance; 5) Test memory overflow: 110 memories = 2508 tokens; 6)
+  Identify issues: no recency tracking, no importance scoring, no semantic search;
+  7) Observe poor relevance detection and context-agnostic retrieval; 8) Conclusion:
+  Memory system lacks precision features for optimal knowledge retrieval.'

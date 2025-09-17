@@ -1,0 +1,27 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- pilot/scene/base_chat.py/class BaseChat(ABC)/chat_retention_rounds
+trigger_tests:
+- '1.Start a New Conversation:
+
+  2.Continue the Conversation:
+
+  The user sends multiple questions/messages in the conversation, creating a dialogue
+  with at least two or more messages.
+
+  3.Trigger the _load_history_messages Function:
+
+  The system invokes the _load_history_messages function to retrieve the conversation
+  history.
+
+  4.Observe the Function''s Return Value:
+
+  The function returns only the first question of the conversation, failing to include
+  the rest of the conversation history.'

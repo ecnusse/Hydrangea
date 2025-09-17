@@ -1,0 +1,14 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- UI
+locations:
+- dbgpt/app/scene/chat_data/chat_excel/excel_analyze/out_parser.py
+trigger_tests:
+- '1.Upload an Excel file with over a dozen dimensions.
+
+  2.Start a conversation, where the chatbot generates the overflowing table.'

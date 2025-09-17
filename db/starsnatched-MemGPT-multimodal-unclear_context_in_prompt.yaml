@@ -1,0 +1,20 @@
+app: MemGPT-multimodal
+repo: https://github.com/starsnatched/MemGPT-multimodal
+commit: 82b9b74efa9ad2a04dc531b0ef77a9e229e86e00
+defect_id: starsnatched-MemGPT-multimodal-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- memgpt/server/rest_api/agents/memory.py
+- memgpt/memory.py
+- memgpt/interface.py
+- memgpt/constants.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

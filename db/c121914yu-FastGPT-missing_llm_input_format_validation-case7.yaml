@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case7
+type: Missing LLM input format validation
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- client/src/service/moduleDispatch/chat/oneapi.ts;client/data/config.json
+trigger_tests:
+- '1. Use "Tool call" to access multiple knowledge bases; 2. Each knowledge base reference
+  limit is below 3000 tokens; 3. Start a chat, and the questions call 2 knowledge
+  bases, but it shows that the tokens exceed the model''s limit of 16k; 4. VERIFIED:
+  System lacks validation for total token count across multiple knowledge bases in
+  filterQuote function'

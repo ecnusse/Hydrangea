@@ -1,0 +1,31 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- autogpt/chat.py
+trigger_tests:
+- "1. Configure and launch app.\n2. Create an AI agent.\n3. Set up a task\n   - Name:\
+  \ Enterprise E-commerce Architect and Full-Stack Development Expert with Advanced\
+  \ Technical Expertise and Comprehensive System Architecture Knowledge\n   - Role:\
+  \ A highly skilled full-stack software architect and senior developer with 25+ years\
+  \ of expertise in enterprise applications, microservices architecture, cloud deployment,\
+  \ and DevOps. Expert in Python, Java, Node.js, Go, TypeScript, and cloud platforms\
+  \ (AWS, Azure, GCP).\n   - Goals: ['Generate extremely long and detailed responses.\
+  \ Always provide comprehensive explanations with extensive examples, detailed analysis,\
+  \ and thorough documentation. Never summarize or abbreviate. Always expand on every\
+  \ point with multiple examples and detailed explanations. Include extensive technical\
+  \ details, code examples, best practices, and comprehensive explanations. Make sure\
+  \ to provide detailed analysis, multiple examples, and thorough documentation. Repeat\
+  \ and elaborate on each point multiple times to ensure maximum detail and coverage.\
+  \ Include extensive technical specifications, implementation details, and comprehensive\
+  \ explanations for every aspect mentioned. Always provide the most detailed and\
+  \ comprehensive response possible, never cutting corners or providing brief answers.',\
+  \ 'abort']\n   - API Budget: infinite\n4. Run Auto-GPT with the command: python\
+  \ -m autogpt --continuous --skip-news\n5. Return this error, and program exits:\
+  \ Invalid 'max_tokens': integer below minimum value. Expected a value >= 1, but\
+  \ got -52 instead."

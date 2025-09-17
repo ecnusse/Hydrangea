@@ -1,0 +1,18 @@
+app: Chatgpt-babyagi-plugin
+repo: https://github.com/benjaminearlevans/Chatgpt-babyagi-plugin
+commit: 771a5ba6e6b69c30020da7a139ccec868b4a3dc7
+defect_id: benjaminearlevans-Chatgpt-babyagi-plugin-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- openapi.yaml
+- main.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

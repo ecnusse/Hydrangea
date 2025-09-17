@@ -1,0 +1,18 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-resource_contention-/
+type: resource contention
+case: /
+consequence:
+- ST
+locations:
+- 1.packages/dbgpt-client/src/dbgpt_client/client.py
+- 2.packages/dbgpt-app/src/dbgpt_app/openapi/api_v2.py
+trigger_tests:
+- "1.Start the local DB-GPT WebServer: uv run dbgpt start webserver --config configs/dbgpt-proxy-openai.toml\n\
+  2.Test the chat data mode using Python SDK. The test code is as follows：\n\nimport\
+  \ asyncio\nfrom dbgpt_client import Client\n\nasync def main():\n    # initialize\
+  \ client\n    DBGPT_API_KEY = \"\"\n    client = Client(api_key=DBGPT_API_KEY)\n\
+  \    \n    res = await client.chat(model=\"gpt-3.5-turbo\", messages=\"hello\")\n\
+  \    print(res)\n\nif __name__ == \"__main__\":\n    asyncio.run(main())"

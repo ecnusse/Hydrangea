@@ -1,0 +1,19 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- autogpt/llm/api_manager.py
+trigger_tests:
+- '1.Configure and launch app.
+
+  2.In manual mode, do not interact with app for "a long time" (3 hours for example).
+
+  3.Try to interact with app again and observe if you encounter any API errors or connection timeouts
+  and you''ll see "openai.error.AuthenticationError: The project you are requesting
+  has been archived and is no longer accessible"'

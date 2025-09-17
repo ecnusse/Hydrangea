@@ -1,0 +1,20 @@
+app: Chatgpt-babyagi-plugin
+repo: https://github.com/benjaminearlevans/Chatgpt-babyagi-plugin
+commit: 771a5ba6e6b69c30020da7a139ccec868b4a3dc7
+defect_id: benjaminearlevans-Chatgpt-babyagi-plugin-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- openapi.yaml
+- main.py
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

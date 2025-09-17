@@ -1,0 +1,14 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- UI
+locations:
+- web/components/chat/chat-content/config.tsx
+trigger_tests:
+- '1.Upload an Excel file with over a dozen dimensions.
+
+  2.Start a conversation, where the chatbot generates the overflowing table.'

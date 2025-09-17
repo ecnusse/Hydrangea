@@ -1,0 +1,19 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- ST
+- IC
+locations:
+- 1.dbgpt/app/scene/chat_data/chat_excel/excel_reader.py
+- 2.dbgpt/app/scene/chat_data/chat_excel/excel_learning/chat.py
+- 3.dbgpt/app/scene/chat_data/chat_excel/excel_analyze/chat.py
+trigger_tests:
+- '1.In the Chat Excel scenario, upload a large xlsx file (you can use the test file provided here: https://github.com/eosphoros-ai/DB-GPT/issues/1337).
+
+  2.Use GPT-4.
+
+  3.The JSON generation is too slow, causing it to be incomplete and resulting in a JSON parsing error.'

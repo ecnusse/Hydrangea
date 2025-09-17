@@ -1,0 +1,17 @@
+app: BrainChulo
+repo: https://github.com/ChuloAI/BrainChulo
+commit: f2d6753177ef9940dcb6994da03fbf5fd323a3b3
+defect_id: ChuloAI-BrainChulo-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- app/prompt_templates/document_based_conversation.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

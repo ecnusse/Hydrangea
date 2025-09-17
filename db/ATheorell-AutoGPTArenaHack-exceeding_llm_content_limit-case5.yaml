@@ -1,0 +1,17 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-exceeding_llm_content_limit-case5
+type: exceeding LLM content limit
+case: '5'
+consequence:
+- ST
+- IC
+locations:
+- autogpts/autogpt/autogpt/commands/file_operations.py (list_files); autogpts/autogpt/autogpt/models/action_history.py;
+  autogpts/autogpt/autogpt/llm/api_manager.py (create_chat_completion)
+trigger_tests:
+- '1. Configure & launch AutoGPT (use releases before v0.4.0) 2. Populate ''auto_gpt_workspace''
+  with a very large directory tree 3. Start and authorize: list_files ARGUMENTS =
+  {''directory'': ''.../auto_gpt_workspace''} 4. Observe: openai.error.InvalidRequestError:
+  This model''s maximum context length is 4097 tokens'

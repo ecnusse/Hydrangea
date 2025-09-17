@@ -1,0 +1,15 @@
+app: Agent-LLM
+repo: https://github.com/hlohaus/Agent-LLM
+commit: d8a46dacea35c6224effd3e733d5c085bea1949a
+defect_id: hlohaus-Agent-LLM-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- CustomPrompt.py, AgentLLM.py, model-prompts/gpt-3.5-turbo/instruct.txt
+trigger_tests:
+- 1. Select a character to converse with in the UI. 2. Ask vague or ambiguous questions/overly
+  complex or contradictory information like "Explain what it is" or "If the sun were
+  blue, what color would the moon be?" 3. Observe whether the LLM's response lacks
+  context or contradicts facts.

@@ -1,0 +1,21 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- dbgpt/app/dbgpt_server.py
+trigger_tests:
+- '1.Run server by:python dbgpt/app/dbgpt_server.py
+
+  2.Chat with knowledge
+
+  3.Chat with llm
+
+  4.For more than 2 or 3 questions it will crush down when llm is generating answers
+
+
+  LLM:chatglm3-6b embedding model: text2vec-large-chinese'

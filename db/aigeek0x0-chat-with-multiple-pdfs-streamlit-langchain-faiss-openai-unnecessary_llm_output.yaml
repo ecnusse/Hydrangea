@@ -1,0 +1,25 @@
+app: chat-with-multiple-pdfs-streamlit-langchain-faiss-openai
+repo: https://github.com/aigeek0x0/chat-with-multiple-pdfs-streamlit-langchain-faiss-openai
+commit: 3cc2b0ac1522d6a78a998759ea212052ddefb3b7
+defect_id: aigeek0x0-chat-with-multiple-pdfs-streamlit-langchain-faiss-openai-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- SL
+locations:
+- app.py
+trigger_tests:
+- '1. Set up Ask Multiple PDFs: Ensure the project is correctly set up in your local
+  environment.
+
+  2. Upload multiple PDF documents for querying.
+
+  3. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query that requires generating a detailed response.
+
+  6. Observe the generated output to check if the last sentence is repeated multiple
+  times.'

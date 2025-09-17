@@ -1,0 +1,46 @@
+app: babyagi-streamlit
+repo: https://github.com/dory111111/babyagi-streamlit
+commit: 088aa7376c39d541543a3518df8bd5db46633f51
+defect_id: dory111111-babyagi-streamlit-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+  In this example, the task list numbering in Round 2 should start from 2 instead
+  of 1.
+
+  Example:
+
+  Round 1
+
+  Task 1: Attend a live theater performance to enjoy a different form of live entertainment
+  and immerse yourself in a story.
+
+  Task 2: Have a picnic in a local park or scenic spot, bringing along your favorite
+  foods and drinks for a relaxing outdoor meal.
+
+  Task 3: Take a dance class to learn a new style of dance and have fun moving to
+  the music.
+
+  Task 4: Go on a day trip to a nearby town or city to explore new surroundings and
+  discover hidden gems.
+
+  Round 2
+
+  Task 1: Take a dance class to learn a new style of dance and have fun moving to
+  the music.
+
+  Task 2: Go on a day trip to a nearby town or city to explore new surroundings and
+  discover hidden gems.
+
+  Task 3: Visit a local art gallery or museum to appreciate different forms of art
+  and culture, and expand your knowledge and creativity.
+
+  Task 4: Attend a live music concert or performance to enjoy the energy and excitement
+  of live music, and dance and sing along to your favorite songs.'

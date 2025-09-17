@@ -1,0 +1,18 @@
+app: h2ogpt-dev-local
+repo: https://github.com/Jerk400/h2ogpt-dev-local
+commit: ba56d6471080ec447c7c5347a2d4765ae4dba5b4
+defect_id: Jerk400-h2ogpt-dev-local-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- src/enums.py:model_token_mapping; src/gen.py:set_model_max_len; src/h2oai_pipeline.py:limit_prompt
+trigger_tests:
+- '1. Set up the application according to the README.md of this project; 2. Upload
+  a large text document (>2048 tokens) in the application''s chat UI; 3. Have multiple
+  rounds of conversation to accumulate tokens; 4. Try to process complex queries with
+  rich context; 5. Observe the error: ''Input validation error: inputs must have less
+  than 2048 tokens''; 6. Verify that conversation history is lost due to context window
+  overflow; 7. Confirm that content is arbitrarily truncated when exceeding token
+  limits'

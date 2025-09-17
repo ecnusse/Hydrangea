@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-lacking_restrictions_in_prompt-case1
+type: Lacking restrictions in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- src/gen.py::max_new_tokens; src/gpt4all_llm.py::n_predict
+trigger_tests:
+- Configure max output tokens limit; enter query requiring detailed response; observe
+  response cut off due to token limit; test with complex queries needing comprehensive
+  answers.

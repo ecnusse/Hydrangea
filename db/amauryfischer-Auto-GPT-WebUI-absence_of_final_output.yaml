@@ -1,0 +1,19 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-absence_of_final_output-/
+type: absence of final output
+case: /
+consequence:
+- IC
+- ST
+locations:
+- autogpt/agent/agent.py/start_interaction_loop(self)
+trigger_tests:
+- '1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according to the instructions on v0.2.2 READMe.md
+
+  2. Run AutoGPT in continuous mode.
+
+  3.Let Auto GPT execute "browse_website" command  to collect information from the web about a specific topic. The webpage you directed AutoGPT to browse has no text to summarize or contains other page errors.
+
+  4.Observe if AutoGPT enters a loop that after a webpage browsing failure，it restarts the Google search, lands on the same page, and starts the search over, only to land on the page again.'

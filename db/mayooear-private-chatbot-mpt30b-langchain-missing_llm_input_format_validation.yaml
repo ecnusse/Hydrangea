@@ -1,0 +1,13 @@
+app: private-chatbot-mpt30b-langchain
+repo: https://github.com/mayooear/private-chatbot-mpt30b-langchain
+commit: dbb888a2d5f1eaf6256ffab53e4ec0b766a86a3f
+defect_id: mayooear-private-chatbot-mpt30b-langchain-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chat.py
+- question_answer_docs.py
+trigger_tests:
+- Upload the pptx file.

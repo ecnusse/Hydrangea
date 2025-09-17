@@ -1,0 +1,28 @@
+app: BabyCommandAGI
+repo: https://github.com/saten-private/BabyCommandAGI
+commit: 993f7075479d4d89948410bfec0c4c18d4a06b0c
+defect_id: saten-private-BabyCommandAGI-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- classic/babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2. Observe the tasks and outcoms, until you notice the repeated tasks.
+
+  Example:
+
+  Set OBJECTIVE="Translate this sentence from english into chinese: hello, world"
+  and YOUR_FIRST_TASK="Develop a task list"
+
+  Task 1: Translate the sentence ''Goodbye, universe'' into Chinese.
+
+  Task 4: Translate the sentence ''Goodbye, universe'' into Chinese.
+
+  Task 8: Translate the sentence ''Goodbye, universe'' into Chinese.
+
+  Task 13: Translate the sentence ''Goodbye, universe'' into Chinese.'

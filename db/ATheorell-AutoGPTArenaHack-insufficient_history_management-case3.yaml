@@ -1,0 +1,15 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/agents/planning_agent.py; autogpts/autogpt/autogpt/models/action_history.py
+trigger_tests:
+- 1. Start AutoGPT with 'python -m autogpt run' 2. Give the agent multiple related
+  tasks in quick succession 3. Switch between tasks before completion 4. Ask the agent
+  to continue a previous task 5. Observe if the agent repeats completed steps or loses
+  track of task progress

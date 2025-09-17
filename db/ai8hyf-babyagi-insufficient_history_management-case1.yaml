@@ -1,0 +1,25 @@
+app: babyagi
+repo: https://github.com/ai8hyf/babyagi
+commit: 6fcd528a92c80846dbb351f2b7babdd50c38709d
+defect_id: ai8hyf-babyagi-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2. Observe the tasks and outcoms, until you notice the repeated tasks.
+
+  Example: Research Application Processes and Requirements for Funding Programs
+
+  Task 8: Research the application process and requirements for each identified funding
+  source.
+
+  Task 13: Research the application process and requirements for the listed tax incentives
+  and grants.
+
+  Task 22: Research the application process for each grant or tax incentive.'

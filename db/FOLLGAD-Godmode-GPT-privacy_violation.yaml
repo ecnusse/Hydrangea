@@ -1,0 +1,19 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT.
+
+  2.(cli mode)Use the command: "python -m autogpt --continuous" to start AutoGPT in
+  continuous mode.
+
+  3.Set up a task, which involves web browsing and searching.
+
+  4.Allow AutoGPT to process the task and check if AutoGPT accesses the browser without user consent.'

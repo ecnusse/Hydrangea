@@ -1,0 +1,43 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- SL
+locations:
+- dbgpt/model/llm_out/vllm_llm.py
+trigger_tests:
+- '1. Start Qwen service using this command: CUDA_VISIBLE_DEVICES=4,5,6,7 dbgpt start worker --model_name Qwen-72B-Chat --model_path xxxxxx --model_type vllm --controller_addr http://localhost:8000 --gpu_memory_utilization 0.85
+
+  2.Enter the "Chat Knowledge" scenario.
+
+  3.Enter the following text: 
+
+  Many things happened in life that moved me, one of the most moving things is a day
+  to buy balloons, my sister and my mother went to the bookstore to read books to
+  buy books, I walked in the pedestrian street injury suddenly found a car selling
+  balloons, there is no adults, only a little boy, he may be to help adults take care
+  of the business, the car balloons colorful, Each color of the balloon tied with
+  a white line, I saw the beautiful balloon called my mother to take me to buy, under
+  my entanglement mother gave me 10 yuan, I took the money to the car, the little
+  boy saw me come to say hello, I asked: "How much is a balloon", the little boy answered:
+  "50 cents, how many do you want."
+
+  Touching story I said: "Want four, give me red, yellow." Blue and purple balloons."
+  I said as I handed the money, the little boy quickly unwrapped the red, yellow,
+  blue, purple balloon to me and took the money to the past, I saw the little boy''s
+  face when he looked for the money, he did not have change for me. He raised his
+  head with big intelligent eyes and whispered: "The change is in my father''s body,
+  now can not be found, you take 4 balloons, 6 yuan I will give you a simulation to
+  go first, OK!" I held four balloons, with my mother and sister went to the Xinhua
+  bookstore, after up to 2 hours of reading, I reluctantly walked out of the bookstore,
+  after such a long time days are almost dark, I have long forgotten this matter,
+  suddenly a little boy ran to say: "Little sister, here''s your six yuan, I''m sorry,"
+  he said as he shoved the money into my hand, then turned and ran away. I tightly
+  hold the 6 yuan money with the remaining warmth, a warm spread on the heart, I was
+  deeply moved by his behavior: how trustworthy little boy ah!
+
+
+  and the model inference freezes.'

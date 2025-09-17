@@ -1,0 +1,16 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/pilot/scene/base_chat.py/class BaseChat(ABC)/chat_retention_rounds
+trigger_tests:
+- '1.Enter the Chat Data scenario.
+
+  2.Engage in multiple rounds of conversation.
+
+  3.Observe the return value of the _load_history_messages function in the log. The function''s return result only includes the first question of the conversation.'

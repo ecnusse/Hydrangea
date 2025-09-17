@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- projects/app/src/components/ChatBox/ResponseTags.tsx;projects/app/src/service/moduleDispatch/tools/http.ts;projects/app/src/service/moduleDispatch/chat/oneapi.ts;packages/global/core/module/template/system/http.ts
+trigger_tests:
+- '1. In a conversational application, integrate knowledge base citations into the
+  HTTP module in workflow; 2. During debugging, when the bot answers questions related
+  to the knowledge base, it does not cite references; 3. Root cause: HTTP module response
+  data format lacks quoteList field, quote list processing logic only filters chatNode
+  type modules, HTTP module integration with knowledge base is incomplete'

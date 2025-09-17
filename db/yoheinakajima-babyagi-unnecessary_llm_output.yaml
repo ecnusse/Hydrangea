@@ -1,0 +1,62 @@
+app: babyagi
+repo: https://github.com/yoheinakajima/babyagi
+commit: 3532f987744e9254afacc254e3325d1910c0651d
+defect_id: yoheinakajima-babyagi-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- babyagi/babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Clone the Repository:
+
+     git clone https://github.com/yoheinakajima/babyagi.git
+
+     cd babyagi
+
+  2.Install the Required Packages:
+
+     pip install -r requirements.txt
+
+  3.Set Up Environment Variables:
+
+    (1)Copy the .env.example file to .env:
+
+     cp .env.example .env
+
+    (2)Open the .env file and set the following variables:
+
+     OPENAI_API_KEY=your_openai_api_key
+
+     OPENAI_API_MODEL=gpt-3.5-turbo
+
+     TABLE_NAME=your_results_store_name
+
+  (3)Optionally, set other variables:
+
+     BABY_NAME=your_babyagi_instance_name
+
+     OBJECTIVE="Translate this sentence from english into chinese: hello, world"
+
+     FIRST_TASK="Make a todo list"
+
+  4.Run the Script:
+
+     python babyagi.py
+
+  5.Observe tasks and outcomes, and you''ll see that BabyAGI generated many unnecessary
+  tasks.Example:
+
+  Task 2. Host a virtual dance party with friends or family members over a video call
+  to spread joy and have a fun time together.
+
+  Task 3. Start the day with a relaxing morning yoga session to stretch and energize
+  your body.
+
+  Task 4. Have a dance party in your living room to your favorite music playlist and
+  let loose with some fun moves to uplift your spirits.
+
+  Task 5. Join a virtual Indian mythology quiz night to test your knowledge of Indian
+  myths, gods, and legends for a fun and challenging trivia session.'

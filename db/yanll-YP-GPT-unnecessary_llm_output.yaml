@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- UI
+- TK
+locations:
+- YP-GPT/dbgpt/app/dbgpt_server.py
+trigger_tests:
+- '1.Follow instructions on https://www.yuque.com/eosphoros/dbgpt-docs/owcrh9423f9rqkg2#LYjPt
+
+  2.Input:"Build sales reports and analyze user orders from at least three dimensions”
+
+  3.Terminal: warp.app or iterm.app'

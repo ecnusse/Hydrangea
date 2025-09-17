@@ -1,0 +1,23 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- src/agents/prioritization_agent.py
+trigger_tests:
+- "1.Run the script according to the previously mentioned steps.\n2.Observe whether the generated task list shows any numbering inconsistencies or misorder.\n\
+  Problem Type: Each list item shows duplicate number prefixes\nExample:\n1. 1. Close\
+  \ your eyes and focus on your breathing for 10 minutes.\n2. 2. Count backwards from\
+  \ 100 to 0 in your mind without getting distracted for 15 minutes.\n3. 3. Imagine\
+  \ yourself in a peaceful place and stay in that mental state for 20 minutes.\nProblem\
+  \ Type1: Each new list restarts numbering from 1\nProblem Type2: Task numbering\
+  \ uses a colon after the number (e.g., 1: instead of 1.), which is non-standard.\n\
+  Example:\nTask 1. Translate \"hello, world\" from English to Chinese.  \nTask 2.\
+  \ Translate \"good morning\" from English to Chinese.  \nTask 3. Translate \"I love\
+  \ you\" from English to Chinese.  \nTask 4. Translate \"how are you?\" from English\
+  \ to Chinese.  \nTask 5. Translate \"goodbye, world\" from English to Chinese. \
+  \ \nTask 1: Translate \"hello, world\" from English to Chinese."

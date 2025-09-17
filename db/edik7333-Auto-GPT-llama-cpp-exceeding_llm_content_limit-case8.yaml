@@ -1,0 +1,19 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case8
+type: exceeding LLM content limit
+case: '8'
+consequence:
+- ST
+locations:
+- scripts/config.py/__init__(self) scripts/browse.py/split_text(), summarize_text()
+trigger_tests:
+- '1.Run Auto-GPT v0.3.0. 2.Set up an AI with the following parameters: Goal 1: Search_files
+  and make a descriptions of all files. Goal 2: be aware that you cannot send long
+  requests to the api. i think max is 8k tokens. Goal 3: Using memory of type: LocalCache
+  Using Browser: chrome 3.Authorize the search_files command with the code file WoWinArabic_Chat.lua
+  4.After the search_files command, the following error should appear: openai.error.InvalidRequestError:
+  This model''s maximum context length is 8191 tokens, however you requested 17113
+  tokens (17113 in your prompt; 0 for the completion). Please reduce your prompt;
+  or completion length.'

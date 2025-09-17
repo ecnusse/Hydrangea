@@ -1,0 +1,25 @@
+app: examor
+repo: https://github.com/codeacme17/examor
+commit: 891ed727b711c6b59e3c6899f7fa08f0df773c30
+defect_id: codeacme17-examor-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- server/apis/profile.py
+- server/db_services/profile.py
+- app/src/hooks/share.ts
+trigger_tests:
+- '1. Set up Examor: Ensure the project is correctly set up in your local environment.
+
+  2. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  3. Open the profile settings interface in the web UI.
+
+  4. Enter a very long string for the ORGANIZATION field in the profile.
+
+  5. Attempt to save the profile update.
+
+  6. Observe if the profile update fails when the ORGANIZATION string is too long.'

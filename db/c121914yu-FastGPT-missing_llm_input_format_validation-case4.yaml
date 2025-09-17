@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- IC
+locations:
+- client/src/constants/common.ts;client/src/pages/kb/detail/components/Import/FileSelect.tsx;client/src/utils/file.ts
+trigger_tests:
+- '1. Upload CSV or XLSX files to your knowledge base, selecting "Direct Segmentation"
+  and "Automatic" in "Data Processing"; 2. VERIFIED: Excel files are silently ignored
+  due to missing format support; CSV files require strict question/answer column format
+  validation'

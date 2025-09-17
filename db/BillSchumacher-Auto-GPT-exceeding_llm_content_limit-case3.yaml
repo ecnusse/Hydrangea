@@ -1,0 +1,23 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/chat.py
+- autogpt/api_manager.py
+- autogpt/commands/file_operations.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT
+
+  2.Create an AI agent.
+
+  3.Start AutoGPT. Authorize the forlowing command and observe its outputs: 
+
+  search_files ARGUMENTS = {''directory'': ''....\auto_gpt_workspace''} --> openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens, however you requested 21995
+  tokens'

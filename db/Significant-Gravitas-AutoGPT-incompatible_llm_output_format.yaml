@@ -1,0 +1,24 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- scripts/browse.py
+trigger_tests:
+- "1.Complete the environment setup for AutoGPT.\n2.Run the test script:\nimport sys\n\
+  import os\nsys.path.append(os.path.join(os.path.dirname(__file__), '..'))\nfrom\
+  \ scripts.browse import split_text\ndef test_newline_loss():\n    \"\"\"测试换行符丢失缺陷\"\
+  \"\"\n    text = \"line1\\nline2\\nline3\"\n    chunks = list(split_text(text, max_length=10))\n\
+  \    reconstructed = \"\".join(chunks)\n    original_newlines = text.count('\\n')\n\
+  \    reconstructed_newlines = reconstructed.count('\\n')\n    print(f\"原始文本: {repr(text)}\"\
+  )\n    print(f\"重构文本: {repr(reconstructed)}\")\n    print(f\"原始换行符: {original_newlines}\"\
+  )\n    print(f\"重构换行符: {reconstructed_newlines}\")\n    print(f\"丢失换行符: {original_newlines\
+  \ - reconstructed_newlines}\")\n    if original_newlines != reconstructed_newlines:\n\
+  \        print(\"缺陷触发成功：换行符丢失\")\n        return True\n    else:\n        print(\"\
+  无缺陷\")\n        return False\nif __name__ == \"__main__\":\n    test_newline_loss()\n\
+  3.Observe the output, which may show:\n原始文本: 'line1\\nline2\\nline3'\n重构文本: 'line1line2line3'\n\
+  原始换行符: 2\n重构换行符: 0\n丢失换行符: 2\n缺陷触发成功：换行符丢失"

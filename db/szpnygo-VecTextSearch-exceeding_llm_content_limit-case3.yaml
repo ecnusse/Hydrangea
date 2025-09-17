@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-exceeding_llm_content_limit-case3
+type: exceeding LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- history/extension/README.md
+trigger_tests:
+- 1. Read the extension README documentation; 2. Look for information about content
+  size limitations; 3. Note the absence of warnings about large conversations; 4.
+  Observe that no guidance is provided for handling long conversations

@@ -1,0 +1,19 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- UI
+locations:
+- web/components/chat/chat-content/config.tsx
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload "The Little Prince" .pdf knowledge file to the knowledge base.
+
+  3.Ask the question: "Which planet did the Little Prince meet the king on?"
+
+  4.UI displays the response in code block format instead of plain text when answering
+  normal questions.'

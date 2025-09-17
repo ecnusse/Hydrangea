@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-knowledge_misalignment-case1
+type: knowledge misalignment
+case: '1'
+consequence:
+- ST
+- IC
+locations:
+- 'scripts/chat.py: permanent memory usage; scripts/commands.py: memory management;
+  scripts/memory.py: memory storage'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Create large issues_data.json (~737KB); 3)
+  Pre-seed memory with sample data; 4) Launch: python scripts/main.py --gpt3only;
+  5) Configure AI to use pre-seeded memory data; 6) Observe AI ignores pre-seeded
+  data and attempts to download/clone repositories instead.'

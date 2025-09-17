@@ -1,0 +1,21 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+- IC
+locations:
+- scripts/main.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT.
+
+  2.(cli mode)Use the command: "python scripts/main.py continuous-mode" to start AutoGPT in continuous mode.
+
+  3.Set up a complex multi-goal task (with AI Name, Role, and 5 Goals).
+
+  4.Allow AutoGPT to process the task and observe if the token length error occurs
+  and you may see that openai.error.RateLimitError: Rate limit reached for gpt-4 ...
+  Limit 10000, Used 2903, Requested 7906.'

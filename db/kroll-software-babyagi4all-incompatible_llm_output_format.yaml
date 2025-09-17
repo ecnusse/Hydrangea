@@ -1,0 +1,14 @@
+app: babyagi4all
+repo: https://github.com/kroll-software/babyagi4all
+commit: 3dc42659eb5cb51dbea71b565ce09f61a130cc20
+defect_id: kroll-software-babyagi4all-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.'

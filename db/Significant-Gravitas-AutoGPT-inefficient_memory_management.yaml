@@ -1,0 +1,19 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- scripts/main.py
+trigger_tests:
+- "1. Complete the environment setup for AutoGPT. (Set API Keys for OpenAI, Pinecone,\
+  \ and Eleven Labs, then change the model to use gpt-3.5-turbo.)\n2. In CLI mode,\
+  \ use the command: \"python ./scripts/main.py\" to start AutoGPT.\n3. Set up the\
+  \ prompt as follows:\n   Name: Entrepreneur-GPT\n   Entrepreneur-GPT is: An AI designed\
+  \ to test memory functionality in AutoGPT.\n   Goal 1: Remember a simple piece of\
+  \ information: \"The user likes apples.\"\n   Goal 2: Tell me what the user likes.\n\
+  4. Allow AutoGPT to process the task and check for any JSON format errors or issues\
+  \ with memory handling.(Error: Invalid JSON)"

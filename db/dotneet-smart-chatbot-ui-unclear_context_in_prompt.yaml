@@ -1,0 +1,19 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- types/prompt.ts, components/Promptbar/components/Prompt.tsx, components/Chat/PromptList.tsx,
+  components/Chat/ChatInput.tsx, components/Chat/SystemPrompt.tsx
+trigger_tests:
+- '1. Model: GPT-4o, Temperature: 2, Context Length: 128000, Include Profile Context:
+  yes, Include Workplace Instructions: yes, Embeddings Provider: OpenAI. 2. Start
+  chatting and use prompt templates with variables ({{variable}}). 3. The system may
+  produce unexpected responses due to improper variable parsing and context handling.
+  4. Test case: Create a prompt template like "{{name}} is a {{adjective}} {{noun}}"
+  and observe how the system handles variable parsing and replacement. 5. Test case:
+  Test character limit functionality with prompt templates containing variables.'

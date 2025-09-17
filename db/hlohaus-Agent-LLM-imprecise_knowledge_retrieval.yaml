@@ -1,0 +1,15 @@
+app: Agent-LLM
+repo: https://github.com/hlohaus/Agent-LLM
+commit: d8a46dacea35c6224effd3e733d5c085bea1949a
+defect_id: hlohaus-Agent-LLM-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- CL
+- SL
+locations:
+- commands/google.py, Config/__init__.py
+trigger_tests:
+- 1. Setup with docker (Local environment). 2. Run Gen and run Task Chain. 3. Observe
+  that Google search commands fail due to missing API configuration, preventing knowledge
+  retrieval.

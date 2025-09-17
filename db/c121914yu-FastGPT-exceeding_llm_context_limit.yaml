@@ -1,0 +1,18 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-exceeding_llm_context_limit-/
+type: Exceeding LLM context limit
+case: /
+consequence:
+- ST
+locations:
+- client/src/pages/api/plugins/kb/data/insertData.ts;client/src/service/utils/chat/index.ts;client/data/config.json
+trigger_tests:
+- '1. Set up FastGPT application according to README.md; 2. Create a knowledge base
+  and attempt to insert a text document with token count exceeding 4000 tokens; 3.
+  The system will throw ''Over Tokens'' error and stop processing; 4. Alternative
+  test: Upload a large document in chat UI and perform multiple rounds of conversation
+  to observe ChatContextFilter trimming behavior; 5. VERIFIED: Successfully reproduced
+  the defect by analyzing source code and confirming the error throwing mechanism
+  in insertData.ts lines 37-40'

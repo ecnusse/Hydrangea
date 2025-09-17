@@ -1,0 +1,64 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case6
+type: exceeding  LLM content limit
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/config/config.py
+- autogpt/llm/__init__.py
+- autogpt/llm/llm_utils.py
+- autogpt/llm/modelsinfo.py
+trigger_tests:
+- 'Install all the dependencies and run as AutoGPT.
+
+
+  Give the prompt:
+
+  Name: Xiaoji Tour Guide
+
+  Role: Design a detailed 10-day tour plan for Xinjiang starting and ending in Urumqi,
+  respond and search in Chinese.
+
+  Goals: [''Respond in Chinese and use Chinese keywords for search'', ''Include detailed
+  itinerary and budget'', ''Suitable for a trip in late July during summer vacation'',
+  ''Relaxing with not too much traveling'', ''Suitable for car rental or self-driving'']
+
+
+  According to the user''s logs, the next steps are as follows:
+
+  THOUGHTS: I think we should start by searching for some popular tourist destinations
+  in Xinjiang and then plan our itinerary accordingly. We can also look for some car
+  rental services in the area.
+
+  REASONING: By searching for popular tourist destinations, we can get an idea of
+  what places are worth visiting and plan our itinerary accordingly. Additionally,
+  by looking for car rental services, we can determine the feasibility of renting
+  a car for the trip.
+
+  PLAN:
+
+
+  Search for popular tourist destinations in Xinjiang
+
+  Look for car rental services in the area
+
+  Plan itinerary based on the destinations found
+
+  CRITICISM: I need to make sure that I am not just relying on the most popular tourist
+  destinations and that I am considering other factors such as cost and time constraints.
+
+  NEXT ACTION: COMMAND = google ARGUMENTS = {''input'': ''Xinjiang tourist attractions''}
+
+  Enter ''y'' to authorize command, ''y-N'' to run N continuous commands, ''n'' to
+  exit program, or enter feedback for ...
+
+  Input: y
+
+  After the google command, the following error should appear: openai.error.InvalidRequestError:
+  This model''s maximum context length is 8191 tokens, however you requested 9564
+  tokens (9564 in your prompt; 0 for the completion). Please reduce your prompt; or
+  completion length.'

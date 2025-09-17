@@ -1,0 +1,18 @@
+app: DocsGPT
+repo: https://github.com/NinjaDevOps0831/DocsGPT
+commit: 6b6737613ad934a28ae4251ffa9716465e6e35dd
+defect_id: DanielSmith0831-DocsGPT-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- scripts/parser/file/html_parser.py
+trigger_tests:
+- '1.Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment.
+
+  2.Ask a Question: Use DocsGPT to ask any question that generates a response with
+  bullet points.
+
+  3.Observe the Bullets: Notice that the bullets in the response are not aligned properly.'

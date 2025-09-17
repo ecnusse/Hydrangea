@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-imprecise_knowledge_retrieval-case1
+type: Imprecise knowledge retrieval
+case: '1'
+consequence:
+- SL
+locations:
+- backend/vectorstore/supabase.py, backend/models/databases/supabase/brains.py
+trigger_tests:
+- Create brain, upload multiple files to knowledge, ask questions about documents,
+  system takes too long to index files and retrieve knowledge due to missing caching
+  and indexing optimizations

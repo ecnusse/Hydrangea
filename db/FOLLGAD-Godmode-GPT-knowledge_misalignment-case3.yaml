@@ -1,0 +1,29 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-knowledge_misalignment-case3
+type: knowledge misalignment
+case: '3'
+consequence:
+- IC
+locations:
+- godmode-gpt/autogpt/commands/file_operations.py/split_file()
+trigger_tests:
+- '1.Configure and start the app with the "local" memory backend.
+
+  2.Create a small file (test_file_126.txt) with about 126 characters.
+
+  3.Run data_ingestion on this file.
+
+  4.Check auto-gpt.json. The file will exist but contain no data.
+
+  5.Check console logs. They indicate: 0 chunks were saved (because the file is too
+  small).
+
+  6.Extend the file to about 1198 characters (test_file_1198.txt).
+
+  7.Run data_ingestion again on the larger file.
+
+  8.Check console logs. This time it indicates: 1 chunk was saved.
+
+  9.Verify auto-gpt.json has been updated with ingested content.'

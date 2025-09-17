@@ -1,0 +1,13 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case8
+type: Missing LLM input format validation
+case: '8'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Add a .doc file to the knowledge base. 2. Attempt to import/process it. 3. Observe
+  that .doc files are not supported (no ingestion or an unsupported format error).

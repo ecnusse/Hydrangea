@@ -1,0 +1,20 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-exceeding_llm_content_limit-case6
+type: exceeding LLM content limit
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- 'scripts/config.py: token limit settings; scripts/llm_utils.py: create_chat_completion;
+  scripts/commands.py: google_search; scripts/chat.py: context construction and token
+  management'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Set FAST_TOKEN_LIMIT=1500 (lower than default
+  4000); 3) Launch: python scripts/main.py --continuous --gpt3only; 4) Configure AI
+  to perform multiple searches (e.g., "Xinjiang tourist attractions"); 5) Execute
+  google_search command with large result sets; 6) Observe "InvalidRequestError: This
+  model''s maximum context length is 8191 tokens" when large search results exceed
+  token limit.'

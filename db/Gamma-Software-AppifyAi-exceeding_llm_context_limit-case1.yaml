@@ -1,0 +1,14 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-exceeding_llm_context_limit-case1
+type: Exceeding LLM context limit
+case: '1'
+consequence:
+- ST
+locations:
+- generative_app/core/chains/conversational_retrieval_over_code.py, generative_app/core/app_pages/chat.py
+trigger_tests:
+- 1. Start a conversation with AppifyAi to create an app. 2. As the generated app
+  grows, the code becomes more complex with many lines and chat history grows as well.
+  3. Eventually, the context exceeds model limits causing system timeout.

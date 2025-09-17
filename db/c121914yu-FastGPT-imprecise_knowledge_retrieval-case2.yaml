@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-imprecise_knowledge_retrieval-case2
+type: Imprecise knowledge retrieval
+case: '2'
+consequence:
+- IC
+locations:
+- client/src/service/moduleDispatch/kb/search.ts;client/src/pages/api/openapi/kb/searchTest.ts
+trigger_tests:
+- '1. Import the knowledge base with serial number/model data; 2. We have tried Q&A
+  training and document uploading to the knowledge base to ensure that the numbered
+  keywords have been covered by the knowledge base multiple times; 3. Neither semantic
+  retrieval nor full-text retrieval can accurately point to the relevant knowledge;
+  4. VERIFIED: System lacks number-specific processing in vector search, causing imprecise
+  knowledge retrieval for numeric queries'

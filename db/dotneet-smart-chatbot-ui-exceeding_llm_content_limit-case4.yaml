@@ -1,0 +1,20 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-exceeding_llm_content_limit-case4
+type: exceeding LLM content limit
+case: '4'
+consequence:
+- SL
+locations:
+- types/llmUsage.ts, components/Chat/ChatInputTokenCount.tsx, components/Chat/ChatMessage.tsx,
+  components/Markdown/MemoizedReactMarkdown.tsx, pages/api/chat.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment. 2. Engage in Long Text Generation: Initiate a conversation or
+  code generation that results in lengthy texts. 3. Observe Performance: During the
+  generation of long texts, notice slowdowns and freezes in the UI. The speed should
+  return to normal after the process completes or is interrupted. 4. Real test confirmed:
+  UI blocking operations during token counting and markdown rendering, high memory
+  usage with large texts (500KB text caused 7907KB memory increase), and main thread
+  blocking causing UI freezes and slowdowns.'

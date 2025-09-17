@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- UI
+locations:
+- dbgpt/core/interface/prompt.py, chat.py
+trigger_tests:
+- '1.Download and configure app.
+
+  2.Set need_historical_messages=True in the packages/dbgpt-app/src/dbgpt_app/scene/base.py.
+
+  3.Start a conversation test using the qwen72b model and find that multi-turn dialogue is not supported.'

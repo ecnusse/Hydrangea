@@ -1,0 +1,15 @@
+app: babyagi
+repo: https://github.com/yoheinakajima/babyagi
+commit: 3532f987744e9254afacc254e3325d1910c0651d
+defect_id: yoheinakajima-babyagi-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi/babyagi.py/task_creation_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2. Observe the tasks and outcomes, until you notice the repeated tasks.'

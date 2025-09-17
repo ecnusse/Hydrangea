@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-improper_text_embedding-/
+type: Improper text embedding
+case: /
+consequence:
+- ST
+locations:
+- src/gpt_langchain.py::similarity_search_with_score; src/gpt_langchain.py::get_embedding
+trigger_tests:
+- Load 4GB embedding database; perform similarity search on large database; observe
+  memory exhaustion and potential segmentation faults; test with large-scale embedding
+  operations.

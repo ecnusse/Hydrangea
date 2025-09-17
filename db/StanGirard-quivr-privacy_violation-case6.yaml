@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-privacy_violation-case6
+type: privacy violation
+case: '6'
+consequence:
+- IS
+locations:
+- frontend/app/brains-management/[brainId]/components/BrainManagementTabs/components/KnowledgeTab/KnowledgeItem/CrawledKnowledgeItem.tsx
+trigger_tests:
+- 'Crawled knowledge URLs are rendered directly in href attributes and text content
+  without validation, allowing malicious URLs like javascript: and data: protocols
+  to execute'

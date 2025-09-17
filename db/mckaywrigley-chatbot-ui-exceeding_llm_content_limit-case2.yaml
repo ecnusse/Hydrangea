@@ -1,0 +1,20 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-exceeding_llm_content_limit-case2
+type: exceeding LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- app/api/chat/openai/route.ts:max_tokens setting (line 30), app/api/chat/mistral/route.ts:missing
+  max_tokens, app/api/chat/google/route.ts:missing max_tokens, lib/chat-setting-limits.ts:MAX_TOKEN_OUTPUT_LENGTH
+  values
+trigger_tests:
+- '1. Set Up Chatbot UI: Ensure that the Chatbot UI project is correctly set up and
+  configured in your local environment according to the project documentation 2. Engage
+  in a Long Conversation: Initiate a conversation with the chatbot and continue interacting
+  until the conversation becomes lengthy 3. Observe Response Truncation: Monitor the
+  chatbot''s responses. Specifically, check if new responses from the model are being
+  truncated or cut off. This behavior may indicate that the token limit for the model''s
+  responses is being exceeded'

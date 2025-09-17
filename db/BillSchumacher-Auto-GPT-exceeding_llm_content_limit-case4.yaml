@@ -1,0 +1,45 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/chat.py
+- autogpt/api_manager.py
+- autogpt/commands/web_selenium.py
+trigger_tests:
+- '1.Install all the dependencies and run as "python -m autogpt -c"
+
+  2.Give the prompt:
+
+  Goal 1: Use browse_website command to visit https://www.reddit.com and analyze ALL
+  content
+
+  Goal 2: Extract and process every single hyperlink found on the page
+
+  Goal 3: Provide comprehensive analysis of each link and its content
+
+  Goal 4: Do not limit or skip any links, process them all in detail
+
+  Continuous Mode:  ENABLED
+
+
+  Name:  Link Analyzer
+
+  Role: An AI designed to extract and analyze all hyperlinks from websites, providing
+  comprehensive analysis of every link found
+
+  Continue (y/n): y
+
+  Using memory of type:  LocalCache
+
+  Using Browser:  chrome
+
+  3. After the get_hyperlinks command, the following error should appear: openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens, however you requested 12147
+  tokens (12147 in your prompt; 0 for the completion). Please reduce your prompt;
+  or completion length.'

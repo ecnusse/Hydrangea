@@ -1,0 +1,19 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-exceeding_llm_content_limit-case1
+type: exceeding LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- types/llmUsage.ts, components/Chat/ChatInputTokenCount.tsx, types/openai.ts, utils/server/message.ts,
+  pages/api/chat.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure you have the Chatbot UI project correctly set up and
+  configured on your local environment. 2. Configure GPT-3.5-turbo: Modify the settings
+  to use the GPT-3.5-turbo model. 3. Send a query: Input any query, even as short
+  as one or two tokens. 4. Observe the error: Notice the error message indicating
+  "context length exceeded" despite the short query length. 5. Real test confirmed:
+  Token calculation shows system prompt + user message + reserved tokens can exceed
+  the 4000 limit.'

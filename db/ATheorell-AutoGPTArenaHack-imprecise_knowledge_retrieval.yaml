@@ -1,0 +1,15 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- autogpts/forge/forge/agent.py; autogpts/autogpt/autogpt/memory/vector/*
+trigger_tests:
+- 'The user did not provide specific examples; observe behavior in tasks. Quick simulation:
+  run ''python test_memory_recency_importance.py'' to compare similarity-only vs similarity+recency+importance
+  rankings; the latter prioritizes recent/critical items appropriately'

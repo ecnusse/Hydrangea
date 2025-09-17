@@ -1,0 +1,14 @@
+app: babyagi-langchain
+repo: https://github.com/jimwhite/babyagi-langchain
+commit: ''
+defect_id: jimwhite-babyagi-langchain-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/TaskCreationChain, TaskPrioritizationChain
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.'

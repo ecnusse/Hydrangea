@@ -1,0 +1,26 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-incompatible_llm_output_format-case3
+type: Incompatible LLM output format
+case: '3'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly configured in your local
+  environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Open the GUI: Access the web UI.
+
+  4. Upload a Document: Upload a document for processing.
+
+  5. Ask a Question: Enter a question that expects a multiline or bullet-pointed response,
+  such as "List 5 benefits of exercise."
+
+  6. Observe the Response: Notice if the AI''s response is truncated or incorrectly
+  formatted.'

@@ -1,0 +1,17 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- godmode-gpt/autogpt/agent/agent.py
+- godmode-gpt/autogpt/llm/chat.py
+trigger_tests:
+- "1.Complete the environment setup.\n2.(cli mode) start app.\n3.Set up a task as\
+  \ \"write a python file to print hello,world\"\n4.Allow app to process the task. Wait for a while, check if app loses track of what it's done in the past and starts to repeat actions.\
+  \ You can see that it repeatedly executes the same commands:  \nCommand 1: write_to_file\
+  \ → hello_world.py  \nCommand 2: read_file → hello_world.py  \nCommand 3: task_complete\
+  \ → task finished"

@@ -1,0 +1,13 @@
+app: MemGPT-multimodal
+repo: https://github.com/starsnatched/MemGPT-multimodal
+commit: 82b9b74efa9ad2a04dc531b0ef77a9e229e86e00
+defect_id: starsnatched-MemGPT-multimodal-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- memgpt/cli/cli_load.py
+- memgpt/memory.py
+trigger_tests:
+- Upload the pptx file.

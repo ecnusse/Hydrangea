@@ -1,0 +1,25 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-lacking_restrictions_in_prompt-case2
+type: lacking restrictions in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- chatdocs/chatdocs/chains.py
+- chatdocs/chatdocs/llms.py
+- chatdocs/chatdocs/data/chatdocs.yml
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query in a language other than English.
+
+  6. Observe if the response is given in English instead of the language of the query.'

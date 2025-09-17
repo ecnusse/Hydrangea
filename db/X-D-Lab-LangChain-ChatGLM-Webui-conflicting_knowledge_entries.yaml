@@ -1,0 +1,18 @@
+app: LangChain-ChatGLM-Webui
+repo: https://github.com/X-D-Lab/LangChain-ChatGLM-Webui
+commit: ef829a28234228761a97541e4ebae9da4f4e6800
+defect_id: X-D-Lab-LangChain-ChatGLM-Webui-conflicting_knowledge_entries-/
+type: conflicting knowledge entries
+case: /
+consequence:
+- IC
+locations:
+- 1.LangChain-ChatGLM-Webui/app.py/class KnowledgeBasedChatLLM/load_file()
+- 2.LangChain-ChatGLM-Webui/app.py/class KnowledgeBasedChatLLM/init_vector_store()
+- 3..LangChain-ChatGLM-Webui/app.py/the Gradio UI section/"file = gr.File(label='请上传知识库文件', file_types=['.txt', '.md', '.docx', '.pdf'])"
+trigger_tests:
+- '(same as bug1:Unable to simultaneously upload multiple documents of the same format or multiple documents of different formats.)
+
+  1.Upload a knowledge base file on the left side of the project''s UI interface.
+
+  2.After uploading one file, users cannot upload another file without deleting the previously uploaded file.'

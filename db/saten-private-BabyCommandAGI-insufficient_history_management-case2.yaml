@@ -1,0 +1,42 @@
+app: BabyCommandAGI
+repo: https://github.com/saten-private/BabyCommandAGI
+commit: 993f7075479d4d89948410bfec0c4c18d4a06b0c
+defect_id: saten-private-BabyCommandAGI-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- classic/babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example:
+
+  Set OBJECTIVE="Translate this sentence from english into chinese: hello, world"
+  and YOUR_FIRST_TASK="Develop a task list"
+
+  Task 1: Translate the sentence ''Goodbye, earth'' into Chinese.
+
+  Task 2: Translate the sentence ''Goodbye, solar system'' into Chinese.
+
+  Task 3: Translate the sentence ''Goodbye, sun'' into Chinese.
+
+  Task 4: Translate the sentence ''Goodbye, moon'' into Chinese.
+
+  Task 5: Translate the sentence ''Goodbye, stars'' into Chinese.
+
+  Task 6: Translate the sentence ''Goodbye, universe'' into Chinese.
+
+  Task 7: Translate the sentence ''Goodbye, galaxy'' into Chinese.
+
+  Task 8: Translate the sentence ''Goodbye, milky way'' into Chinese.
+
+  Task 9: Translate the sentence ''Goodbye, black hole'' into Chinese.
+
+  Task 10: Translate the sentence ''Goodbye, asteroid belt'' into Chinese.
+
+  In this example, you can see that the task list has a highly repetitive structure
+  with no real progress.'

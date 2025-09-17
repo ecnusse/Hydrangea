@@ -1,0 +1,18 @@
+app: code-review-gpt
+repo: https://github.com/mattzcarey/code-review-gpt
+commit: 87bce4d443c869eb3da09e5a2c11b1a79c5e5d6a
+defect_id: mattzcarey-code-review-gpt-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- packages/code-review-gpt/src/review/prompt/constructPrompt/batchFiles/utils/createPromptFiles.ts
+- services/core/functions/webhook/src/prompts/buildPrompt.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

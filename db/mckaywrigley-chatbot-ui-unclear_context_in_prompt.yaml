@@ -1,0 +1,19 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- lib/build-prompt.ts:buildBasePrompt function, components/utility/global-state.tsx:default
+  chatSettings
+trigger_tests:
+- '1. Model: GPT-4o 2. Advanced settings: Temperature: 2 (high creativity), Context
+  Length: 128000, Chats Include Profile Context: yes, Chats Include Workplace Instructions:
+  yes, Embeddings Provider: OpenAI 3. Start a new chat without configuring any specific
+  assistant, user profile context, or workspace instructions 4. Ask a question like
+  ''What is the weather today?'' or ''Can you help me with my homework?'' 5. The AI
+  may provide responses that are not directly related to the question or seem out
+  of context'

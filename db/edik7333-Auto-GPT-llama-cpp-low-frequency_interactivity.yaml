@@ -1,0 +1,16 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- scripts/config.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website:
+  https://docs.agpt.co/autogpt/setup/ . 2.In manual mode, do not interact with Auto-GPT
+  for "a long time" (3 hours for example). 3.Try to interact with Auto-GPT again and
+  observe if you encounter any API errors or connection timeouts.'

@@ -1,0 +1,24 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the PrivateGPT project is correctly set up in your
+  local environment.
+
+  2.Configure Environment Variables: Ensure the MODEL_N_CTX value is set in the .env
+  file.
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Long Query: Input a query that exceeds the context window size.
+
+  5.Observe the Error: Notice the error message indicating that the prompt size exceeds
+  the context window size and cannot be processed.'

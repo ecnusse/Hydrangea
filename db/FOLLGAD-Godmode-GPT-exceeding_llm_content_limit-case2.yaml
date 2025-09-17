@@ -1,0 +1,30 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/llm/chat.py/count_message_tokens()
+- autogpt/llm/base.py
+trigger_tests:
+- '1.Complete the environment setup for app according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  (Open .env, set USE_AZURE to True and make an Azure configuration file.Rename azure.yaml.template to azure.yaml and provide the relevant azure_api_base, azure_api_version and deployment IDs for the models that you want to use. All these are also included in https://docs.agpt.co/autogpt/setup/)
+
+  2.(cli mode)Use the command: "./autogpt.sh --continuous" to start AutoGPT in continuous mode.
+
+  3.Set up a simple task as blow:
+
+    Name: Phone finder
+
+    Role: best phone 2
+
+    Goals: [''list 2 best phone for high mega pixel camera'', ''abort'']
+
+    API Budget: infinite
+
+  4.Allow AutoGPT to process the task and observe if the token length error occurs.'

@@ -1,0 +1,22 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- dbgpt/core/interface/llm.py
+- dbgpt/app/scene/chat_normal/chat.py
+trigger_tests:
+- '1.Run server by:python dbgpt/app/dbgpt_server.py
+
+  2.Chat with knowledge
+
+  3.Chat with llm
+
+  4.For more than 2 or 3 questions it will crush down when llm is generating answers
+
+
+  LLM:chatglm3-6b embedding model: text2vec-large-chinese'

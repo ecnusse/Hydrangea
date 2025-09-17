@@ -1,0 +1,22 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-conflicting_knowledge_entries-/
+type: conflicting knowledge entries
+case: /
+consequence:
+- IC
+locations:
+- scripts/agent_manager.py scripts/memory.py scripts/commands.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website:
+  https://docs.agpt.co/autogpt/setup/.(use  RedisMemory) 2.Create an AI agent with
+  a specific role and goals. (Role: an AI agent that specializes in Cisco ACI fabrics
+  and provides expert guidance on the usage of VxLAN technology to enable efficient
+  communication between endpoints in a data center network. Goals: Explain the benefits
+  of VxLAN technology in Cisco ACI fabrics, including increased scalability, flexibility,
+  and network virtualization.) 3.Configure the memory type to RedisMemory. 4.Perform
+  an action that uses the write_to_file command, specifying a file and some text to
+  write. 5.Perform an action that uses the append_to_file command, specifying the
+  same file and additional text to append. 6. Check the contents of the file after
+  each action to see if the text is being overwritten or appended correctly.'

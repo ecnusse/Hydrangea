@@ -1,0 +1,25 @@
+app: MemGPT
+repo: https://github.com/cpacker/MemGPT
+commit: 6e2c92e3abda617b9efc96c88b582195579717c8
+defect_id: cpacker-MemGPT-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- ST
+locations:
+- letta/schemas/memory.py
+- letta/memory.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Context: Set the memory context to a specific limit in the configuration
+  file.
+
+  3. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  4. Open the chat or interaction interface.
+
+  5. Input a series of queries or interactions to fill up the context memory.
+
+  6. Observe if the server fails or encounters issues when the context memory is full,
+  especially during calls to `archival_memory_insert`.'

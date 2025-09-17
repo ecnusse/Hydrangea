@@ -1,0 +1,12 @@
+app: ChromaDB_Chatbot_Public
+repo: https://github.com/daveshap/ChromaDB_Chatbot_Public
+commit: ad7df3a7391c07ab59298e48ac05c24c8698698b
+defect_id: daveshap-ChromaDB_Chatbot_Public-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chat.py
+trigger_tests:
+- Upload the pptx file.

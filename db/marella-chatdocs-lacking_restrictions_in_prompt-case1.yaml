@@ -1,0 +1,26 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-lacking_restrictions_in_prompt-case1
+type: lacking restrictions in prompt
+case: '1'
+consequence:
+- ST
+- UI
+locations:
+- chatdocs/chatdocs/chat.py:24
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Input Length Limit: Set a specific limit for input length in the configuration
+  file.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the input interface in the web UI.
+
+  5. Enter a lengthy input that exceeds the configured limit.
+
+  6. Observe if the system properly enforces the input length limit and prevents out-of-memory
+  issues.'

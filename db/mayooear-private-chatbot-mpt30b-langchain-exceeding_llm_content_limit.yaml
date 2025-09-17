@@ -1,0 +1,20 @@
+app: private-chatbot-mpt30b-langchain
+repo: https://github.com/mayooear/private-chatbot-mpt30b-langchain
+commit: dbb888a2d5f1eaf6256ffab53e4ec0b766a86a3f
+defect_id: mayooear-private-chatbot-mpt30b-langchain-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- chat.py
+- ingest.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

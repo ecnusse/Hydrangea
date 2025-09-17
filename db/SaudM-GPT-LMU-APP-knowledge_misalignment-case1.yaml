@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-knowledge_misalignment-case1
+type: knowledge misalignment
+case: '1'
+consequence:
+- IC
+locations:
+- client/src/utils/adapt.ts
+trigger_tests:
+- '1) Knowledge Base → Text Dataset → upload .docx with ### headings <29 chars → Direct
+  Segmentation → observe heading loss. 2) Test with ### headings ≥29 chars → headings
+  preserved correctly. 3) Workaround: ensure headings have sufficient content or adjust
+  minChunkSize parameter.'

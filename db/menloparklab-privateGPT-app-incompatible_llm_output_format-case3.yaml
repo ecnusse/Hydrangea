@@ -1,0 +1,26 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-incompatible_llm_output_format-case3
+type: Incompatible LLM output format
+case: '3'
+consequence:
+- IC
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly configured in your local
+  environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Open the GUI: Access the web UI.
+
+  4. Upload a Document: Upload a document for processing.
+
+  5. Ask a Question: Enter a question that expects a multiline or bullet-pointed response,
+  such as "List 5 benefits of exercise."
+
+  6. Observe the Response: Notice if the AI''s response is truncated or incorrectly
+  formatted.'

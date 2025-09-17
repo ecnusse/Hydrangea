@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- IC
+locations:
+- client/src/pages/kb/components/SelectCsvModal.tsx; client/src/pages/kb/components/SelectFileModal.tsx;
+  client/src/utils/file.ts
+trigger_tests:
+- '1) Use ''csv 问答对导入'' with CSV header question,answer → success (inserted rows).
+  2) Try XLSX: file picker rejects it (unsupported). 3) In text-split flow, uploading
+  CSV and previewing source then importing yields no items by design (flow mismatch).'

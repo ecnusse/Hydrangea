@@ -1,0 +1,20 @@
+app: LLMChat
+repo: https://github.com/c0sogi/LLMChat
+commit: b0fe554ca2327d2dc43dc819934b7973e662ffdb
+defect_id: c0sogi-LLMChat-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- app/models/gpt_llms.py
+- app/models/gpt_models.py
+- app/viewmodels/base_models.py
+- app/utils/chatgpt/chatgpt_generation.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

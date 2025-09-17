@@ -1,0 +1,17 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- SL
+locations:
+- pilot/server/knowledge/document_db.py/get_knowledge_documents_count_bulk
+- pilot/server/knowledge/service.py/get_knowledge_space
+trigger_tests:
+- '1.Create more than 10 knowledge spaces.
+
+  2.Upload files to each knowledge space.
+
+  3.The response process of the /knowledge/space/list interface is very slow, making it difficult to promptly view the number of documents for each space.'

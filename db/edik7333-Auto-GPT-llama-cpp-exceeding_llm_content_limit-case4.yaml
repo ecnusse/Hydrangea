@@ -1,0 +1,17 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case4
+type: exceeding LLM content limit
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- scripts/agent_manager.py/create_chat_completion() scripts/chat.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website:
+  https://docs.agpt.co/.(Use  releases before v0.4.0) 2.Create an AI agent. 3.Start
+  AutoGPT. Authorize the forlowing command and observe its outputs: list_files ARGUMENTS
+  = {''directory'': ''....\auto_gpt_workspace''} --> openai.error.InvalidRequestError:
+  This model''s maximum context length is 4097 tokens'

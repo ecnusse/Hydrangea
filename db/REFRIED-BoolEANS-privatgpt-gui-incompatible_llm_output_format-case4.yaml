@@ -1,0 +1,21 @@
+app: privatgpt-gui
+repo: https://github.com/REFRIED-BoolEANS/privatgpt-gui
+commit: 840675927b1ace596dcc2c8ed0f6f483805e33fe
+defect_id: REFRIED-BoolEANS-privatgpt-gui-incompatible_llm_output_format-case4
+type: Incompatible LLM output format
+case: '4'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Perform the Environment Setup: Follow the setup instructions in the project''s
+  README.
+
+  3.Ask the Question: Input the question "What is the most fundamental right in America?".
+
+  4.Observe the Response: Notice that while the response references the correct document,
+  it doesn''t align with the source content accurately.'

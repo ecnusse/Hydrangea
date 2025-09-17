@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- UI
+locations:
+- dbgpt/app/scene/chat_db/auto_execute/prompt.py, chat.py
+trigger_tests:
+- '1.Download and configure DB-GPT.
+
+  2.Set need_historical_messages=True in the dbgpt/app/scene/base.py file.
+
+  3.Start a conversation test using the qwen72b model and find that multi-turn dialogue is not supported.'

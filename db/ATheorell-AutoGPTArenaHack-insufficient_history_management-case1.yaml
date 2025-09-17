@@ -1,0 +1,17 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/core/memory/simple.py; autogpts/autogpt/autogpt/memory/vector/memory_item.py;
+  autogpts/autogpt/autogpt/agents/base.py
+trigger_tests:
+- 1. Set up AutoGPT environment using 'python -m poetry install' 2. Start AutoGPT
+  with 'python -m autogpt run' 3. Give the agent a series of related tasks (e.g.,
+  'create a Python script', 'modify the script', 'test the script') 4. Observe that
+  the agent's memory accumulates duplicate entries from conversation history 5. Check
+  if the agent starts repeating actions or loses track of completed tasks

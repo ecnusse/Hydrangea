@@ -1,0 +1,29 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-exceeding_llm_content_limit-case6
+type: exceeding  LLM content limit
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- scripts/chat.py
+trigger_tests:
+- '1.Install all the dependencies and run as AutoGPT.
+
+  2.Give the prompt:
+
+  Name: Xiaoji Tour Guide
+
+  Role: Design a detailed 10-day tour plan for Xinjiang starting and ending in Urumqi,
+  respond and search in Chinese.
+
+  Goals: [''Respond in Chinese and use Chinese keywords for search'', ''Include detailed
+  itinerary and budget'', ''Suitable for a trip in late July during summer vacation'',
+  ''Relaxing with not too much traveling'', ''Suitable for car rental or self-driving'']
+
+  3.After the google command, the following error should appear: openai.error.RateLimitError:
+  Request too large for gpt-4 in project proj_w5IYmdsmL6dV6SgI3zJtkNu2 organization
+  org-Ddq2QLeztZ6t6LO24d0VmL9f on tokens per min (TPM): Limit 0, Requested 1476. The
+  input or output tokens must be reduced in order to run successfully.'

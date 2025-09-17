@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-insufficient_history_management-/
+type: Insufficient history management
+case: /
+consequence:
+- IC
+locations:
+- src/prompter.py::generate_prompt; src/prompter.py::get_prompt
+trigger_tests:
+- Upload dataset with noisy/irrelevant data; query topics covered in mixed quality
+  data; observe LLM producing bad outputs due to unfiltered context; test with conflicting
+  information in dataset.

@@ -1,0 +1,21 @@
+app: langchain-ChatGLM-annotation
+repo: https://github.com/hzg0601/langchain-ChatGLM-annotation
+commit: da8085ba5fcb89a2e665cd3fde28cdafa38b9c29
+defect_id: hzg0601-langchain-ChatGLM-annotation-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- ST IC
+locations:
+- agent/custom_agent.py
+- models/llama_llm.py
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Use Linux Environment: Make sure you are operating within a Linux environment.
+
+  3.Upload a .doc File: Try uploading a .doc file to the knowledge base.
+
+  4.Observe the Error: Notice the error message indicating that the .doc file format
+  is not supported and the file cannot be parsed.'

@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case9
+type: Missing LLM input format validation
+case: '9'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Upload the two-column PDF "Class management strategies for cultivating good behavior
+  habits of primary and secondary school students_Chen Fang.pdf" (see https://github.com/labring/FastGPT/issues/621).
+  2. Select "Direct Segmentation". 3. Preview segmentation results and observe disorganized,
+  misordered extracted content.

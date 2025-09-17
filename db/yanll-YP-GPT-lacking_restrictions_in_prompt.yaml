@@ -1,0 +1,15 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-lacking_restrictions_in_prompt-/
+type: lacking restrictions in prompt
+case: /
+consequence:
+- IC
+- SL
+locations:
+- YP-GPT/dbgpt/core/interface/output_parser.py
+trigger_tests:
+- '1.Enter the "Chat Data" scenario and ask a question that cannot generate an SQL query.
+
+  2.The bot responds, "The provided table structure information is insufficient to generate an SQL query." Meanwhile, the frontend displays: "Application error: a client-side exception has occurred (see the browser console for more information)," affecting users''s seamless experience.'

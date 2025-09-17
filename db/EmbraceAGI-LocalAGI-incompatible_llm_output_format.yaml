@@ -1,0 +1,15 @@
+app: LocalAGI
+repo: https://github.com/EmbraceAGI/LocalAGI
+commit: f2fd7824ee270b8d45b336366ec885a14b809b8b
+defect_id: EmbraceAGI-LocalAGI-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- local_agi.py:557-560 (prioritization_agent function), local_agi.py:675 (main function),
+  local_agi_zh.py:557-560 (prioritization_agent function), local_agi_zh.py:675 (main
+  function)
+trigger_tests:
+- 1. Run the script according to the previously mentioned steps. 2. Observe whether
+  the generated task list shows any numbering inconsistencies or misorder.

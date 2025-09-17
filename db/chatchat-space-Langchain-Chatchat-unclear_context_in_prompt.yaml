@@ -1,0 +1,23 @@
+app: Langchain-Chatchat
+repo: https://github.com/chatchat-space/Langchain-Chatchat
+commit: bc7f01925fe49c622cf7d6e2540c03fd5a0679e1
+defect_id: chatchat-space-Langchain-Chatchat-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- frontend/src/database/models/topic.ts
+- 'Function: The query_knowledge_base method in the KnowledgeQuery class'
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Execute ''Knowledge Base Management - Create New Knowledge Base - Upload Files''.
+
+  3.Click ''Conversation - Select Knowledge Base Q&A - Choose Knowledge Base''.
+
+  4.Scroll to ''Input Box and Ask a Question''.
+
+  5.Observe the issue: ''No related documents found, the response is based on the
+  model''s own capability.'''

@@ -1,0 +1,14 @@
+app: MemGPT
+repo: https://github.com/goetzrobin/MemGPT
+commit: 0e8918e79935d24210991d78da09bf0e4c796d2e
+defect_id: goetzrobin-MemGPT-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- memgpt/main.py
+- memgpt/cli/cli_load.py
+- memgpt/data_sources/connectors.py
+trigger_tests:
+- Upload the pptx file.

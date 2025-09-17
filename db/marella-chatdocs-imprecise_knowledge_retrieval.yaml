@@ -1,0 +1,28 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- ST
+locations:
+- chatdocs/chatdocs/chains.py
+- chatdocs/chatdocs/add.py
+- chatdocs/chatdocs/vectorstores.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a question related to the content of the uploaded document.For example,
+  "Summarize the key points of the document."
+
+  6. Observe if the response includes the error message "Index not found, please create
+  an instance before querying."or "ValueError: invalid literal for int() with base
+  10: ''some_value''"'

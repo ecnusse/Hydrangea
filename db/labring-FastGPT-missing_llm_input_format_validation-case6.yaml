@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case6
+type: Missing LLM input format validation
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- projects/app/src/pages/api/common/file/upload.ts;projects/app/src/web/common/file/utils.ts;projects/app/src/pages/dataset/detail/components/Import/FileSelect.tsx
+trigger_tests:
+- '1. Upload a CSV file larger than 20MB to your knowledge base; 2. In Data Processing,
+  select Direct Segmentation; 3. Click upload and receive an error: The value of ''offset''
+  is out of range; 4. Root cause: Papa.parse library limitations and lack of file
+  size validation'

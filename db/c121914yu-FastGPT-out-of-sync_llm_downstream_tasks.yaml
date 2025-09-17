@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- UI
+locations:
+- client/src/service/moduleDispatch/tools/http.ts;client/src/service/moduleDispatch/chat/oneapi.ts
+trigger_tests:
+- '1. The user needs to provide several pieces of information in a chat to achieve
+  a certain goal; 2. The user can send partial information each time, and the bot
+  will sequentially receive the information provided by the user, gradually completing
+  the necessary information to achieve the goal throughout the chat; 3. VERIFIED:
+  HTTP module only uses regular fetch requests without streaming support, unlike AI
+  chat module which has complete streaming implementation'

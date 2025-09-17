@@ -1,0 +1,21 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- scripts/main.py
+- scripts/commands.py
+- scripts/browse.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT.
+
+  2.(cli mode)Use the command: "python scripts/main.py continuous-mode" to start AutoGPT
+  in continuous mode.
+
+  3.Set up a task, which involves web browsing and searching.
+
+  4.Allow AutoGPT to process the task and check if AutoGPT accesses the browser without user consent.'

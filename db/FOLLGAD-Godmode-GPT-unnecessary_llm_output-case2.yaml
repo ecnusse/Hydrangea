@@ -1,0 +1,19 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-unnecessary_llm_output-case2
+type: unnecessary LLM output
+case: '2'
+consequence:
+- IC
+locations:
+- autogpt/agent/agent.py/start_interaction_loop(self)
+- (Releases before v0.3.0)
+trigger_tests:
+- '1.Configure and launch app.
+
+  2.Create an AI agent.
+
+  3.Set up a task, let AutoGPT enter its interactive loop. Use any command that generates the following info:
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''s'' to run self-feedback commands''n'' to exit program, or enter feedback for ...'

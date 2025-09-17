@@ -1,0 +1,20 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/pilot/embedding_engine/pdf_embedding.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a PDF file.
+
+  3.After uploading the PDF, the chunk contents display as garbled text.
+
+  (LLM: vicuna-13b-v1.5
+
+  Embedding model: text2vec-large-chinese)'

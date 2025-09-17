@@ -1,0 +1,18 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- scripts/file_operations.py/read_file()
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on v0.2.2
+  READMe.md 2. Run AutoGPT. (Prompts: ai_goals: - Read project-plan-form.htm file  -
+  Fill project-plan-form.htm for and idea with flying monkeys ai_name: DocWritter
+  ai_role: Fill in a doc using a file template) 3.Authorize and wait for the result
+  of the "read_file ARGUMENTS = {''file'': ''project-plan-form.htm''}" command, which
+  will cause an error: "Command read_file returned: Error: ''utf-8'' codec can''t
+  decode byte 0xa0 in position 1341: invalid start byte ".'

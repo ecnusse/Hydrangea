@@ -1,0 +1,18 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- SL
+- IC
+locations:
+- lib/build-prompt.ts:buildFinalMessages function (lines 78-88), components/chat/chat-ui.tsx:fetchMessages
+  function
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment 2. Engage in a Conversation: Start a chat session and continue
+  it for several interactions 3. Observe Context Freezing: Notice that after a few
+  exchanges, the dialogue context freezes, and responses to new queries remain the
+  same'

@@ -1,0 +1,27 @@
+app: chatdocs-streamlit
+repo: https://github.com/Vidminas/chatdocs-streamlit
+commit: cf4053a1b20116fb0d05e64778e3c4c28b902f2a
+defect_id: Vidminas-chatdocs-streamlit-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- ST
+locations:
+- chatdocs/ui.py
+- chatdocs/add.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a PDF document for training.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query related to the content of the uploaded PDF document, e.g Summarize
+  the key points of the document..
+
+  6. Observe the results to check if the responses include information that is not
+  from the content of the PDF document.(similar to AttributeError: ''NoneType'' object
+  has no attribute ''some_method'')'

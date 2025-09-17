@@ -1,0 +1,14 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. In the UI, select "Application" and choose the GPT-4o model to start chatting.
+  2. Send an image to the chatbox. 3. Encounter the error "ECONNREFUSED ::1:3000"
+  as the application tries to connect to a non-existent image processing service.

@@ -1,0 +1,15 @@
+app: babyagi-langchain
+repo: https://github.com/jimwhite/babyagi-langchain
+commit: ''
+defect_id: jimwhite-babyagi-langchain-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/TaskCreationChain
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2. Observe the tasks and outcoms, until you notice the repeated tasks.'

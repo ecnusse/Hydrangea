@@ -1,0 +1,16 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/app/scene/chat_knowledge/chat.py, prompt.py
+trigger_tests:
+- '1.Enter the "Chat Knowledge" scene
+
+  2.Upload knowledge documents in md format
+
+  3.Start the conversation'

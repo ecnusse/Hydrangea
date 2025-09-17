@@ -1,0 +1,24 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the PrivateGPT project is correctly set up in your
+  local environment.
+
+  2.Configure Environment Variables: Ensure the MODEL_N_CTX value is set in the .env
+  file.
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Long Query: Input a query that exceeds the context window size.
+
+  5.Observe the Error: Notice the error message indicating that the prompt size exceeds
+  the context window size and cannot be processed.'

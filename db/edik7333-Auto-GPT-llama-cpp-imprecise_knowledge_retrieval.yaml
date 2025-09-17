@@ -1,0 +1,14 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- scripts/agent_manager.py scripts/chat.py
+trigger_tests:
+- The user did not provide specific examples. We can observe AutoGPT's memory performance
+  in its behavior.

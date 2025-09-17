@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/hlohaus/Agent-LLM
+commit: d8a46dacea35c6224effd3e733d5c085bea1949a
+defect_id: hlohaus-Agent-LLM-insufficient_history_management-/
+type: Insufficient history management
+case: /
+consequence:
+- CL
+locations:
+- AgentLLM.py, Config/Agent.py
+trigger_tests:
+- 1. Run streamlit with Main.py. 2. Start textgen server with oobabooga configuration.
+  3. Create new agent with oobabooga provider settings. 4. Try to chat or ask the
+  agent to do anything. 5. Observe that the agent gets stuck trying to create memories.

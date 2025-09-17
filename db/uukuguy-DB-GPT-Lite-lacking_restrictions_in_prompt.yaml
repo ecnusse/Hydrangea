@@ -1,0 +1,17 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-lacking_restrictions_in_prompt-/
+type: lacking restrictions in prompt
+case: /
+consequence:
+- IC
+- SL
+locations:
+- 1.dbgpt/app/scene/chat_db/auto_execute/chat.py
+- 2.dbgpt/app/scene/chat_db/auto_execute/prompt.py
+- 3.web/hooks/use-chat.ts
+trigger_tests:
+- '1.Enter the "Chat Data" scenario and ask a question that cannot generate an SQL query.
+
+  2.The bot responds, "The provided table structure information is insufficient to generate an SQL query." Meanwhile, the frontend displays: "Application error: a client-side exception has occurred (see the browser console for more information)," affecting users''s seamless experience.'

@@ -1,0 +1,14 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- autogpt/agent/agent.py
+- autogpt/chat.py
+trigger_tests:
+- The user did not provide specific examples. We can observe AutoGPT's memory performance in its behavior.

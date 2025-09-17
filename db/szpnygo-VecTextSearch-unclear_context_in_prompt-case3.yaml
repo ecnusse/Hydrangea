@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- UI
+locations:
+- demo/flutter/vec_text_search_demo/lib/src/screens/home_screen.dart
+trigger_tests:
+- 1. Launch the Flutter application; 2. Observe the app bar title 'VecTextSearch Demo';
+  3. Note the lack of descriptive context about the application's purpose; 4. Observe
+  no additional help or guidance text in the interface

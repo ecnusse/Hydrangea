@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- client/src/service/moduleDispatch/tools/http.ts;client/src/components/ChatBox/ResponseTags.tsx
+trigger_tests:
+- '1. (A conversational application) IN "workflow," integrate knowledge base citations
+  into the HTTP module; 2. During debugging, when the bot answers questions related
+  to the knowledge base, it does not cite references; 3. VERIFIED: HTTP module lacks
+  quoteList field in responseData, and ResponseTags only displays references from
+  AI chat module'

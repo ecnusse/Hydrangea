@@ -1,0 +1,24 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-unclear_context_in_prompt-case4
+type: Unclear context in prompt
+case: '4'
+consequence:
+- IC
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Open the chat interface in the web UI.
+
+  3. Enter a query that requires a context-based answer, such as: "Summarize the main
+  points from the provided text."
+
+  4. Observe the response to determine if it integrates context from previous messages
+  or if it is purely based on the LLM''s capabilities.
+
+  5. Note the missing text formatting options in the chat editor that affect the structuring
+  of messages.'

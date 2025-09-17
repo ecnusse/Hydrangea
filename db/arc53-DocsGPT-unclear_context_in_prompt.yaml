@@ -1,0 +1,15 @@
+app: DocsGPT
+repo: https://github.com/arc53/DocsGPT
+commit: 744d4ebbaf4349444d8d361593c4c04652c6c54b
+defect_id: arc53-DocsGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- frontend/src/Navigation.tsx
+trigger_tests:
+- 1. Set up DocsGPT frontend application. 2. Create a chat session with a very long
+  title. 3. Observe that the chat title text overflows the container without proper
+  truncation. 4. Notice that long titles break the layout and are not contained within
+  the title box.

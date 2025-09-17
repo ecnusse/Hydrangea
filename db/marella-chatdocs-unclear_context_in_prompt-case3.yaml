@@ -1,0 +1,26 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- chatdocs/chatdocs/chains.py
+- chatdocs/chatdocs/llms.py
+- chatdocs/chatdocs/add.py
+- chatdocs/chatdocs/data/chatdocs.yml
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query related to the content of the uploaded document.
+
+  6. Observe if the response includes information not contained in the uploaded documents.'

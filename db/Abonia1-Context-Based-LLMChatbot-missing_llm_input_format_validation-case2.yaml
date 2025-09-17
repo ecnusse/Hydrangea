@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Access the batch data addition API endpoint. 2. Send a POST request with collectionId,
+  trainingMode, and data array. 3. The API will return a 500 error with "Cannot read
+  properties of undefined (reading 'forEach')" message. 4. Users cannot successfully
+  batch add data to collections due to the validation failure.

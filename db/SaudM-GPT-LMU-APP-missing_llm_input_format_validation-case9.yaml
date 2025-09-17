@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case9
+type: Missing LLM input format validation
+case: '9'
+consequence:
+- IC
+locations:
+- client/src/utils/file.ts; client/public/js/pdf.js; client/public/js/pdf.worker.js
+trigger_tests:
+- '1) Import the referenced two-column PDF via Text Dataset → Direct Segmentation.
+  2) Preview segments: text order is jumbled due to pdf.js extraction and simple token
+  join. 3) Workarounds: convert to single-column PDF, use OCR/DocAI, or implement
+  layout-aware parsing.'

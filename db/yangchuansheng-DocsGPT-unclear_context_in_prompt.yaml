@@ -1,0 +1,17 @@
+app: DocsGPT
+repo: https://github.com/yangchuansheng/DocsGPT
+commit: 595581b624b54046d756ad28bc845521ee4807d0
+defect_id: yangchuansheng-DocsGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- extensions/chrome/popup.html:12
+trigger_tests:
+- '1. Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment. 2. Initiate a Chat: Start a chat session within DocsGPT Chrome extension.
+  3. Create a Long Title: Generate a chat session title that is long enough to cause
+  overflow, such as ''DocsGPT - Documentation AI Assistant with Very Long Title That
+  Should Overflow''. 4. Observe Text Overflow: Notice that the chat''s title text
+  overflows and is not contained within the title box, causing layout issues.'

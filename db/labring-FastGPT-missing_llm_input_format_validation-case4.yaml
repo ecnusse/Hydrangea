@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- IC
+locations:
+- projects/app/src/pages/dataset/detail/components/Import/Provider.tsx;projects/app/src/pages/dataset/detail/components/Import/FileSelect.tsx;projects/app/src/web/common/file/utils.ts
+trigger_tests:
+- '1. Upload CSV or XLSX files to your knowledge base, selecting Direct Segmentation
+  and Automatic in Data Processing; 2. If you click Preview Source Text before uploading,
+  the dataset appears empty after uploading and is not stored in the database; 3.
+  If you do not click Preview Source Text before uploading, the upload is successful
+  and the data is stored in the database; 4. Root cause: setPreviewFile(undefined)
+  in onReSplitChunks function affects upload flow'

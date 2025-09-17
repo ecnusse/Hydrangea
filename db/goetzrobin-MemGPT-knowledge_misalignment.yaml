@@ -1,0 +1,31 @@
+app: MemGPT
+repo: https://github.com/goetzrobin/MemGPT
+commit: 0e8918e79935d24210991d78da09bf0e4c796d2e
+defect_id: goetzrobin-MemGPT-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- IC
+locations:
+- memgpt/models/embedding_response.py
+- memgpt/embeddings.py
+- memgpt/constants.py
+trigger_tests:
+- '1.Set up MemGPT:Ensure MemGPT is correctly set up and running in your local environment.
+
+  2.Modify Configuration:Open the config.yaml file located in the project directory.
+
+  Set the max_memory parameter to 1024MB and the memory_limit parameter to 512MB.
+
+  3.Run a Memory-Intensive Task:Execute a memory-intensive task that exceeds the memory_limit
+  parameter. For example, run the command:python run_task.py --task heavy_computation
+
+  4.Monitor Memory Usage:Observe the memory usage of the MemGPT process. Use a tool
+  like htop or psutil to monitor memory consumption.
+
+  5.Observe the Error:Note if an error is thrown indicating that the memory usage
+  has exceeded the limit. The error message should be similar to:MemoryError: Exceeded
+  memory limit of 512MB.
+
+  6.Check Logs:Review the application logs for any additional error messages or stack
+  traces related to the memory limit.'

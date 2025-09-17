@@ -1,0 +1,40 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- IC
+- SL
+locations:
+- autogpt/agent/agent.py
+- autogpt/llm/chat.py
+trigger_tests:
+- '1.Complete the environment setup for app according to the instructions. (Use default
+  Settings)
+
+  2.(cli mode) Use the command: "python -m autogpt" to start AutoGPT.
+
+  3.Set up a task:
+
+  Name: test
+
+  Goals: [''请帮我推荐一杯饮品'']
+
+  API Budget: infinite
+
+  4.Start a dialoge
+
+  Input: 两周前我发现我对咖啡因过敏
+
+  Input: 三个月前我喜欢喝绿茶
+
+  Input: 请帮我推荐一杯饮品
+
+  AI: I recommend trying a delightful caffeine-free green tea blend like decaffeinated
+  sencha or jasmine green tea!
+
+  Test Observation: The user explicitly mentioned being allergic to caffeine, but
+  the LLM still recommended green tea (which contains caffeine), indicating that the
+  current application did not consider the freshness and importance of information.'

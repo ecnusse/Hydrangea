@@ -1,0 +1,36 @@
+app: babyagi-chroma-agent
+repo: https://github.com/alexdphan/babyagi-chroma-agent
+commit: a5379280e526fd559c49d3b85513a339afc302e5
+defect_id: alexdphan-babyagi-chroma-agent-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- babyagi-chroma.py/task_creation_chain,task_prioritization_chain
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+
+  In this example, the task list contains numbering errors—“1” appears at the end—resulting
+  in non-sequential numbers.
+
+  Example (Round2 Task List):
+
+  Task 2: Have a picnic in the park with friends or family
+
+  Task 3: Try a new outdoor activity such as paddleboarding or kayaking
+
+  Task 4: Visit a local farmers market and pick out fresh ingredients for a homemade
+  meal
+
+  Task 5: Have a DIY spa day at home with face masks, nail painting, and relaxation
+
+  Task 6: Attend a virtual cooking class and learn how to make a new dish
+
+  Task 7: Have a game night with friends or family, complete with snacks and laughter
+
+  Task 8: Take a scenic drive to a nearby town and explore their shops and restaurants
+
+  Task 1: Explore a new hiking trail and take in the beautiful scenery'

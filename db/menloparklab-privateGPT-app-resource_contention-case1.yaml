@@ -1,0 +1,35 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-resource_contention-case1
+type: resource contention
+case: '1'
+consequence:
+- SL
+locations:
+- streamlit_app.py
+- app.py
+- privateGPT.py
+trigger_tests:
+- 'Ensure PrivateGPT is set up and the server is running.
+
+  Open the privateGPT.py file.
+
+  Set the n_threads parameter to a high value, such as n_threads=40, to use all CPU
+  cores.
+
+  Save the changes.
+
+  Restart the PrivateGPT server.
+
+  Observe the server''s performance and note if there is a drastic slowdown or significant
+  delay in response times when answering questions.
+
+  Additional Steps:
+
+
+  Try setting n_threads=1 to use only 1 CPU core and observe if the performance issue
+  persists.
+
+  Remove the n_threads parameter entirely from the privateGPT.py file and check if
+  the answer speed improves and returns to normal.'

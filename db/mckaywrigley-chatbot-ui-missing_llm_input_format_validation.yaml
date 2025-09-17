@@ -1,0 +1,16 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- app/api/retrieval/process/route.ts:switch statement (lines 40-65), components/chat/chat-hooks/use-select-file-handler.tsx:ACCEPTED_FILE_TYPES
+  (lines 7-15), lib/retrieval/processing/:missing ppt.ts/pptx.ts files
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment 2. Upload PPT File: Attempt to upload a .pptx file to the system
+  3. Observe Error: Notice that the system returns "Unsupported file type" error and
+  cannot process the PPT document'

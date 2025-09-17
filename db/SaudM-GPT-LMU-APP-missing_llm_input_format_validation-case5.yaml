@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case5
+type: Missing LLM input format validation
+case: '5'
+consequence:
+- IC
+locations:
+- client/src/utils/plugin/openai.ts; client/src/service/utils/chat/openai.ts; client/src/service/utils/chat/claude.ts;
+  client/src/service/utils/chat/index.ts
+trigger_tests:
+- '1) Call a multimodal API config (e.g., Claude). 2) Note that request shaping only
+  sends text: OpenAI path builds role+content strings; Claude path builds a plain
+  prompt. 3) Images are sent via /api/system/uploadImage and referenced by URL; there
+  is no content array to preserve order.'

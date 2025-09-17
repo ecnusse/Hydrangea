@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case10
+type: Missing LLM input format validation
+case: '10'
+consequence:
+- ST
+locations:
+- projects/app/src/pages/api/common/file/upload.ts;packages/service/common/file/gridfs/controller.ts;packages/service/support/user/team/controller.ts;projects/app/src/web/core/dataset/utils.ts
+trigger_tests:
+- '1. In the UI, select Knowledge Base; 2. Upload a CSV file larger than 100 MB to
+  your knowledge base, and then selecting Direct Segmentation; 3. Click upload, and
+  an error will occur; 4. Root cause: API layer has 500MB limit but team default is
+  5MB, GridFS lacks size validation'

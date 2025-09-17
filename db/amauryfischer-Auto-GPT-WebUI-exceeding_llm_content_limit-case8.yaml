@@ -1,0 +1,71 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case8
+type: exceeding  LLM content limit
+case: '8'
+consequence:
+- ST
+locations:
+- autogpt/config/config.py/__init__(self)
+- autogpt/processing/text.py/split_text(), summarize_text()
+trigger_tests:
+- '1.Run Auto-GPT v0.3.0.
+
+  2.Set up an AI with the following parameters:
+
+  Goal 1: Search_files and make a descriptions of all files.   
+
+  Goal 2: be aware that you cannot send long requests to the api. i think max is 8k tokens.
+
+  Goal 3:
+
+  Using memory of type: LocalCache
+
+  Using Browser: chrome
+
+
+  3.Authorize the search_files command with the code file WoWinArabic_Chat.lua
+
+  4.After the search_files command, the following error should appear: openai.error.InvalidRequestError: This model''s maximum context length is 8191 tokens, however you requested 17113 tokens (17113 in your prompt; 0 for the completion). Please reduce your prompt; or completion length.
+
+
+  (Complete user''s logs:)
+
+  Goal 1: Search_files and make a descriptions of all files.
+
+  Goal 2: be aware that you cannot send long requests to the api. i think max is 8k tokens.
+
+  Goal 3:
+
+  Using memory of type: LocalCache
+
+  Using Browser: chrome
+
+  THOUGHTS: I suggest we start by searching for the files in the current directory using the ''search_files'' command.
+
+  REASONING: Before we can work on any files, we need to know what files are available in the current directory. This will help us plan our next steps.
+
+  PLAN:
+
+
+  Use the ''search_files'' command to find all files in the current directory.
+
+  Save the file descriptions to a file for future reference.
+
+  CRITICISM: I need to ensure that I am saving the file descriptions to a file for future reference, so that I don''t have to search for them again.
+
+  SPEAK: I suggest we start by searching for the files in the current directory using the ''search_files'' command.
+
+  Attempting to fix JSON by finding outermost brackets
+
+  Apparently json was fixed.
+
+  NEXT ACTION: COMMAND = search_files ARGUMENTS = {''directory'': ''.''}
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''n'' to exit program, or enter feedback for ...
+
+  Input:y -10
+
+
+  PS.The folder should contain  lots of files.'

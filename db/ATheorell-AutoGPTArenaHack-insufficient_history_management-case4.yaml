@@ -1,0 +1,15 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-insufficient_history_management-case4
+type: insufficient history management
+case: '4'
+consequence:
+- SL
+locations:
+- autogpts/autogpt/autogpt/memory/vector/providers/json_file.py; autogpts/autogpt/autogpt/memory/vector/memory_item.py
+trigger_tests:
+- 1. Start AutoGPT with 'python -m autogpt run' 2. Generate a large number of memory
+  entries (>1000) through extensive interaction 3. Monitor system performance and
+  response times 4. Observe if the agent starts exhibiting repetitive behavior or
+  performance degradation

@@ -1,0 +1,27 @@
+app: MemGPT-multimodal
+repo: https://github.com/starsnatched/MemGPT-multimodal
+commit: 82b9b74efa9ad2a04dc531b0ef77a9e229e86e00
+defect_id: starsnatched-MemGPT-multimodal-improper_text_embedding-case2
+type: improper text embedding
+case: '2'
+consequence:
+- ST
+- IC
+locations:
+- memgpt/models/embedding_response.py
+- memgpt/embeddings.py
+- memgpt/server/rest_api/openai_assistants/assistants.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure the Embedding Model: Verify the configuration settings for the embedding
+  model and ensure it is properly set up.
+
+  3. Load Data: Attempt to load data from the specified directory (`/embeddings/api`).
+
+  4. Ensure Token Limit: Prepare data inputs with fewer than 512 tokens.
+
+  5. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  6. Observe Errors: Check if validation errors occur related to token limits or compatibility
+  issues, and ensure that the sources are compatible with the agent''s embedding model.'

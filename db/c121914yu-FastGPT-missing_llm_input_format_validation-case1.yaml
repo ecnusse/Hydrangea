@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- client/src/constants/common.ts;client/src/pages/kb/detail/components/Import/FileSelect.tsx
+trigger_tests:
+- '1. Set up FastGPT application according to README.md; 2. Create a new knowledge
+  base; 3. In the "Dataset" interface, select "Create/Import" tab and choose "Text
+  Dataset"; 4. Attempt to upload a PPTX file; 5. VERIFIED: The file is silently ignored
+  due to missing format support - no error message or validation feedback provided'

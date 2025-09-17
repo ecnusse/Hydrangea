@@ -1,0 +1,14 @@
+app: babyagi
+repo: https://github.com/robiwan303/babyagi
+commit: 9c22f053675710094576bfc4e6527f59a50e6ac2
+defect_id: robiwan303-babyagi-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.'

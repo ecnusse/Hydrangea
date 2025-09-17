@@ -1,0 +1,29 @@
+app: anything-llm
+repo: https://github.com/frasergr/anything-llm
+commit: 5fa61458724fd019a15e243b8db8e71bead950b5
+defect_id: frasergr-anything-llm-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- frontend/src/models/system.js
+- collector/scripts/utils.py
+- collector/scripts/link.py
+trigger_tests:
+- '1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Azure OpenAI Embed API: Integrate the Azure OpenAI Embed API with the
+  project.
+
+  3. Run Anything-LLM: Execute `python app.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Prepare a batch of inputs larger than 16.
+
+  6. Submit the batch of inputs to the Azure OpenAI Embed API.
+
+  7. Observe if an error occurs with the message "Too many inputs. The max number
+  of inputs is 16."or "IndexError: list index out of range"'

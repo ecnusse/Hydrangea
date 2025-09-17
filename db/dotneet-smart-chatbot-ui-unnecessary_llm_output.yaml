@@ -1,0 +1,17 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- types/llmUsage.ts, agent/agent.ts, utils/server/storage.ts, components/Chat/ChatMessage.tsx,
+  components/Chat/ChatLoader.tsx
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment. 2. Remove Assistant''s Picture: Configure the assistant to have
+  no picture. 3. Initiate a Chat: Start a chat session where the assistant''s message
+  is displayed. 4. Observe the Broken Image: Notice that instead of a placeholder,
+  a broken image icon appears.'

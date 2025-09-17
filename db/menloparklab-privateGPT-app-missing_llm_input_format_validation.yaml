@@ -1,0 +1,19 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- ST IC
+locations:
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Use Linux Environment: Make sure you are operating within a Linux environment.
+
+  3.Upload a .doc File: Try uploading a .doc file to the knowledge base.
+
+  4.Observe the Error: Notice the error message indicating that the .doc file format
+  is not supported and the file cannot be parsed.'

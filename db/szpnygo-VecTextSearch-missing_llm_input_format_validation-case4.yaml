@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- IC
+locations:
+- README.md
+trigger_tests:
+- 1. Read the README documentation; 2. Look for information about file upload support;
+  3. Note that only text-based APIs are documented; 4. Observe the lack of documentation
+  for document processing features

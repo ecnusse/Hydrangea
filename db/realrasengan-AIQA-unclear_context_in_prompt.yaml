@@ -1,0 +1,17 @@
+app: AIQA
+repo: https://github.com/realrasengan/AIQA
+commit: fb86f8c48978bd218df62f6bf034463f0034b426
+defect_id: realrasengan-AIQA-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- aiqa.js; bot.js
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

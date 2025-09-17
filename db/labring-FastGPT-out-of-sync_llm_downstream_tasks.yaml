@@ -1,0 +1,18 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- UI
+locations:
+- projects/app/src/service/moduleDispatch/tools/http.ts;projects/app/src/service/moduleDispatch/chat/oneapi.ts;projects/app/src/service/moduleDispatch/index.ts;projects/app/src/web/common/api/fetch.ts
+trigger_tests:
+- '1. The user needs to provide several pieces of information in a chat to achieve
+  a certain goal; 2. The user can send partial information each time, and the bot
+  will sequentially receive the information provided by the user, gradually completing
+  the necessary information to achieve the goal throughout the chat; 3. Root cause:
+  HTTP module uses axios for synchronous requests, lacks streaming response processing
+  logic, module dispatch system does not support HTTP module streaming, progressive
+  information collection functionality is missing'

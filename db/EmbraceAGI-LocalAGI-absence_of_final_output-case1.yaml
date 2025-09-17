@@ -1,0 +1,18 @@
+app: LocalAGI
+repo: https://github.com/EmbraceAGI/LocalAGI
+commit: f2fd7824ee270b8d45b336366ec885a14b809b8b
+defect_id: EmbraceAGI-LocalAGI-absence_of_final_output-case1
+type: absence of final output
+case: '1'
+consequence:
+- UI
+locations:
+- local_agi.py:620-680 (main function), local_agi.py:500-530 (task_creation_agent
+  function)
+trigger_tests:
+- "1. Set up LocalAGI according to the README.md of this project: https://github.com/EmbraceAGI/LocalAGI/blob/main/README.md\
+  \ \n2. Set environment variables:\n   LLM_MODEL=chatglm-6b\n   OBJECTIVE=Implement\
+  \ a Python code to accept input and print it in the terminal\n   INITIAL_TASK=Build\
+  \ a task list\n3. Run the program with: python local_agi.py\n4. The program will\
+  \ start creating and completing tasks in an infinite loop, never stopping even when\
+  \ the objective should be considered complete."

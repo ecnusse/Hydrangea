@@ -1,0 +1,19 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-absence_of_final_output-/
+type: absence of final output
+case: /
+consequence:
+- IC
+- ST
+locations:
+- scripts/agent_manager.py
+trigger_tests:
+- 1.(MacOS, Set up with Docker)Complete the environment setup for AutoGPT according
+  to the instructions on v0.2.2 READMe.md 2. Run AutoGPT in continuous mode. 3.Let
+  Auto GPT execute "browse_website" command  to collect information from the web about
+  a specific topic. The webpage you directed AutoGPT to browse has no text to summarize
+  or contains other page errors. 4.Observe if AutoGPT enters a loop that after a webpage
+  browsing failure，it restarts the Google search, lands on the same page, and starts
+  the search over, only to land on the page again.

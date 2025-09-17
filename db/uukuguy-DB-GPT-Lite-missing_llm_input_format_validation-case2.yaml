@@ -1,0 +1,16 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- SL
+locations:
+- dbgpt/app/dbgpt_server.py
+trigger_tests:
+- '1.Add knowledge.
+
+  2.Upload documents.
+
+  3.Selcted csv file (which is bigger than 200KB)'

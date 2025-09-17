@@ -1,0 +1,12 @@
+app: chat-langchain
+repo: https://github.com/langchain-ai/chat-langchain
+commit: a875a649109ad7c3d68d7e9b75508f687e627ca4
+defect_id: langchain-ai-chat-langchain-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- _scripts/evaluate_chains_agent.py
+trigger_tests:
+- Upload the pptx file.

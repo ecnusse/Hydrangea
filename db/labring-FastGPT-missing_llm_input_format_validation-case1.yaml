@@ -1,0 +1,14 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- python/api/services/office2txt.py;projects/app/src/web/common/file/utils.ts;projects/app/src/pages/api/common/file/upload.ts
+trigger_tests:
+- '1. Use FastGPT online: https://fastgpt.in/; 2. Create a new knowledge base; 3.
+  In the Dataset interface, select the Create/Import tab and choose Text Dataset;
+  4. Upload the pptx file; 5. After parsing the pptx file, the order is chaotic'

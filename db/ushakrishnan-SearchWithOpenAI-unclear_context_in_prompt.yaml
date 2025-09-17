@@ -1,0 +1,17 @@
+app: SearchWithOpenAI
+repo: https://github.com/ushakrishnan/SearchWithOpenAI
+commit: 470a5d10f786efbac2feab18330c69365a937599
+defect_id: ushakrishnan-SearchWithOpenAI-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- pages/6_Q&A_with_Open_AI.py
+trigger_tests:
+- 1.In the application, select a character to converse with. 2.Ask the character vague
+  or ambiguous questions/overly complex or contradictory Information like "Explain
+  what it is." or "If the sun were blue, what color would the moon be?" 3. The LLM
+  may respond with generic information instead of document-specific content 4. This
+  demonstrates the unclear context defect where responses don't reference uploaded
+  documents

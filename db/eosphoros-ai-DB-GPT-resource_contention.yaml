@@ -1,0 +1,46 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-resource_contention-/
+type: resource contention
+case: /
+consequence:
+- ST
+locations:
+- dbgpt/client/client.py
+- The developer suggests the user to add client.aclose() in test code.
+trigger_tests:
+- '1.Install and configure DB-GPT using Docker.
+
+  2.Test the chat data mode using Python SDK. The test code is as follows：
+
+
+  import asyncio
+
+  from dbgpt.client import Client
+
+  async def main():
+
+  # initialize client
+
+  DBGPT_API_KEY = ""
+
+  client = Client(api_key=DBGPT_API_KEY)
+
+  #async for data in client.chat_stream(
+
+  # model="tongyi_proxyllm",
+
+  # messages="hello",
+
+  #):
+
+  # print(data)
+
+  res = await client.chat(model="tongyi_proxyllm" ,messages="hello")
+
+  print(res)
+
+  if name == "main":
+
+  asyncio.run(main())'
