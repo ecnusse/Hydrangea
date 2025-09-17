@@ -1,4 +1,5 @@
 # README
+## Command-line interface: Hydrangea command
 <div style="overflow: auto;">
   <img src="./Hydrangea.png" alt="Alt text" width="300" style="float: right; margin-left: 10px;">
 </div>
@@ -11,7 +12,7 @@
 
 This is the artifact for our ICSE2025 paper "[Are LLMs Correctly Integrated into Software Systems?](https://arxiv.org/abs/2407.05138)". It is publicly archived at [Figshare](https://figshare.com/articles/dataset/Hydrangea/28262426). This repository is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://opendatacommons.org/licenses/pddl/1.0/ - see the [LICENSE](./LICENSE) file for details. Notably, a misintegration case studied in our paper has been officially assigned **CVE-2025-45150**. If you have any questions, please feel free to contact me via email(ycshao@stu.ecnu.edu.cn).
 
-We are grateful for the contribution made by our anonymous collaborator. The `defect.csv` file has been updated accordingly. You can review the latest updates!
+We are grateful for the contribution made by our anonymous collaborator. Additionally, Mingyu Weng, Yiwen Sun, and Wenjing Liu have developed the Command-line Interface (CLI) to further enhance its functionality. The `defect.csv` file has been updated accordingly. You can review the latest updates!
 
 Hydrangea is a defect library for LLM-enabled software. Hydrangea has 4 main petals, each corresponding to one of the major components where defects often arise: LLM agent, vector database, software component, and system.
 
