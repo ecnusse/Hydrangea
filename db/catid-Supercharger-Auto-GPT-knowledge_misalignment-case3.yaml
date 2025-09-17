@@ -1,0 +1,18 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-knowledge_misalignment-case3
+type: knowledge misalignment
+case: '3'
+consequence:
+- IC
+locations:
+- 'scripts/browse.py: split_text function; scripts/commands.py: commit_memory; scripts/memory.py:
+  memory storage'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Create file with exactly 126 characters; 3)
+  Test split_text() with max_length=100; 4) Observe 2 chunks: first empty (0 chars),
+  second with content (126 chars); 5) Simulate data ingestion: only 1 valid chunk
+  saved to memory; 6) Create file with 1198 characters; 7) Observe same issue: 1 chunk
+  saved instead of proper chunking; 8) This indicates split_text() logic error affects
+  data ingestion.'

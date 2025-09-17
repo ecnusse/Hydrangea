@@ -1,0 +1,29 @@
+app: langchain-chatbot
+repo: https://github.com/Haste171/langchain-chatbot
+commit: f3999530d57eb8069d8b911024785d82ac5d003d
+defect_id: Haste172-langchain-chatbot-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- utils/pdf_loader.py
+trigger_tests:
+- '1. Set up GPT4 PDF Chatbot LangChain: Ensure the project is correctly set up in
+  your local environment.
+
+  2. Upload a PDF document that contains images.
+
+  3. Run the Chatbot: Execute `python app.py` or the relevant command to start the
+  server.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query that references the images in the PDF.
+
+  6. Observe if the response fails to include or reference the images from the PDF,
+  indicating that the project cannot process images read from PDF documents.(for example,OSError:
+  [Errno 24] Too many open files)
+
+  7.Check Logs and Output: Review the application logs and console output for any
+  additional error messages or stack traces that provide more details about the failure.'

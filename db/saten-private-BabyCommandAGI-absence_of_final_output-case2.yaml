@@ -1,0 +1,19 @@
+app: BabyCommandAGI
+repo: https://github.com/saten-private/BabyCommandAGI
+commit: 993f7075479d4d89948410bfec0c4c18d4a06b0c
+defect_id: saten-private-BabyCommandAGI-absence_of_final_output-case2
+type: absence of final output
+case: '2'
+consequence:
+- UI
+locations:
+- classic/babyagi.py/task_creation_agent(), main() loop
+trigger_tests:
+- "(for example:)\n1.Clone the Repository:\n   git clone https://github.com/saten-private/BabyCommandAGI.git\n\
+     cd babyagi\n2.Install the Required Packages:\n   pip install -r requirements.txt\n\
+  3.Set Up Environment Variables:\n  (1)Copy the .env.example file to .env:\n   cp .env.example .env\n\
+    (2)Open the .env file and set the following variables:\n   OPENAI_API_KEY=your_openai_api_key\n\
+     OPENAI_API_MODEL=gpt-3.5-turbo\n   YOUR_TABLE_NAME=your_results_store_name\n\
+  \  (3)Optionally, set other variables:\n   OBJECTIVE=\"Write a novel\"\n   YOUR_FIRST_TASK=\"\
+  Start writing the introduction of the novel\"\n4.Run the Script:\n   python classic/babyagi.py\n\
+  5.Observe tasks and outcomes"

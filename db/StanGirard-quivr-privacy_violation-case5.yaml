@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-privacy_violation-case5
+type: privacy violation
+case: '5'
+consequence:
+- IS
+locations:
+- backend/routes/crawl_routes.py
+trigger_tests:
+- Admin creates brain, adds User-B with Viewer permission, User-B cannot access knowledge
+  base in UI but can add crawl knowledge via API, system adds knowledge without permission
+  check

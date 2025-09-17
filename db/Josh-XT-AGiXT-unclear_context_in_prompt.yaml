@@ -1,0 +1,16 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- 'app.py: instruct(), chat(); AgentLLM.py: run(), get_prompt_with_context(), context_agent(),
+  trim_context()'
+trigger_tests:
+- 'UI: Select any agent and enter "Explain what it is." or "If the sun were blue,
+  what color would the moon be?"; API: POST /api/agent/{agent_name}/instruct with
+  body {"prompt":"Explain what it is."} or {"prompt":"If the sun were blue, what color
+  would the moon be?"}'

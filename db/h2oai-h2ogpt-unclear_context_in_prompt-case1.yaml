@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::use_context; src/gpt_langchain.py::langchain_mode
+trigger_tests:
+- Configure system to connect to existing database; enter query that should retrieve
+  data; observe database not used despite existence; monitor logs for database access
+  indications.

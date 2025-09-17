@@ -1,0 +1,15 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-inefficient_memory_management-/
+type: Inefficient memory management
+case: /
+consequence:
+- CL
+locations:
+- 'AgentLLM.py: __init__() (embedding_function initialization); requirements.txt:
+  sentence-transformers, chromadb; Dockerfile-backend: libgomp1 installation'
+trigger_tests:
+- '(Env: Docker/Linux ARM64) 1) Run Docker container on ARM64 system. 2) Start Agent-LLM
+  with memory enabled (NO_MEMORY=false). 3) Create agent and start task. 4) Observe
+  "cannot allocate memory in static TLS block" error in logs. 5) Fix: export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1:$LD_PRELOAD.'

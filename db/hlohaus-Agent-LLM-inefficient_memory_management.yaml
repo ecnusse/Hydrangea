@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/hlohaus/Agent-LLM
+commit: d8a46dacea35c6224effd3e733d5c085bea1949a
+defect_id: hlohaus-Agent-LLM-inefficient_memory_management-/
+type: Inefficient memory management
+case: /
+consequence:
+- CL
+locations:
+- Dockerfile-backend, AgentLLM.py
+trigger_tests:
+- 1. Start Docker Container Streamlit. 2. Access the webui on Streamlit. 3. Create
+  Agent (Bard, Palm, gpt4free). 4. Go to tasks. 5. Create a task and start it. 6.
+  Watch logs - Error will show on the logs on streamlit backend.

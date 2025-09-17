@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-inefficient_memory_management-case1
+type: inefficient memory management
+case: '1'
+consequence:
+- ST
+- IC
+locations:
+- /
+trigger_tests:
+- '1.Follow the tutorial to deploy app on the ubuntu machine (https://github.com/eosphoros-ai/DB-GPT/README.md) (24g single-card GPU)
+
+  2.Continue to ask questions
+
+  3.Observe that CUDA memory kept increasing until memory exploded'

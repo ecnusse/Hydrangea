@@ -1,0 +1,12 @@
+app: ChatIQ
+repo: https://github.com/yujiosaka/ChatIQ
+commit: def21481b0c132173b51d1d7a314b103db324ca2
+defect_id: yujiosaka-ChatIQ-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chatiq/handlers/file_shared.py chatiq/document_loaders/
+trigger_tests:
+- Upload the pptx file.

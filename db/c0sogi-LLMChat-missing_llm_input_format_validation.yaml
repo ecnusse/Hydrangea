@@ -1,0 +1,14 @@
+app: LLMChat
+repo: https://github.com/c0sogi/LLMChat
+commit: b0fe554ca2327d2dc43dc819934b7973e662ffdb
+defect_id: c0sogi-LLMChat-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- app/utils/chatgpt/chatgpt_fileloader.py
+- app/utils/chatgpt/chatgpt_vectorstore_manager.py
+- app/models/gpt_llms.py
+trigger_tests:
+- Upload the pptx file.

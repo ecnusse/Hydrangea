@@ -1,0 +1,23 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-inefficient_memory_management-case4
+type: inefficient memory management
+case: '4'
+consequence:
+- SL
+locations:
+- 1.dbgpt/model/adapter/loader.py
+- 2.dbgpt/model/llm_out/vicuna_base_llm.py
+- 3.dbgpt/util/model_utils.py
+trigger_tests:
+- '1.Download vicuna-13b-v1.5 model files from https://huggingface.co/lmsys/vicuna-13b-v1.5
+
+  2.Start dbgpt_server.py on Mac with M2/M2 max/M2 ultra
+
+  3.Create the App according to https://www.yuque.com/eosphoros/dbgpt-docs/aiagvxeb86iarq6r
+
+  4.Input "Please group orders by product category to calculate total sales, average
+  sales, and number of transactions" in the text field, the App would inference the result.
+
+  5.The consumed memory on the device will increase continually.'

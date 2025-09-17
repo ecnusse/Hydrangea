@@ -1,0 +1,23 @@
+app: langchain-ChatGLM-annotation
+repo: https://github.com/hzg0601/langchain-ChatGLM-annotation
+commit: da8085ba5fcb89a2e665cd3fde28cdafa38b9c29
+defect_id: hzg0601-langchain-ChatGLM-annotation-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- chains/dialogue_answering/prompts.py
+- views/src/store/modules/prompt/index.ts
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Execute ''Knowledge Base Management - Create New Knowledge Base - Upload Files''.
+
+  3.Click ''Conversation - Select Knowledge Base Q&A - Choose Knowledge Base''.
+
+  4.Scroll to ''Input Box and Ask a Question''.
+
+  5.Observe the issue: ''No related documents found, the response is based on the
+  model''s own capability.'''

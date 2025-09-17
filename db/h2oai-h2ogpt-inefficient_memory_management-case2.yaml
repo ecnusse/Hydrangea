@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-inefficient_memory_management-case2
+type: Inefficient memory management
+case: '2'
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::file_to_doc; CSVLoader; UnstructuredExcelLoader
+trigger_tests:
+- Upload CSV/Excel with tables; query specific table data like "average salary in
+  Engineering"; observe broken table structure after chunking; test calculations on
+  table data.

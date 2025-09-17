@@ -1,0 +1,22 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Ensure PrivateGPT is set up and the server is running.
+
+  2. Open the web UI and navigate to the chat interface.
+
+  3. Enter the query `“Explain the concept of quantum entanglement in detail.”`
+
+  4. Submit the query.
+
+  5. Observe the response to check if it is incomplete or truncated, especially if
+  it cuts off abruptly or lacks detailed explanation.'

@@ -1,0 +1,18 @@
+app: gaib
+repo: https://github.com/groovybits/gaib
+commit: 887e8edf7f6ce112af4790ac5f45c629b05e3225A
+defect_id: groovybits-gaib-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- config/personalityPrompts.ts
+- pages/api/openai.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

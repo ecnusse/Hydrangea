@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-imprecise_knowledge_retrieval-case2
+type: Imprecise knowledge retrieval
+case: '2'
+consequence:
+- IC
+locations:
+- backend/llm/qa_base.py, backend/models/databases/supabase/chats.py
+trigger_tests:
+- Create brain, add knowledge, ask questions about documents, observe empty output
+  content while system logs show normal document reading, indicating missing validation
+  and quality checks

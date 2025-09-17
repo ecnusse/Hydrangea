@@ -1,0 +1,21 @@
+app: privatgpt-gui
+repo: https://github.com/REFRIED-BoolEANS/privatgpt-gui
+commit: 840675927b1ace596dcc2c8ed0f6f483805e33fe
+defect_id: REFRIED-BoolEANS-privatgpt-gui-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- ST IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Use Linux Environment: Make sure you are operating within a Linux environment.
+
+  3.Upload a .doc File: Try uploading a .doc file to the knowledge base.
+
+  4.Observe the Error: Notice the error message indicating that the .doc file format
+  is not supported and the file cannot be parsed.'

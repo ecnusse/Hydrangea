@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-exceeding_llm_context_limit-/
+type: exceeding LLM context limit
+case: /
+consequence:
+- ST
+locations:
+- chat.py, config.py
+trigger_tests:
+- 1. Set up the application according to the README.md of this project. 2. Upload
+  a large text document in the application's chat UI. 3. Wait for multiple rounds
+  of processing. 4. The application will receive context window exceeded errors when
+  the combined input (user query + document chunks) exceeds 4096 tokens.

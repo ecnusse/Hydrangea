@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- IC
+locations:
+- demo/web/index.html; demo/web/js/main.js
+trigger_tests:
+- 1. Open the web application; 2. Look for file upload interface elements; 3. Observe
+  that only text input is available; 4. Note the absence of file upload functionality
+  in the UI

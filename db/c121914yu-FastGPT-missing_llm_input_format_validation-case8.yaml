@@ -1,0 +1,14 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case8
+type: Missing LLM input format validation
+case: '8'
+consequence:
+- IC
+locations:
+- client/src/constants/common.ts;client/src/pages/kb/detail/components/Import/FileSelect.tsx;client/src/utils/file.ts
+trigger_tests:
+- '1. Add new files to your knowledge base; 2. Found that importing .doc files IS
+  supported; 3. VERIFIED: This is an incorrect defect report - FastGPT actually supports
+  .doc files with complete processing logic'

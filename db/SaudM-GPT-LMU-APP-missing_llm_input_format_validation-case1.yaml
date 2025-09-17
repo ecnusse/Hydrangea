@@ -1,0 +1,14 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- client/src/pages/kb/components/SelectFileModal.tsx; client/src/utils/file.ts
+trigger_tests:
+- 1) Go to Knowledge Base → Create/Import → Text Dataset. 2) Try selecting a .pptx
+  file; the file picker filters it out. 3) Converting the PPTX to PDF and uploading
+  works; PPTX-specific disorder is not applicable here.

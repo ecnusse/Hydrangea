@@ -1,0 +1,36 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- autogpt/prompt.py
+- autogpt/app.py
+- autogpt/agents/agent.py
+trigger_tests:
+- '1.Set up and Configure app.
+
+  2.Create a Task: Create a task for app that is likely to fail or has complex steps
+  prone to errors.
+
+  3.Observe Task Execution: Run the task and let app operate for an extended period.
+  Check if it gets stuck in loops because it mishandles errors and repeatedly outputs
+  invalid JSON instead of progressing.
+
+  4.Concrete Case:
+
+  Task: Fetch hyperlinks from an invalid URL http://invalid.example.
+
+  Observed Execution:
+
+  Command 1: get_hyperlinks("http://invalid.example") → HTTP 500 error
+
+  Command 2: Error: Missing ''command'' object in JSON (repeated many times)
+
+  Behavior: After the initial failure, the app does not recover and repeatedly produces
+  the same JSON error instead of handling the failure gracefully.
+
+  Result: The app gets stuck in a loop of invalid JSON errors without making progress.'

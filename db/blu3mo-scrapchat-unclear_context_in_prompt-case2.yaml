@@ -1,0 +1,24 @@
+app: scrapchat
+repo: https://github.com/blu3mo/scrapchat
+commit: ce78a875399b069d3d5c44c738cb10fb3704c0fd
+defect_id: blu3mo-scrapchat-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- query_data.py
+trigger_tests:
+- '1.Ask a question outside of context in the UI interface.
+
+  2.Notice that the returned Chat-langchain generates answer form internet, instead of returning "Hmm, Im not sure".
+
+  Example:
+
+  You: Do you know The Little Prince?
+
+  Expected Result: The chatbot should respond with "Hmm, I''m not sure." since this
+  question is not related to the knowledge base.
+
+  Actual Result: Chatbot: Yes, I know. The Little Prince is a famous French novella
+  that tells the story of a young prince’s adventures in the universe.'

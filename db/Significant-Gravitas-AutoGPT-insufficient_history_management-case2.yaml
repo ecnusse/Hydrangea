@@ -1,0 +1,30 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- scripts/main.py
+trigger_tests:
+- '1. Set up and Configure AutoGPT.
+
+  2. Create a Task: Create a task for AutoGPT that is likely to fail or has complex
+  steps prone to errors.
+
+  3. Observe Task Execution: Run the task and let AutoGPT operate for an extended
+  period. Check if it gets stuck in loops because it thinks failed repeated attempts
+  are relevant and therefore should be tried again and again.
+
+  4. Actual Result:
+
+  Name: test
+
+  Role: coder
+
+  Goal: write a python file to print Hello, AutoGPT and execute it until success
+
+  Observation: It failed to execute the python file and then fell into a loop of rewriting
+  and re-executing the file repeatedly.'

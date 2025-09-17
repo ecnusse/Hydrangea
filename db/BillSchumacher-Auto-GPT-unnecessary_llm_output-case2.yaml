@@ -1,0 +1,19 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-unnecessary_llm_output-case2
+type: unnecessary LLM output
+case: '2'
+consequence:
+- IC
+locations:
+- autogpt/agent/agent.py/start_interaction_loop(self)
+- (Releases before v0.3.0)
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.
+
+  2.Create an AI agent.
+
+  3.Set up a task, let AutoGPT enter its interactive loop. Use any command that generates the following info:
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''s'' to run self-feedback commands''n'' to exit program, or enter feedback for ...'

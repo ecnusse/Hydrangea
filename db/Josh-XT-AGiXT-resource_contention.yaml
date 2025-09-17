@@ -1,0 +1,16 @@
+app: AGiXT
+repo: https://github.com/Josh-XT/AGiXT
+commit: de7d913b2853708b9f9d4e7127ea48bca80865b9
+defect_id: Josh-XT-AGiXT-resource_contention-/
+type: Resource contention
+case: /
+consequence:
+- ST
+locations:
+- 'commands/web_playwright.py: scrape_text(), scrape_links(); app.py: instruct(),
+  chat() (async endpoints calling sync Playwright)'
+trigger_tests:
+- '(Env: Local) 1) Create async context (e.g., FastAPI endpoint or asyncio.run()).
+  2) Call web_playwright.scrape_text("https://example.com") or use agent with web
+  scraping command. 3) Observe "Playwright Sync API inside asyncio loop" error. 4)
+  Switching to Playwright Async API resolves the conflict.'

@@ -1,0 +1,19 @@
+app: scrapchat
+repo: https://github.com/blu3mo/scrapchat
+commit: ce78a875399b069d3d5c44c738cb10fb3704c0fd
+defect_id: blu3mo-scrapchat-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- main.py
+- callback.py
+trigger_tests:
+- '1.Set up chat-langchain locally.
+
+  2.Open the browser interface and ask a question.
+
+  3.Notice that the answers displayed in the browser have duplicated words (e.g., "CanCan you you provide provide me me with with instructions instructions on on how how to to...").
+
+  4.Debug backtrace from smith shows the response works fine, but the issue persists in the browser display.'

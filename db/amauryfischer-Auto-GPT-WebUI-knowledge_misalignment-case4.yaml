@@ -1,0 +1,22 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-knowledge_misalignment-case4
+type: knowledge misalignment
+case: '4'
+consequence:
+- IC
+locations:
+- autogpt/commands/file_operations.py/split_file()
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT(v<=0.2.1)
+
+  2. Run AutoGPT. Ask AutoGPT to read a file. (The file should not be too big)
+
+  3.Authorize and wait for the result, which may lead to the error: 
+
+   File "/usr/local/lib/python3.10/site-packages/openai/api_requestor.py", line 682, in _interpret_response_line
+
+      raise self.handle_error_response(
+
+  openai.error.InvalidRequestError: This model''s maximum context length is 8191 tokens, however you requested 15117 tokens (15117 in your prompt; 0 for the completion). Please reduce your prompt; or completion length.'

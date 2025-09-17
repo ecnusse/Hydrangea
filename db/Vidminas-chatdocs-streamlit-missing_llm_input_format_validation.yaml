@@ -1,0 +1,14 @@
+app: chatdocs-streamlit
+repo: https://github.com/Vidminas/chatdocs-streamlit
+commit: cf4053a1b20116fb0d05e64778e3c4c28b902f2a
+defect_id: Vidminas-chatdocs-streamlit-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- chatdocs/add.py
+- chatdocs/pages/embeddings_viz.py
+- chatdocs/document_loaders/nougat_loader.py
+trigger_tests:
+- Upload the pptx file.

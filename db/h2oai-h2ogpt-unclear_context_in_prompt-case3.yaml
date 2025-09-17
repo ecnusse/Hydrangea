@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- src/gen.py::max_new_tokens; src/gpt4all_llm.py::temperature; src/stopping.py::StoppingCriteria
+trigger_tests:
+- Upload document with specific information; enter query related to document content;
+  observe rambling or off-topic responses; note instances where model responses become
+  increasingly irrelevant.

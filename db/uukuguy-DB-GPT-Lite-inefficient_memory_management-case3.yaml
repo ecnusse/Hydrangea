@@ -1,0 +1,16 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-inefficient_memory_management-case3
+type: inefficient memory management
+case: '3'
+consequence:
+- IC
+locations:
+- 1.dbgpt/serve/agent/team/plan/team_auto_plan.py
+- 2.dbgpt/agent/memory/gpts_memory.py
+- 3.dbgpt/serve/agent/agents/controller.py
+trigger_tests:
+- "1.Use the test data provided in the official documentation, with the agent only\
+  \ using DataScientist. \n2.Count the number of men and women in each country and\
+  \ display it using an appropriate chart."

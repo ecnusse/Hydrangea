@@ -1,0 +1,17 @@
+app: gpt4-pdf-chatbot-langchain
+repo: https://github.com/mayooear/gpt4-pdf-chatbot-langchain
+commit: 66d183f6b207fa1d92153a430c620c58b01e9b1c
+defect_id: mayooear-gpt4-pdf-chatbot-langchain-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- utils/makechain.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

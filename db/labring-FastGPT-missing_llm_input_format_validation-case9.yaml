@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case9
+type: Missing LLM input format validation
+case: '9'
+consequence:
+- IC
+locations:
+- projects/app/src/web/common/file/utils.ts;python/api/services/office2txt.py;packages/global/common/string/textSplitter.ts;packages/service/core/dataset/collection/utils.ts
+trigger_tests:
+- '1. Upload this two-column PDF file to the knowledge base: Class management strategies
+  for cultivating good behavior habits of primary and secondary school students_Chen
+  Fang.pdf; 2. Select Direct Segmentation; 3. Preview the segmentation results and
+  observe that the content extraction from the PDF is disorganized; 4. Root cause:
+  transform[5] position calculation only considers Y-axis, ignoring X-axis for multi-column
+  layouts'

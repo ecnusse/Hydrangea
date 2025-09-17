@@ -1,0 +1,19 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-missing_llm_input_format_validation-case3
+type: Missing LLM input format validation
+case: '3'
+consequence:
+- ST
+- IC
+locations:
+- YP-GPT/dbgpt/pilot/scene/chat_data/chat_excel
+trigger_tests:
+- '1.Enter the Chat Excel scenario.
+
+  2.Upload a .xlsx or .csv file.
+
+  3.Attempt to converse with the bot. A "not allowed" sign appears while typing; sometimes chatting works, but the answer always starts with an ERROR message and afterwards it returns a correct answer: "Error! LLM response can''t parse!"
+
+  4.Also in the analysis of the document, chinese letters and english letters mixed.'

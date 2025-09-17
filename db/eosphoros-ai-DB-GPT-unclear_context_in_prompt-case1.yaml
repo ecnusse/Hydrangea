@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- dbgpt/app/scene/chat_knowledge/chat.py, prompt.py
+trigger_tests:
+- '1.Enter the "Chat Knowledge" scene
+
+  2.Upload knowledge documents in md format
+
+  3.Start the conversation'

@@ -1,0 +1,19 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-exceeding_llm_content_limit-case7
+type: exceeding LLM content limit
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- 'scripts/config.py: token limit settings; scripts/llm_utils.py: create_chat_completion;
+  scripts/commands.py: read_file; scripts/chat.py: context construction and token
+  management'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Set FAST_TOKEN_LIMIT=1000 (lower than default
+  4000); 3) Launch: python scripts/main.py --continuous --gpt3only; 4) Configure AI
+  to analyze large code file (e.g., WoWinArabic_Chat.lua); 5) Execute read_file command
+  on large file (~3MB, 700k+ tokens); 6) Observe "InvalidRequestError: This model''s
+  maximum context length is 8191 tokens" when large file content exceeds token limit.'

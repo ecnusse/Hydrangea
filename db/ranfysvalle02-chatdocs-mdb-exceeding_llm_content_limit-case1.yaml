@@ -1,0 +1,24 @@
+app: chatdocs-mdb
+repo: https://github.com/ranfysvalle02/chatdocs-mdb
+commit: 6322d0ea03d2a3a14fbfaa7ca9f12104e733a72f
+defect_id: ranfysvalle02-chatdocs-mdb-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- IC
+locations:
+- chatdocs/llms.py
+- chatdocs/ui.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a document for querying.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query related to the content of the uploaded document.
+
+  6. Observe the response to check if it gets cut off in the middle.'

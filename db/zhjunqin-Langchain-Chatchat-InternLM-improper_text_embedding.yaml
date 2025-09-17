@@ -1,0 +1,22 @@
+app: Langchain-Chatchat-InternLM
+repo: https://github.com/zhjunqin/Langchain-Chatchat-InternLM
+commit: 761f0bc3a94ccdda9970761b6c769c7e0537e2e8
+defect_id: zhjunqin-Langchain-Chatchat-InternLM-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- IC
+- ST
+locations:
+- server/knowledge_base/kb_service/base.py
+- server/knowledge_base/utils.py
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment with the necessary dependencies.
+
+  2.Use Elasticsearch for Vector Database: Configure Elasticsearch as the vector database.
+
+  3.Add Markdown Documents: Add multiple markdown documents to the knowledge base.
+
+  4.Observe Failures: Notice that some markdown documents fail to vectorize properly,
+  with errors like "index creation failed" and "index already exists."'

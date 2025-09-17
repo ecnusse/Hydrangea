@@ -1,0 +1,15 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-unnecessary_llm_output-case2
+type: unnecessary LLM output
+case: '2'
+consequence:
+- IC
+locations:
+- 'scripts/main.py: user interaction feedback; scripts/agent_manager.py: agent management'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch: python scripts/main.py --gpt3only;
+  3) Configure AI agent; 4) Wait for command authorization prompt; 5) Observe "Enter
+  ''y'' to authorise command" (spelling error: should be "authorize"); 6) Note missing
+  self-feedback option mentioned in defect description.'

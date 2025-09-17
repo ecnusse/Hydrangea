@@ -1,0 +1,49 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864
+defect_id: fendouai-babyagi_zh-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- '1. Clone the repository via git clone https://github.com/fendouai/babyagi_zh.git
+  and cd into the cloned repository.
+
+  2. Install the required packages: pip install -r requirements.txt
+
+  3. Create the .env file manually since there''s no .env.example file in this project.
+  This is where you will set the following variables.
+
+  4. Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables.
+  You will also need to setup Pinecone variables detailed here.
+
+  5. Set the Pinecone API key in the PINECONE_API_KEY variable.
+
+  6. Set the Pinecone environment in the PINECONE_ENVIRONMENT variable.
+
+  7. Set the name of the table where the task results will be stored in the TABLE_NAME
+  variable.
+
+  8. Set the OBJECTIVE variable as "Translate this sentence from english into chinese:
+  hello, world"
+
+  9. Set the INITIAL_TASK variable as "Develop a task list."
+
+  10. Run the script: python babyagi.py
+
+  11.Observe Tasks and Outcomes and you can see that the task creation process generating too many unnecessary tasks
+
+  Example:
+
+  Task 2: "Visit a local farmer''s market and pick out fresh ingredients to cook a
+  new dish at home"
+
+  Task 3: "Try a new indoor activity like painting, pottery, or indoor rock climbing
+  for a creative outlet"
+
+  Task 4: "Visit a local art gallery or museum to immerse yourself in creativity and
+  inspiration"'

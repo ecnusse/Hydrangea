@@ -1,0 +1,19 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- IC
+- SL
+locations:
+- dbgpt/app/knowledge/api.py
+- dbgpt/app/openapi/api_v1/api_v1.py
+trigger_tests:
+- '1.In .env file, set "language" to zh.
+
+  2.Start DB-GPT, Enter "Chat Knowledge" scenario.
+
+  3.Try to upload large text files (greater than 2M) to knowledge bases, observe that
+  the file upload process is very slow.'

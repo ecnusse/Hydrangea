@@ -1,0 +1,28 @@
+app: nan
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: nan-nan-incompatible_llm_output_format-case4
+type: Incompatible LLM output format
+case: '4'
+consequence:
+- UI
+locations:
+- web/components/chat/chat-content/chart-view.tsx
+trigger_tests:
+- '1.Enter the ChatExcel scenario.
+
+  2.Upload an xlsx file with multiple columns.
+
+  3.Input: "Return all data"
+
+
+  Expected Result:
+
+  System should display all data with proper table formatting showing multiple columns
+  clearly.
+
+  Actual Result:
+
+  LLM displays a narrow table showing only 2 column of data, with remaining columns
+  requiring horizontal scrolling to view,negatively impacting user experience and
+  data readability.'

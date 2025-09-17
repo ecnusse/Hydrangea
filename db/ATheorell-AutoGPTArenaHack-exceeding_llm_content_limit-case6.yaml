@@ -1,0 +1,19 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-exceeding_llm_content_limit-case6
+type: exceeding LLM content limit
+case: '6'
+consequence:
+- ST
+locations:
+- autogpts/forge/forge/agent.py; autogpts/autogpt/autogpt/agents/base.py (build_prompt,
+  send_token_limit); autogpts/autogpt/autogpt/agents/prompt_strategies/one_shot.py
+  (compile_progress)
+trigger_tests:
+- '1. Configure and launch AutoGPT (use releases before v0.4.0) 2. Execute large commands:
+  (1) list_files on folders with many files (2) read_file on a large document (3)
+  browse_website on a long webpage 3. Observe absence of early warning and eventual
+  ''This model''s maximum context length is 4097 tokens'' error. Quick local simulation:
+  run ''python test_context_overflow_warning.py'' in this repo to reproduce overflow
+  and missing proactive warning'

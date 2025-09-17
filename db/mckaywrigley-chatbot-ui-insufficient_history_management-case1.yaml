@@ -1,0 +1,17 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- components/chat/chat-hooks/use-chat-handler.tsx:handleSendMessage function (line
+  175)
+trigger_tests:
+- 1. Start a new chat 2. Send a message to the AI and wait for it to start generating
+  a response 3. While the AI is generating (isGenerating=true), type a new prompt
+  in the chat input bar 4. Wait for the AI to finish generating the previous response
+  5. Observe that the typed prompt disappears and the input bar is cleared, losing
+  the user's input

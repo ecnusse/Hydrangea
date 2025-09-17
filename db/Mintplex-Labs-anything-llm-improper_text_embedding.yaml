@@ -1,0 +1,23 @@
+app: anything-llm
+repo: https://github.com/Mintplex-Labs/anything-llm
+commit: ebd3a62866e9e17b07a4a973b74329c0297fb78a
+defect_id: Mintplex-Labs-anything-llm-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- IC
+- TK
+locations:
+- frontend/src/utils/paths.js
+- frontend/src/components/EmbeddingSelection/CohereOptions/index.jsx
+trigger_tests:
+- "1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.\n\
+  2. Configure LM Studio Embedding Models: Ensure the LM Studio embedding models are\
+  \ properly integrated.\n3. Run Anything-LLM: Execute `python app.py` or the relevant\
+  \ command to start the server.\n4. Open the query interface in the web UI.\n5. Enter\
+  \ a user query for embedding.\n6. Observe the embedding process to check if the\
+  \ query embeddings are being chunked per character instead of by word or sentence.(for\
+  \ example,KeyError: 'API_KEY') \n7.Check Logs and Output: Review the application\
+  \ logs and console output for any additional error messages or stack traces that\
+  \ provide more details about the failure. Pay special attention to errors related\
+  \ to missing environment variables or incorrect configurations."

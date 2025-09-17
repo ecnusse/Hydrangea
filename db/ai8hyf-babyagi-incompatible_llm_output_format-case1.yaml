@@ -1,0 +1,28 @@
+app: babyagi
+repo: https://github.com/ai8hyf/babyagi
+commit: 6fcd528a92c80846dbb351f2b7babdd50c38709d
+defect_id: ai8hyf-babyagi-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- babyagi.py/prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+  In this example, you will see that the task numbers are prefixed with an extra “#”
+  symbol, which is incorrect.
+
+  Example:
+
+  Task 1: Have a picnic in a nearby park with friends or family. Enjoy delicious food,
+  play games, and soak up the sunshine.
+
+  Task # 2: Visit a local museum or art gallery to explore and appreciate the beauty
+  of art and history.
+
+  Task #9: Explore a local hiking trail or nature reserve to immerse yourself in the
+  beauty of the outdoors. Take in the fresh air, listen to the sounds of nature, and
+  appreciate the serene surroundings.'

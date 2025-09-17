@@ -1,0 +1,21 @@
+app: h2ogpt-dev-local
+repo: https://github.com/Jerk400/h2ogpt-dev-local
+commit: ba56d6471080ec447c7c5347a2d4765ae4dba5b4
+defect_id: Jerk400-h2ogpt-dev-local-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- src/prompter.py:generate_prompt; src/h2oai_pipeline.py:preprocess
+trigger_tests:
+- 1. Start the h2oGPT application with a character selection interface; 2. Upload
+  a document containing factual information (e.g., a PDF with specific data about
+  climate change showing 1.1°C temperature increase); 3. Ask vague or ambiguous questions
+  like 'Explain what it is' or 'What does this mean?'; 4. Ask contradictory questions
+  like 'If the sun were blue, what color would the moon be?'; 5. Ask questions that
+  require specific context from the uploaded document without providing clear context
+  boundaries; 6. Observe that the LLM generates responses that contradict the uploaded
+  document content or provide inconsistent answers; 7. Verify the defect by checking
+  that the system does not ask for clarification for ambiguous queries and provides
+  generic answers instead of context-specific responses

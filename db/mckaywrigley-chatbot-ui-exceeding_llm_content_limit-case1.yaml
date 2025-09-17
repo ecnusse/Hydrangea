@@ -1,0 +1,17 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-exceeding_llm_content_limit-case1
+type: exceeding LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- lib/build-prompt.ts:buildFinalMessages function (lines 74-78), components/ui/chat-settings-form.tsx:context
+  length slider (line 147), app/api/chat/openai/route.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure you have the Chatbot UI project correctly set up and
+  configured on your local environment 2. Configure GPT-3.5-turbo: Modify the settings
+  to use the GPT-3.5-turbo model 3. Send a query: Input any query, even as short as
+  one or two tokens 4. Observe the error: Notice the error message indicating "context
+  length exceeded" despite the short query length'

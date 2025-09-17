@@ -1,0 +1,21 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- privateGPT.py
+trigger_tests:
+- '1. Ensure PrivateGPT is set up and the server is running.
+
+  2. Open the web UI and navigate to the chat interface.
+
+  3. Enter the query `“Explain the concept of quantum entanglement in detail.”`
+
+  4. Submit the query.
+
+  5. Observe the response to check if it is incomplete or truncated, especially if
+  it cuts off abruptly or lacks detailed explanation.'

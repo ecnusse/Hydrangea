@@ -1,0 +1,18 @@
+app: IncarnaMind
+repo: https://github.com/junruxiong/IncarnaMind
+commit: 75564a3bf08d0006387889cdc9a76fc509ededd8
+defect_id: junruxiong-IncarnaMind-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- toolkit/prompts.py
+- convo_qa_chain.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

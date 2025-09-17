@@ -1,0 +1,32 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- UI
+locations:
+- 1.packages/dbgpt-core/src/dbgpt/util/utils.py
+- 2.packages/dbgpt-core/src/dbgpt/_private/config.py
+- 3.packages/dbgpt-app/src/dbgpt_app/config.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload "The Little Prince" .md knowledge file to the knowledge base.
+
+  1. Enter the Chat Knowledge scenario.
+
+  2. Upload "The Little Prince" .md knowledge file to the knowledge base.
+
+  3. Ask:
+
+  "What did the Little Prince learn from the fox?"
+
+  "What lesson does the dialogue between the Little Prince and the fox teach us?"
+
+  "What is the most important lesson the fox taught the Little Prince?"
+
+  Log observation: The log redundancy mainly outputs request retries, HTTP connection
+  status, and JSON parsing details, causing console overload and making it hard to
+  spot critical errors.'

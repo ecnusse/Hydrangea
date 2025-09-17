@@ -1,0 +1,27 @@
+app: anything-llm
+repo: https://github.com/Mintplex-Labs/anything-llm
+commit: ebd3a62866e9e17b07a4a973b74329c0297fb78a
+defect_id: Mintplex-Labs-anything-llm-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+locations:
+- server/utils/openAi/index.js
+- server/utils/chats/index.js
+trigger_tests:
+- '1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
+
+  2. Configure OpenAI API: Ensure the OpenAI API is properly integrated.
+
+  3. Run Anything-LLM: Execute `python app.py` or the relevant command to start the
+  server.
+
+  4. Open the chat interface in the web UI.
+
+  5. Engage in a chat session by entering multiple queries and responses to build
+  a long chat history.
+
+  6. Observe if an OpenAI 400 Error occurs when the chat history becomes long, indicating
+  the issue with handling extended chat sessions.(for example, FileNotFoundError:
+  [Errno 2] No such file or directory: ''path/to/document'')'

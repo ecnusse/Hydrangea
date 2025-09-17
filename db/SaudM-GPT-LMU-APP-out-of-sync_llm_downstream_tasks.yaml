@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- UI
+locations:
+- client/src/pages/api/openapi/chat/chat.ts
+trigger_tests:
+- '1) User needs to provide multiple pieces of information across chat turns to achieve
+  a goal. 2) User sends partial info each time, bot should receive sequentially and
+  gradually complete necessary information. 3) Current limitation: HTTP module doesn''t
+  support streaming responses from ChatGPT, preventing incremental information gathering
+  workflow.'

@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case4
+type: Unclear context in prompt
+case: '4'
+consequence:
+- IC
+locations:
+- services/openai.go
+trigger_tests:
+- 1. Use an invalid or expired API key; 2. Make a request to the search API; 3. Observe
+  the generic error message 'OpenAI API returned an error'; 4. Note the lack of specific
+  error details or resolution guidance

@@ -1,0 +1,18 @@
+app: h2ogpt-dev-local
+repo: https://github.com/Jerk400/h2ogpt-dev-local
+commit: ba56d6471080ec447c7c5347a2d4765ae4dba5b4
+defect_id: Jerk400-h2ogpt-dev-local-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py:UnstructuredPowerPointLoader; models/modelling_RW_falcon7b.py
+trigger_tests:
+- 1. Start the h2oGPT application; 2. Upload a PPTX file with complex formatting,
+  embedded objects, or corrupted content; 3. Observe that the system processes the
+  file without format validation; 4. Check that embedded objects (charts, images)
+  are ignored or not properly extracted; 5. Verify that large PPT files are processed
+  inefficiently without optimization; 6. Confirm that corrupted PPT files may cause
+  crashes or incorrect results; 7. Observe that the system lacks PPT-specific content
+  structure optimization

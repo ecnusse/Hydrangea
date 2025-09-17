@@ -1,0 +1,36 @@
+app: LUISE
+repo: https://github.com/sw5park/LUISE
+commit: e88343c1e2d1c634a33838500e6cc72aa97fdeaa
+defect_id: sw5park-LUISE-absence_of_final_output-case1
+type: absence of final output
+case: '1'
+consequence:
+- UI
+locations:
+- src/pinecone_helper.py
+trigger_tests:
+- '1. Clone the repository via git clone https://github.com/sw5park/LUISE.git and
+  cd into the cloned repository.
+
+  2. Install the required packages: pip install -r requirements.txt
+
+  3. Copy the config_copy.yaml file to config.yaml: cp configs/config_copy.yaml configs/config.yaml.
+  This is where you will set the following variables.
+
+  4. Set your OpenAI API key in the openai.api_key field.
+
+  5. Set your Pinecone configuration including api_key, environment, and pinecone_index.table_name
+  in the pinecone section.
+
+  6. Set the project.objective variable in the project section.
+
+  7. Set the project.first_task variable in the project section.
+
+  8. Run the script: python scripts/main.py
+
+  9. Close the Instance: Stop the running script by pressing Ctrl+C in the terminal
+  or closing the terminal window.
+
+  10. Restart the script to check if the previous tasks and outcomes are retrievable.
+
+  11. Notice that the previous tasks and outcomes are not available.'

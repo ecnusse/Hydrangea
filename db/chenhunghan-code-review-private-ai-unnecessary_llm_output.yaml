@@ -1,0 +1,27 @@
+app: code-review-private-ai
+repo: https://github.com/chenhunghan/code-review-private-ai
+commit: 17f00ec43ba35f3914fea322ad84f4b1a888500f
+defect_id: chenhunghan-code-review-private-ai-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- utils/build.js
+- src/review/llm/AIModel.ts
+- src/review/index.ts
+trigger_tests:
+- '1. Set up Code Review GPT: Ensure the project is correctly set up in your local
+  environment.
+
+  2. Run Code Review GPT: Execute `python code_review_gpt.py` or the relevant command
+  to start the server.
+
+  3. Open the chat interface or input field.
+
+  4. Enter a query that typically requires a concise response, such as: "Explain the
+  purpose of a `for` loop in Python."
+
+  5. Observe the output: Notice if the response is excessively polite or verbose,
+  deviating from a succinct and clear answer.'

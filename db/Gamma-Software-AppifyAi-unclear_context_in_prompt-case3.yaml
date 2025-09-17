@@ -1,0 +1,14 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-unclear_context_in_prompt-case3
+type: Unclear context in prompt
+case: '3'
+consequence:
+- IC
+locations:
+- generative_app/core/chains/prompt.py
+trigger_tests:
+- 1. Ask very general questions like "Can you help me?" or "What should I do?" 2.
+  The query generation may fail to extract meaningful keywords, resulting in poor
+  document retrieval and incorrect responses.

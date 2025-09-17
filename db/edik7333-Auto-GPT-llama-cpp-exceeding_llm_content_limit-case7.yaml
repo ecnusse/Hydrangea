@@ -1,0 +1,20 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case7
+type: exceeding LLM content limit
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- scripts/config.py scripts/llm_utils.py
+trigger_tests:
+- '1.Run Auto-GPT in GPT3.5 only mode: "python -m autogpt --gpt3only" 2.Set up an
+  AI with the following parameters: AI Name: Yoyo Role: Lua coder Goal 1: Improve
+  the code file WoWinArabic_Chat.lua and document it then save it. 3.Authorize the
+  analyze_code command with the code file WoWinArabic_Chat.lua 4.After the analyze_code
+  command, the following error should appear: openai.error.InvalidRequestError: This
+  model''s maximum context length is 8191 tokens, however you requested 19023 tokens
+  (19023 in your prompt; 0 for the completion). Please reduce your prompt; or completion
+  length.'

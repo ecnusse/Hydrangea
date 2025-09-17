@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- client/src/pages/api/openapi/chat/chat.ts; client/src/pages/api/openapi/v1/chat/completions.ts
+trigger_tests:
+- '1) Workflow → conversational application → integrate KB citations into HTTP module
+  → debug bot responses. 2) Bot answers KB questions without showing reference citations,
+  making source unclear. 3) Root cause: citation display logic missing or improperly
+  implemented in workflow HTTP module integration.'

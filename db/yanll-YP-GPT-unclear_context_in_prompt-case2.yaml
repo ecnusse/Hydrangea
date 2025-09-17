@@ -1,0 +1,19 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- YP-GPT/dbgpt/app/scene/chat_knowledge/chat.py, prompt.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a .txt knowledge file to the knowledge base.
+
+  3.Ask a question about the file. In the background, it can be observed that the content from the .txt file has been converted into a prompt and sent to the LLM, but the LLM''s response does not reference the knowledge file.
+
+
+  llm: chatglm-6b.'

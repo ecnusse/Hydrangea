@@ -1,0 +1,14 @@
+app: babyagi-langchain
+repo: https://github.com/jimwhite/babyagi-langchain
+commit: ''
+defect_id: jimwhite-babyagi-langchain-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi.py/TaskCreationChain, TaskPrioritizationChain
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.'

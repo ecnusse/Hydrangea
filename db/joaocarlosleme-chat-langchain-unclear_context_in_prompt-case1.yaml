@@ -1,0 +1,14 @@
+app: chat-langchain
+repo: https://github.com/joaocarlosleme/chat-langchain
+commit: 362e71c016d70022a6b1d067e0cddbe1a6ef496e
+defect_id: joaocarlosleme-chat-langchain-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- query_data.py
+trigger_tests:
+- '1.Ask a question in the UI interface.
+
+  2.Notice that the returned sources contain content unrelated to the question.'

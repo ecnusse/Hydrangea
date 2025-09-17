@@ -1,0 +1,15 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- scripts/memory/local.py/__init__() scripts/memory/base.py/get_ada_embedding()
+trigger_tests:
+- 1.Run Auto-GPT with --gpt3only (or run test_gpt3only_memory_bug.py). 2.Pre-seed
+  memory file 'auto-gpt-test-gpt3only.json' with content. 3.Start agent and observe
+  the memory file becomes '{}' on initialization. 4.Restart Auto-GPT and verify memory
+  is lost.

@@ -1,0 +1,28 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-unnecessary_llm_output-case1
+type: unnecessary LLM output
+case: '1'
+consequence:
+- IC
+- UI
+locations:
+- autogpt/chat.py
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.(Use releases before v0.5.0)
+
+  2.Create an AI agent.
+
+  3.Start AutoGPT. Authorize these commands and observe their outputs: 
+
+  (1) search_files ARGUMENTS = {''directory'': ''....\auto_gpt_workspace''} --> openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens, however you requested 22070
+  tokens (22070 in your prompt; 0 for the completion). Please reduce your prompt;
+  or completion length.
+
+  (2)read_file ARGUMENTS = {''filename'': ''...WoWinArabic_Chat.lua''} --> openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens, however you requested 9177
+  tokens (9177 in your prompt; 0 for the completion). Please reduce your prompt; or
+  completion length.'

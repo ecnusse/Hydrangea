@@ -1,0 +1,36 @@
+app: localagi
+repo: https://github.com/VTSTech/localagi
+commit: 85ecc246bd50783e9edaa4227493c0ac127912d8
+defect_id: VTSTech-localagi-absence_of_final_output-case1
+type: absence of final output
+case: '1'
+consequence:
+- UI
+locations:
+- babyagi.py/perform_task()
+trigger_tests:
+- '1.Clone the repository via git clone https://github.com/yoheinakajima/babyagi.git and cd into the cloned repository.
+
+  2.Install the required packages: pip install -r requirements.txt
+
+  3.Copy the .env.example file to .env: cp .env.example .env. This is where you will set the following variables.
+
+  4.Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables. In order to use with Weaviate you will also need to setup additional variables detailed here.
+
+  5.Set the name of the table where the task results will be stored in the TABLE_NAME variable.
+
+  6.set the following .env variable:COOPERATIVE_MODE=local
+
+  6.(Optional) Set the name of the BabyAGI instance in the BABY_NAME variable.
+
+  7.(Optional) Set the objective of the task management system in the OBJECTIVE variable.
+
+  8.(Optional) Set the first task of the system in the INITIAL_TASK variable.
+
+  9.Run the script: python babyagi.py
+
+  10.Close the Instance:Stop the running script by pressing Ctrl+C in the terminal or closing the terminal window.
+
+  11.Restart the script to check if the previous tasks and outcomes are retrievable.
+
+  12.Notice that the previous tasks and outcomes are not available.'

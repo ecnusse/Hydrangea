@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-imprecise_knowledge_retrieval-case1
+type: Imprecise knowledge retrieval
+case: '1'
+consequence:
+- IC
+locations:
+- client/src/utils/adapt.ts; client/src/service/plugins/useSearch.ts
+trigger_tests:
+- '1) Knowledge Base → upload large Excel (10k+ rows) → Direct Segmentation → Search
+  Test → observe poor Q&A accuracy. 2) Different search modes (similarity/rerank)
+  still return inaccurate results due to broken table context. 3) Root cause: chunking
+  algorithm doesn''t preserve Excel structure, affecting vector embeddings and retrieval
+  quality.'

@@ -1,0 +1,15 @@
+app: scrapchat
+repo: https://github.com/blu3mo/scrapchat
+commit: ce78a875399b069d3d5c44c738cb10fb3704c0fd
+defect_id: blu3mo-scrapchat-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- query_data.py
+- archive/chain.py
+trigger_tests:
+- '1.Ask a question in the UI interface.
+
+  2.Notice that the returned sources contain content unrelated to the question.'

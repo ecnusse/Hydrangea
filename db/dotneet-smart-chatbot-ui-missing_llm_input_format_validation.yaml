@@ -1,0 +1,12 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- components/Input/InputText.tsx, components/Chat/ChatInput.tsx, components/Input/Checkbox.tsx
+trigger_tests:
+- Upload the pptx file.

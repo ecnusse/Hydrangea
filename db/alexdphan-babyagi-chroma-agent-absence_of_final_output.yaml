@@ -1,0 +1,36 @@
+app: babyagi-chroma-agent
+repo: https://github.com/alexdphan/babyagi-chroma-agent
+commit: a5379280e526fd559c49d3b85513a339afc302e5
+defect_id: alexdphan-babyagi-chroma-agent-absence_of_final_output-/
+type: absence of final output
+case: /
+consequence:
+- UI
+locations:
+- babyagi-chroma.py/BabyAGI
+trigger_tests:
+- '1. Clone the repository via git clone https://github.com/alexdphan/babyagi-chroma.git
+  and cd into the cloned repository.
+
+  2. Install the required packages: pip install -r requirements.txt.
+
+  3. Copy the .env.example file to .env: cp .env.example .env. This is where you will
+  set the following variables.
+
+  4. Set your OpenAI API key in the OPENAI_API_KEY variable. You will also need to
+  set SERPAPI_API_KEY for search functionality.
+
+  5. Set the name of the table where the task results will be stored in the TABLE_NAME
+  variable.
+
+  6. Set the objective of the task management system in the OBJECTIVE variable.
+
+  7. Set the first task of the system in the FIRST_TASK variable.
+
+  8. Run the script: python babyagi-chroma.py.
+
+  9.Close the Instance:Stop the running script by pressing Ctrl+C in the terminal or closing the terminal window.
+
+  10.Restart the script to check if the previous tasks and outcomes are retrievable.
+
+  11.Notice that the previous tasks and outcomes are not available.'

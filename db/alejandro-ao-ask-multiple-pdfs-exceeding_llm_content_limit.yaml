@@ -1,0 +1,27 @@
+app: ask-multiple-pdfs
+repo: https://github.com/alejandro-ao/ask-multiple-pdfs
+commit: 362e85213a01d73772d5319fb9819e026ecbe8a7
+defect_id: alejandro-ao-ask-multiple-pdfs-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- app.py
+trigger_tests:
+- '1. Set up Ask Multiple PDFs: Ensure the project is correctly set up in your local
+  environment.
+
+  2. Upload multiple PDF documents for querying.
+
+  3. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a very detailed or lengthy query that is likely to exceed the model''s
+  maximum context length.
+
+  6. Observe if an `InvalidRequestError` occurs with a message indicating that the
+  model''s maximum context length of 4097 tokens has been exceeded by your messages,
+  resulting in 6777 tokens.'

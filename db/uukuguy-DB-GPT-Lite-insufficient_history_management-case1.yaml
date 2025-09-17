@@ -1,0 +1,14 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- dbgpt/app/scene/chat_dashboard/chat.py
+trigger_tests:
+- '1.Enter the "Dashboard" scene.
+
+  2.Attempt to view previous chats, but their chat reports cannot be viewed.'

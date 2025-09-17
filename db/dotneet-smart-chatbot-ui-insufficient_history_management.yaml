@@ -1,0 +1,21 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-insufficient_history_management-/
+type: insufficient history management
+case: /
+consequence:
+- SL
+- IC
+locations:
+- utils/app/clean.ts, agent/agentUtil.ts, pages/api/home/home.state.tsx, utils/app/clientstream.ts,
+  hooks/useConversations.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment. 2. Engage in a Conversation: Start a chat session and continue
+  it for several interactions. 3. Observe Context Freezing: Notice that after a few
+  exchanges, the dialogue context freezes, and responses to new queries remain the
+  same. 4. Real test confirmed: Dialog context gets stuck when asking "What is artificial
+  intelligence?" after previous conversation about backpropagation, system returns
+  same response "Backpropagation is an algorithm..." indicating context freezing and
+  state synchronization issues between conversation updates and stream processing.'

@@ -1,0 +1,20 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/llm/api_manager.py/create_chat_completion()
+- autogpt/llm/chat.py
+trigger_tests:
+- '1.Configure and launch app according to the instructions on this website: https://docs.agpt.co/.(Use releases before v0.4.0)
+
+  2.Create an AI agent.
+
+  3.Start app. Authorize the forlowing command and observe its outputs: 
+
+  list_files ARGUMENTS = {''directory'': ''....\auto_gpt_workspace''} --> openai.error.InvalidRequestError: This model''s maximum context length is 4097 tokens'

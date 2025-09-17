@@ -1,0 +1,20 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/app.py
+- autogpt/commands/file_operations.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.(Use releases before v0.4.0)
+
+  2.Create an AI agent.
+
+  3.Start AutoGPT. Authorize the forlowing command and observe its outputs: 
+
+  list_files ARGUMENTS = {''directory'': ''....\auto_gpt_workspace''} --> openai.error.InvalidRequestError: This model''s maximum context length is 4097 tokens'

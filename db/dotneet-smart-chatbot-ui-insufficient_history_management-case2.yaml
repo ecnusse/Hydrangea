@@ -1,0 +1,16 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- utils/app/clean.ts, agent/agentUtil.ts, pages/api/home/home.tsx, components/Chat/ChatInput.tsx,
+  hooks/chatmode/useDirectMode.ts
+trigger_tests:
+- 1. Start chatting. 2. Type a new prompt while the chatbot is generating an answer
+  to a previous one. 3. When the previous answer finishes generating, the new prompt
+  in the chat bar disappears and the chat bar refreshes. You will lose the contents
+  that you have typed so far and need to start the process again.

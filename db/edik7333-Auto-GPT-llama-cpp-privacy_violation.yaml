@@ -1,0 +1,16 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- scripts/commands.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this
+  website: https://docs.agpt.co/autogpt/setup/ . (Use default Settings) 2.(cli mode)Use
+  the command: "./autogpt.sh run --help " to start AutoGPT. 3.Set up a task, which
+  involves web browsing and searching. 4.Allow AutoGPT to process the task and check
+  if AutoGPT accesses the browser without user consent.'

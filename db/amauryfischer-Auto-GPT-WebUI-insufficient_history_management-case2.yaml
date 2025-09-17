@@ -1,0 +1,21 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- .autodoc/docs/data
+- .autodoc/docs/json
+- autogpt/prompt.py
+- autogpt/app.py
+- autogpt/agents/agent.py
+- '...'
+trigger_tests:
+- '1.Set up and Configure AutoGPT.
+
+  2.Create a Task: Create a task for AutoGPT that is likely to fail or has complex steps prone to errors.
+
+  3.Observe Task Execution:Run the task and let AutoGPT operate for an extended period. Check if It gets stuck in loops because it thinks failed repeated attempts are relevant and therefore should be tried again and again.'

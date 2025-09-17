@@ -1,0 +1,26 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b865
+defect_id: fendouai-babyagi_zh-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- UI
+locations:
+- babyagi.py/execution_agent()
+trigger_tests:
+- "1. Clone the repository via git clone https://github.com/fendouai/babyagi_zh.git\
+  \ and cd into the cloned repository.\n2. Install the required packages: pip install\
+  \ -r requirements.txt\n3. Create the .env file manually since there's no .env.example\
+  \ file in this project. This is where you will set the following variables.\n4.\
+  \ Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables.\
+  \ You will also need to setup Pinecone variables detailed here.\n5. Set the Pinecone\
+  \ API key in the PINECONE_API_KEY variable.\n6. Set the Pinecone environment in\
+  \ the PINECONE_ENVIRONMENT variable.\n7. Set the name of the table where the task\
+  \ results will be stored in the TABLE_NAME variable.\n8. Set the OBJECTIVE variable\
+  \ as \"Translate this sentence from english into chinese: hello, world\"\n9. Set\
+  \ the INITIAL_TASK variable as \"Develop a task list.\"\n10. Run the script: python\
+  \ babyagi.py\n11.Observe Tasks and Outcomes and note any tasks in the generated\
+  \ task result that unexpectedly appear in Chinese.\nExample:\n*****NEXT TASK*****\
+  \ \n1: \"Try a new indoor activity like painting, pottery, or indoor rock climbing\
+  \ for a creative outlet\"\n *****TASK RESULT***** \n尝试一种新的室内活动，比如绘画、陶艺或者室内攀岩，以激发创造力。"

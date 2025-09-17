@@ -1,0 +1,17 @@
+app: chat-pdf
+repo: https://github.com/edrickdch/chat-pdf
+commit: bf5343fef116a360424245b1c154edc2bac07bfd
+defect_id: edrickdch-chat-pdf-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- src/single-pdf.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

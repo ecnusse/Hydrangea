@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case10
+type: Missing LLM input format validation
+case: '10'
+consequence:
+- ST
+locations:
+- client/src/pages/api/openapi/kb/pushData.ts;client/src/pages/kb/detail/components/Import/Csv.tsx
+trigger_tests:
+- '1. In the UI, select "Knowledge Base"; 2. Upload a CSV file larger than 100 MB
+  to your knowledge base, and then selecting "Direct Segmentation"; 3. Click upload,
+  and an error will occur; 4. VERIFIED: System lacks file size validation before API
+  upload, causing pushData API to fail when data exceeds 12mb limit'

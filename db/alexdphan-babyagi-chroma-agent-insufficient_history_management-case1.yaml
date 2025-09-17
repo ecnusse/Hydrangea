@@ -1,0 +1,23 @@
+app: babyagi-chroma-agent
+repo: https://github.com/alexdphan/babyagi-chroma-agent
+commit: a5379280e526fd559c49d3b85513a339afc302e5
+defect_id: alexdphan-babyagi-chroma-agent-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi-chroma.py/task_creation_chain
+trigger_tests:
+- '1. Run the script according to the previously mentioned steps.
+
+  2. Set OBJECTIVE as "Have a fun day" and FIRST_TASK as "Develop a task list".
+
+  3. Observe the tasks and outcomes until you notice the repeated tasks.
+
+  Example: Repeated Tasks
+
+  Task 2: "Organize a themed party or event"
+
+  Task 9: "Organize a themed party or event"'

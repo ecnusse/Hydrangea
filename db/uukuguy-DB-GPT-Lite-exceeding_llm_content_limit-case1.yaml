@@ -1,0 +1,16 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- UI
+locations:
+- dbgpt/app/scene/base.py
+trigger_tests:
+- '1.Download and configure DB-GPT.
+
+  2.Set need_historical_messages=True in the dbgpt/app/scene/base.py file.
+
+  3.Start a conversation test using the qwen72b model and find that multi-turn dialogue is not supported.'

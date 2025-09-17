@@ -1,0 +1,14 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-privacy_violation-/
+type: Privacy violation
+case: /
+consequence:
+- IS
+locations:
+- src/create_data.py::do_one; src/create_data.py::ProcessPoolExecutor
+trigger_tests:
+- Process large datasets with ProcessPoolExecutor; observe child process termination
+  and memory corruption; test with memory-intensive operations; check for "illegal
+  memory access" errors.

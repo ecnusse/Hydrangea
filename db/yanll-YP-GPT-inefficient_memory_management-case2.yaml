@@ -1,0 +1,18 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-inefficient_memory_management-case2
+type: inefficient memory management
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- YP-GPT/dbgpt/dbgpt/storage/metadata/db_storage.py
+- YP-GPT/dbgpt/app/base.py/_initialize_db_storage
+trigger_tests:
+- '1. Enter the "Chat Data" scene.The user  added a MySQL data source named dbgpt_test and tried to do some data conversations.
+
+  2. The user found that the effect was not ideal, and the large language model often gave some incorrect queries. Therefore, he/she/they tried to modify the table structure to generate more accurate SQL.
+
+  3. The user found that the table structure in the new prompt sent was still the same, even if he/she/they tried again the next day. The new table structure will only appear in the new prompt when he/she/they create and add a new database.'

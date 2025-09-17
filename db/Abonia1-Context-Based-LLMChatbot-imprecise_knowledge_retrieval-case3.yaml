@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-imprecise_knowledge_retrieval-case3
+type: Imprecise knowledge retrieval
+case: '3'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. In the "Workbench", create a new "Workflow". 2. In the "Question Classification"
+  module, select the AI model as gpt-4o. 3. After successfully creating the application,
+  start the conversation. 4. The bot's responses in the conversation always contain
+  garbled characters.

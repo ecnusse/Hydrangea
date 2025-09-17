@@ -1,0 +1,17 @@
+app: DocsGPT
+repo: https://github.com/yangchuansheng/DocsGPT
+commit: 595581b624b54046d756ad28bc845521ee4807d0
+defect_id: yangchuansheng-DocsGPT-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- application/static/src/chat.js:35, application/app.py:137-139
+trigger_tests:
+- '1. Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment. 2. Ask a Question: Use DocsGPT to ask any question that generates a
+  response with bullet points, such as ''What are the main features of laf? Please
+  list them with bullet points.'' 3. Observe the Bullets: Notice that the bullets
+  in the response are not aligned properly due to being wrapped in <code> tags with
+  monospace font rendering.'

@@ -1,0 +1,20 @@
+app: ElasticSearch-Langchain-Chatglm2
+repo: https://github.com/iMagist486/ElasticSearch-Langchain-Chatglm2
+commit: 304d3d204a00782a0078fd76be232fa5802f4307
+defect_id: iMagist486-ElasticSearch-Langchain-Chatglm2-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- web.py
+trigger_tests:
+- '1. Set up GPT4 PDF Chatbot LangChain: Ensure the project is correctly set up in
+  your local environment.
+
+  2. Upload a PDF document that contains images.
+
+  3. Run the Chatbot: Execute `python app.py` or the relevant command to start the
+  server.
+
+  4. See whether it can be uploaded or not'

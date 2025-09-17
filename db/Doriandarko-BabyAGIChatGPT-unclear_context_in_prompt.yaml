@@ -1,0 +1,18 @@
+app: BabyAGIChatGPT
+repo: https://github.com/Doriandarko/BabyAGIChatGPT
+commit: 174491cbbc09d3f6ef0ec511e9e3b94e2615ffa0
+defect_id: Doriandarko-BabyAGIChatGPT-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- openapi.yaml
+- main.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

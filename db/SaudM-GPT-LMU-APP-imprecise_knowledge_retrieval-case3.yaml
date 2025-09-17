@@ -1,0 +1,15 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-imprecise_knowledge_retrieval-case3
+type: Imprecise knowledge retrieval
+case: '3'
+consequence:
+- IC
+locations:
+- client/src/pages/model/index.tsx; client/src/service/utils/chat/openai.ts
+trigger_tests:
+- '1) Workbench → new Workflow → Question Classification → select gpt-4o → create
+  application → start conversation. 2) Bot responses contain garbled characters and
+  show ''retrieving file'' consistently. 3) Root cause: encoding mismatch or streaming
+  response parsing issue with gpt-4o multimodal integration.'

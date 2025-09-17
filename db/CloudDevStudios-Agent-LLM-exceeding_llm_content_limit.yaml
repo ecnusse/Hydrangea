@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- AgentLLM.py, provider/oobabooga.py
+trigger_tests:
+- '1.Set MAX_TOKENS to 2000 in .env file 2.Make API request to Oobabooga 3.Observe
+  context size of 2096 in Oobabooga logs 4.Additional test cases: Test with large
+  input data, verify trim_context function, check token limit enforcement'

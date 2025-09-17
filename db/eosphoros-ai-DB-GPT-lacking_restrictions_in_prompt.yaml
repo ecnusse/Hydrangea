@@ -1,0 +1,15 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-lacking_restrictions_in_prompt-/
+type: lacking restrictions in prompt
+case: /
+consequence:
+- IC
+- SL
+locations:
+- dbgpt/core/interface/output_parser.py
+trigger_tests:
+- '1.Enter the "Chat Data" scenario and ask a question that cannot generate an SQL query.
+
+  2.The bot responds, "The provided table structure information is insufficient to generate an SQL query." Meanwhile, the frontend displays: "Application error: a client-side exception has occurred (see the browser console for more information)," affecting users''s seamless experience.'

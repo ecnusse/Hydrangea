@@ -1,0 +1,19 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-inefficient_memory_management-case2
+type: inefficient memory management
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- 1.dbgpt/datasource/rdbms/base.py
+- 2.dbgpt/app/scene/chat_db/auto_execute/prompt.py
+- 3.dbgpt/datasource/manages/connection_manager.py
+trigger_tests:
+- '1. Enter the "Chat Data" scene.The user  added a MySQL data source named dbgpt_test and tried to do some data conversations.
+
+  2. The user found that the effect was not ideal, and the large language model often gave some incorrect queries. Therefore, he/she/they tried to modify the table structure to generate more accurate SQL.
+
+  3. The user found that the table structure in the new prompt sent was still the same, even if he/she/they tried again the next day. The new table structure will only appear in the new prompt when he/she/they create and add a new database.'

@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- UI
+locations:
+- No such feature yet.
+trigger_tests:
+- 1. The user needs to provide several pieces of information in a chat to achieve
+  a certain goal. 2. The user can send partial information each time, and the bot
+  will sequentially receive the information provided by the user, gradually completing
+  the necessary information to achieve the goal throughout the chat.

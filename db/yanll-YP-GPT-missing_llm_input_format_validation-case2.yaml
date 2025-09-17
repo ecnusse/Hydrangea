@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- SL
+locations:
+- YP-GPT/dbgpt/app/knowledge/api.py
+- dbgpt/rag/index/base.py
+trigger_tests:
+- '1.Add knowledge.
+
+  2.Upload documents.
+
+  3.Selcted csv file (which is bigger than 200KB)'

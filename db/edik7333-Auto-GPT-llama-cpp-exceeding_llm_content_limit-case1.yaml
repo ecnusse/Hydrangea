@@ -1,0 +1,18 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case1
+type: exceeding LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- scripts/config.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this
+  website: https://docs.agpt.co/autogpt/setup/ . 2.(cli mode)Use the command: "./autogpt.sh
+  --continuous" to start AutoGPT in continuous mode. 3.Simulate API Quota Depletion:Ensure
+  that your OpenAI API quota is depleted. This can be done by using up your available
+  credits or not having sufficient pre-paid balance on your OpenAI account. 4.Allow
+  AutoGPT to make several API requests to OpenAI which will result in "429 Too Many
+  Requests" errors due to the depleted API quota.'

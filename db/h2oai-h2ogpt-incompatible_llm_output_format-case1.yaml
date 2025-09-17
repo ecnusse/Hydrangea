@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::file_to_doc; src/gpt_langchain.py::clean_doc; src/gpt_langchain.py::chunk_sources
+trigger_tests:
+- Upload PDF with wrapped lines; query content from wrapped PDF; observe LLM replicating
+  line wrapping in responses; test with different PDF formatting styles.

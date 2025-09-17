@@ -1,0 +1,37 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-exceeding_llm_content_limit-case6
+type: exceeding  LLM content limit
+case: '6'
+consequence:
+- ST
+locations:
+- autogpt/chat.py
+trigger_tests:
+- "1.Run Auto-GPT.\n2.Set up an AI with the following parameters:\nGoal 1: Use search_files\
+  \ command with directory '.' to find all files in workspace  \nGoal 2: Make descriptions\
+  \ of all files found in the workspace.\nGoal 3: Be aware that you cannot send long\
+  \ requests to the api. i think max is 8k tokens\nUsing memory of type: LocalCache\n\
+  Using Browser: chrome\n\n3.Authorize the search_files command with the code file WoWinArabic_Chat.lua\n\
+  4.After the search_files command, the following error should appear:openai.error.InvalidRequestError:\
+  \ This model's maximum context length is 8192 tokens, however you requested 22064\
+  \ tokens (22064 in your prompt; 0 for the completion). Please reduce your prompt;\
+  \ or completion length.\n\n(Complete user's logs:)\nGoal 1: Use search_files command\
+  \ with directory '.' to find all files in workspace  \nGoal 2: Make descriptions\
+  \ of all files found in the workspace.\nGoal 3: Be aware that you cannot send long\
+  \ requests to the api. i think max is 8k tokens\nUsing memory of type: LocalCache\n\
+  Using Browser: chrome\n THOUGHTS:  I should start by using the 'search_files' command\
+  \ to find all files in the workspace\n and then proceed to make descriptions of\
+  \ each file found.\nREASONING:  By searching for all files in the workspace, I can\
+  \ gather information on the files available for analysis.\nPLAN: \n-  Use 'search_files'\
+  \ command with directory '.' to find all files in the workspace\n-  Analyze the\
+  \ descriptions of each file found\nCRITICISM:  I need to ensure that I handle the\
+  \ file descriptions efficiently and accurately.\nNEXT ACTION:  COMMAND = search_files\
+  \ ARGUMENTS = {'directory': 'G:\\\\projects\\\\BillSchumacher\\\\Auto-GPT\\\\autogpt\\\
+  \\auto_gpt_workspace'}\nEnter 'y' to authorise command, 'y -N' to run N continuous\
+  \ commands, 's' to run self-feedback commands'n' to exit program, or enter feedback\
+  \ for ...\nAsking user via keyboard...\nInput:y\nraise self.handle_error_response(\n\
+  openai.error.InvalidRequestError: This model's maximum context length is 8192 tokens,\
+  \ however you requested 22064 tokens (22064 in your prompt; 0 for the completion).\
+  \ Please reduce your prompt; or completion length.\nPS.The folder should contain  lots of files."

@@ -1,0 +1,36 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-exceeding_llm_content_limit-case7
+type: exceeding  LLM content limit
+case: '7'
+consequence:
+- ST
+- IC
+locations:
+- scripts/chat.py
+trigger_tests:
+- "1.Run Auto-GPT: \"python scripts/main.py\"\n2.Set up an AI with the following parameters:\n\
+  AI Name: Yoyo\nRole: Lua coder\nGoal 1: Improve the code file WoWinArabic_Chat.lua and document it then save it.\n\
+  3.Authorize the analyze_code command with the code file WoWinArabic_Chat.lua\n4.After the analyze_code command, the following error should appear: openai.error.InvalidRequestError:\
+  \ This model's maximum context length is 8192 tokens. However, your messages resulted\
+  \ in 8216 tokens. Please reduce the length of the messages.\n\n(Complete user's logs:)\n\
+  (G:\\conda_envs\\Significant-Gravitas) G:\\WCC_Experiment\\CCF\\projects\\Significant-Gravitas\\\
+  AutoGPT>python scripts/main.py\nWelcome to Auto-GPT!  Enter the name of your AI\
+  \ and its role below. Entering nothing will load defaults.      \nName your AI:\
+  \  For example, 'Entrepreneur-GPT'\nAI Name: Yoyo\nYoyo here! I am at your service.\n\
+  Describe your AI's role:  For example, 'an AI designed to autonomously develop and\
+  \ run businesses with the sole goal of increasing your net worth.'\nYoyo is: Lua\
+  \ coder\nEnter up to 5 goals for your AI:  For example: Increase net worth Grow\
+  \ Twitter Account Develop and manage multiple businesses autonomously'\nEnter nothing\
+  \ to load defaults, enter nothing when finished.\nGoal 1: Improve the code file\
+  \ WoWinArabic_Chat.lua and document it then save it.\nGoal 2: \nYOYO THOUGHTS: To\
+  \ start improving the file, I first need to read its current contents.\nREASONING:\
+  \ Reading the file will allow me to understand the structure of the existing code,\
+  \ identify any possible areas for improvement, and ultimately make the necessary\
+  \ adjustments to refine and document the script.\nPLAN: \n-  Read the WoWinArabic_Chat.lua\
+  \ file\n-  Evaluate the code\n-  Identify areas for improvement\n-  Improve and\
+  \ document the code\n-  Save the improved and documented code\nCRITICISM: No criticisms\
+  \ at this point. The approach is logical for the task at hand.\nNEXT ACTION:  COMMAND\
+  \ = read_file ARGUMENTS = {'file': 'WoWinArabic_Chat.lua'}\nEnter 'y' to authorise\
+  \ command or 'n' to exit program...\nInput:y"

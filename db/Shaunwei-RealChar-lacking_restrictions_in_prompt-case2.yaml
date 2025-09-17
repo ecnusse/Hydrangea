@@ -1,0 +1,17 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-lacking_restrictions_in_prompt-case2
+type: lacking restrictions in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- 1.realtime_ai_character/websocket_routes.py
+- 2.realtime_ai_character/audio/speech_to_text/google.py
+- 3.realtime_ai_character/audio/speech_to_text/whisper.py
+- 4.client/mobile/ios/rac/rac/Welcome/WelcomeView.swift
+trigger_tests:
+- '1.Select a character to converse with.
+
+  2.During the conversation, request to switch the conversation language or switch to another character.'

@@ -1,0 +1,24 @@
+app: camel
+repo: https://github.com/camel-ai/camel
+commit: 71d466d9d67d1d7230ebfa1be6db95f5c53e38d9
+defect_id: camel-ai-camel-sketchy_error_handling-/
+type: sketchy error handling
+case: /
+consequence:
+- ST
+locations:
+- camel/toolkits/twitter_toolkit.py
+trigger_tests:
+- '1. Set up Camel: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Multi-Agent Environment: Set up multiple agents with defined roles
+  in the Camel system.
+
+  3. Run Camel: Execute `python camel.py` or the relevant command to start the server.
+
+  4. Open the role assignment interface in the web UI.
+
+  5. Assign roles to the agents and configure their interactions.
+
+  6. Observe if the system correctly calculates and displays the Multi-Agent Compatibility
+  Score for the role assignments.'

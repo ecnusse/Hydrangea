@@ -1,0 +1,23 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Ingest Documents: Upload 1047 different PDF files (4GB) into the system.
+
+  3. Run the Server: Execute `python privateGPT.py`.
+
+  4. Ask Multiple Queries: Make several unrelated queries with subjects exclusive
+  to different source files.
+
+  5. Observe the Sources: Notice that the responses always exhibit the same sources
+  for every query, even when those sources have zero relation to the query context.'

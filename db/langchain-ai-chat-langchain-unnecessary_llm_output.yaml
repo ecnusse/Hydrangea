@@ -1,0 +1,19 @@
+app: chat-langchain
+repo: https://github.com/langchain-ai/chat-langchain
+commit: a875a649109ad7c3d68d7e9b75508f687e627ca4
+defect_id: langchain-ai-chat-langchain-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- frontend/app/components/ChatWindow.tsx
+- (applyPatch modifies the document so every token got added twice to the stream)
+trigger_tests:
+- '1.Set up chat-langchain locally.
+
+  2.Open the browser interface and ask a question.
+
+  3.Notice that the answers displayed in the browser have duplicated words (e.g., "CanCan you you provide provide me me with with instructions instructions on on how how to to...").
+
+  4.Debug backtrace from smith shows the response works fine, but the issue persists in the browser display.'

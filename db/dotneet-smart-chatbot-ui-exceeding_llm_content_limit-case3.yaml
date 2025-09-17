@@ -1,0 +1,22 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-exceeding_llm_content_limit-case3
+type: exceeding LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- types/llmUsage.ts, components/Chat/ChatInputTokenCount.tsx, types/openai.ts, utils/server/message.ts,
+  pages/api/chat.ts
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up and configured
+  in your local environment. 2. Initiate a Long Conversation: Engage in a lengthy
+  conversation using the GPT-4 API. 3. Input a Short Message: Enter a short message,
+  such as "my host supports PostgreSQL databases." 4. Observe the Error: Notice the
+  error indicating the context length exceeds the model''s maximum limit, with a message
+  similar to: [OpenAIError: This model''s maximum context length is 8192 tokens. However,
+  you requested 8554 tokens (7554 in the messages, 1000 in the completion). Please
+  reduce the length of the messages or completion.] 5. Real test confirmed: GPT-4
+  token limit incorrectly set to 8000 instead of 8192, causing premature context length
+  exceeded errors even for short messages in long conversations.'

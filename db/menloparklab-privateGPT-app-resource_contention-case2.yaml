@@ -1,0 +1,26 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-resource_contention-case2
+type: resource contention
+case: '2'
+consequence:
+- ST
+locations:
+- streamlit_app.py
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure API Endpoint: Set the API endpoint in the configuration file to an
+  incorrect or non-existent URL.
+
+  3. Run PrivateGPT: Execute `python privateGPT.py`.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query and submit it.
+
+  6. Observe if there is an error message or if the server fails to respond due to
+  the incorrect API endpoint.'

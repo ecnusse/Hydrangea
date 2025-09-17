@@ -1,0 +1,71 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- ST
+- IC
+locations:
+- autogpt/agent/agent.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT
+
+  2.Download the script from AutoGPT issue #2076 and run the following command to
+  generate issues_data.json
+
+  python data_ingestion.py --f issues_data.json --init --overlap 300 --max_length
+  3000
+
+  3.Start AutoGPT with "python -m autogpt"
+
+
+  ai_goals:
+
+  Read design.txt and follow its design specifications
+
+  Read advice.txt and obey it every 10 minutes
+
+  Use the information saved in memory to determine the most frequently asked questions
+  from the repo’s issue posts
+
+  Determine the best answers to the most frequently asked questions based on issue
+  comments
+
+  Write a FAQ and answer the most frequently asked questions
+
+
+  ai_name: GitHubIssuesFAQ-Ai
+
+  ai_role: an AI designed to autonomously manage GitHub issues to make it easier for
+  users to find solutions to their problems
+
+  advice.txt contains:
+
+  Use the data saved in your memory as it already has all the JSON data from the repos
+  you are watching
+
+  4. Provide a design.txt file with the following specifications
+
+  The AI must use the issues and comments data already stored in memory
+
+  The AI should read through all issues and their comments to identify the most frequently
+  asked questions
+
+  The AI should analyze the comments and determine the best answers for those questions
+
+  The AI should compile the questions and answers into a clear well-structured FAQ
+  document
+
+  The FAQ should be easy to read and organized by topic
+
+  The AI must not download the repository source code again if the necessary data
+  already exists in memory
+
+  The AI should periodically check the advice.txt file and follow its instructions
+  every 10 minutes
+
+  5. AutoGPT did not use the pre-seeded data in memory.It attempted to retrieve issue
+  posts directly from GitHub by executing commands such as google and get_hyperlinks
+  to gather data.'

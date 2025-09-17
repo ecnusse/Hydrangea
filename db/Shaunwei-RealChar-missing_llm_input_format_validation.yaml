@@ -1,0 +1,18 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- This is a bug on the Rebyte platform
+trigger_tests:
+- '1.Log in to the Rebyte platform
+
+  2.Go to "Knowledge"  section.
+
+  3.Create Knowledge
+
+  3.Upload File after creating.'

@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- src/gpt_langchain.py::file_to_doc
+trigger_tests:
+- Upload a malformed .pptx; upload a non-PPTX renamed to .pptx; upload an oversized
+  PPTX with many slides.

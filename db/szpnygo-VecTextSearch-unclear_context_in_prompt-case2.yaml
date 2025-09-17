@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- demo/flutter/vec_text_search_demo/lib/src/widgets/search_result_list.dart
+trigger_tests:
+- 1. Perform a search in the Flutter application; 2. View the search results; 3. Observe
+  that results only show content, certainty percentage, and distance without explanation;
+  4. Note the lack of context about what these values represent

@@ -1,0 +1,28 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- SL
+locations:
+- packages/dbgpt-ext/src/dbgpt_ext/rag/knowledge/csv.py
+trigger_tests:
+- '1.Add knowledge.
+
+  2.Upload documents.
+
+  3.Selcted csv file (which is bigger than 200KB)
+
+  4.Ask a question based on the uploaded csv file.
+
+
+  Expected Result:
+
+  The large model generates a correct and accurate answer based on the knowledge base.
+
+  Actual Result:
+
+  The large model may either hallucinate and fabricate data or return: “The content
+  provided in the knowledge base is not enough to answer this question.”'

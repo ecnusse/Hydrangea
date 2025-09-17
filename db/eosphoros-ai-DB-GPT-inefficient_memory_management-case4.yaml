@@ -1,0 +1,21 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-inefficient_memory_management-case4
+type: inefficient memory management
+case: '4'
+consequence:
+- SL
+locations:
+- /
+trigger_tests:
+- '1.Download vicuna-13b-v1.5 model files from https://huggingface.co/lmsys/vicuna-13b-v1.5
+
+  2.Start dbgpt_server.py on Mac with M2/M2 max/M2 ultra
+
+  3.Create the App according to https://www.yuque.com/eosphoros/dbgpt-docs/aiagvxeb86iarq6r
+
+  4.Input "Please group orders by product category to calculate total sales, average
+  sales, and number of transactions" in the text field, the App would inference the result.
+
+  5.The consumed memory on the device will increase continually.'

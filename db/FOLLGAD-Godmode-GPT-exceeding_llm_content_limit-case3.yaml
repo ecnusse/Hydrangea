@@ -1,0 +1,40 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- autogpt/llm/chat.py
+trigger_tests:
+- '1.Configure and launch app.
+
+  2.Create an AI agent.
+
+  3.Set up a task
+
+  Name: Enterprise E-commerce Architect and Full-Stack Development Expert with Advanced
+  Technical Expertise and Comprehensive System Architecture Knowledge
+
+  Role: A highly skilled full-stack software architect and senior developer with 25+
+  years of expertise in enterprise applications, microservices architecture, cloud
+  deployment, and DevOps. Expert in Python, Java, Node.js, Go, TypeScript, and cloud
+  platforms (AWS, Azure, GCP).
+
+  Goals: [''Create a comprehensive enterprise-level e-commerce platform with microservices
+  architecture that includes at least 25 different microservices, each with their
+  own database, API endpoints, and business logic. The platform must support multi-tenancy,
+  handle millions of concurrent users, and process thousands of transactions per second
+  while maintaining 99.99% uptime and sub-100ms response times across all services.
+  Each microservice must implement circuit breakers, retry mechanisms, and graceful
+  degradation patterns. The system must support horizontal scaling with automatic
+  load balancing and include comprehensive health checks, metrics collection, and
+  distributed tracing. Each microservice must implement comprehensive logging, proper
+  error handling, and comprehensive unit and integration tests. ... ]
+
+  API Budget: infinite
+
+  4. Return this error, and program exits: Invalid ''max_tokens'': integer below minimum
+  value. Expected a value >= 1, but got -1566 instead.'

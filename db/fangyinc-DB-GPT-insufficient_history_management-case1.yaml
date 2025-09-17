@@ -1,0 +1,14 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- web/components/chat/chat-container.tsx
+trigger_tests:
+- '1.Enter the "Dashboard" scene.
+
+  2.Attempt to view previous chats, but their chat reports cannot be viewed.'

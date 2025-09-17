@@ -1,0 +1,19 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- autogpt/llm_utils.py
+- autogpt/chat.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  2.(cli mode)Use the command: "./autogpt.sh --continuous" to start AutoGPT in continuous mode.
+
+  3.Simulate API Quota Depletion:Ensure that your OpenAI API quota is depleted. This can be done by using up your available credits or not having sufficient pre-paid balance on your OpenAI account.
+
+  4.Allow AutoGPT to make several API requests to OpenAI, which will result in "429 Too Many Requests" errors due to the depleted API quota.'

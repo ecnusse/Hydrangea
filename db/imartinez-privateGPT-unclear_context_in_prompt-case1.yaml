@@ -1,0 +1,21 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Start the PrivateGPT server: Execute `python privateGPT.py`.
+
+  3. Use the GUI: Open the web UI and upload a document.
+
+  4. Ask a Question: Enter a question that should be answerable from the document.
+
+  5. Observe the Response: Note that the model does not utilize the supplied documents''
+  information but instead relies on its own knowledge.'

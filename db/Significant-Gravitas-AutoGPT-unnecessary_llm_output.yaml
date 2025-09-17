@@ -1,0 +1,18 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- scripts/main.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website: https://docs.agpt.co/.
+
+  2.Create an AI agent.
+
+  3.Set up a task, let AutoGPT enter its interactive loop. Use any command that generates the following info:
+
+  Enter ''y'' to authorise command, ''y -N'' to run N continuous commands, ''s'' to run self-feedback commands''n'' to exit program, or enter feedback for ...'

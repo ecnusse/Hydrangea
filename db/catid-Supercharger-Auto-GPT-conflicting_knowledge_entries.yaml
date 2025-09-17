@@ -1,0 +1,20 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-conflicting_knowledge_entries-/
+type: conflicting knowledge entries
+case: /
+consequence:
+- IC
+- IS
+locations:
+- 'scripts/file_operations.py: write_to_file and append_to_file functions; scripts/commands.py:
+  command execution'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Test write_to_file function: correctly overwrites
+  file content (expected behavior); 3) Test append_to_file function: correctly appends
+  to file content (expected behavior); 4) Test mixed operations: write then append
+  then write then append; 5) Observe proper behavior: write overwrites, append adds;
+  6) Test memory operations: no interference with file operations; 7) Conclusion:
+  File operations work correctly as designed; 8) Possible explanation: User may have
+  expected append behavior but used write_to_file command.'

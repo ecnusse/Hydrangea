@@ -1,0 +1,17 @@
+app: DocsGPT
+repo: https://github.com/yangchuansheng/DocsGPT
+commit: 595581b624b54046d756ad28bc845521ee4807d0
+defect_id: yangchuansheng-DocsGPT-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- application/app.py:117, scripts/ingest.py:52
+trigger_tests:
+- '1. Set up DocsGPT: Ensure the DocsGPT project is correctly set up in your local
+  environment. 2. Upload Large Document: Upload a large text document (over 2048 tokens)
+  to the application''s chat UI. 3. Process Multiple Rounds: Wait for multiple rounds
+  of processing and chat interactions. 4. Observe Error: Notice the error ''Requested
+  tokens exceed context window of 2048'' or ''completion_chunk'' errors indicating
+  token limit exceeded.'

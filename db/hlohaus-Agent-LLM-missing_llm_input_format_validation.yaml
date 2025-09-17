@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/hlohaus/Agent-LLM
+commit: d8a46dacea35c6224effd3e733d5c085bea1949a
+defect_id: hlohaus-Agent-LLM-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- commands/file_operations.py, app.py
+trigger_tests:
+- 1. Click "Interact", choose "Learning", choose agent, method from file, choose a
+  PDF and upload. 2. Observe the TypeError when the system tries to process the PDF
+  file as text.

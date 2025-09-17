@@ -1,0 +1,18 @@
+app: chat-langchain
+repo: https://github.com/joaocarlosleme/chat-langchain
+commit: 362e71c016d70022a6b1d067e0cddbe1a6ef496e
+defect_id: joaocarlosleme-chat-langchain-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- main.py
+trigger_tests:
+- '1.Set up chat-langchain locally.
+
+  2.Open the browser interface and ask a question.
+
+  3.Notice that the answers displayed in the browser have duplicated words (e.g., "CanCan you you provide provide me me with with instructions instructions on on how how to to...").
+
+  4.Debug backtrace from smith shows the response works fine, but the issue persists in the browser display.'

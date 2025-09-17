@@ -1,0 +1,15 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- generative_app/core/chains/prompt.py, generative_app/core/chains/conversational_retrieval_over_code.py,
+  generative_app/core/chains/llm.py
+trigger_tests:
+- 1. In the application, select a character to converse with. 2. Ask the character
+  vague or ambiguous questions/overly complex or contradictory information like "Explain
+  what it is." or "If the sun were blue, what color would the moon be?"

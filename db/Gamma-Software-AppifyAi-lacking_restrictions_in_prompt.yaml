@@ -1,0 +1,13 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-lacking_restrictions_in_prompt-/
+type: Lacking restrictions in prompt
+case: /
+consequence:
+- IC
+locations:
+- generative_app/core/chains/prompt.py
+trigger_tests:
+- 1. Start a conversation with AppifyAi, asking questions in a non-English language.
+  2. AppifyAi's responses do not use the user's language consistently.

@@ -1,0 +1,18 @@
+app: pr-agent
+repo: https://github.com/Codium-ai/pr-agent
+commit: 41166dc271039f9952c8086005f6c4b242021221
+defect_id: Codium-ai-pr-agent-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- pr_agent/algo/token_handler.py
+- pr_agent/tools/pr_questions.py
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

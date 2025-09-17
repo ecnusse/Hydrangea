@@ -1,0 +1,15 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-imprecise_knowledge_retrieval-case2
+type: Imprecise knowledge retrieval
+case: '2'
+consequence:
+- IC
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. Import the knowledge base with serial number/model data. 2. Try Q&A training
+  and document uploading to ensure numbered keywords are covered multiple times. 3.
+  Neither semantic retrieval nor full-text retrieval can accurately point to the relevant
+  knowledge.

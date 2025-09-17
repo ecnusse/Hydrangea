@@ -1,0 +1,48 @@
+app: babyagi-chroma-agent
+repo: https://github.com/alexdphan/babyagi-chroma-agent
+commit: a5379280e526fd559c49d3b85513a339afc302e5
+defect_id: alexdphan-babyagi-chroma-agent-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- babyagi-chroma.py/task_creation_chain
+trigger_tests:
+- '1. Clone the repository via git clone https://github.com/alexdphan/babyagi-chroma.git
+  and cd into the cloned repository.
+
+  2. Install the required packages: pip install -r requirements.txt.
+
+  3. Copy the .env.example file to .env: cp .env.example .env. This is where you will
+  set the following variables.
+
+  4. Set your OpenAI API key in the OPENAI_API_KEY variable. You will also need to
+  set SERPAPI_API_KEY for search functionality.
+
+  5. Set the name of the table where the task results will be stored in the TABLE_NAME
+  variable.
+
+  6. Set the OBJECTIVE variable as "Translate this paragraph from english into chinese."
+
+  7. Set the FIRST_TASK variable as "Develop a task list."
+
+  8. Run the script: python babyagi-chroma.py.
+
+  9. Observe Tasks and Outcomes, noting that the task list contains many redundant
+  tasks unrelated to the objective.
+
+  Example:
+
+  Task 6: Develop a guide for incorporating mindfulness practices into daily task
+  planning in Chinese culture
+
+  Task 14: Develop a system for integrating traditional Chinese values into modern
+  task management practices
+
+  Task 15: Research cultural norms for celebrating and acknowledging progress in Chinese
+  business settings
+
+  Task 16: Research the impact of technology on task completion efficiency in Chinese
+  workplaces'

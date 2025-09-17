@@ -1,0 +1,19 @@
+app: code-review-private-ai
+repo: https://github.com/chenhunghan/code-review-private-ai
+commit: 17f00ec43ba35f3914fea322ad84f4b1a888500f
+defect_id: chenhunghan-code-review-private-ai-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- src/review/ci/commentOnPR.ts
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

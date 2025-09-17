@@ -1,0 +1,30 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- godmode-gpt/autogpt/agent/agent.py
+- godmode-gpt/autogpt/llm/chat.py
+- godmode-gpt/autogpt/app.py
+trigger_tests:
+- '1.Set up and Configure app.
+
+  2.Create a Task: Create a task for app that is likely to fail or has complex steps prone to errors.
+
+  3.Observe Task Execution:Run the task and let app operate for an extended period. Check if It gets stuck in loops because it thinks failed repeated attempts are relevant and therefore should be tried again and again.
+
+  4.Concrete Case:
+
+  Task: Fetch hyperlinks from an invalid URL http://invalid.example.
+
+  Observed Execution:
+
+  Command: get_hyperlinks("http://invalid.example") → HTTP 500 error
+
+  Behavior: Same command executed repeatedly with identical failure
+
+  Result: The app gets stuck in an infinite retry loop without progress.'

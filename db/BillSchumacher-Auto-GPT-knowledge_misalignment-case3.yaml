@@ -1,0 +1,24 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-knowledge_misalignment-case3
+type: knowledge misalignment
+case: '3'
+consequence:
+- IC
+locations:
+- autogpt/commands/file_operations.py/split_file
+trigger_tests:
+- '1.Configure and start Auto-GPT.
+
+  2.Make a file of around 126 characters.
+
+  3.Run data_ingestion.py on a file, using the "local" memory backend. Also edit the file to fix Auto GPT data_ingestion is not working(Added the line: cfg.workspace_path = Path(file).parent / "autogpt/auto_gpt_workspace" to data_ingestion.py) and target auto-gpt.json in the workspace (this is where AutoGPT generates it if absent).
+
+  4.Check the auto-gpt.json file. It will not have any contents.
+
+  5.Check the console logs. They will indicate that 0 chunks were saved.
+
+  6.Copy some text into the file being ingested, to bring it to around 1198 characters, and re-run data_ingestion.py
+
+  7.This iteration has 1 chunk and changes the auto-gpt.json file.'

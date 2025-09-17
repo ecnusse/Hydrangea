@@ -1,0 +1,25 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Pool: Set a large value for the `context_memory_pool_size` parameter
+  in the configuration file.
+
+  3. Run PrivateGPT: Execute `python privateGPT.py`.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query that generates a large amount of data, such as: "Explain the history
+  and significance of the French Revolution in detail."
+
+  6. Observe if an error occurs indicating "not enough space in the context''s memory
+  pool."'

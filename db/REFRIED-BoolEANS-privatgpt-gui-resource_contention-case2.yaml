@@ -1,0 +1,25 @@
+app: privatgpt-gui
+repo: https://github.com/REFRIED-BoolEANS/privatgpt-gui
+commit: 840675927b1ace596dcc2c8ed0f6f483805e33fe
+defect_id: REFRIED-BoolEANS-privatgpt-gui-resource_contention-case2
+type: resource contention
+case: '2'
+consequence:
+- ST
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure API Endpoint: Set the API endpoint in the configuration file to an
+  incorrect or non-existent URL.
+
+  3. Run PrivateGPT: Execute `python privateGPT.py`.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query and submit it.
+
+  6. Observe if there is an error message or if the server fails to respond due to
+  the incorrect API endpoint.'

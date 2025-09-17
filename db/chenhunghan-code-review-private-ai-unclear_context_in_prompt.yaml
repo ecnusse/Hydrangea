@@ -1,0 +1,18 @@
+app: code-review-private-ai
+repo: https://github.com/chenhunghan/code-review-private-ai
+commit: 17f00ec43ba35f3914fea322ad84f4b1a888500f
+defect_id: chenhunghan-code-review-private-ai-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- src/review/prompt/templates.ts
+- src/review/prompt/getDiffFiles.ts
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

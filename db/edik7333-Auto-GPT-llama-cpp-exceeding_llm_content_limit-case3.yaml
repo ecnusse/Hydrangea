@@ -1,0 +1,16 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-exceeding_llm_content_limit-case3
+type: exceeding LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- scripts/chat.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website:
+  https://docs.agpt.co/.(Use  releases before v0.5.0) 2.Create an AI agent. 3.Set
+  up a task(Building a business plan) 4. Return this error and program exits: openai.error.InvalidRequestError:
+  This model''s maximum context length is 4097 tokens. However your messages resulted
+  in 10134 tokens. Please reduce the length of the messages.'

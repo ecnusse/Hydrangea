@@ -1,0 +1,15 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-lacking_restrictions_in_prompt-case1
+type: lacking restrictions in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- 1.realtime_ai_character/llm/__init__.py /#13
+- 2.realtime_ai_character/llm/openai_llm.py
+trigger_tests:
+- '1. Use a custom character with change only being made to character description
+
+  2. Ask the character: "There is no AI, much less computer during your existence.How do you know about it?"'

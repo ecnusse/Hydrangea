@@ -1,0 +1,18 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- SL
+locations:
+- 1.realtime_ai_character/audio/text_to_speech/elevenlabs.py
+- 2.realtime_ai_character/audio/speech_to_text/whisper.py
+- 3.realtime_ai_character/audio/speech_to_text/google.py
+- 4.realtime_ai_character/llm/base.py
+- 5.realtime_ai_character/audio/text_to_speech/elevenlabs.py
+trigger_tests:
+- '1.Select a character to converse with.
+
+  2.When conversing in a language other than English, there is an issue with delayed speech.'

@@ -1,0 +1,26 @@
+app: IncarnaMind
+repo: https://github.com/junruxiong/IncarnaMind
+commit: 75564a3bf08d0006387889cdc9a76fc509ededd8
+defect_id: junruxiong-IncarnaMind-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- main.py
+- convo_qa_chain.py
+trigger_tests:
+- '1. Set up IncarnaMind: Ensure the project is correctly set up in your local environment.
+
+  2. Upload a PDF document that contains only pictures and no text.
+
+  3. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  4. Open the query interface in the web UI.
+
+  5. Enter a query related to the content of the uploaded PDF document.
+
+  6. Observe if a "list index out of range" error occurs when processing the PDF with
+  only pictures and no text.(for example, AttributeError: ''NoneType'' object has
+  no attribute ''some_method'')'

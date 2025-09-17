@@ -1,0 +1,16 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-knowledge_misalignment-case4
+type: knowledge misalignment
+case: '4'
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/commands/file_operations.py; autogpts/autogpt/autogpt/processing/text.py
+  (split_text overlap handling)
+trigger_tests:
+- '1. Setup AutoGPT (v<=0.2.1) 2. Ask to read a not-too-big file 3. Observe occasional
+  InvalidRequestError 8191 with unexpectedly large prompt due to overlap duplication.
+  Quick simulation: run ''python test_split_overlap_edge_case.py'' showing overlap>last-chunk
+  inflates tokens'

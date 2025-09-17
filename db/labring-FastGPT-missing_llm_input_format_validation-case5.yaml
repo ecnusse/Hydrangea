@@ -1,0 +1,18 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case5
+type: Missing LLM input format validation
+case: '5'
+consequence:
+- IC
+locations:
+- packages/service/core/chat/utils.ts;projects/app/src/service/moduleDispatch/chat/oneapi.ts
+trigger_tests:
+- '1. In Application Configuration, call a multimodal application''s API (such as
+  claude-3); 2. When calling the API, the message body transmits images and text information
+  in an ordered array format via content; 3. However, when passed into FastGPT, the
+  message body automatically places all images at the front and then merges multiple
+  text segments in content into one block of text; 4. This causes the connection between
+  images and text to be lost, affecting the response quality of the model; 5. Root
+  cause: text merging logic in formatStr2ChatContent function disrupts original order'

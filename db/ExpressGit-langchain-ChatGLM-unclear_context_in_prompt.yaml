@@ -1,0 +1,23 @@
+app: langchain-ChatGLM
+repo: https://github.com/ExpressGit/langchain-ChatGLM
+commit: 21035d7706b24956f845c65e1492690abbb07d8b
+defect_id: ExpressGit-langchain-ChatGLM-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- views/src/store/modules/prompt/index.ts
+- views/src/store/modules/prompt/helper.ts
+trigger_tests:
+- '1.Set up Langchain-Chatchat: Ensure the project is correctly set up in your local
+  environment.
+
+  2.Execute ''Knowledge Base Management - Create New Knowledge Base - Upload Files''.
+
+  3.Click ''Conversation - Select Knowledge Base Q&A - Choose Knowledge Base''.
+
+  4.Scroll to ''Input Box and Ask a Question''.
+
+  5.Observe the issue: ''No related documents found, the response is based on the
+  model''s own capability.'''

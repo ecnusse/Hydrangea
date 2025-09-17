@@ -1,0 +1,17 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-knowledge_misalignment-case2
+type: knowledge misalignment
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- client/src/utils/file.ts;client/src/pages/kb/detail/components/Import/FileSelect.tsx
+trigger_tests:
+- '1. Upload spreadsheet files to your knowledge base; 2. Select "Direct Segmentation";
+  3. Review the segmentation results and observe that the segmentation is done directly
+  by word count, resulting in information from the same row being located in different
+  chunks; 4. VERIFIED: System lacks table structure preservation in splitText2Chunks
+  function, causing knowledge alignment errors and performance degradation'

@@ -1,0 +1,19 @@
+app: chromadb-chatbot
+repo: https://github.com/AgentValley/chromadb-chatbot
+commit: 48c10aa15ae4c0896fc282c4f1c4efdfccbd53bf
+defect_id: AgentValley-chromadb-chatbot-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- chatbot/runner.py const.py tools/load_data.py tools/chat_openai.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

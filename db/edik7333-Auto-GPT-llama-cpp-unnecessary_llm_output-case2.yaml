@@ -1,0 +1,16 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-unnecessary_llm_output-case2
+type: unnecessary LLM output
+case: '2'
+consequence:
+- IC
+locations:
+- scripts/agent_manager.py
+trigger_tests:
+- '1.Configure and launch Auto-GPT according to the instructions on this website:
+  https://docs.agpt.co/ . 2.Create an AI agent. 3.Set up a task, let AutoGPT enter
+  its interactive loop. Use any command that generates the following info: Enter ''y''
+  to authorise command, ''y -N'' to run N continuous commands, ''s'' to run self-feedback
+  commands''n'' to exit program, or enter feedback for ...'

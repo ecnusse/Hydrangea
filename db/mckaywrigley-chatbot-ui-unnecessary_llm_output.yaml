@@ -1,0 +1,16 @@
+app: chatbot-ui
+repo: https://github.com/mckaywrigley/chatbot-ui
+commit: f4ec4df77f650fa650535c6b934d4a1775cf491a
+defect_id: mckaywrigley-chatbot-ui-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+locations:
+- components/messages/message.tsx:Image component rendering (lines 154-162)
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment 2. Remove Assistant''s Picture: Configure the assistant to have
+  no picture 3. Initiate a Chat: Start a chat session where the assistant''s message
+  is displayed 4. Observe the Broken Image: Notice that instead of a placeholder,
+  a broken image icon appears'

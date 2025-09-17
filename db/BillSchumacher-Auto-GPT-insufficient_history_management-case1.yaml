@@ -1,0 +1,38 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- autogpt/agent/agent.py
+- autogpt/app.py
+- autogpt/chat.py
+trigger_tests:
+- '1.Complete the environment setup.
+
+  2.(cli mode) start app.
+
+  3.Set up a task as "write a python file to print hello,world"
+
+  4.Allow app to process the task. It should execute the following commands:
+
+  Command 1: write_to_file → hello_world.py
+
+  Command 2: execute_python_file → hello_world.py
+
+  Command 3: task_complete → task finished
+
+  5.After the first task is finished, set up the same task again: "write a python
+  file to print hello,world"
+
+  6.Allow app to process the new task. You can see that it repeats the same commands
+  as before:
+
+  Command 1: write_to_file → hello_world.py
+
+  Command 2: execute_python_file → hello_world.py
+
+  Command 3: task_complete → task finished'

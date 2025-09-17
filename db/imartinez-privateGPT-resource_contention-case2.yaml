@@ -1,0 +1,24 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-resource_contention-case2
+type: resource contention
+case: '2'
+consequence:
+- ST
+locations:
+- privateGPT.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure API Endpoint: Set the API endpoint in the configuration file to an
+  incorrect or non-existent URL.
+
+  3. Run PrivateGPT: Execute `python privateGPT.py`.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query and submit it.
+
+  6. Observe if there is an error message or if the server fails to respond due to
+  the incorrect API endpoint.'

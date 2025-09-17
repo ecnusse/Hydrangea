@@ -1,0 +1,15 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-missing_llm_input_format_validation-case1
+type: Missing LLM input format validation
+case: '1'
+consequence:
+- IC
+locations:
+- demo/flutter/vec_text_search_demo/lib/main.dart; demo/flutter/vec_text_search_demo/lib/src/widgets/search_bar.dart;
+  api/handlers/text_handlers.go
+trigger_tests:
+- 1. Open the Flutter application; 2. Observe that there is no file upload interface;
+  3. Try to upload a PPTX file; 4. Note that the system only accepts text input and
+  has no document processing capabilities

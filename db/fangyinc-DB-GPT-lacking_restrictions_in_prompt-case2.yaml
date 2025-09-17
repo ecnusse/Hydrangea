@@ -1,0 +1,27 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-lacking_restrictions_in_prompt-case2
+type: lacking restrictions in prompt
+case: '2'
+consequence:
+- IC
+- TK
+locations:
+- packages/dbgpt-app/src/dbgpt_app/scene/chat_data/chat_excel/excel_analyze/prompt.py
+trigger_tests:
+- '1.Add a database to the system.
+
+  2.Enter the "Chat Data" scenario.
+
+  3.Ask a general question: "What is artificial intelligence?"
+
+  Expected Result:
+
+  System should attempt to query database or indicate question cannot be processed.
+
+  Actual Result:
+
+  LLM responds: "Artificial intelligence refers to the simulation of human intelligence
+  processes by machines, especially computer systems. It includes tasks such as learning,
+  reasoning, problem-solving, perception, and language understanding."'

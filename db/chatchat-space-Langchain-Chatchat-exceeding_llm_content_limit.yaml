@@ -1,0 +1,20 @@
+app: Langchain-Chatchat
+repo: https://github.com/chatchat-space/Langchain-Chatchat
+commit: bc7f01925fe49c622cf7d6e2540c03fd5a0679e1
+defect_id: chatchat-space-Langchain-Chatchat-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- frontend/src/libs/agent-runtime/zhipu/authToken.ts
+- libs/chatchat-server/chatchat/server/memory/conversation_db_buffer_memory.py
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

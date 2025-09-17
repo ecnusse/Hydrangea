@@ -1,0 +1,23 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Configure Environment Variables: Set the environment variables, including MODEL_PATH
+  to a specific model path (e.g., models/vicuna_ggml-vicuna-7b-1.1/ggml-vic7b-uncensored-q4_0.bin).
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Query: Input a query such as "What is a tree?".
+
+  5.Observe the Response: Notice that the response contains additional prompts or
+  unrelated names and characters.'

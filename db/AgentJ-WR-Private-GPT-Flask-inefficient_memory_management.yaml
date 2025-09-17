@@ -1,0 +1,26 @@
+app: Private-GPT-Flask
+repo: https://github.com/AgentJ-WR/Private-GPT-Flask
+commit: 328bbc320a6dacc1a120cfcaf9c88e0fd001b381
+defect_id: AgentJ-WR-Private-GPT-Flask-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- privateGPT.py
+- ingest.py
+trigger_tests:
+- '1. Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Pool: Set a large value for the `context_memory_pool_size` parameter
+  in the configuration file.
+
+  3. Run PrivateGPT: Execute `python privateGPT.py`.
+
+  4. Open the chat interface in the web UI.
+
+  5. Enter a query that generates a large amount of data, such as: "Explain the history
+  and significance of the French Revolution in detail."
+
+  6. Observe if an error occurs indicating "not enough space in the context''s memory
+  pool."'

@@ -1,0 +1,34 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864
+defect_id: fendouai-babyagi_zh-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+
+  In this example, the task list numbering resets, with “1” appearing at the end,
+  causing the numbers to be non-sequential.
+
+  Example:
+
+  Task 8: Try a new workout routine or dance workout video to keep things fun
+
+  Task 9: Host a virtual game night with friends and play online multiplayer games
+  together. Choose fun and interactive
+
+  Task 10: Go for a nature walk in a nearby park or trail and take in the sights and
+  sounds of the outdoors
+
+  Task 11: Have a picnic in the park with your favorite snacks
+
+  Task 12: Create a playlist of calming music
+
+  Task 1: Visit a local art gallery or museum to explore new exhibits and appreciate
+  different forms'

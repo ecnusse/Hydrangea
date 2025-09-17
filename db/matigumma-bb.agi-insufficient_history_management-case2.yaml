@@ -1,0 +1,28 @@
+app: bb.agi
+repo: https://github.com/matigumma/bb.agi
+commit: 9af4396c1c97b0de3fc47ceb35ff8e4489be6254
+defect_id: matigumma-bb.agi-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example:
+
+  Task 1: Visit a local art gallery or museum to immerse yourself in creativity and
+  culture. Explore the exhibits, admire the artwork, and learn something new about
+  the world of art.
+
+  Task 2: Visit a local art gallery or museum to explore different artistic styles
+  and exhibitions. Take your time appreciating the creativity and talent of various
+  artists while immersing yourself in the world of art.
+
+  Task 6: Visit a local art gallery and explore different art styles and techniques
+  for inspiration. Take note of the colors, textures, and compositions that catch
+  your eye, and consider how you can incorporate these elements into your own artwork.'

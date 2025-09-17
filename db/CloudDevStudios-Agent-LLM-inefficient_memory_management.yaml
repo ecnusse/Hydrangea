@@ -1,0 +1,15 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- CL
+locations:
+- Dockerfile-backend, AgentLLM.py
+trigger_tests:
+- '1.Start Docker Container Streamlit 2.Access the webui on Streamlit 3.Create Agent
+  (Bard, Palm, gpt4free) 4.Go to tasks 5.Create a task and start it 6.Additional test
+  cases: Monitor memory usage, test memory-intensive operations, apply LD_PRELOAD
+  fix'

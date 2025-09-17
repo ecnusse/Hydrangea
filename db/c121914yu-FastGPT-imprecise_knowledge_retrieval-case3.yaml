@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-imprecise_knowledge_retrieval-case3
+type: Imprecise knowledge retrieval
+case: '3'
+consequence:
+- IC
+locations:
+- client/data/config.json;client/src/pages/api/system/getInitData.ts;client/src/service/moduleDispatch/chat/oneapi.ts
+trigger_tests:
+- '1. In the "Workbench," create a new "Workflow"; 2. In the "Question Classification"
+  module, select the AI model as gpt-4o; 3. After successfully creating the application,
+  start the conversation; 4. The bot''s responses in the conversation always contain
+  garbled characters; 5. VERIFIED: System lacks gpt-4o model configuration, causing
+  character encoding errors and garbled responses'

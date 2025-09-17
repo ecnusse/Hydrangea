@@ -1,0 +1,14 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-missing_llm_input_format_validation-case10
+type: Missing LLM input format validation
+case: '10'
+consequence:
+- ST
+locations:
+- chat.py, app.py
+trigger_tests:
+- 1. In the UI, select "Knowledge Base" (not available). 2. Attempt to upload a CSV
+  file larger than 100MB (no upload interface). 3. Try to select "Direct Segmentation"
+  (not available). 4. Observe that the application lacks these features entirely.

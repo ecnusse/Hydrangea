@@ -1,0 +1,27 @@
+app: MemGPT-multimodal
+repo: https://github.com/starsnatched/MemGPT-multimodal
+commit: 82b9b74efa9ad2a04dc531b0ef77a9e229e86e00
+defect_id: starsnatched-MemGPT-multimodal-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- memgpt/data_types.py
+- memgpt/constants.py
+- memgpt/metadata.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure External Functions: Set up external functions that return tokens in
+  the system.
+
+  3. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  4. Open the chat or interaction interface.
+
+  5. Invoke external functions that return tokens.
+
+  6. Observe if there are any safeguards or validations on the tokens returned by
+  these external functions, and check for potential issues or vulnerabilities related
+  to token handling.'

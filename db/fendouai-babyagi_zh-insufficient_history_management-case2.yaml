@@ -1,0 +1,23 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864
+defect_id: fendouai-babyagi_zh-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent(), prioritization_agent()
+trigger_tests:
+- '1. Run the script according to the previously mentioned steps.
+
+  2. Set OBJECTIVE as "Have a fun day" and INITIAL_TASK as "Develop a task list".
+
+  3.Observe whether the generated task list becomes increasingly similar to previous ones over time, showing no progress.
+
+  Example: Similar Tasks
+
+  Task 1: "Plan a virtual game night with friends using online gaming platforms."
+
+  Task 7: "Host a virtual game night with friends and play online multiplayer games
+  together. Choose fun and interactive."'

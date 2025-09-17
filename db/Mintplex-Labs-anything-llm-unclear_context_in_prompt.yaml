@@ -1,0 +1,19 @@
+app: anything-llm
+repo: https://github.com/Mintplex-Labs/anything-llm
+commit: ebd3a62866e9e17b07a4a973b74329c0297fb78a
+defect_id: Mintplex-Labs-anything-llm-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- frontend/src/components/WorkspaceChat/ChatContainer/PromptInput/index.jsx
+- server/utils/openAi/index.js
+- server/utils/chats/index.js
+trigger_tests:
+- '1.In the the application, select a character to converse with.
+
+  2.Ask the character vague or ambiguous questions/overly complex or contradictory
+  Information
+
+  like "Explain what it is." or "If the sun were blue, what color would the moon be?"'

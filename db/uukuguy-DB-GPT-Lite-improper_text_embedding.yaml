@@ -1,0 +1,18 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-improper_text_embedding-/
+type: improper text embedding
+case: /
+consequence:
+- IC
+locations:
+- 1.dbgpt/rag/knowledge/pdf.py
+- 2.dbgpt/app/knowledge/service.py
+- 3.dbgpt/rag/knowledge/factory.py
+trigger_tests:
+- '1.Enter the Chat Data scene and upload a Chinese data file.
+
+  2.During the conversation, the bot returns garbled Chinese data from the file.
+
+  3.Viewing the Chinese file in the database shows it displays normally.'

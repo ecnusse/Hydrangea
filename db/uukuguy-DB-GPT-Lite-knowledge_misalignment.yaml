@@ -1,0 +1,21 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- IC
+locations:
+- 1.dbgpt/rag/knowledge/pdf.py
+- 2.dbgpt/rag/knowledge/factory.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a PDF file.
+
+  3.After uploading the PDF, the chunk contents display as garbled text.
+
+  (LLM: vicuna-13b-v1.5
+
+  Embedding model: text2vec-large-chinese)'

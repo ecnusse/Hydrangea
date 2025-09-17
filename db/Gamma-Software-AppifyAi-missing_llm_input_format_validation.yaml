@@ -1,0 +1,14 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- generative_app/core/app_pages/chat.py
+trigger_tests:
+- 1. During chatting, users cannot upload files (such as docx, csv, png, etc.) to
+  add new data into the context. 2. No file upload widgets or file processing functionality
+  exists in the chat interface.

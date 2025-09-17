@@ -1,0 +1,14 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- UI
+locations:
+- YP-GPT/dbgpt/agent/plugin/commands/built_in/display_type/show_table_gen.py
+trigger_tests:
+- '1.Upload an Excel file with over a dozen dimensions.
+
+  2.Start a conversation, where the chatbot generates the overflowing table.'

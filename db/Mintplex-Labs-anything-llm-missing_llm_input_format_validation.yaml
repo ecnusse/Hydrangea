@@ -1,0 +1,14 @@
+app: anything-llm
+repo: https://github.com/Mintplex-Labs/anything-llm
+commit: ebd3a62866e9e17b07a4a973b74329c0297fb78a
+defect_id: Mintplex-Labs-anything-llm-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- server/utils/vectorDbProviders/chroma/index.jsserver/utils/vectorDbProviders/pinecone/index.js
+- server/utils/vectorDbProviders/lance/index.js
+- frontend/src/components/WorkspaceChat/ChatContainer/PromptInput/index.jsx
+trigger_tests:
+- Upload the pptx file.

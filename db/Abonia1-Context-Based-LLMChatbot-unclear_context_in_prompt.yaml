@@ -1,0 +1,14 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- config.py, chat.py
+trigger_tests:
+- 1. (A conversational application) IN "workflow", integrate knowledge base citations
+  into the HTTP module. 2. During debugging, when the bot answers questions related
+  to the knowledge base, it does not cite references.

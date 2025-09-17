@@ -1,0 +1,19 @@
+app: DB-GPT-Lite
+repo: https://github.com/uukuguy/DB-GPT-Lite
+commit: d857cb71f2c19e8535d0f5e9692e15c4e4dd100d
+defect_id: uukuguy-DB-GPT-Lite-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- SL
+- TK
+locations:
+- 1.dbgpt/app/knowledge/service.py
+- 2.dbgpt/app/knowledge/document_db.py
+- 3.dbgpt/app/knowledge/api.py
+trigger_tests:
+- '1.Create more than 10 knowledge spaces.
+
+  2.Upload files to each knowledge space.
+
+  3.The response process of the /knowledge/space/list interface is very slow, making it difficult to promptly view the number of documents for each space.'

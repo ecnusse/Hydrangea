@@ -1,0 +1,18 @@
+app: Auto-GPT-llama-cpp
+repo: https://github.com/edik7333/Auto-GPT-llama-cpp
+commit: 2b4bf189825c0abe28bf6f020b87921d82636d67
+defect_id: edik7333-Auto-GPT-llama-cpp-knowledge_misalignment-case4
+type: knowledge misalignment
+case: '4'
+consequence:
+- IC
+locations:
+- scripts/browse.py/split_text()
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT(v<=0.2.1) 2. Run AutoGPT. Ask AutoGPT
+  to read a file. (The file should not be too big) 3.Authorize and wait for the result,
+  which may lead to the error: File "/usr/local/lib/python3.10/site-packages/openai/api_requestor.py",
+  line 682, in _interpret_response_line raise self.handle_error_response( openai.error.InvalidRequestError:
+  This model''s maximum context length is 8191 tokens, however you requested 15117
+  tokens (15117 in your prompt; 0 for the completion). Please reduce your prompt;
+  or completion length.'

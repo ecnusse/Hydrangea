@@ -1,0 +1,15 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case6
+type: Unclear context in prompt
+case: '6'
+consequence:
+- IC
+locations:
+- README.md
+trigger_tests:
+- 1. Read the README documentation; 2. Look for guidance on how to formulate effective
+  search queries; 3. Note the lack of examples or best practices for search input;
+  4. Observe that the documentation only shows technical API format without usage
+  guidance

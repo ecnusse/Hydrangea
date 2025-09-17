@@ -1,0 +1,16 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-inefficient_memory_management-case2
+type: inefficient memory management
+case: '2'
+consequence:
+- IC
+locations:
+- dbgpt/agent/core/plan/team_auto_plan.py
+- dbgpt/agent/core/memory/gpts/gpts_memory.py
+- dbgpt/agent/core/plan/awel/agent_operator.py
+trigger_tests:
+- "1.Use the test data provided in the official documentation, with the agent only\
+  \ using DataScientist. \n2.Count the number of men and women in each country and\
+  \ display it using an appropriate chart."

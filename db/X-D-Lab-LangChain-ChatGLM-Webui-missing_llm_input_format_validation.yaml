@@ -1,0 +1,16 @@
+app: LangChain-ChatGLM-Webui
+repo: https://github.com/X-D-Lab/LangChain-ChatGLM-Webui
+commit: ef829a28234228761a97541e4ebae9da4f4e6800
+defect_id: X-D-Lab-LangChain-ChatGLM-Webui-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- SL
+locations:
+- 1.LangChain-ChatGLM-Webui/app.py/class KnowledgeBasedChatLLM/load_file()
+- 2.LangChain-ChatGLM-Webui/app.py/class KnowledgeBasedChatLLM/init_vector_store()
+- 3..LangChain-ChatGLM-Webui/app.py/the Gradio UI section/"file = gr.File(label='请上传知识库文件', file_types=['.txt', '.md', '.docx', '.pdf'])"
+trigger_tests:
+- '1.Upload the knowledge base file on the left side of the project''s UI interface.
+
+  2.After uploading one file, the user cannot upload any additional files.'

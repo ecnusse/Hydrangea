@@ -1,0 +1,17 @@
+app: babyagi
+repo: https://github.com/ai8hyf/babyagi
+commit: 6fcd528a92c80846dbb351f2b7babdd50c38710d
+defect_id: ai9hyf-babyagi-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi.py/prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.The LLM returned tasks in the format "# 1: Task name," but the code expects "1.
+  Task name," causing a task ID parsing error and a program crash.
+
+  Model: gpt-3.5-turbo'

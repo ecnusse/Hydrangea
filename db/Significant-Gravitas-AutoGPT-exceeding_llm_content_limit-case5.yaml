@@ -1,0 +1,42 @@
+app: AutoGPT
+repo: https://github.com/Significant-Gravitas/AutoGPT
+commit: 9ef4fab084633e4289226a6dd059a598085ec876
+defect_id: Significant-Gravitas-AutoGPT-exceeding_llm_content_limit-case5
+type: exceeding  LLM content limit
+case: '5'
+consequence:
+- ST
+- IC
+locations:
+- scripts/chat.py
+trigger_tests:
+- '1.Install all the dependencies and run as "python scripts/main.py"
+
+  2.Give the prompt:
+
+  Name:  Entrepreneur-GPT
+
+  Role: A website analysis specialist designed to examine website structure, design,
+  and functionality by analyzing hyperlinks and content
+
+
+  Goal 1: Use get\_hyperlinks command to extract all hyperlinks from [http://mathrubhumi.com](http://mathrubhumi.com)
+  homepage
+
+  Goal 2: Analyze the website structure based on the extracted hyperlinks
+
+  Goal 3: Provide detailed feedback on the website''s design and functionality based
+  on link analysis
+
+  Goal 4: Create a comprehensive report of findings and recommendations
+
+  Goal 5: abort
+
+
+  Using memory of type:  LocalMemory
+
+  Using Browser:  chrome
+
+  3. After the get_hyperlinks command, the following error should appear: openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens. However, your messages resulted
+  in 10644 tokens. Please reduce the length of the messages.'

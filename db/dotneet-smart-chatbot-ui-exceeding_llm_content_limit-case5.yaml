@@ -1,0 +1,21 @@
+app: smart-chatbot-ui
+repo: https://github.com/dotneet/smart-chatbot-ui
+commit: 6a07b944b73ca53996a1a06cdf65ab19ed2a19ab
+defect_id: dotneet-smart-chatbot-ui-exceeding_llm_content_limit-case5
+type: exceeding LLM content limit
+case: '5'
+consequence:
+- SL
+- IC
+locations:
+- types/llmUsage.ts, components/Chat/ChatInputTokenCount.tsx, utils/server/message.ts,
+  pages/api/chat.ts, components/Chat/Regenerate.tsx
+trigger_tests:
+- '1. Set up Chatbot UI: Ensure the Chatbot UI project is correctly set up in your
+  local environment. 2. Engage in a Long Conversation: Continue a conversation until
+  it becomes lengthy. 3. Observe Response Issue: Notice that after a long conversation,
+  the AI stops generating replies. Neither the regenerate nor the re-edit functions
+  work. 4. Start a New Conversation: Starting a new conversation works normally. 5.
+  Real test confirmed: Single message with 51,300 characters (12,825 tokens) exceeds
+  4000 token limit, causing createMessagesToSend to return empty array, chat API throws
+  ''message is too long'' error, and regenerate/re-edit functions fail completely.'

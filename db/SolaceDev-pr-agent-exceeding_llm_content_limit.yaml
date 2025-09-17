@@ -1,0 +1,19 @@
+app: pr-agent
+repo: https://github.com/SolaceDev/pr-agent
+commit: 5c768572233adb5fb9eadef21a184410b30b5603
+defect_id: SolaceDev-pr-agent-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- pr_agent/algo/token_handler.py
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

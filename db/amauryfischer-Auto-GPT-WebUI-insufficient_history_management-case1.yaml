@@ -1,0 +1,19 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+locations:
+- autogpt/agent/agent.py
+- autogpt/chat.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  2.(cli mode)Use the command: "./autogpt.sh run --help " to start AutoGPT.
+
+  3.Set up a task.
+
+  4.Allow AutoGPT to process the task. Wait for a while, check if Auto-GPT loses track of what it''s done in the past and starts to repeat actions.'

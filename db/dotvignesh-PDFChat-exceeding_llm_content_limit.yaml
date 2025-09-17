@@ -1,0 +1,25 @@
+app: PDFChat
+repo: https://github.com/dotvignesh/PDFChat
+commit: bb46824b7835386d39f76cd0c70b427dc42997c9
+defect_id: dotvignesh-PDFChat-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- app.py
+trigger_tests:
+- '1. Set up PDFChat: Ensure the project is correctly set up in your local environment.
+
+  2. Run the application: Execute `python app.py` or the relevant command to start
+  the server.
+
+  3. Open the upload interface in the web UI.
+
+  4. Attempt to upload multiple PDF files.
+
+  5. Enter a query that requires information from the content of the uploaded PDF
+  files.
+
+  6. Observe if the application fails to handle multiple file uploads and if you encounter
+  issues when asking questions based on the content of the multiple files.'

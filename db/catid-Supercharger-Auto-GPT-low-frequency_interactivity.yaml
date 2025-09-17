@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- IC
+- UI
+locations:
+- 'scripts/config.py: configuration management; scripts/llm_utils.py: API calls; scripts/chat.py:
+  error handling; scripts/main.py: main loop'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch AutoGPT in manual mode; 3) Do not interact
+  for 3 hours; 4) Try to interact again; 5) Observe API errors or connection timeouts;
+  6) Issues: no timeout config, limited error handling, no retry logic; 7) Only RateLimitError
+  handled, other errors cause crashes; 8) No session management or connection pooling.'

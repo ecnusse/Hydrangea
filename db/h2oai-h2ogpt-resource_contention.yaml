@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-resource_contention-/
+type: Resource contention
+case: /
+consequence:
+- ST
+locations:
+- src/create_data.py::train_data.map; finetune.py::generate_and_tokenize_prompt
+trigger_tests:
+- Configure multi-process training; prepare dataset for tokenization; observe errors
+  during simultaneous tokenization; monitor CPU and memory usage under high load.

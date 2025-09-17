@@ -1,0 +1,15 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-low-frequency_interactivity-/
+type: low-frequency interactivity
+case: /
+consequence:
+- SL
+locations:
+- provider/chatgpt.py, app.py
+trigger_tests:
+- '1.Locally run an OpenAI compatible API (Preferably RWKV Runner) 2.Setup the agent
+  3.Create a conversation 4.Click "Send" in chat mode about 3-5 times and wait for
+  response 5.Additional test cases: Test provider switching, monitor response times,
+  check connection stability'

@@ -1,0 +1,19 @@
+app: AIQA
+repo: https://github.com/realrasengan/AIQA
+commit: fb86f8c48978bd218df62f6bf034463f0034b426
+defect_id: realrasengan-AIQA-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- aiqa.js; bot.js
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

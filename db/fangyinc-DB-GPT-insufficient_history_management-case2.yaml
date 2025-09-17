@@ -1,0 +1,32 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-insufficient_history_management-case2
+type: insufficient history management
+case: '2'
+consequence:
+- IC
+locations:
+- packages/dbgpt-app/src/dbgpt_app/scene/base_chat.py
+- packages/dbgpt-app/src/dbgpt_app/scene/chat_knowledge/v1/chat.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload "The Little Prince" .md knowledge file to the knowledge base.
+
+  3.Ask: "What is special about the Little Prince''s rose?"
+
+  4.System responds with correct information about the rose.
+
+  5.Ask: "What question did I just ask?"
+
+
+  Expected Result:
+
+  System should correctly recall: "Your previous question was: ''What is special about
+  the Little Prince''s rose?''"
+
+  Actual Result:
+
+  System responds: "Sorry, based on the information provided, I cannot determine what
+  question you just asked."'

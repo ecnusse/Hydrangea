@@ -1,0 +1,15 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-inefficient_memory_management-/
+type: inefficient memory management
+case: /
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/agents/agent.py (model/mode handling); autogpts/autogpt/autogpt/memory/vector/*
+trigger_tests:
+- '1. Setup per docs; run with --gpt3only 2. Prompt to ingest a design document and
+  use it later 3. Observe memory backend shows 0 chunks / no retrieval 4. Quick simulation:
+  run ''python test_gpt3only_memory_issue.py'' to compare normal vs gpt3only saving
+  behavior (1 vs 0)'

@@ -1,0 +1,14 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case7
+type: Unclear context in prompt
+case: '7'
+consequence:
+- IC
+locations:
+- Makefile
+trigger_tests:
+- 1. Run 'make init' command; 2. Examine the generated .env file; 3. Note the placeholder
+  'your_openai_api_key_here' without guidance on how to obtain a valid API key; 4.
+  Observe the lack of documentation about configuration options and their purposes

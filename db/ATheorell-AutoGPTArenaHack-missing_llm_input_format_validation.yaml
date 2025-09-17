@@ -1,0 +1,16 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/commands/file_operations_utils.py (HTMLParser, XMLParser,
+  MarkdownParser, LaTeXParser)
+trigger_tests:
+- '1. Set up AutoGPT environment using ''python -m poetry install'' 2. Start AutoGPT
+  with ''python -m autogpt run'' 3. Create an HTML file with non-UTF-8 characters
+  (e.g., containing byte 0xa0) 4. Use the read_file command to read the HTML file
+  5. Observe UnicodeDecodeError: ''utf-8'' codec can''t decode byte 0xa0'

@@ -1,0 +1,16 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-knowledge_misalignment-case3
+type: knowledge misalignment
+case: '3'
+consequence:
+- IC
+locations:
+- autogpts/autogpt/autogpt/commands/file_operations.py (ingest_file); autogpts/autogpt/autogpt/memory/vector/memory_item.py
+  (split_text)
+trigger_tests:
+- '1. Configure & start Auto-GPT with local memory backend 2. Ingest ~126-char file
+  via data_ingestion; observe 0 chunks, auto-gpt.json unchanged 3. Add content to
+  ~1198 chars and re-ingest; observe 1 chunk saved and auto-gpt.json updated. Quick
+  simulation: run ''python test_small_file_ingestion.py'''

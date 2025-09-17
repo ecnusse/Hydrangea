@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-exceeding_llm_context_limit-/
+type: Exceeding LLM context limit
+case: /
+consequence:
+- IC
+locations:
+- client/src/service/utils/chat/openai.ts; client/src/service/utils/chat/index.ts;
+  client/src/constants/model.ts; client/src/utils/plugin/openai.ts
+trigger_tests:
+- 1) Start app per README; ensure HTTP proxy is set. 2) In Chat, use gpt-3.5-turbo
+  and send a very long input so history+prompt > 4000 tokens. 3) Observe conversation
+  still succeeds due to context truncation and no “Requested tokens exceed context
+  window of 2048” error; also, file upload exists only under Knowledge Base, not Chat.

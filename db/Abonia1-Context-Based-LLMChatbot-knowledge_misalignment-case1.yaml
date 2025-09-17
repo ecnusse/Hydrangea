@@ -1,0 +1,16 @@
+app: Context-Based-LLMChatbot
+repo: https://github.com/Abonia1/Context-Based-LLMChatbot
+commit: f21f7e157157d235e0b9ddd2fc997a7d33096da1
+defect_id: Abonia1-Context-Based-LLMChatbot-knowledge_misalignment-case1
+type: knowledge misalignment
+case: '1'
+consequence:
+- IC
+locations:
+- chat.py
+trigger_tests:
+- 1. Upload a .docx file containing level 3 headings to your knowledge base. 2. In
+  "Data Processing", select "Direct Segmentation" and "Automatic". 3. In the segmentation
+  results, if a level 3 heading (###) has fewer than 29 characters, the heading is
+  lost and its content is directly merged into the next segment. If it has 29 or more
+  characters, the issue doesn't occur.

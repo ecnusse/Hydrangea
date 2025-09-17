@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-imprecise_knowledge_retrieval-case3
+type: Imprecise knowledge retrieval
+case: '3'
+consequence:
+- IC
+locations:
+- projects/app/src/pages/api/v1/chat/completions.ts;projects/app/src/service/moduleDispatch/agent/classifyQuestion.ts;projects/app/src/service/moduleDispatch/chat/oneapi.ts;projects/app/src/web/common/api/fetch.ts
+trigger_tests:
+- '1. In Workbench, create a new Workflow; 2. In Question Classification module, select
+  AI model as gpt-4o; 3. After successfully creating the application, start the conversation;
+  4. The bot''s responses in the conversation always contain garbled characters; 5.
+  Root cause: GPT-4o model channel configuration issues, character encoding processing
+  errors, and stream response handling problems'

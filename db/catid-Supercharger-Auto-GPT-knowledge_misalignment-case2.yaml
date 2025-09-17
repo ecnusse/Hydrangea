@@ -1,0 +1,16 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-knowledge_misalignment-case2
+type: knowledge misalignment
+case: '2'
+consequence:
+- IC
+locations:
+- 'scripts/browse.py: split_text function'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Create file with exactly 126 characters; 3)
+  Test split_text() with max_length=100; 4) Observe empty first chunk (0 characters)
+  and second chunk with all content (126 characters); 5) Create file with 1198 characters;
+  6) Observe same issue: empty first chunk, content in second chunk; 7) This indicates
+  split_text() function has logic error when processing single-paragraph text.'

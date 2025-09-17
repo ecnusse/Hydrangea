@@ -1,0 +1,16 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case6
+type: Missing LLM input format validation
+case: '6'
+consequence:
+- ST
+- IC
+locations:
+- client/src/pages/kb/components/SelectCsvModal.tsx; client/src/pages/kb/components/SelectFileModal.tsx;
+  client/src/utils/file.ts; client/src/pages/api/openapi/kb/pushData.ts
+trigger_tests:
+- '1) CSV import: use ''csv 问答对导入'' → parses and batches; succeeds >20MB (batched).
+  2) Text-split: .csv is rejected by file filter; forcing it into text-split may trigger
+  client decoding issues; use supported types instead.'

@@ -1,0 +1,13 @@
+app: GPT-LMU-APP
+repo: https://github.com/SaudM/GPT-LMU-APP
+commit: 882ad9818e49ca004959e17a0f7d2580ebfedb10
+defect_id: SaudM-GPT-LMU-APP-missing_llm_input_format_validation-case8
+type: Missing LLM input format validation
+case: '8'
+consequence:
+- IC
+locations:
+- client/src/utils/file.ts; client/src/pages/kb/components/SelectFileModal.tsx
+trigger_tests:
+- 1) Knowledge Base → File import → select .doc → error shown. 2) Convert the same
+  file to .docx/PDF and retry → import succeeds.

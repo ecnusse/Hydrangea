@@ -1,0 +1,26 @@
+app: chatdocs
+repo: https://github.com/marella/chatdocs
+commit: ff0f962972ba65f0bccbf2e81875a95bae7473b5
+defect_id: marella-chatdocs-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- ST
+locations:
+- /Lib/site-packages/openai/api_resources/embedding.py
+- -/Lib/site-packages/openai/embeddings_utils.py
+- -/Lib/site-packages/langchain/vectorstores/pgembedding.py
+trigger_tests:
+- '1. Set up ChatDocs: Ensure the project is correctly set up in your local environment.
+
+  2. Prepare a large Parquet file for testing.
+
+  3. Run ChatDocs: Execute `python chatdocs.py` or the relevant command to start the
+  server.
+
+  4. Upload the large Parquet file using the web UI.
+
+  5. Observe if an error occurs when handling the large Parquet file.
+
+  6. Check if there is a function or option for splitting the Parquet file to avoid
+  errors.'

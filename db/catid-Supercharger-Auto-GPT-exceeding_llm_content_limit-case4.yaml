@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-exceeding_llm_content_limit-case4
+type: exceeding  LLM content limit
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- 'scripts/agent_manager.py: create_chat_completion; scripts/chat.py: context construction
+  and token limit checking'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch: python scripts/main.py --continuous
+  --gpt3only; 3) Set up task requiring file listing (e.g., "List all files in auto_gpt_workspace
+  directory"); 4) Execute list_files command with large directory; 5) Observe if "InvalidRequestError:
+  This model''s maximum context length is 4097 tokens" error occurs.'

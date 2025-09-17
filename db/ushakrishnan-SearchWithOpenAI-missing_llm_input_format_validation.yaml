@@ -1,0 +1,15 @@
+app: SearchWithOpenAI
+repo: https://github.com/ushakrishnan/SearchWithOpenAI
+commit: 470a5d10f786efbac2feab18330c69365a937599
+defect_id: ushakrishnan-SearchWithOpenAI-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- pages/2_Upload_Documents.py
+trigger_tests:
+- 1.Upload the pptx file. 2. File uploader only accepts ['txt', 'PDF'] files and rejects
+  PPTX files 3. No PPTX/PPT document loader implemented 4. No PPTX text extraction
+  functionality 5. Users cannot upload and analyze PowerPoint presentations 6. This
+  demonstrates the missing format validation defect for PPTX files

@@ -1,0 +1,17 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-exceeding_llm_content_limit-case4
+type: exceeding LLM content limit
+case: '4'
+consequence:
+- ST
+locations:
+- autogpts/autogpt/autogpt/models/action_history.py (EpisodicActionHistory), autogpts/autogpt/autogpt/agents/prompt_strategies/one_shot.py
+  (compile_progress)
+trigger_tests:
+- 1. Set up AutoGPT environment using 'python -m poetry install' 2. Start AutoGPT
+  with 'python -m autogpt run' 3. Create a complex task like 'Building a business
+  plan' 4. Allow the agent to execute multiple steps (7+ episodes) 5. Observe InvalidRequestError
+  when action history exceeds 4097 tokens 6. Program exits with token limit exceeded
+  error

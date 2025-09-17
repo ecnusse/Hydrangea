@@ -1,0 +1,23 @@
+app: privateGPT-app
+repo: https://github.com/menloparklab/privateGPT-app
+commit: 028c81038dec2f923477812f7c7f7d48706fa7a9
+defect_id: menloparklab-privateGPT-app-incompatible_llm_output_format-case1
+type: Incompatible LLM output format
+case: '1'
+consequence:
+- IC
+locations:
+- app.py
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the project is correctly set up in your local environment.
+
+  2.Configure Environment Variables: Set the environment variables, including MODEL_PATH
+  to a specific model path (e.g., models/vicuna_ggml-vicuna-7b-1.1/ggml-vic7b-uncensored-q4_0.bin).
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Query: Input a query such as "What is a tree?".
+
+  5.Observe the Response: Notice that the response contains additional prompts or
+  unrelated names and characters.'

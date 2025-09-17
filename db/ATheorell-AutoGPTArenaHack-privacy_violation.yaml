@@ -1,0 +1,17 @@
+app: AutoGPTArenaHack
+repo: https://github.com/ATheorell/AutoGPTArenaHack
+commit: 1e4f2dc004b92b9f236543674f94fb9f0af9bb2e
+defect_id: ATheorell-AutoGPTArenaHack-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- autogpts/autogpt/autogpt/commands/web_selenium.py (read_webpage, open_page_in_browser);
+  autogpts/autogpt/autogpt/config/config.py (selenium_web_browser='chrome', selenium_headless=True)
+trigger_tests:
+- '1. Setup AutoGPT with default settings 2. In CLI, issue a browsing task (read_webpage/browse)
+  3. Observe Selenium driver starts (headless or visible depending on config) and
+  fetches the URL without extra consent prompts. Optional local check: inspect defaults
+  in config.py and the direct call path in web_selenium.py; or run a safe stub ''test_browser_default_access.py''
+  after installing deps to see it tries to open browser'

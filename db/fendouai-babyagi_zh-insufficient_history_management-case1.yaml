@@ -1,0 +1,25 @@
+app: babyagi_zh
+repo: https://github.com/fendouai/babyagi_zh
+commit: bc907f1d94cd0a6b57db5f6e2b1d0ffbabf6b864
+defect_id: fendouai-babyagi_zh-insufficient_history_management-case1
+type: insufficient history management
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- '1. Run the script according to the previously mentioned steps.
+
+  2. Set OBJECTIVE as "Have a fun day" and INITIAL_TASK as "Develop a task list".
+
+  3. Observe the tasks and outcomes until you notice the repeated tasks.
+
+  Example: Repeated Tasks
+
+  Task 3: "Visit a local farmer''s market and pick out fresh ingredients to cook a
+  new recipe at home"
+
+  Task 5: "Visit a local farmer''s market and pick out fresh ingredients to cook a
+  new recipe at home"'

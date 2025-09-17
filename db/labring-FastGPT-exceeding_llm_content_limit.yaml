@@ -1,0 +1,19 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- packages/global/common/string/tiktoken/index.ts;projects/app/src/service/moduleDispatch/chat/oneapi.ts;packages/service/core/chat/utils.ts;projects/app/src/service/core/dataset/data/pg.ts
+trigger_tests:
+- 1. Set up the application according to the README.md of this project; 2. Upload
+  a large text document (>8000 tokens) in the application's chat UI and engage in
+  multiple rounds of conversation; 3. Send a very long text input that when combined
+  with conversation history exceeds the model's context limit (e.g., 8000 tokens for
+  GPT-4); 4. Upload multiple documents and reference them in conversation, causing
+  total tokens to exceed limit; 5. Use a model with smaller context window (e.g.,
+  GPT-3.5-turbo with 4096 tokens) and send long inputs; 6. Create a conversation with
+  many short messages that collectively exceed the token limit

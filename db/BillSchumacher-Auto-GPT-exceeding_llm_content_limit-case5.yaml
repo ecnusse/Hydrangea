@@ -1,0 +1,34 @@
+app: Auto-GPT
+repo: https://github.com/BillSchumacher/Auto-GPT
+commit: bdd07b18bea674cf756ebfb3a0a8915042d9126f
+defect_id: BillSchumacher-Auto-GPT-exceeding_llm_content_limit-case5
+type: exceeding  LLM content limit
+case: '5'
+consequence:
+- ST
+- IC
+locations:
+- autogpt/chat.py
+- autogpt/llm_utils.py
+- autogpt/api_manager.py
+trigger_tests:
+- '1.Run Auto-GPT in GPT3.5 only mode: "python -m autogpt --gpt3only"
+
+  2.Set up an AI with the following parameters:
+
+  AI Name: Yoyo
+
+  Role: Lua coder
+
+  Goal 1: Read and analyze the WoWinArabic_Chat.lua file in the workspace
+
+  Goal 2: Improve the code structure and add better documentation
+
+  Goal 3: Save the improved version with comprehensive comments
+
+  3.Authorize the analyze_code command with the code file WoWinArabic_Chat.lua
+
+  4.After the analyze_code command, the following error should appear: openai.error.InvalidRequestError:
+  This model''s maximum context length is 8192 tokens, however you requested 9474
+  tokens (9474 in your prompt; 0 for the completion). Please reduce your prompt; or
+  completion length.'

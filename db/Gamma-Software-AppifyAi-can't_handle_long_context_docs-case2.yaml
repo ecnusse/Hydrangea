@@ -1,0 +1,14 @@
+app: AppifyAi
+repo: https://github.com/Gamma-Software/AppifyAi
+commit: 6c6a116d2530cbf4cb83809a931ca0a1f86c23f2
+defect_id: Gamma-Software-AppifyAi-can't_handle_long_context_docs-case2
+type: Can't handle long context docs
+case: '2'
+consequence:
+- ST
+locations:
+- generative_app/core/chains/doc_retriever.py
+trigger_tests:
+- 1. Currently, AppifyAi doesn't use LongContextReorder when retrieving Streamlit
+  documents. 2. Fixed chunking strategy without context awareness leads to poor retrieval
+  quality for long documents.

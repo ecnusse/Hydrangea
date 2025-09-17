@@ -1,0 +1,25 @@
+app: anything-llm
+repo: https://github.com/Mintplex-Labs/anything-llm
+commit: ebd3a62866e9e17b07a4a973b74329c0297fb78a
+defect_id: Mintplex-Labs-anything-llm-exceeding_llm_content_limit-case3
+type: exceeding  LLM content limit
+case: '3'
+consequence:
+- ST
+locations:
+- server/utils/vectorDbProviders/chroma/index.js
+- server/vector-cache/VECTOR_CACHE.md
+trigger_tests:
+- '1. Set up Anything-LLM: Ensure the project is correctly set up in your local environment.
+
+  2. Run Anything-LLM: Execute `python app.py` or the relevant command to start the
+  server.
+
+  3. Open the document embedding interface in the web UI.
+
+  4. Select and upload multiple documents for embedding.
+
+  5. Observe if the server force-restarts during the process.
+
+  6. Check if only one document is embedded after the restart, despite multiple documents
+  being selected initially.(for example, "TypeError: ''NoneType'' object is not iterable")'

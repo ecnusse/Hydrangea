@@ -1,0 +1,50 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-missing_llm_input_format_validation-case4
+type: Missing LLM input format validation
+case: '4'
+consequence:
+- ST
+- IC
+locations:
+- pilot/scene/chat_knowledge/v1/chat.py/generate_input_values
+trigger_tests:
+- '1.Create a new chat knowledge with ppt
+
+  2.Upload and wait for Synch
+
+  3.Chat with this new space
+
+  4.Error occured unexpectedly. when chat via web console，exception raised:
+
+    File "d:\code\db-gpt\pilot\openapi\api_v1\api_v1.py", line 449, in stream_generator
+
+      async for chunk in chat.stream_call():
+
+    File "d:\code\db-gpt\pilot\scene\chat_knowledge\v1\chat.py", line 61, in stream_call
+
+      input_values = self.generate_input_values()
+
+    File "d:\code\db-gpt\pilot\scene\chat_knowledge\v1\chat.py", line 95, in generate_input_values
+
+      set([os.path.basename(d.metadata.get("source", "")) for d in docs])
+
+    File "d:\code\db-gpt\pilot\scene\chat_knowledge\v1\chat.py", line 95, in <listcomp>
+
+      set([os.path.basename(d.metadata.get("source", "")) for d in docs])
+
+    File "C:\Users\Peter\miniconda3\envs\dbgpt_env\lib\ntpath.py", line 242, in basename
+
+      return split(p)[1]
+
+    File "C:\Users\Peter\miniconda3\envs\dbgpt_env\lib\ntpath.py", line 211, in split
+
+      p = os.fspath(p)
+
+  TypeError: expected str, bytes or os.PathLike object, not int
+
+
+  And returned error is:
+
+  Sorry, We meet some error, please try agin later.'

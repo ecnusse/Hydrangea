@@ -1,0 +1,20 @@
+app: DB-GPT
+repo: https://github.com/eosphoros-ai/DB-GPT
+commit: 1519df7f0179be0957008e75fd27eafb9d6890f1
+defect_id: eosphoros-ai-DB-GPT-knowledge_misalignment-/
+type: knowledge misalignment
+case: /
+consequence:
+- IC
+locations:
+- pilot/embedding_engine/pdf_embedding.py
+trigger_tests:
+- '1.Enter the Chat Knowledge scenario.
+
+  2.Upload a PDF file.
+
+  3.After uploading the PDF, the chunk contents display as garbled text.
+
+  (LLM: vicuna-13b-v1.5
+
+  Embedding model: text2vec-large-chinese)'

@@ -1,0 +1,16 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- 'scripts/chat.py: RateLimitError exception handling'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Ensure OpenAI API quota is depleted (use up
+  credits or have insufficient prepaid balance); 3) Launch: python scripts/main.py
+  --continuous --gpt3only; 4) Allow multiple API requests until "429 Too Many Requests"
+  error occurs; 5) Observe that the error is interpreted as "API Rate Limit Reached"
+  rather than quota exhaustion.'

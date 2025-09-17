@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-exceeding_llm_content_limit-case2
+type: exceeding LLM content limit
+case: '2'
+consequence:
+- IC
+locations:
+- frontend/lib/config/defaultBrainConfig.ts, backend/routes/chat_routes.py
+trigger_tests:
+- Upload documents, ask Quivr to write literature review, observe point 3 gets interrupted
+  due to token limit, continuation produces irrelevant content ignoring original prompt
+  due to low maxTokens (500) and missing context preservation

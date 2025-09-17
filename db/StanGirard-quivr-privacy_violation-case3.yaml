@@ -1,0 +1,14 @@
+app: quivr
+repo: https://github.com/StanGirard/quivr
+commit: b6f38f7aff5f026eb46a071362c9362e057119df
+defect_id: StanGirard-quivr-privacy_violation-case3
+type: privacy violation
+case: '3'
+consequence:
+- IS
+locations:
+- backend/routes/brain_routes.py, backend/models/databases/supabase/user_usage.py
+trigger_tests:
+- Create account, create brains up to limit, send concurrent brain creation requests,
+  system allows limit bypass through race conditions, JWT tokens exposed in error
+  messages

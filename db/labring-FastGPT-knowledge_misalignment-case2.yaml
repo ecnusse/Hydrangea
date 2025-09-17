@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-knowledge_misalignment-case2
+type: knowledge misalignment
+case: '2'
+consequence:
+- IC
+- SL
+locations:
+- projects/app/src/pages/dataset/detail/components/Import/FileSelect.tsx;packages/global/common/string/textSplitter.ts;projects/app/src/web/common/file/utils.ts;packages/service/worker/file/extension/xlsx.ts,csv.ts,pdf.ts
+trigger_tests:
+- '1. Upload spreadsheet files to your knowledge base; 2. Select Direct Segmentation;
+  3. Review the segmentation results and observe that the segmentation is done directly
+  by word count; 4. Root cause: text splitting algorithm lacks table structure recognition
+  and row boundary detection'

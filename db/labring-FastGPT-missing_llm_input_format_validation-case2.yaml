@@ -1,0 +1,16 @@
+app: FastGPT
+repo: https://github.com/labring/FastGPT
+commit: 05bf1b22653f8699b85098db3e86a7f29bdc2895
+defect_id: labring-FastGPT-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- IC
+locations:
+- projects/app/src/pages/api/core/dataset/data/pushData.ts;projects/app/src/global/core/dataset/api.d.ts
+trigger_tests:
+- '1. Call FastGPT OpenAPI: https://api.fastgpt.in/api/core/dataset/pushData; 2. Send
+  POST request with empty billId field; 3. Request body: {collectionId: 66434de186542ddfe1187c56,
+  trainingMode: chunk, prompt: , billId: , data: [{q: There''s a pretty good restaurant
+  near Xidian University in Xi''an.}]}; 4. Observe 500 error with message Cannot read
+  properties of undefined (reading ''forEach'')'

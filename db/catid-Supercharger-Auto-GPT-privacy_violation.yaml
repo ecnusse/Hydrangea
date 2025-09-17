@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-privacy_violation-/
+type: privacy violation
+case: /
+consequence:
+- IS
+locations:
+- 'scripts/commands.py: browse_website command; scripts/browse.py: scrape_text and
+  scrape_links functions'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch AutoGPT in CLI mode; 3) Set up task
+  involving web browsing; 4) Allow AutoGPT to process task; 5) Observe AutoGPT accesses
+  websites without user consent; 6) Issues: no consent required, no opt-out mechanism,
+  no transparency; 7) Can access any public website by default; 8) No privacy controls
+  or user permissions.'

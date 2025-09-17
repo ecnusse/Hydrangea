@@ -1,0 +1,22 @@
+app: DB-GPT
+repo: https://github.com/fangyinc/DB-GPT
+commit: f317740d5557b56899d1a3e786ca7cc583fdd700
+defect_id: fangyinc-DB-GPT-lacking_restrictions_in_prompt-case1
+type: lacking restrictions in prompt
+case: '1'
+consequence:
+- IC
+- SL
+locations:
+- packages/dbgpt-core/src/dbgpt/agent/util/api_call.py
+trigger_tests:
+- '1.Add a database to the system.
+
+  2.Enter the "Chat Data" scenario.
+
+  3.Ask a question that cannot generate an SQL query like "Help me write a poem."
+
+  4. The llm responds:"It seems like you''re looking for a poetic response. Let me
+  try to craft a poetic message for you. ERROR!(pymysql.err.ProgrammingError) (1064,
+  "You have an error in your SQL syntax; check the manual that corresponds to your
+  MySQL server version for the right syntax to use near ''N/A'' at line 1")", affecting users''s seamless experience.'

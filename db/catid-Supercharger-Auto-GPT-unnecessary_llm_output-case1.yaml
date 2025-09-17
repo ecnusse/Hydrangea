@@ -1,0 +1,17 @@
+app: Supercharger-Auto-GPT
+repo: https://github.com/catid/Supercharger-Auto-GPT
+commit: 2f8066fb4121ba0f724cbe92c4cbef91ecf5cc29
+defect_id: catid-Supercharger-Auto-GPT-unnecessary_llm_output-case1
+type: unnecessary LLM output
+case: '1'
+consequence:
+- IC
+- UI
+locations:
+- 'scripts/chat.py: output processing; scripts/agent_manager.py: message handling;
+  scripts/file_operations.py: read_file; scripts/commands.py: command execution'
+trigger_tests:
+- '1) Setup deps and OPENAI_API_KEY; 2) Launch: python scripts/main.py --continuous
+  --gpt3only; 3) Configure AI to analyze files; 4) Execute list_files on directory
+  with many files; 5) Execute read_file on large file (~2.8MB); 6) Observe "Failure:
+  command returned too much output" when output exceeds reasonable limits.'

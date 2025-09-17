@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-out-of-sync_llm_downstream_tasks-/
+type: Out-of-sync LLM downstream tasks
+case: /
+consequence:
+- ST
+- IC
+locations:
+- YP-GPT/dbgpt/web/components/chat/header/excel-uploaded.tsx
+trigger_tests:
+- '1.In the Chat Excel scenario, upload a large xlsx file (you can use the test file provided here: https://github.com/eosphoros-ai/DB-GPT/issues/1337).
+
+  2.Use GPT-4.
+
+  3.The JSON generation is too slow, causing it to be incomplete and resulting in a JSON parsing error.'

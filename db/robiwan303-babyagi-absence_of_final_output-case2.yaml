@@ -1,0 +1,30 @@
+app: babyagi
+repo: https://github.com/robiwan303/babyagi
+commit: 9c22f053675710094576bfc4e6527f59a50e6ac2
+defect_id: robiwan303-babyagi-absence_of_final_output-case2
+type: absence of final output
+case: '2'
+consequence:
+- UI
+locations:
+- babyagi.py/task_creation_agent(), main() loop
+trigger_tests:
+- '1.Clone the repository via git clone https://github.com/robiwan303/babyagi.git and cd into the cloned repository.
+
+  2.Install the required packages: pip install -r requirements.txt
+
+  3.Copy the .env.example file to .env: cp .env.example .env. This is where you will set the following variables.
+
+  4.Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables.
+
+  5.Set the name of the table where the task results will be stored in the RESULTS_STORE_NAME variable.
+
+  6.(Optional) Set the name of the BabyAGI instance in the INSTANCE_NAME variable.
+
+  7.Set the OBJECTIVE variable as "Write a novel"
+
+  8.Set the INITIAL_TASK variable as "Start writing the introduction of the novel"
+
+  9.Run the script: python babyagi.py
+
+  10.Observe tasks and outcomes.'

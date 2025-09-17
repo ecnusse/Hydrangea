@@ -1,0 +1,51 @@
+app: babyagi-langchain
+repo: https://github.com/jimwhite/babyagi-langchain
+commit: ''
+defect_id: jimwhite-babyagi-langchain-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- babyagi.py/TaskCreationChain
+trigger_tests:
+- '1.Clone the Repository:
+
+     git clone https://github.com/yoheinakajima/babyagi.git
+
+     cd babyagi
+
+  2.Install the Required Packages:
+
+     pip install -r requirements.txt
+
+  3.Set Up Environment Variables:
+
+    (1)Copy the .env.example file to .env:
+
+     cp .env.example .env
+
+    (2)Open the .env file and set the following variables:
+
+     OPENAI_API_KEY=your_openai_api_key
+
+     OPENAI_API_MODEL=gpt-3.5-turbo
+
+     TABLE_NAME=your_results_store_name
+
+     COOPERATIVE_MODE=local
+
+  (3)Optionally, set other variables:
+
+     BABY_NAME=your_babyagi_instance_name
+
+     OBJECTIVE="do nothing"
+
+     INITIAL_TASK="Make a todo list"
+
+  4.Run the Script:
+
+     python babyagi.py
+
+  5.Observe Tasks and Outcomes'

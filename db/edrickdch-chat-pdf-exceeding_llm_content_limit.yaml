@@ -1,0 +1,19 @@
+app: chat-pdf
+repo: https://github.com/edrickdch/chat-pdf
+commit: bf5343fef116a360424245b1c154edc2bac07bfd
+defect_id: edrickdch-chat-pdf-exceeding_llm_content_limit-/
+type: exceeding LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- src/single-pdf.py
+trigger_tests:
+- '"1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

@@ -1,0 +1,13 @@
+app: anything-llm
+repo: https://github.com/frasergr/anything-llm
+commit: 5fa61458724fd019a15e243b8db8e71bead950b5
+defect_id: frasergr-anything-llm-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- collector/watch.py
+- server/utils/vectorDbProviders/lance/index.js
+trigger_tests:
+- Upload the pptx file.

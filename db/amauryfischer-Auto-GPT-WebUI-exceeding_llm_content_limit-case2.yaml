@@ -1,0 +1,30 @@
+app: Auto-GPT-WebUI
+repo: https://github.com/amauryfischer/Auto-GPT-WebUI
+commit: cea68df18f309b094912bdaa6ce2cd484dca5a13
+defect_id: amauryfischer-Auto-GPT-WebUI-exceeding_llm_content_limit-case2
+type: exceeding  LLM content limit
+case: '2'
+consequence:
+- ST
+- IC
+locations:
+- AutoGPT/forge/forge/llm/providers/openai.py/count_message_tokens(), _get_chat_completion_args
+- autogpt/llm/base.py
+trigger_tests:
+- '1.Complete the environment setup for AutoGPT according to the instructions on this website: https://docs.agpt.co/autogpt/setup/.
+
+  (Open .env, set USE_AZURE to True and make an Azure configuration file.Rename azure.yaml.template to azure.yaml and provide the relevant azure_api_base, azure_api_version and deployment IDs for the models that you want to use. All these are also included in https://docs.agpt.co/autogpt/setup/)
+
+  2.(cli mode)Use the command: "./autogpt.sh --continuous" to start AutoGPT in continuous mode.
+
+  3.Set up a simple task as blow:
+
+    Name: Phone finder
+
+    Role: best phone 2
+
+    Goals: [''list 2 best phone for high mega pixel camera'', ''abort'']
+
+    API Budget: infinite
+
+  4.Allow AutoGPT to process the task and observe if the token length error occurs.'

@@ -1,0 +1,20 @@
+app: langchain-ChatGLM-annotation
+repo: https://github.com/hzg0601/langchain-ChatGLM-annotation
+commit: da8085ba5fcb89a2e665cd3fde28cdafa38b9c29
+defect_id: hzg0601-langchain-ChatGLM-annotation-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+locations:
+- models/llama_llm.py
+- models/chatglm_llm.py
+trigger_tests:
+- '1. Set up the application according to the README.md of this project
+
+  2. Upload a text document in the application''s chat UI. Wait for multiple rounds
+  of processing, and we will receive the following error:
+
+  ‘...
+
+  Regarding completion_chunk'

@@ -1,0 +1,27 @@
+app: MemGPT-multimodal
+repo: https://github.com/starsnatched/MemGPT-multimodal
+commit: 82b9b74efa9ad2a04dc531b0ef77a9e229e86e00
+defect_id: starsnatched-MemGPT-multimodal-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- memgpt/data_types.py
+- memgpt/constants.py
+- memgpt/metadata.py
+trigger_tests:
+- '1. Set up MemGPT: Ensure the project is correctly set up in your local environment.
+
+  2. Configure Memory Context: Set or verify the memory context limit in the configuration
+  file.
+
+  3. Run MemGPT: Execute `python memgpt.py` or the relevant command to start the server.
+
+  4. Open the chat or interaction interface.
+
+  5. Input a series of queries or interactions that are designed to exceed the memory
+  context limit.
+
+  6. Observe if a "Memory context limit exceeded" error occurs or if the system fails
+  to handle the excess memory context properly.'

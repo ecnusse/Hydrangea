@@ -1,0 +1,13 @@
+app: h2ogpt
+repo: https://github.com/h2oai/h2ogpt
+commit: 15f3a2d564541020f78cfc83bc90722dcda8a960
+defect_id: h2oai-h2ogpt-inefficient_memory_management-case1
+type: Inefficient memory management
+case: '1'
+consequence:
+- SL
+locations:
+- models/gpu_mem_track.py; src/utils.py::clear_torch_cache; src/gpt_langchain.py::file_to_doc
+trigger_tests:
+- Upload a large PDF (>100 pages); process multiple large documents; monitor memory
+  usage during PDF processing; observe slow processing times for large files.

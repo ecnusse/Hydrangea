@@ -1,0 +1,14 @@
+app: chat-langchain
+repo: https://github.com/langchain-ai/chat-langchain
+commit: a875a649109ad7c3d68d7e9b75508f687e627ca4
+defect_id: langchain-ai-chat-langchain-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- backend/graph.py/retrieve_documents(), get_retriever()
+trigger_tests:
+- '1.Ask a question in the UI interface.
+
+  2.Notice that the returned sources contain content unrelated to the question.'

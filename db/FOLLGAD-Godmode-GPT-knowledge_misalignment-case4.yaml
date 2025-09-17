@@ -1,0 +1,21 @@
+app: Godmode-GPT
+repo: https://github.com/FOLLGAD/Godmode-GPT
+commit: 4e1dc7055580ab9bb3ce85114f9e17950ac96d7b
+defect_id: FOLLGAD-Godmode-GPT-knowledge_misalignment-case4
+type: knowledge misalignment
+case: '4'
+consequence:
+- IC
+locations:
+- autogpt/commands/file_operations.py/split_file()
+trigger_tests:
+- "1. Complete the environment setup for the app.\n2. Run AutoGPT (`python -m autogpt`)\
+  \ and prompt it to read a file `testfile.txt` (file should be reasonably large).\n\
+  3. AI Configuration:\nAI Name: File-Reader-GPT\nAI Role: An AI assistant designed\
+  \ to read large text files and summarize their contents.\nGoal 1: Read the file\
+  \ `testfile.txt`.\nGoal 2: Summarize the contents of the file.\n4. Authorize the\
+  \ AI to read the file and observe its behavior.\n5. Observed Behavior:\n   (1) AutoGPT\
+  \ repeatedly attempts to read the file in different ways (line by line, chunked\
+  \ reading, skimming).\n   (2) Each attempt fails, showing \"The JSON object is invalid.\"\
+  \ in the logs.\n   (3) AutoGPT never successfully summarizes the file.\n6. Defect\
+  \ Description: The app cannot handle reading large files properly"

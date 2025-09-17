@@ -1,0 +1,28 @@
+app: bb.agi
+repo: https://github.com/matigumma/bb.agi
+commit: 9af4396c1c97b0de3fc47ceb35ff8e4489be6254
+defect_id: matigumma-bb.agi-insufficient_history_management-case3
+type: insufficient history management
+case: '3'
+consequence:
+- IC
+locations:
+- babyagi.py/task_creation_agent()
+trigger_tests:
+- "1.Clone the repository via git clone https://github.com/matigumma/bb.agi.git and cd into the cloned repository.\n\
+  2.Install the required packages: pip install -r requirements.txt\n3.Copy the .env.example file to .env: cp .env.example .env. This is where you will set the following variables.\n\
+  4.Set your OpenAI API key in the OPENAI_API_KEY and OPENAI_API_MODEL variables. In order to use with Pinecone\
+  \ you will also need to setup additional variables detailed here.\n5.Set the name of the table where the task results will be stored in the TABLE_NAME variable.\n\
+  6.(Optional) Set the name of the BabyAGI instance in the BABY_NAME variable.\n7.Set the OBJECTIVE variable as \"\
+  Have a fun day.\"\n8.Set the INITIAL_TASK variable as \"1.Make a list of tasks\"\
+  .\n9.Run the script: python babyagi.py\n10.After several rounds of task generation, check whether the newly generated task lists ignore the preceding task results.\n\
+  Example:\nTask Result: Let's have a karaoke night at home with friends or family!\
+  \ Get ready to sing your heart out, have some laughs, and create unforgettable memories\
+  \ together. Prepare your favorite songs, set up a karaoke machine or use a karaoke\
+  \ app, and let the music fill the room with joy and laughter.\nTask List: \n2: Visit\
+  \ a local farmer's market to discover fresh produce, homemade goods, and unique\
+  \ finds.\n3: Explore a nearby art gallery or museum to appreciate different forms\
+  \ of art and culture.\n4: Host a themed movie night with costumes, snacks, and decorations\
+  \ based on a favorite movie or TV show. \nYou can see that the TASK RESULT is about\
+  \ karaoke, but the newly generated TASK LIST does not create follow-up tasks based\
+  \ on this result."

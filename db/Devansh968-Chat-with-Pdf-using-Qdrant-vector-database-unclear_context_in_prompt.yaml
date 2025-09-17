@@ -1,0 +1,24 @@
+app: Chat-with-Pdf-using-Qdrant-vector-database
+repo: https://github.com/Devansh968/Chat-with-Pdf-using-Qdrant-vector-database
+commit: 771195f36a735a6f4ac1b63edc04661c11a67f3f
+defect_id: Devansh968-Chat-with-Pdf-using-Qdrant-vector-database-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- /Lib/site-packages/click/termui.py
+- -/Lib/site-packages/rich/prompt.py
+- -/Lib/site-packages/langchain/chains/prompt_selector.py
+- -/Lib/site-packages/langchain/schema/prompt_template.py
+trigger_tests:
+- '1.Set up: Ensure the project is correctly set up in your local environment.
+
+  2.Execute ''Knowledge Base Management - Create New Knowledge Base - Upload Files''.
+
+  3.Click ''Conversation - Select Knowledge Base Q&A - Choose Knowledge Base''.
+
+  4.Scroll to ''Input Box and Ask a Question''.
+
+  5.Observe the issue: ''No related documents found, the response is based on the
+  model''s own capability.'''

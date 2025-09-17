@@ -1,0 +1,35 @@
+app: bb.agi
+repo: https://github.com/matigumma/bb.agi
+commit: 9af4396c1c97b0de3fc47ceb35ff8e4489be6254
+defect_id: matigumma-bb.agi-incompatible_llm_output_format-/
+type: Incompatible LLM output format
+case: /
+consequence:
+- IC
+locations:
+- babyagi.py/prioritization_agent()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.Observe whether the generated task list shows any numbering inconsistencies or misorder.
+
+  Example:
+
+  Set OBJECTIVE=Have a fun day and INITIAL_TASK=Develop a task list
+
+  Task 3: Take a dance or fitness class to have fun while staying active and learning
+  something new.
+
+  Task #4: Explore a new hiking trail or nature walk in your area. Enjoy the fresh
+  air, beautiful scenery, and the opportunity to connect with nature. Take some time
+  to relax and rejuvenate while getting some exercise.
+
+  Task #5: Attend a local food festival or farmers'' market to sample delicious foods
+  and discover new culinary delights. Immerse yourself in the vibrant atmosphere,
+  try different dishes, and maybe even pick up some fresh ingredients to cook with
+  at home.
+
+  Task #6: Visit a museum
+
+  Result:You can observe that the extra “#” before the task numbers (for example “Task
+  #4”),and this will cause parsing errors and lead the program to terminate abnormally.'

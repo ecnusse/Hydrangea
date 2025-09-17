@@ -1,0 +1,23 @@
+app: privateGPT
+repo: https://github.com/imartinez/privateGPT
+commit: 2f3aab9cfdc139f399387dbb90300d5a8bf8d2f1
+defect_id: imartinez-privateGPT-exceeding_llm_content_limit-case1
+type: exceeding  LLM content limit
+case: '1'
+consequence:
+- ST
+locations:
+- privateGPT.py
+trigger_tests:
+- '1.Set up PrivateGPT: Ensure the PrivateGPT project is correctly set up in your
+  local environment.
+
+  2.Configure Environment Variables: Set MODEL_N_CTX and MODEL_N_BATCH in the .env
+  file.
+
+  3.Run PrivateGPT: Execute python privateGPT.py.
+
+  4.Enter a Query: Input a simple query such as "hi".
+
+  5.Observe the Error: Notice the error message "too many tokens" indicating the context
+  window is exceeded.'

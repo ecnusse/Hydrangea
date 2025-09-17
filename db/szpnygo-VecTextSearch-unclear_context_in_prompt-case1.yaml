@@ -1,0 +1,15 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-unclear_context_in_prompt-case1
+type: Unclear context in prompt
+case: '1'
+consequence:
+- IC
+locations:
+- demo/flutter/vec_text_search_demo/lib/src/widgets/search_bar.dart
+trigger_tests:
+- 1. Open the Flutter application; 2. Navigate to the search interface; 3. Enter vague
+  or ambiguous search queries such as 'Explain what it is' or 'If the sun were blue,
+  what color would the moon be?'; 4. Observe that the search interface provides no
+  guidance or context for formulating proper search queries

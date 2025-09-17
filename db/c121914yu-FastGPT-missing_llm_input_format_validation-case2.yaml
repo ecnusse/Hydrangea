@@ -1,0 +1,15 @@
+app: FastGPT
+repo: https://github.com/c121914yu/FastGPT
+commit: 2ae8d43216d4e6fb739143c3cc12285fed048596
+defect_id: c121914yu-FastGPT-missing_llm_input_format_validation-case2
+type: Missing LLM input format validation
+case: '2'
+consequence:
+- IC
+locations:
+- client/src/pages/api/openapi/kb/pushData.ts
+trigger_tests:
+- '1. Set up FastGPT application according to README.md; 2. Call the pushData API
+  endpoint with billId as empty string; 3. The system will return 500 error due to
+  missing billId validation; 4. VERIFIED: API endpoint lacks billId parameter validation
+  in the request body parsing logic'

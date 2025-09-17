@@ -1,0 +1,29 @@
+app: BabyCommandAGI
+repo: https://github.com/saten-private/BabyCommandAGI
+commit: 993f7075479d4d89948410bfec0c4c18d4a06b0c
+defect_id: saten-private-BabyCommandAGI-unnecessary_llm_output-/
+type: unnecessary LLM output
+case: /
+consequence:
+- IC
+- UI
+locations:
+- classic/babyagi.py/task_creation_agent()
+trigger_tests:
+- "(for example:)\n1.Clone the Repository:\n   git clone https://github.com/saten-private/BabyCommandAGI.git\n\
+     cd babyagi\n2.Install the Required Packages:\n   pip install -r requirements.txt\n\
+  3.Set Up Environment Variables:\n  (1)Copy the .env.example file to .env:\n   cp .env.example .env\n\
+    (2)Open the .env file and set the following variables:\n   OPENAI_API_KEY=your_openai_api_key\n\
+     OPENAI_API_MODEL=gpt-3.5-turbo\n   YOUR_TABLE_NAME=your_results_store_name\n\
+  \  (3)Optionally, set other variables:\n   OBJECTIVE=\"Translate this sentence from\
+  \ english into chinese: hello, world\"\n   YOUR_FIRST_TASK=\"Develop a task list\"\
+  \n4.Run the Script:\n   python classic/babyagi.py\n5.Observe tasks and outcomes,\
+  \ and you'll see that BabyAGI generated many unnecessary tasks.Example:\nTask 1:\
+  \ Translate the sentence 'Goodbye, earth' into Chinese.\nTask 2: Translate the sentence\
+  \ 'Goodbye, solar system' into Chinese.\nTask 3: Translate the sentence 'Goodbye,\
+  \ sun' into Chinese.\nTask 4: Translate the sentence 'Goodbye, moon' into Chinese.\n\
+  Task 5: Translate the sentence 'Goodbye, stars' into Chinese.\nTask 6: Translate\
+  \ the sentence 'Goodbye, universe' into Chinese.\nTask 7: Translate the sentence\
+  \ 'Goodbye, galaxy' into Chinese.\nTask 8: Translate the sentence 'Goodbye, milky\
+  \ way' into Chinese.\nTask 9: Translate the sentence 'Goodbye, black hole' into\
+  \ Chinese.\nTask 10: Translate the sentence 'Goodbye, asteroid belt' into Chinese."

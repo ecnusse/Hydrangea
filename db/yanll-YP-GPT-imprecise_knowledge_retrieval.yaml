@@ -1,0 +1,17 @@
+app: YP-GPT
+repo: https://github.com/yanll/dbgpts
+commit: ''
+defect_id: yanll-YP-GPT-imprecise_knowledge_retrieval-/
+type: Imprecise knowledge retrieval
+case: /
+consequence:
+- SL
+locations:
+- YP-GPT/dbgpt/pilot/server/knowledge/document_db.py/get_knowledge_documents_count_bulk
+- YP-GPT/dbgpt/pilot/server/knowledge/service.py/get_knowledge_space
+trigger_tests:
+- '1.Create more than 10 knowledge spaces.
+
+  2.Upload files to each knowledge space.
+
+  3.The response process of the /knowledge/space/list interface is very slow, making it difficult to promptly view the number of documents for each space.'

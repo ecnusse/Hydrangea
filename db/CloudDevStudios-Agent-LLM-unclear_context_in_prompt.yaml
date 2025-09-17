@@ -1,0 +1,16 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-unclear_context_in_prompt-/
+type: Unclear context in prompt
+case: /
+consequence:
+- IC
+locations:
+- CustomPrompt.py, AgentLLM.py, model-prompts/default/instruct.txt
+trigger_tests:
+- '1.In the UI, select a character to converse with. 2.Ask the character vague or
+  ambiguous questions/overly complex or contradictory Information like "Explain what
+  it is." or "If the sun were blue, what color would the moon be?" 3.Additional test
+  cases: "What do you think about that?", "Can you help me with something?", "Tell
+  me about everything."'

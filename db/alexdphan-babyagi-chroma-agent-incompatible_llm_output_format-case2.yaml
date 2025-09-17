@@ -1,0 +1,20 @@
+app: babyagi-chroma-agent
+repo: https://github.com/alexdphan/babyagi-chroma-agent
+commit: a5379280e526fd559c49d3b85513a339afc302e6
+defect_id: alexdphan-babyagi-chroma-agent-incompatible_llm_output_format-case2
+type: Incompatible LLM output format
+case: '2'
+consequence:
+- IC
+locations:
+- babyagi-chroma.py/ZeroShotAgent.create_prompt()
+trigger_tests:
+- '1.Run the script according to the previously mentioned steps.
+
+  2.It was observed that the AI agent’s output did not follow the expected “Thought-Action-Action
+  Input” format.For example, the program raised an error:
+
+  ValueError: Could not parse LLM output: `I have the forecasted weather for San Francisco.
+
+  Action: Verify`. This caused parsing to fail and prevented the program from proceeding
+  to the next step.'

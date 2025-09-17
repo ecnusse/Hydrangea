@@ -1,0 +1,15 @@
+app: VecTextSearch
+repo: https://github.com/szpnygo/VecTextSearch
+commit: ec6a1a2861b1399b3463026980c02507702d3508
+defect_id: szpnygo-VecTextSearch-exceeding_llm_content_limit-case4
+type: exceeding LLM content limit
+case: '4'
+consequence:
+- ST
+locations:
+- services/text.go
+trigger_tests:
+- 1. Send a request to /add-text with very long text content (over 8000 tokens); 2.
+  Observe that the API accepts the request without validation; 3. Note the potential
+  for OpenAI API failures due to token limits; 4. Confirm the lack of content length
+  restrictions

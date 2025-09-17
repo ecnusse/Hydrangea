@@ -1,0 +1,14 @@
+app: Agent-LLM
+repo: https://github.com/CloudDevStudios/Agent-LLM
+commit: f89aaebd761a4d016b8a61ee511330f5ed403fe9
+defect_id: CloudDevStudios-Agent-LLM-missing_llm_input_format_validation-/
+type: Missing LLM input format validation
+case: /
+consequence:
+- IC
+locations:
+- app.py, commands/file_operations.py
+trigger_tests:
+- '1.Click "Interact", choose "Learning", choose agent, method from file, choose a
+  pdf and upload 2.Additional test cases: Upload any binary file format (PDF, DOC,
+  XLS) without proper format validation 3.Test with corrupted or invalid file formats'

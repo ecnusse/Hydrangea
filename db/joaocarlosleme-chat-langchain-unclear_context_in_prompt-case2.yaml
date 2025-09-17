@@ -1,0 +1,15 @@
+app: chat-langchain
+repo: https://github.com/joaocarlosleme/chat-langchain
+commit: 362e71c016d70022a6b1d067e0cddbe1a6ef496e
+defect_id: joaocarlosleme-chat-langchain-unclear_context_in_prompt-case2
+type: Unclear context in prompt
+case: '2'
+consequence:
+- IC
+locations:
+- query_data.py
+trigger_tests:
+- '1.Ask a question outside of context in the UI interface.
+
+  2.The chatbot should generate an answer from the internet instead of returning "Hmm,
+  I''m not sure"'

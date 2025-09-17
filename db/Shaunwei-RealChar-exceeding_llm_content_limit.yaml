@@ -1,0 +1,18 @@
+app: RealChar
+repo: https://github.com/Shaunwei/RealChar
+commit: ee36a803e220c8a3f021a61922ea81c59e7242ee
+defect_id: Shaunwei-RealChar-exceeding_llm_content_limit-/
+type: exceeding  LLM content limit
+case: /
+consequence:
+- ST
+- IC
+locations:
+- 1.realtime_ai_character/utils.py
+- 2.realtime_ai_character/llm/openai_llm.py
+- 3.realtime_ai_character/static/script.js
+- 4.realtime_ai_character/llm/base.py
+trigger_tests:
+- '1.Select a character to converse with.
+
+  2.Engage in multiple rounds of conversation and observe that the character''s responses are increasingly interrupted as the conversation progresses.'
