@@ -79,6 +79,19 @@ Take **LocalAGI** as an example. It makes plans to guide users to achieve their 
    3. You can attempt to reproduce the issue.
 
 ## Command-line interface: Hydrangea command
+
+### 🚀 Setup
+
+1. Clone Defects4J:
+
+   ```bash
+   git clone https://github.com/ecnusse/Hydrangea.git
+   ```
+2. install dependencies
+   ```bash
+   pip install -e .
+   ```
+
 ### 🎯 Command Overview
 
 | Command | Description | Main Parameters |
@@ -91,9 +104,9 @@ Take **LocalAGI** as an example. It makes plans to guide users to achieve their 
 
 ---
 
-## 1. 📱 `apps` Command — List Applications
+### 1. 📱 `apps` Command — List Applications
 
-### Basic Usage
+#### Basic Usage
 
 ```bash
 # List all applications
@@ -102,22 +115,31 @@ hydrangea apps
 # View detailed help information
 hydrangea apps --help
 
+# Filtering application based on llm
+hydrangea apps --llm OpenAI
+
+# Filtering application based on vector database
+hydrangea apps --vdb chroma
+
+# Filtering application based on language
+hydrangea apps --language python
+
 ```
 
 
 
 ---
 
-## 2. 🐛 `bids` Command — List Defect IDs
+### 2. 🐛 `bids` Command — List Defect IDs
 
-### Basic Usage
+#### Basic Usage
 
 ```bash
 # List all defect IDs
 hydrangea bids
 ```
 
-### 🔍 Filter Defect IDs by Application
+#### 🔍 Filter Defect IDs by Application
 
 ```bash
 # List all defect IDs for a specific application
@@ -128,9 +150,9 @@ hydrangea bids --app LocalAGI
 
 ---
 
-## 3. 📊 `info` Command — View Detailed Defect Information
+### 3. 📊 `info` Command — View Detailed Defect Information
 
-### Basic Usage
+#### Basic Usage
 
 ```bash
 # View detailed information for a specific defect
@@ -138,18 +160,17 @@ hydrangea info "camel" camel-ai-camel-privacy_violation-/
 hydrangea info MEMGPT cpacker-MemGPT-exceeding_llm_content_limit-case1
 ```
 
-### 📋 Output Information Includes
+#### 📋 Output Information Includes
 
-- Defect Type and Severity
+- Defect Type
 - Application Basic Information
 - Defect Description and Impact
-- Reproduction Steps
-- Related Test Cases
+
 
 ---
 
-## 4. 🧪 `test` Command — Display Test Information
-### 📝 Parameter Description
+### 4. 🧪 `test` Command — Display Test Information
+#### 📝 Parameter Description
 
 | Parameter | Type | Description |
 |------|------|------|
@@ -157,7 +178,7 @@ hydrangea info MEMGPT cpacker-MemGPT-exceeding_llm_content_limit-case1
 | `bid` | Required | Defect ID |
 | `--trigger` | Optional | Show detailed trigger test information |
 
-### 🚀 Usage Examples
+#### 🚀 Usage Examples
 
 ```bash
 # Show basic test information
@@ -167,9 +188,9 @@ hydrangea test camel camel-ai-camel-privacy_violation-/
 hydrangea test camel camel-ai-camel-privacy_violation-/ --trigger
 ```
 
-### 📤 Output Examples
+#### 📤 Output Examples
 
-#### 🔸 Basic Mode Output
+##### 🔸 Basic Mode Output
 
 ```bash
 Test information for camel - camel-ai-camel-privacy_violation-/
@@ -178,7 +199,7 @@ Case: /
 Use --trigger to see detailed trigger tests
 ```
 
-#### 🔸 Trigger Test Mode Output
+##### 🔸 Trigger Test Mode Output
 
 ```bash
 trigger_tests:
