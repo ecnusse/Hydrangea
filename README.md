@@ -216,7 +216,7 @@ trigger_tests:
 
 #### 📝 Description
 
-This command uses the Comfrey framework to automatically detect LLM input/output format issues in a specific software project. It clones the repository (if not already cloned), checks out to the specified commit, and analyzes the codebase for potential format problems in LLM interactions.
+This command automatically detects LLM input/output format issues in a specific software project. It clones the repository (if not already cloned), checks out to the specified commit, and analyzes the codebase for potential format problems in LLM interactions.
 
 #### 🚀 Usage
 

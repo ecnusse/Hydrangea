@@ -4,7 +4,7 @@ import typer
 from typing import Optional
 from pathlib import Path
 from .core.metadata import MetadataManager
-from .core.format_analyzer import FormatAnalyzer
+from .core.analyze.format_analyzer import FormatAnalyzer
 
 app = typer.Typer(help="Hydrangea CLI - Query Hydrangea dataset")
 metadata_manager = MetadataManager()

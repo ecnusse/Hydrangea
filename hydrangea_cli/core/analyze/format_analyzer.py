@@ -10,13 +10,10 @@ from typing import Optional, Dict, List, Any
 import ast
 from functools import lru_cache
 
-# Import Comfrey components
-comfrey_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../Comfrey/Comfrey-main'))
-sys.path.append(comfrey_path)
-print(f"Added Comfrey path to sys.path: {comfrey_path}")
-from src.format_detector import FormatDetector
-from src.config import ComfreyConfig
-from src.types import ErrorType, DetectionResult
+# Local lightweight Comfrey components
+from .format_detector import FormatDetector
+from .config import ComfreyConfig
+from .types import ErrorType, DetectionResult
 
 class FormatAnalyzer:
     """Format analyzer that uses Comfrey's format detector to analyze LLM inputs and outputs"""
