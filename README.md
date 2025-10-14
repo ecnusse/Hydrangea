@@ -211,6 +211,75 @@ trigger_tests:
 ```
 
 ---
+
+### 5. 🔍 `analyze` Command — Analyze LLM Input/Output Format Issues
+
+#### 📝 Description
+
+This command uses the Comfrey framework to automatically detect LLM input/output format issues in a specific software project. It clones the repository (if not already cloned), checks out to the specified commit, and analyzes the codebase for potential format problems in LLM interactions.
+
+#### 🚀 Usage
+
+```bash
+# Analyze a specific application
+hydrangea analyze <application_name>
+```
+
+#### 📊 What It Does
+
+1. **Repository Management**: Automatically clones the repository from GitHub (if not already present locally) and checks out to the specific commit from `application.csv`(repos are stored in **./repos**)
+2. **Code Analysis**: Scans the codebase to identify files that interact with LLMs
+3. **Format Detection**: Uses Comfrey's `format_detector` to analyze:
+   - Template discrepancies in LLM prompts and responses
+   - Data segmentation issues
+   - Context construction problems
+4. **Results Reporting**: Provides a detailed summary of detected issues with severity levels (showing in the cli and creatinging a report in **./repos/analyze_report**)
+
+#### 📤 Output Examples
+
+```bash
+Analyzing application: LocalAGI
+
+✅ Analysis completed for VTSTech/localagi
+🔗 Repository: https://github.com/VTSTech/localagi
+📝 Commit ID: 85ecc246bd50783e9edaa4227493c0ac127912d8
+📊 Classification: task management
+🤖 LLM: OpenAI
+
+📋 Analysis Summary:
+  Total files analyzed: 15
+  Files with format issues: 3
+
+🔍 Detailed Format Issues:
+
+File: localagi/agent.py
+  📝 Prompt Issues:
+    - Type: format_template_discrepancy
+      Severity: Medium (0.50)
+      Violations: 2
+  📤 Completion Issues:
+    - Type: format_data_segmentation
+      Severity: Low (0.25)
+      Violations: 1
+
+File: localagi/utils.py
+  📝 Prompt Issues:
+    - Type: format_context_construction
+      Severity: High (0.85)
+      Violations: 3
+```
+
+#### 🔍 How It Works
+
+The analysis leverages Comfrey's advanced format detection capabilities to identify three main types of issues:
+
+1. **Template Discrepancy**: Detects mismatches between expected and actual formats in structured data (JSON, XML, YAML), positional templates, and code-fenced content
+2. **Data Segmentation**: Analyzes word completeness, sentence integrity, boundary markers, and cross-segment coherence
+3. **Context Construction**: Checks for relevance and coherence in context provided to LLMs
+
+Each issue is assigned a severity score (0-1) to help prioritize fixes.
+
+---
 <div align="center">
 
 **⭐ If this project is helpful to you, please give us a Star!**

@@ -23,4 +23,7 @@ Thumbs.db
 # Logs
 *.log
 
+# Repositories (do not track any cloned repos)
+repos/**
+
 

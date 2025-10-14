@@ -2,10 +2,13 @@
 
 import typer
 from typing import Optional
+from pathlib import Path
 from .core.metadata import MetadataManager
+from .core.format_analyzer import FormatAnalyzer
 
 app = typer.Typer(help="Hydrangea CLI - Query Hydrangea dataset")
 metadata_manager = MetadataManager()
+format_analyzer = FormatAnalyzer()
 
 
 @app.command()
@@ -117,6 +120,129 @@ def test(
         typer.echo(f"Defect type: {defect_info.get('type', 'N/A')}")
         typer.echo(f"Case: {defect_info.get('case', 'N/A')}")
         typer.echo("Use --trigger to see detailed trigger tests")
+
+
+@app.command()
+def analyze(
+    app_name: str = typer.Argument(..., help="Application name to analyze")
+):
+    """Analyze an application for LLM input/output format issues using Comfrey framework"""
+    typer.echo(f"Analyzing application: {app_name}")
+    
+    # Prepare report file
+    report_dir = Path("repos/analyze_report")
+    report_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Handle app names with path separators
+    safe_app_name = app_name.replace('/', '_').replace('\\', '_')
+    report_file = report_dir / f"{safe_app_name}_analyze.txt"
+    
+    # Capture output for both CLI and file
+    cli_output = []
+    
+    # Run analysis
+    results = format_analyzer.analyze_application(app_name)
+    
+    if not results['success']:
+        error_msg = f"❌ Analysis failed: {results['error']}"
+        cli_output.append(error_msg)
+        typer.echo(error_msg)
+        return
+    
+    # Display results
+    app_info = results['app_info']
+    header = f"\n✅ Analysis completed for {app_info['app']}"
+    cli_output.append(header)
+    typer.echo(header)
+    
+    repo_info = [
+        f"🔗 Repository: {app_info['url']}",
+        f"📝 Commit ID: {app_info['commit_id']}",
+        f"📊 Classification: {app_info['classification']}",
+        f"🤖 LLM: {app_info['llm']}"
+    ]
+    for line in repo_info:
+        cli_output.append(line)
+        typer.echo(line)
+    
+    summary = [
+        f"\n📋 Analysis Summary:",
+        f"  Total files analyzed: {results['total_files_analyzed']}",
+        f"  Files with format issues: {results['files_with_issues']}"
+    ]
+    for line in summary:
+        cli_output.append(line)
+        typer.echo(line)
+    
+    def _emit_issue_section(title: str, issues: list):
+        if not issues:
+            return
+        cli_output.append(title)
+        typer.echo(title)
+        for issue in issues:
+            severity = "High" if issue['severity'] > 0.7 else "Medium" if issue['severity'] > 0.3 else "Low"
+            issue_info = [
+                f"    - Type: {issue['type']}",
+                f"      Severity: {severity} ({issue['severity']:.2f})"
+            ]
+            cli_output.extend(issue_info)
+            for line in issue_info:
+                typer.echo(line)
+            violations = issue.get('details', {}).get('violations', [])
+            if violations:
+                count_line = f"      Violations: {len(violations)}"
+                cli_output.append(count_line)
+                typer.echo(count_line)
+                details_lines = []
+                no_preview = 0
+                no_preview_positions = []
+                for i, v in enumerate(violations):
+                    position_info = []
+                    if 'source' in v:
+                        position_info.append(f"Source: {v['source']}")
+                    if 'start_index' in v:
+                        position_info.append(f"Index: {v['start_index']}")
+                    preview = v.get('document_preview', '')
+                    if preview:
+                        preview_text = preview[:50] + ('...' if len(preview) > 50 else '')
+                        position_text = " (" + ", ".join(position_info) + ")" if position_info else ""
+                        details_lines.append(f"        * Violation {i+1}:{position_text} Preview: '{preview_text}'")
+                    else:
+                        no_preview += 1
+                        if position_info:
+                            no_preview_positions.append(f"Violation {i+1} (" + ", ".join(position_info) + ")")
+                cli_output.extend(details_lines)
+                if no_preview > 0:
+                    if no_preview == 1 and no_preview_positions:
+                        cli_output.append(f"        * {no_preview_positions[0]} - No preview available")
+                    elif no_preview == 1:
+                        cli_output.append(f"        * Violation {len(violations)} - No preview available")
+                    else:
+                        cli_output.append(f"        * {no_preview} violations - No preview available")
+                        if len(no_preview_positions) > 0:
+                            cli_output.append(f"          Sample positions: {', '.join(no_preview_positions[:3])}{'...' if len(no_preview_positions) > 3 else ''}")
+
+    if results['analysis_results']:
+        cli_output.append("\n🔍 Detailed Format Issues:")
+        typer.echo("\n🔍 Detailed Format Issues:")
+        for file_result in results['analysis_results']:
+            file_line = f"\nFile: {file_result['file']}"
+            cli_output.append(file_line)
+            typer.echo(file_line)
+            _emit_issue_section("  📝 Prompt Issues:", file_result.get('prompt_issues', []))
+            _emit_issue_section("  📤 Completion Issues:", file_result.get('completion_issues', []))
+    else:
+        no_issues = "\n✅ No format issues detected in the analyzed files."
+        cli_output.append(no_issues)
+        typer.echo(no_issues)
+    
+    # Write to report file
+    try:
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write("\n".join(cli_output))
+        typer.echo(f"\n📄 Analysis report saved to: {report_file}")
+    except Exception as e:
+        typer.echo(f"\n❌ Failed to save report: {e}")
 
 
 def main():
