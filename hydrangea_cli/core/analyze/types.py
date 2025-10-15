@@ -1,5 +1,5 @@
 """
-Type definitions for lightweight Comfrey subset used by Hydrangea.
+Type definitions for lightweight subset used by Hydrangea.
 """
 
 from dataclasses import dataclass

@@ -1,6 +1,5 @@
 """
-Lightweight copy of Comfrey's FormatDetector used by Hydrangea.
-Only keeps format-related detection paths.
+Lightweight FormatDetector used by Hydrangea.
 """
 
 import json
@@ -11,7 +10,7 @@ import logging
 from enum import Enum
 
 from .types import DetectionResult, ErrorType
-from .config import ComfreyConfig
+from .config import Config
 
 
 logger = logging.getLogger(__name__)
@@ -25,7 +24,7 @@ class WordCompleteEnum(Enum):
 
 
 class FormatDetector:
-    def __init__(self, config: ComfreyConfig):
+    def __init__(self, config: Config):
         self.config = config
         self.nlp = None
         self.enchant_dict = None

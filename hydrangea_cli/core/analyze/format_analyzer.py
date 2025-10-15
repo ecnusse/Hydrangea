@@ -1,4 +1,4 @@
-"""Format analyzer module that integrates Comfrey's format_detector"""
+"""Format analyzer module that integrates format_detector"""
 
 import os
 import sys
@@ -10,20 +10,20 @@ from typing import Optional, Dict, List, Any
 import ast
 from functools import lru_cache
 
-# Local lightweight Comfrey components
+# Local lightweight components
 from .format_detector import FormatDetector
-from .config import ComfreyConfig
+from .config import Config
 from .types import ErrorType, DetectionResult
 
 class FormatAnalyzer:
-    """Format analyzer that uses Comfrey's format detector to analyze LLM inputs and outputs"""
+    """Format analyzer that uses format detector to analyze LLM inputs and outputs"""
     
     def __init__(self, base_dir: str = "."):
         self.base_dir = Path(base_dir)
         self.repos_dir = self.base_dir / "repos"
         self.apps_csv = self.base_dir / "application.csv"
         # Lightweight configuration tweaks
-        self.config = ComfreyConfig.create_lightweight_config()
+        self.config = Config.create_lightweight_config()
         self.config.enable_embedding_similarity = False
         self.config.enable_detailed_logging = False
         self.config.max_processing_time_ms = 400
@@ -423,7 +423,7 @@ class FormatAnalyzer:
         return hit, {'providers': sorted(providers), 'calls': calls}
     
     def analyze_format(self, text: str, func_name: str = "default") -> Dict[str, DetectionResult]:
-        """Analyze text for format issues using Comfrey's format detector"""
+        """Analyze text for format issues using format detector"""
         results = {
             'template_discrepancy': self.format_detector.detect_template_discrepancy(text, func_name),
             'data_segmentation': self.format_detector.detect_data_segmentation_issues(text, func_name),

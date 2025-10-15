@@ -229,7 +229,7 @@ hydrangea analyze <application_name>
 
 1. **Repository Management**: Automatically clones the repository from GitHub (if not already present locally) and checks out to the specific commit from `application.csv`(repos are stored in **./repos**)
 2. **Code Analysis**: Scans the codebase to identify files that interact with LLMs
-3. **Format Detection**: Uses Comfrey's `format_detector` to analyze:
+3. **Format Detection**: Uses advanced format detection to analyze:
    - Template discrepancies in LLM prompts and responses
    - Data segmentation issues
    - Context construction problems
@@ -271,7 +271,7 @@ File: localagi/utils.py
 
 #### 🔍 How It Works
 
-The analysis leverages Comfrey's advanced format detection capabilities to identify three main types of issues:
+The analysis identifies three main types of issues:
 
 1. **Template Discrepancy**: Detects mismatches between expected and actual formats in structured data (JSON, XML, YAML), positional templates, and code-fenced content
 2. **Data Segmentation**: Analyzes word completeness, sentence integrity, boundary markers, and cross-segment coherence

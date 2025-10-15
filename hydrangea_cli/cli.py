@@ -126,7 +126,7 @@ def test(
 def analyze(
     app_name: str = typer.Argument(..., help="Application name to analyze")
 ):
-    """Analyze an application for LLM input/output format issues using Comfrey framework"""
+    """Analyze an application for LLM input/output format issues"""
     typer.echo(f"Analyzing application: {app_name}")
     
     # Prepare report file

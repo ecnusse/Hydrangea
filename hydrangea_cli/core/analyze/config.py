@@ -1,5 +1,5 @@
 """
-Lightweight Comfrey configuration used by Hydrangea.
+Lightweight configuration used by Hydrangea.
 """
 
 from dataclasses import dataclass
@@ -7,7 +7,7 @@ from typing import Dict, Any, List
 
 
 @dataclass
-class ComfreyConfig:
+class Config:
     """Minimal configuration subset for the format detector"""
 
     # General
@@ -31,7 +31,7 @@ class ComfreyConfig:
     enable_detailed_logging: bool = False
 
     @classmethod
-    def create_lightweight_config(cls) -> 'ComfreyConfig':
+    def create_lightweight_config(cls) -> 'Config':
         return cls(
             enable_embedding_similarity=False,
             enable_detailed_logging=False,
