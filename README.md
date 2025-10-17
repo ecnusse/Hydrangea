@@ -82,7 +82,7 @@ Take **LocalAGI** as an example. It makes plans to guide users to achieve their 
 
 ### 🚀 Setup
 
-1. Clone Defects4J:
+1. Clone HYDRANGEA:
 
    ```bash
    git clone https://github.com/ecnusse/Hydrangea.git
@@ -96,7 +96,7 @@ Take **LocalAGI** as an example. It makes plans to guide users to achieve their 
 
 | Command | Description | Main Parameters |
 |---------|-------------|-----------------|
-| `apps` | 📱 List all applications, supports multi-dimensional filtering | `--classification`, `--llm`, `--vdb` |
+| `apps` | 📱 List all applications, supports multi-dimensional filtering |  `--llm`, `--vdb` ,`--language`|
 | `bids` | 🐛 List all defect IDs, supports filtering by application | `--app` |
 | `info` | 📊 Display metadata information of a specific defect | `app`, `bid` |
 | `test` | 🧪 Display test information | `app`, `bid`, `--trigger` |
@@ -164,7 +164,8 @@ hydrangea info MEMGPT cpacker-MemGPT-exceeding_llm_content_limit-case1
 
 - Defect Type
 - Application Basic Information
-- Defect Description and Impact
+- Defect Description
+- Defect Impact
 
 
 ---
