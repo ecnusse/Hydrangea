@@ -86,6 +86,7 @@ Take **LocalAGI** as an example. It makes plans to guide users to achieve their 
 
    ```bash
    git clone https://github.com/ecnusse/Hydrangea.git
+   cd Hydrangea
    ```
 2. install dependencies
    ```bash

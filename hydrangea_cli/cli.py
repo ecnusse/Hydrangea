@@ -1,11 +1,35 @@
 """CLI main entry point"""
 
 import typer
+import click
 from typing import Optional
 from .core.metadata import MetadataManager
 
 app = typer.Typer(help="Hydrangea CLI - Query Hydrangea dataset")
 metadata_manager = MetadataManager()
+
+
+def _echo_kv(label: str, value: str) -> None:
+    """Pretty print key-value without changing textual content."""
+    # Keep exact textual form: "label: value"
+    click.secho(f"{label}", bold=True, fg="bright_white", nl=False)
+    click.secho(": ", bold=False, fg="bright_black", nl=False)
+    # Value printed as-is to avoid content change
+    click.secho(f"{value}", fg="bright_cyan")
+
+
+def _echo_kv_aligned(pairs: list[tuple[str, str]]) -> None:
+    """Print multiple key-values with aligned colon positions.
+    Only adds padding spaces after labels; label/value text remains unchanged.
+    """
+    if not pairs:
+        return
+    width = max(len(k) for k, _ in pairs)
+    for k, v in pairs:
+        label_padded = f"{k.ljust(width)}"
+        click.secho(label_padded, bold=True, fg="bright_white", nl=False)
+        click.secho(": ", fg="bright_black", nl=False)
+        click.secho(f"{v}", fg="bright_cyan")
 
 
 @app.command()
@@ -30,11 +54,11 @@ def apps(
     )
     
     if not apps_list:
-        typer.echo("No applications found.")
+        click.secho("No applications found.", fg="yellow")
         return
     
     for app_name in apps_list:
-        typer.echo(app_name)
+        click.secho(f"{app_name}", fg="bright_cyan")
 
 
 @app.command()
@@ -45,11 +69,11 @@ def bids(
     defect_ids = metadata_manager.get_defect_ids(app=app)
     
     if not defect_ids:
-        typer.echo("No defect IDs found.")
+        click.secho("No defect IDs found.", fg="yellow")
         return
     
     for defect_id in defect_ids:
-        typer.echo(defect_id)
+        click.secho(f"{defect_id}", fg="bright_cyan")
 
 
 @app.command()
@@ -61,30 +85,34 @@ def info(
     defect_info = metadata_manager.get_defect_info(app, bid)
     
     if not defect_info:
-        typer.echo(f"Defect not found: {app} - {bid}")
+        click.secho(f"Defect not found: {app} - {bid}", fg="red")
         return
     
-    # Format output
-    typer.echo(f"app: {defect_info.get('app', 'N/A')}")
-    typer.echo(f"repo: {defect_info.get('repo', 'N/A')}")
-    typer.echo(f"commit: {defect_info.get('commit', 'N/A')}")
-    typer.echo(f"defect_id: {defect_info.get('defect_id', 'N/A')}")
-    typer.echo(f"type: {defect_info.get('type', 'N/A')}")
-    typer.echo(f"case: {defect_info.get('case', 'N/A')}")
+    # Format output (aligned two-column)
+    _echo_kv_aligned([
+        ("app", f"{defect_info.get('app', 'N/A')}"),
+        ("repo", f"{defect_info.get('repo', 'N/A')}"),
+        ("commit", f"{defect_info.get('commit', 'N/A')}"),
+        ("defect_id", f"{defect_info.get('defect_id', 'N/A')}"),
+        ("type", f"{defect_info.get('type', 'N/A')}"),
+        ("case", f"{defect_info.get('case', 'N/A')}")
+    ])
     
     # Output consequence
     consequences = defect_info.get('consequence', [])
     if consequences:
-        typer.echo("consequence:")
+        click.secho("consequence", bold=True, fg="bright_white", nl=False)
+        click.secho(":", fg="bright_black")
         for cons in consequences:
-            typer.echo(f"  - {cons}")
+            click.secho(f"  - {cons}", fg="bright_cyan")
     
     # Output locations
     locations = defect_info.get('locations', [])
     if locations:
-        typer.echo("locations:")
+        click.secho("locations", bold=True, fg="bright_white", nl=False)
+        click.secho(":", fg="bright_black")
         for loc in locations:
-            typer.echo(f"  - {loc}")
+            click.secho(f"  - {loc}", fg="bright_cyan")
 
 
 @app.command()
@@ -98,25 +126,25 @@ def test(
     defect_info = metadata_manager.get_defect_info(app, bid)
     
     if not defect_info:
-        typer.echo(f"Defect not found: {app} - {bid}")
+        click.secho(f"Defect not found: {app} - {bid}", fg="red")
         return
     
     if trigger:
         # Display trigger tests
         trigger_tests = defect_info.get('trigger_tests', [])
         if trigger_tests:
-            typer.echo("trigger_tests:")
+            click.secho("trigger_tests:", bold=True, fg="bright_white")
             for test in trigger_tests:
                 if test.strip():
-                    typer.echo(f"- {test}")
+                    click.secho(f"- {test}", fg="bright_cyan")
         else:
-            typer.echo("No trigger tests available for this defect.")
+            click.secho("No trigger tests available for this defect.", fg="yellow")
     else:
         # Display basic test information
-        typer.echo(f"Test information for {app} - {bid}")
-        typer.echo(f"Defect type: {defect_info.get('type', 'N/A')}")
-        typer.echo(f"Case: {defect_info.get('case', 'N/A')}")
-        typer.echo("Use --trigger to see detailed trigger tests")
+        click.secho(f"Test information for {app} - {bid}", bold=True)
+        click.secho(f"Defect type: {defect_info.get('type', 'N/A')}")
+        click.secho(f"Case: {defect_info.get('case', 'N/A')}")
+        click.secho("Use --trigger to see detailed trigger tests", fg="bright_black")
 
 
 def main():

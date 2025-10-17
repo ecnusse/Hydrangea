@@ -3,19 +3,19 @@ import re
 import pandas as pd
 import yaml
 
-# Input Excel file
-INPUT_FILE = "defect.xlsx"
+# Input CSV file
+INPUT_FILE = "defect.csv"
 SHEET_NAME = "defect"
 OUTPUT_DIR = "db"
 
 # Ensure output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Read Excel, note that header=1 is the actual header row
+# Read CSV, note that header=1 is the actual header row
 try:
-    df = pd.read_excel(INPUT_FILE, sheet_name=SHEET_NAME, header=1)
+    df = pd.read_csv(INPUT_FILE, header=1)
 except Exception as e:
-    print(f"Error: Failed to read Excel file {INPUT_FILE}: {e}")
+    print(f"Error: Failed to read CSV file {INPUT_FILE}: {e}")
     exit(1)
 
 last_type_display = ""
