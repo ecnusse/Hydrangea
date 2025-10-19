@@ -15,6 +15,10 @@ We are grateful for the contribution made by our anonymous collaborator. Additio
 
 Hydrangea is a defect library for LLM-enabled software. Hydrangea has 4 main petals, each corresponding to one of the major components where defects often arise: LLM agent, vector database, software component, and system.
 
+### Demo Vedio
+
+https://github.com/user-attachments/assets/168eb593-07c4-4570-9f94-33ac060a8c31
+
 ## What is LLM-enabled software?
 
 It is software that integrates LLMs (large language models) with RAG (retrieval-augmented generation) support to realize intelligence features.
